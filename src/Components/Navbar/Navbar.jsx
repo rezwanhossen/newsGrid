@@ -29,7 +29,7 @@ const Navbar = () => {
         <img className="h-16" src={logo} alt="logo" />
       </div>
       <div className="navbar-end">
-        <Link to="/register">
+        <Link to="/singup">
           <button className="mr-4  bg-gray-800 text-white py-1 px-2 hover:bg-gray-950">
             Register
           </button>
