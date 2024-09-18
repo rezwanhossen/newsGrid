@@ -9,9 +9,9 @@ const CardLayout = () => {
             .then(data => setNews(data))
     } , [])
         return (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2  gap-4 ">
             {
-                news?.map(singleNews => <Card news={singleNews}></Card>)
+                news?.map((singleNews, idx) => <Card key={idx} news={singleNews}></Card>)
             }
         </div>
     );
