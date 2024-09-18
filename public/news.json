@@ -1,0 +1,34 @@
+[
+    {
+      "img": "https://www.unicef.org/sites/default/files/styles/hero_desktop/public/20240830_Bangladesh_1.webp?itok=jY1OqxoJ",
+      "title": "Flooding in Eastern Bangladesh Affects Millions",
+      "short_des": "Severe flooding has displaced over 500,000 people in the eastern region.",
+      "long_des": "Over 5.8 million people have been impacted by flooding in eastern Bangladesh, especially in Noakhali and Feni. More than 500,000 people have been displaced and are seeking refuge in overcrowded evacuation centers. Women and girls are facing additional challenges with limited access to sanitation and increased risk of gender-based violence.",
+      "date": "2024-09-16",
+      "time": "10:00 AM"
+    },
+    {
+      "img": "https://ecdn.dhakatribune.net/contents/cache/images/900x0x1/uploads/dten/2023/04/17/bgb-market---dt.jpeg",
+      "title": "Fire Breaks Out in Uttara Kitchen Market",
+      "short_des": "A fire severely damages shops in Uttara kitchen market, Dhaka.",
+      "long_des": "A significant fire broke out in Uttara's kitchen market, damaging multiple shops. The fire was eventually brought under control, and authorities are investigating the cause. No casualties have been reported yet.",
+      "date": "2024-09-17",
+      "time": "8:30 AM"
+    },
+    {
+      "img": "https://www.thedailystar.net/sites/default/files/styles/very_big_201/public/images/2022/01/22/sust-student.jpg",
+      "title": "College Student Drowns in SUST Campus Pond",
+      "short_des": "A college student drowns in a pond at Shahjalal University.",
+      "long_des": "A tragic incident occurred at Shahjalal University of Science and Technology (SUST) where a college student drowned in a campus pond. Authorities are investigating the situation, and the incident has raised concerns about campus safety.",
+      "date": "2024-09-16",
+      "time": "5:00 PM"
+    },
+    {
+      "img": "https://ecdn.dhakatribune.net/contents/cache/images/400x225x1/uploads/media/2023/09/29/Bangladesh-bank-d4438d886ff89cdffac40c985a1f21e4.jpg?jadewits_media_id=5495",
+      "title": "Bangladesh Bank Restricts Media Amid Merger Tension",
+      "short_des": "Tension arises in the banking sector regarding a potential bank merger.",
+      "long_des": "Amid growing tension surrounding the potential merger of several banks, Bangladesh Bank has restricted media access. Only eight local banks are in good financial standing, adding pressure to the ongoing situation.",
+      "date": "2024-09-17",
+      "time": "9:00 AM"
+    }
+  ]
