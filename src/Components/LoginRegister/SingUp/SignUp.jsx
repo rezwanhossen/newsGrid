@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
-import useAuth from "../useAuth/useAuth";
+import useAuth from "../../../Hook/useAuth/useAuth";
 
 const SignUp = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -21,7 +21,7 @@ const SignUp = () => {
     const confirmPassword = e.target.confirmPassword.value;
     if (password === confirmPassword) {
       singupUser(email, password).then((res) => {
-        alert('sucessfully Created User')
+        alert("sucessfully Created User");
         console.log("Alhamdulillah Sucessfully Created User", res.user);
       });
     }

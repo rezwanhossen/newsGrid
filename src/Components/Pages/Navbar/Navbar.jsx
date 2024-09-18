@@ -1,10 +1,10 @@
 import React from "react";
-import logo from "../../assets/Logo-r.png";
+import logo from "../../../assets/Logo-r.png";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className="navbar bg-base-100 border-2 sticky top-0 z-10">
+    <div className="navbar fixed bg-base-100 border-2  top-0 z-10">
       <div className="navbar-start">
         <div>
           <button>

@@ -1,13 +1,16 @@
 import { useState } from "react";
-import { AiFillEye, AiFillEyeInvisible, AiFillGoogleCircle } from "react-icons/ai";
-import useAuth from './../useAuth/useAuth';
-
+import {
+  AiFillEye,
+  AiFillEyeInvisible,
+  AiFillGoogleCircle,
+} from "react-icons/ai";
+// import useAuth from './../useAuth/useAuth';
+import useAuth from "../../../Hook/useAuth/useAuth";
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  const {user} = useAuth();
-  console.log('user');
-  
+  const { user } = useAuth();
+  console.log("user");
 
   const togglePasswordVisibility = () => setShowPassword(!showPassword);
   const toggleConfirmPasswordVisibility = () =>
@@ -40,7 +43,11 @@ const Login = () => {
             className="absolute right-4 top-3 cursor-pointer text-gray-500"
             onClick={togglePasswordVisibility}
           >
-            {showPassword ? <AiFillEyeInvisible size={24} /> : <AiFillEye size={24} />}
+            {showPassword ? (
+              <AiFillEyeInvisible size={24} />
+            ) : (
+              <AiFillEye size={24} />
+            )}
           </div>
         </div>
 

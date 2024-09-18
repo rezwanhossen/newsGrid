@@ -1,16 +1,9 @@
-
-import Navbar from "../Navbar/Navbar";
-
 import FeaturedSection from "./FeaturedSection/FeaturedSection";
-import Banner from './Banner/Banner/Banner'
+import Banner from "./Banner/Banner/Banner";
 const Home = () => {
   return (
     <div>
-
-      <Navbar />
-
-      <Banner/>
-
+      <Banner />
       <FeaturedSection></FeaturedSection>
     </div>
   );
