@@ -1,9 +1,9 @@
 import FeaturedSection from "./FeaturedSection/FeaturedSection";
-import Banner from './Banner/Banner/Banner'
+import Banner from "./Banner/Banner/Banner";
 const Home = () => {
   return (
     <div>
-      <Banner/>
+      <Banner />
       <FeaturedSection></FeaturedSection>
     </div>
   );
