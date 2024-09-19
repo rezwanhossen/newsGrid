@@ -19,11 +19,20 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
+
+
+        path : '/compare/:keyword',
+        element : <Compare></Compare>
+      },
+      {
+        path: "/signup",
+
         path: "/compare/:keyword",
         element: <Compare></Compare>,
       },
       {
         path: "/singup",
+
         element: <SignUp></SignUp>,
       },
       {

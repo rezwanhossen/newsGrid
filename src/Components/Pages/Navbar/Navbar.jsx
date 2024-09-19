@@ -18,71 +18,41 @@ const Navbar = () => {
   };
 
   return (
-    <div className=" ">
-      <nav className="bg-white shadow-md p-4">
-        <div className="container mx-auto flex items-center justify-between">
-          <div className="flex items-center space-x-4">
-            <button
-              onClick={toggleDashboard}
-              className="text-black hover:text-gray-500 focus:outline-none"
+    <div className="navbar fixed bg-base-100 border-2  top-0 z-10">
+      <div className="navbar-start">
+        <div>
+          <button>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
             >
-              {isDashboardOpen ? (
-                <FiX className="w-6 h-6" />
-              ) : (
-                <FiMenu className="w-6 h-6" />
-              )}
-            </button>
-          </div>
-
-          <div className="flex-1 flex justify-center">
-            <Link to="/">
-              <img className=" h-14" src={logo} alt="logo" />
-            </Link>
-          </div>
-
-          <div className="flex items-center space-x-4">
-            <input type="checkbox" className="toggle" defaultChecked />
-            <Link
-              to="/login"
-              className="text-black border border-black px-4 py-2 rounded hover:bg-gray-100"
-            >
-              Login
-            </Link>
-          </div>
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              />
+            </svg>
+          </button>
         </div>
-      </nav>
-
-      {/* Dashboard  */}
-      <div
-        className={`fixed top-0 left-0 h-full bg-white w-[250px] z-40 shadow-lg transition-transform duration-300 ease-in-out transform ${
-          isDashboardOpen ? "translate-x-0" : "-translate-x-full"
-        }`}
-      >
-        {/* Close Menu Icon */}
-        <button onClick={toggleDashboard} className="text-black p-4">
-          <FiX className="w-6 h-6" />
-        </button>
-
-        <ul className="p-4 space-y-4 z-40">
-          <li className="flex justify-between items-center">
-            <NavLink to="/">Home</NavLink>
-          </li>
-          <li className="flex justify-between items-center">
-            <span>News</span>
-          </li>
-          <li className="flex justify-between items-center">
-            <span>Sport</span>
-          </li>
-          <li className="flex justify-between items-center">
-            <span>Business</span>
-          </li>
-          <li className="flex justify-between items-center">
-            <span>Innovation</span>
-          </li>
-          <li className="flex justify-between items-center">
-            <span>Culture</span>
-          </li>
-        </ul>
+      </div>
+      <div className="navbar-center">
+        <img className="h-16" src={logo} alt="logo" />
+      </div>
+      <div className="navbar-end">
+        <Link to="/singup">
+          <button className="mr-4  bg-gray-800 text-white py-1 px-2 hover:bg-gray-950">
+            Register
+          </button>
+        </Link>
+        <Link to="/login">
+          <button className="font-medium text-black hover:bg-gray-950 hover:text-white py-1 px-2">
+            Sign In
+          </button>
+        </Link>
       </div>
     </div>
   );
