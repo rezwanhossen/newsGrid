@@ -76,6 +76,8 @@ const Login = () => {
           Login
         </button>
 
+        <p>if you ar not registed ! please register</p>
+
         {/* OR Divider */}
         <div className="text-center my-4 text-gray-500">OR</div>
 
