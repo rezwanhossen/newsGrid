@@ -1,22 +1,9 @@
 import React, { useState } from "react";
-import { FiMenu, FiX } from "react-icons/fi"; // Importing icons for the navbar
+
 import logo from "../../../assets/Logo-r.png";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
-  //const [isOpen, setIsOpen] = useState(false);
-  const [isDashboardOpen, setIsDashboardOpen] = useState(false);
-
-  // Function to toggle the dropdown menu
-  //   const toggleMenu = () => {
-  //     setIsOpen(!isOpen);
-  //   };
-
-  // Function to toggle the dashboard
-  const toggleDashboard = () => {
-    setIsDashboardOpen(!isDashboardOpen);
-  };
-
   return (
     <div className="navbar fixed bg-base-100 border-2  top-0 z-10">
       <div className="navbar-start">
