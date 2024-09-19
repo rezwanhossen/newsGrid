@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className="navbar fixed bg-base-100 border-2  top-0 z-10">
+    <div className="navbar lg:px-10 shadow-md shadow-emerald-500 fixed bg-base-100 border-2  top-0 z-20">
       <div className="navbar-start">
         <div>
           <button>
@@ -25,9 +25,9 @@ const Navbar = () => {
           </button>
         </div>
       </div>
-      <div className="navbar-center">
+      <Link to="/" className="navbar-center">
         <img className="h-16" src={logo} alt="logo" />
-      </div>
+      </Link>
       <div className="navbar-end">
         <Link to="/singup">
           <button className="mr-4  bg-gray-800 text-white py-1 px-2 hover:bg-gray-950">

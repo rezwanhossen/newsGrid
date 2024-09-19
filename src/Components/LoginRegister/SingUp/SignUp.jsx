@@ -29,7 +29,7 @@ const SignUp = () => {
   };
 
   return (
-    <div className="my-5 flex justify-center items-center">
+    <div className="mb-5 flex justify-center items-center mt-[120px]">
       <form
         required
         onSubmit={handleSignUp}

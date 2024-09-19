@@ -23,8 +23,8 @@ const router = createBrowserRouter([
 
         path : '/compare/:keyword',
         element : <Compare></Compare>
-      }
-
+      },
+      {
         path: "/singup",
         element: <SignUp></SignUp>,
       },

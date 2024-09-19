@@ -17,7 +17,7 @@ const Login = () => {
     setShowConfirmPassword(!showConfirmPassword);
 
   return (
-    <div className="my-5 flex justify-center items-center">
+    <div className="mb-5 flex justify-center items-center mt-[120px]">
       <form className="w-full max-w-sm bg-white p-6 rounded-lg shadow-lg">
         <h2 className="text-center text-2xl font-semibold mb-6">Login</h2>
 
