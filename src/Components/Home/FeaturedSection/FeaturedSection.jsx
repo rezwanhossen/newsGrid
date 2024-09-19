@@ -1,9 +1,15 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const FeaturedSection = () => {
     const [newsData, setNewsData] = useState([]);
     const [selectedCategory, setSelectedCategory] = useState(null);
     const [categories, setCategories] = useState([]);
+
+
+    const handleKeyword  = (value) => {
+        console.log("keyword" , value);
+    }
 
     useEffect(() => {
         // Fetch the JSON data
@@ -62,7 +68,7 @@ const FeaturedSection = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {displayedNews.length > 0 ? (
                     displayedNews.map((newsItem) => (
-                        <div key={newsItem.id} className="border p-4 rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
+                        <div key={newsItem.id} className="border p-4 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 relative">
                             <img
                                 src={newsItem.image}
                                 alt={newsItem.title}
@@ -70,7 +76,9 @@ const FeaturedSection = () => {
                             />
                             <h3 className="text-lg font-bold mb-2">{newsItem.title}</h3>
                             <p className="text-sm text-gray-600 mb-4">{newsItem.websitename}</p>
-                            <a
+                           
+                           <div className="space-x-4  absolute left-1/2 transform -translate-x-1/2 bottom-3">
+                           <a
                                 href={newsItem.link}
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -78,6 +86,8 @@ const FeaturedSection = () => {
                             >
                                 Read more
                             </a>
+                            <Link to={`/compare/${newsItem?.keyword}`} className="text-orange-500 underline hover:text-orange-700 transition duration-300">Compare</Link>
+                           </div>
                         </div>
                     ))
                 ) : (
