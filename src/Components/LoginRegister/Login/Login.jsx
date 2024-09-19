@@ -71,16 +71,19 @@ const Login = () => {
             )}
           </div>
         </div>
-        <div>
-        Are you new here ? <Link to="/signup"className="mb-2 text-blue-600 underline">Signup</Link>
-      </div>
+        <div></div>
 
         {/* Submit Button */}
         <button className="w-full bg-red-500 text-white py-3 rounded hover:bg-red-600 transition duration-300 mb-4">
           Login
         </button>
 
-        <p>if you ar not registed ! please register</p>
+        <p className=" text-center">
+          if you arn't registed ! please <span> </span>
+          <Link to="/singup" className=" text-rose-600">
+            register
+          </Link>
+        </p>
 
         {/* OR Divider */}
         <div className="text-center my-4 text-gray-500">OR</div>
@@ -91,7 +94,6 @@ const Login = () => {
           Login with Google
         </button>
       </form>
-      
     </div>
   );
 };

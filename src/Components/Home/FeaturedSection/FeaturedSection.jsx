@@ -28,9 +28,7 @@ const FeaturedSection = () => {
     : newsData;
 
   return (
-    <>
     <div className="container mx-auto my-16 px-4 lg:px-0">
-      
       <div className="sticky top-20 z-10 bg-white shadow-md py-4 mb-8 border-b">
         <div className=" top-16 z-10 bg-white  py-4 mb-8 border-b">
           <div className="flex flex-col md:flex-row md:items-center justify-between lg:px-5">
@@ -109,12 +107,8 @@ const FeaturedSection = () => {
           )}
         </div>
       </div>
-
-    </>
-
     </div>
     // </div>
-
   );
 };
 
