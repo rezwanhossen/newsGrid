@@ -8,7 +8,6 @@ import SignUp from "../Components/LoginRegister/SingUp/SignUp";
 import Login from "../Components/LoginRegister/Login/Login";
 import Erroe from "../Components/Pages/Error/Erroe";
 
-
 const router = createBrowserRouter([
   {
     path: "/",
@@ -21,18 +20,25 @@ const router = createBrowserRouter([
       },
       {
 
+
         path : '/compare/:keyword',
         element : <Compare></Compare>
       },
       {
         path: "/signup",
+
+        path: "/compare/:keyword",
+        element: <Compare></Compare>,
+      },
+      {
+        path: "/singup",
+
         element: <SignUp></SignUp>,
       },
       {
         path: "/login",
         element: <Login></Login>,
       },
-
     ],
   },
 ]);

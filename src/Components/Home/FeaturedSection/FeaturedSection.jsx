@@ -6,14 +6,12 @@ const FeaturedSection = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [categories, setCategories] = useState([]);
 
-
   useEffect(() => {
     // Fetch the JSON data
     fetch("/newsData.json")
       .then((response) => response.json())
       .then((data) => {
         setNewsData(data);
-
 
         // Extract unique categories from the news data
         const uniqueCategories = [
@@ -70,41 +68,53 @@ const FeaturedSection = () => {
           </div>
         </div>
 
+        {/* News based on category */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {displayedNews.length > 0 ? (
+            displayedNews.map((newsItem) => (
+              <div
+                key={newsItem.id}
+                className="border p-4 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 relative"
+              >
+                <img
+                  src={newsItem.image}
+                  alt={newsItem.title}
+                  className="w-full h-40 object-cover mb-4 rounded"
+                />
+                <h3 className="text-lg font-bold mb-2">{newsItem.title}</h3>
+                <p className="text-sm text-gray-600 mb-4">
+                  {newsItem.websitename}
+                </p>
 
-            {/* News based on category */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {displayedNews.length > 0 ? (
-                    displayedNews.map((newsItem) => (
-                        <div key={newsItem.id} className="border p-4 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 relative">
-                            <img
-                                src={newsItem.image}
-                                alt={newsItem.title}
-                                className="w-full h-40 object-cover mb-4 rounded"
-                            />
-                            <h3 className="text-lg font-bold mb-2">{newsItem.title}</h3>
-                            <p className="text-sm text-gray-600 mb-4">{newsItem.websitename}</p>
-                           
-                           <div className="space-x-4  absolute left-1/2 transform -translate-x-1/2 bottom-3">
-                           <a
-                                href={newsItem.link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-orange-500 underline hover:text-orange-700 transition duration-300"
-                            >
-                                Read more
-                            </a>
-                            <Link to={`/compare/${newsItem?.keyword}`} className="text-orange-500 underline hover:text-orange-700 transition duration-300">Compare</Link>
-                           </div>
-                        </div>
-                    ))
-                ) : (
-                    <p className="text-gray-500">No news available in this category.</p>
-                )}
-            </div>
-
+                <div className="space-x-4  absolute left-1/2 transform -translate-x-1/2 bottom-3">
+                  <a
+                    href={newsItem.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-orange-500 underline hover:text-orange-700 transition duration-300"
+                  >
+                    Read more
+                  </a>
+                  <Link
+                    to={`/compare/${newsItem?.keyword}`}
+                    className="text-orange-500 underline hover:text-orange-700 transition duration-300"
+                  >
+                    Compare
+                  </Link>
+                </div>
+              </div>
+            ))
+          ) : (
+            <p className="text-gray-500">No news available in this category.</p>
+          )}
         </div>
       </div>
+
     </>
+
+    </div>
+    // </div>
+
   );
 };
 
