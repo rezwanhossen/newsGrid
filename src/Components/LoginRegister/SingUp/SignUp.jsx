@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import useAuth from "../../../Hook/useAuth/useAuth";
+import { Link } from "react-router-dom";
 
 const SignUp = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -29,7 +30,7 @@ const SignUp = () => {
   };
 
   return (
-    <div className="my-5 flex justify-center items-center">
+    <div className="mb-5 flex justify-center items-center mt-[120px]">
       <form
         required
         onSubmit={handleSignUp}
@@ -99,6 +100,9 @@ const SignUp = () => {
             )}
           </div>
         </div>
+        <div>
+            Already have an account ? <Link to="/login"className="text-blue-600 mb-2 underline">Login</Link>
+        </div>
 
         {/* Submit Button */}
         <input
@@ -107,6 +111,7 @@ const SignUp = () => {
           value="Sign Up"
         />
       </form>
+
     </div>
   );
 };

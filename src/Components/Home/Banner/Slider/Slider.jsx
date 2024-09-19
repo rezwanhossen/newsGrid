@@ -15,7 +15,7 @@ const Slider = () => {
         showArrows={true}
       >
         {/* First Slide */}
-        <div className="relative h-[489px]">
+        <div className="relative h-[350px] md:h-[489px]">
           <img
             src="https://images.news18.com/ibnlive/uploads/2024/08/india-vs-bangladesh-2024-08-005a1cd054a1cada0a20dac01368a108.jpg?impolicy=website&width=640&height=480"
             className="h-full object-cover"
@@ -35,7 +35,7 @@ const Slider = () => {
         </div>
 
         {/* Second Slide */}
-        <div className="relative h-[489px]">
+        <div className="relative h-[350px] md:h-[489px]">
           <img
             src="https://i.ibb.co/DRqjx8p/world.jpg"
             className="h-full object-cover"
@@ -56,7 +56,7 @@ const Slider = () => {
         </div>
 
         {/* Third Slide */}
-        <div className="relative h-[489px]">
+        <div className="relative h-[350px] md:h-[489px]">
           <img
             src="https://i.ibb.co/xGrgLCS/iran.jpg"
             className="h-full object-cover"
@@ -77,7 +77,7 @@ const Slider = () => {
         </div>
 
         {/* Fourth Slide */}
-        <div className="relative h-[489px]">
+        <div className="relative h-[350px] md:h-[489px]">
           <img
             src="https://i.ibb.co/rt2dLTs/metro-2.jpg"
             className="h-full object-cover"
