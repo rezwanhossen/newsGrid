@@ -50,7 +50,7 @@ const Sports = () => {
                 </div>
                 <div className='w-full lg:w-[55%] h-[410px]'>
                     
-                    <iframe width="100%" height="410" className="rounded-lg" src="https://www.youtube.com/embed/Tu2Wk_s1Zwk?si=4N7Mbth2GJ_yVQdw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="100%"className="rounded-lg" height="410" src="https://www.youtube.com/embed/uuyLH0QjGik?si=PKBHExYxjyGny7zG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
                 
 
