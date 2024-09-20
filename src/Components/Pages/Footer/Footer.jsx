@@ -18,7 +18,7 @@ const Footer = () => {
           </div>
 
           {/* Quick Links Section */}
-          <div>
+          <div className="col-span-2 lg:col-span-1">
             <h4 className="text-2xl font-semibold text-white mb-4">Quick Links</h4>
             <ul>
               {["Home", "Politics", "World", "Sports", "Entertainment", "Technology", "Health"].map((link, index) => (
@@ -32,7 +32,7 @@ const Footer = () => {
           </div>
 
           {/* Contact Section */}
-          <div>
+          <div className="col-span-2 lg:col-span-1">
             <h4 className="text-2xl font-semibold text-white mb-4">Contact Us</h4>
             <p className="text-gray-400 mb-2">Email: contact@newspaper.com</p>
             <p className="text-gray-400 mb-2">Phone: +123 456 789</p>
@@ -40,7 +40,7 @@ const Footer = () => {
           </div>
 
           {/* Newsletter Section */}
-          <div className="col-span-1">
+          <div className="col-span-2 lg:col-span-1">
             <h4 className="text-2xl font-semibold text-white mb-4">Subscribe</h4>
             <p className="text-gray-400 mb-4">
               Stay updated with the latest news and articles. Subscribe to our newsletter.

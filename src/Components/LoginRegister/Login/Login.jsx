@@ -6,6 +6,7 @@ import {
 } from "react-icons/ai";
 // import useAuth from './../useAuth/useAuth';
 import useAuth from "../../../Hook/useAuth/useAuth";
+import { Link } from "react-router-dom";
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
@@ -70,6 +71,9 @@ const Login = () => {
             )}
           </div>
         </div>
+        <div>
+        Are you new here ? <Link to="/signup"className="mb-2 text-blue-600 underline">Signup</Link>
+      </div>
 
         {/* Submit Button */}
         <button className="w-full bg-red-500 text-white py-3 rounded hover:bg-red-600 transition duration-300 mb-4">
@@ -85,6 +89,7 @@ const Login = () => {
           Login with Google
         </button>
       </form>
+      
     </div>
   );
 };

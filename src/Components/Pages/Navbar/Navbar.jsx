@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className="navbar lg:px-10 shadow-md shadow-emerald-500 fixed bg-base-100 border-2  top-0 z-20">
+    <div className="navbar px-3 lg:px-10 shadow-md shadow-emerald-500 fixed bg-base-100 border-2  top-0 z-20">
       <div className="navbar-start">
         <div>
           <button>
@@ -29,13 +29,9 @@ const Navbar = () => {
         <img className="h-16" src={logo} alt="logo" />
       </Link>
       <div className="navbar-end">
-        <Link to="/singup">
-          <button className="mr-4  bg-gray-800 text-white py-1 px-2 hover:bg-gray-950">
-            Register
-          </button>
-        </Link>
+        
         <Link to="/login">
-          <button className="font-medium text-black hover:bg-gray-950 hover:text-white py-1 px-2">
+          <button className="font-medium  bg-gray-800 text-white py-1 px-2 hover:bg-gray-950">
             Sign In
           </button>
         </Link>

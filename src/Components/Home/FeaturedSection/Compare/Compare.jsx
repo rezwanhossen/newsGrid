@@ -17,7 +17,7 @@ const Compare = () => {
         })
     })
     return (
-        <div>
+        <div className="mt-[110px] mb-12">
               
                 
               {
@@ -49,8 +49,12 @@ const Compare = () => {
             }
                 </div>
                 :
-                <div className='bg-blue-900 px-8 py-3 text-white text-center my-10'>
-                    <h1 className="text-2xl font-bold">No data found related this news</h1>
+                <div className= "px-8 py-3 text-center my-10">
+                    <h1 className="text-2xl font-bold mb-4">No data found related this news</h1>
+                    
+                    <div className="max-w-sm mx-auto rounded-xl">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgwfdPYGzbsKc3NPMtKVF-Jd7JLkVQU_OuGJIvPCqtH-G-Hw1joSiRdVBZKv9rMcfCFWiENy02Ba85I_CbKZjJDqcLBqE5OZRKyk78aN40Qq0qGiHREjpKGgcnxUilh3lZVi9i6cVxEWpz0/s1600/giphy.gif" alt="nai" />
+                    </div>
                 </div>
               }
               

@@ -13,23 +13,23 @@ const Sports = () => {
 
 
     return (
-        <div className="container mx-auto px-4 md:px-0  h-screen">
-            <div className='flex text-2xl font-bold font-serif justify-between mb-10 items-center'>
-                    <h1 className="text-4xl font-bold">Sports</h1>
-                    <h3 className="text-3xl   text-emerald-700">________________________________________</h3>
+        <div className="container mx-auto px-4 md:px-0 mb-16">
+            <div className=' font-serif  mb-10'>
+                    <h1 className="text-4xl font-bold text-center">Sports</h1>
+                    <p className='max-w-5xl mx-auto mt-2 text-center'>Sport covers a range of activities performed within a set of rules and undertaken as part of leisure or competition.Sporting activities involve physical activity carried out by teams.</p>
             </div>
 
 
-            <div className='flex gap-4'>
+            <div className='flex flex-col lg:flex-row gap-4'>
                 {/* left side content */}
                 
-                <div className='w-[45%] '>
+                <div className='w-full lg:w-[45%] '>
                         <div  className="space-y-3">
                         {
-                    sports?.map(sport => <div className="flex  border h-[200px]  p-3 gap-4 hover:bg-sky-900 hover:text-white hover:border-r-8 hover:border-r-cyan-600 rounded-lg">
+                    sports?.map(sport => <div className="flex flex-col lg:flex-row  border lg:h-[200px]  p-3 gap-4 hover:bg-sky-900 hover:text-white hover:border-r-8 hover:border-r-cyan-600 rounded-lg">
                         
-                        <div className="w-[350px] h-full">
-                            <img src={sport?.image} alt=""className="h-full rounded-lg" />
+                        <div className="w-full lg:w-[350px] h-full">
+                            <img src={sport?.image} alt="" className="h-full rounded-lg" />
                         </div>
                         <div className='space-y-2'>
                             <h1 className="text-xl font-semibold font-serif">{sport?.websitename}</h1>
@@ -48,7 +48,7 @@ const Sports = () => {
                 }
                         </div>
                 </div>
-                <div className='w-[55%] h-[410px]'>
+                <div className='w-full lg:w-[55%] h-[410px]'>
                     
                     <iframe width="100%" height="410" className="rounded-lg" src="https://www.youtube.com/embed/Tu2Wk_s1Zwk?si=4N7Mbth2GJ_yVQdw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>

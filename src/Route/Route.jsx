@@ -25,7 +25,7 @@ const router = createBrowserRouter([
         element : <Compare></Compare>
       },
       {
-        path: "/singup",
+        path: "/signup",
         element: <SignUp></SignUp>,
       },
       {
