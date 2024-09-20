@@ -50,16 +50,18 @@ import React, { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import logo from "../../../assets/logo-r.png";
 import { Link, NavLink } from "react-router-dom";
+import useAuth from "../../../Hook/useAuth/useAuth";
 const Navbar = () => {
   const [isDashboardOpen, setIsDashboardOpen] = useState(false);
 
   const toggleDashboard = () => {
     setIsDashboardOpen(!isDashboardOpen);
   };
+  const { user, logout } = useAuth();
 
   return (
     <div className=" ">
-      <nav className=" shadow-md p-4 navbar fixed bg-base-100 border-2  top-0 z-10">
+      <nav className=" shadow-md p-4  bg-base-100 border-2  top-0 z-10">
         <div className="container mx-auto flex items-center justify-between">
           <div className="flex items-center space-x-4">
             <button
@@ -82,12 +84,38 @@ const Navbar = () => {
 
           <div className="flex items-center space-x-4">
             <input type="checkbox" className="toggle" defaultChecked />
-            <Link
-              to="/login"
-              className="text-black border border-black px-4 py-2 rounded hover:bg-gray-100"
-            >
-              Login
-            </Link>
+            {user ? (
+              <div>
+                <div className="dropdown dropdown-end">
+                  <div tabIndex={0} role="button" className=" m-1">
+                    <img
+                      className=" w-12 h-12 rounded-full"
+                      src={user.photoURL}
+                      alt=""
+                    />
+                  </div>
+                  <ul
+                    tabIndex={0}
+                    className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
+                  >
+                    <li>
+                      <a>{user.displayName}</a>
+                    </li>
+
+                    <li>
+                      <button onClick={logout}>Logout</button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            ) : (
+              <Link
+                to="/login"
+                className="text-black border border-black px-4 py-2 rounded hover:bg-gray-100"
+              >
+                Login
+              </Link>
+            )}
           </div>
         </div>
       </nav>

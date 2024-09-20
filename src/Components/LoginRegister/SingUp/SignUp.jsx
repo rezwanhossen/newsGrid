@@ -1,23 +1,55 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import { useForm } from "react-hook-form";
+import axios from "axios";
+import toast from "react-hot-toast";
+import { AuthContext } from "../../Fairbase/AuthProvider";
 
 const SignUp = () => {
   const [showPassword, setShowPassword] = useState(false);
   const togglePasswordVisibility = () => setShowPassword(!showPassword);
-  const handleSignUp = (e) => {
-    e.preventDefault();
-    const name = e.target.name.value;
-    const email = e.target.email.value;
-    const photo = e.target.photo.value;
-    const password = e.target.password.value;
+  const { register, handleSubmit } = useForm();
 
-    console.log(name, email, photo, password);
+  const { creatuser, updatprofil } = useContext(AuthContext);
+
+  const onSubmit = async (data) => {
+    const { name, image, email, password } = data;
+
+    try {
+      const result = await creatuser(email, password);
+      const loguser = result.user;
+      console.log(loguser);
+
+      if (image && image[0]) {
+        const imgFile = new FormData();
+        imgFile.append("image", image[0]);
+
+        const imgResponse = await axios.post(
+          "https://api.imgbb.com/1/upload?key=3b6cd99e0e4ff78e7f4d30e6eeca326f",
+          imgFile,
+          {
+            headers: {
+              "Content-Type": "multipart/form-data",
+            },
+          }
+        );
+        const imageUrl = imgResponse.data.data.display_url;
+
+        await updatprofil(name, imageUrl);
+      } else {
+        await updatprofil(name, null);
+      }
+
+      toast.success("Sign up Successful!");
+    } catch (error) {
+      toast.error(error.message);
+    }
   };
 
   return (
-    <div className=" w-full md:w-[40%] mx-auto p-6 mt-[120px] rounded-lg my-10 bg-white shadow-lg">
-      <form required onSubmit={handleSignUp}>
+    <div className="w-full md:w-[40%] mx-auto p-6  rounded-lg my-10 bg-white shadow-lg">
+      <form onSubmit={handleSubmit(onSubmit)}>
         <h2 className="text-center text-2xl font-semibold mb-6">Sign Up</h2>
 
         {/* Name Input */}
@@ -26,12 +58,15 @@ const SignUp = () => {
             className="w-full border border-gray-300 py-3 px-4 rounded outline-none focus:border-red-500"
             placeholder="Type Your Name"
             type="text"
+            {...register("name")}
             name="name"
           />
         </div>
+
+        {/* Photo Input */}
         <div className="mb-4">
-          <label> Your photo : </label>
-          <input type="file" required name="photo" id="" />
+          <label> Your photo: </label>
+          <input type="file" {...register("image")} name="photo" />
         </div>
 
         {/* Email Input */}
@@ -41,6 +76,7 @@ const SignUp = () => {
             className="w-full border border-gray-300 py-3 px-4 rounded outline-none focus:border-red-500"
             placeholder="Type Your Email"
             type="email"
+            {...register("email")}
             name="email"
           />
         </div>
@@ -51,6 +87,7 @@ const SignUp = () => {
             required
             className="w-full border border-gray-300 py-3 px-4 rounded outline-none focus:border-red-500"
             placeholder="Your Password"
+            {...register("password")}
             type={showPassword ? "text" : "password"}
             name="password"
           />
@@ -73,8 +110,8 @@ const SignUp = () => {
           value="Sign Up"
         />
       </form>
-      <div className=" mt-4 text-center">
-        Already have an account ?{" "}
+      <div className="mt-4 text-center">
+        Already have an account?{" "}
         <Link to="/login" className="text-blue-600 mb-2 underline">
           Login
         </Link>

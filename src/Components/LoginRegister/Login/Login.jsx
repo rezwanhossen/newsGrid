@@ -1,15 +1,28 @@
 import { useState } from "react";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
-
+import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import Socalmedia from "../Socalmedia";
+import useAuth from "../../../Hook/useAuth/useAuth";
+import toast from "react-hot-toast";
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const togglePasswordVisibility = () => setShowPassword(!showPassword);
+  const { register, handleSubmit } = useForm();
+  const { login } = useAuth();
+  const onSubmit = async (data) => {
+    const { email, password } = data;
+    try {
+      await login(email, password);
+      toast.success(" Login successful !");
+    } catch {
+      toast.error(err.message);
+    }
+  };
 
   return (
-    <div className="w-full md:w-[40%] mx-auto p-6 mt-[120px] rounded-lg my-10 bg-white shadow-lg">
-      <form className="">
+    <div className="w-full md:w-[40%] mx-auto p-6 rounded-lg my-10 bg-white shadow-lg">
+      <form onSubmit={handleSubmit(onSubmit)}>
         <h2 className="text-center text-2xl font-semibold mb-6">Login</h2>
 
         {/* Email Input */}
@@ -19,6 +32,7 @@ const Login = () => {
             placeholder="Type Your Email"
             type="email"
             name="email"
+            {...register("email")}
           />
         </div>
 
@@ -27,6 +41,7 @@ const Login = () => {
           <input
             className="w-full border border-gray-300 py-3 px-4 rounded outline-none focus:border-red-500"
             placeholder="Your Password"
+            {...register("password")}
             type={showPassword ? "text" : "password"}
             name="password"
           />
