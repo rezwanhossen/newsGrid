@@ -21,8 +21,8 @@ const Sports = () => {
 
 
             <div className='flex flex-col lg:flex-row gap-4'>
-                {/* left side content */}
                 
+                    {/* content left side */}
                 <div className='w-full lg:w-[45%] '>
                         <div  className="space-y-3">
                         {
