@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Socalmedia from "../Socalmedia";
 import useAuth from "../../../Hook/useAuth/useAuth";
 import toast from "react-hot-toast";
@@ -10,10 +10,14 @@ const Login = () => {
   const togglePasswordVisibility = () => setShowPassword(!showPassword);
   const { register, handleSubmit } = useForm();
   const { login } = useAuth();
+  const naviget = useNavigate();
+  const location = useLocation();
+  const from = location?.state || "/";
   const onSubmit = async (data) => {
     const { email, password } = data;
     try {
       await login(email, password);
+      naviget(from);
       toast.success(" Login successful !");
     } catch {
       toast.error(err.message);
