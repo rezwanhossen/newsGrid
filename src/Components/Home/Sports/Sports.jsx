@@ -1,28 +1,31 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 
 const Sports = () => {
-        const [sports , setSports] = useState([])
-        useEffect(() => {
-                fetch('/newsData.json')
-                .then(res => res.json())
-                .then(data => {
-                    const filter = data.filter(news => news.category === 'Sports')
-                    setSports(filter)
-                })
-        } ,[])
+  const [sports, setSports] = useState([]);
+  useEffect(() => {
+    fetch("/newsData.json")
+      .then((res) => res.json())
+      .then((data) => {
+        const filter = data.filter((news) => news.category === "Sports");
+        setSports(filter);
+      });
+  }, []);
 
-
-    return (
-        <div className="container mx-auto px-4 md:px-0 mb-16">
-            <div className=' font-serif  mb-10'>
-                    <h1 className="text-4xl font-bold text-center">Sports</h1>
-                    <p className='max-w-5xl mx-auto mt-2 text-center'>Sport covers a range of activities performed within a set of rules and undertaken as part of leisure or competition.Sporting activities involve physical activity carried out by teams.</p>
-            </div>
+  return (
+    <div className="container mx-auto px-4 md:px-0 mb-16">
+      <div className=" font-serif  mb-10">
+        <h1 className="text-4xl font-bold text-center">Sports</h1>
+        <p className="max-w-5xl mx-auto mt-2 text-center">
+          Sport covers a range of activities performed within a set of rules and
+          undertaken as part of leisure or competition.Sporting activities
+          involve physical activity carried out by teams.
+        </p>
+      </div>
 
 
             <div className='flex flex-col lg:flex-row gap-4'>
+                {/* left side content */}
                 
-                    {/* content left side */}
                 <div className='w-full lg:w-[45%] '>
                         <div  className="space-y-3">
                         {
