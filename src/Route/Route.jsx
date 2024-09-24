@@ -25,6 +25,7 @@ const router = createBrowserRouter([
         element: <Compare></Compare>,
       },
       {
+        
         path: "/singup",
         element: <SignUp></SignUp>,
       },
@@ -36,7 +37,8 @@ const router = createBrowserRouter([
         path: '/news',
         element : <News></News>
       }
-    ],
-  },
-]);
+    
+    ]}
+  ])
+
 export default router;

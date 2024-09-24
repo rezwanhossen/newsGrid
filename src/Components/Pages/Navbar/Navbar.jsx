@@ -47,6 +47,7 @@
 
 // export default Navbar;
 import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import logo from "../../../assets/logo-r.png";
 import { Link, NavLink } from "react-router-dom";
@@ -85,7 +86,10 @@ const Navbar = () => {
 
   return (
     <div className="fixed top-0 left-0 z-20 w-full bg-white h-[88px]">
-      <nav className=" shadow-md shadow-emerald-700 p-4">
+      {/* <nav className=" shadow-md shadow-emerald-700 p-4"> */}
+  
+    <div className=" ">
+      <nav className=" shadow-md p-4  bg-base-100 border-2  top-0 z-10">
         <div className="container mx-auto flex items-center justify-between">
           <div className="flex items-center space-x-4">
             <button
@@ -129,6 +133,7 @@ const Navbar = () => {
       d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
   </svg>
 </label>
+            <input type="checkbox" className="toggle" defaultChecked />
             {user ? (
               <div>
                 <div className="dropdown dropdown-end">
@@ -167,9 +172,7 @@ const Navbar = () => {
 
       {/* Dashboard  */}
       <div
-        className={`shadow-lg bg-white max-w-[300px]  mt-2 transition-transform duration-300 ease-in-out transform ${
-          isDashboardOpen ? "translate-x-0" : "-translate-x-full"
-        }`}
+        className={`shadow-lg bg-white max-w-[300px]  mt-2 transition-transform duration-300 ease-in-out transform fixed top-0 left-0 h-full bg-white w-[250px] z-40 shadow-lg transition-transform duration-300 ease-in-out transform ${ isDashboardOpen ? 'translate-x-0' : '-translate-x-full' }`}
       >
         {/* Close Menu Icon */}
         <button onClick={toggleDashboard} className="text-black p-4">
@@ -184,6 +187,7 @@ const Navbar = () => {
           </li>
           <li className="flex justify-between items-center">
             <NavLink to="/news" className="border border-1 w-full px-3 py-1">News</NavLink>
+            <NavLink className="border border-1 w-full px-3 py-1">News</NavLink>
           </li>
           <li className="flex justify-between items-center">
             <NavLink className="border border-1 w-full px-3 py-1">
@@ -193,7 +197,9 @@ const Navbar = () => {
         </ul>
       </div>
     </div>
+    </div>
   );
 };
 
 export default Navbar;
+ 
