@@ -33,10 +33,11 @@ const Login = () => {
   };
 
   return (
+    
     <div className="w-full md:w-[40%] mx-auto p-6 rounded-lg my-10 bg-white shadow-lg">
       <form onSubmit={handleSubmit(onSubmit)}>
-    <div className="w-full md:w-[40%] mx-auto p-6 rounded-lg my-10 bg-white shadow-lg">
-      <form onSubmit={handleSubmit(onSubmit)}>
+    
+    
         <h2 className="text-center text-2xl font-semibold mb-6">Login</h2>
 
         {/* Email Input */}
@@ -78,7 +79,8 @@ const Login = () => {
           className=" w-full bg-red-500 text-white py-3 rounded hover:bg-red-600 transition duration-300 mb-4"
           value="Login"
         />
-      </form>
+      
+
       <p className=" text-center">
         if you arn't registed ! please <span> </span>
         <Link to="/singup" className=" text-rose-600">
@@ -91,6 +93,7 @@ const Login = () => {
           value="Login"
         />
       </form>
+      
       <p className=" text-center">
         if you arn't registed ! please <span> </span>
         <Link to="/singup" className=" text-rose-600">
