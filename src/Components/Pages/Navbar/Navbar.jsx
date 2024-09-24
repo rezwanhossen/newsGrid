@@ -69,11 +69,11 @@ const Navbar = () => {
       const localTheme = localStorage.getItem('theme');
       document.querySelector('html').setAttribute('data-theme', localTheme)
   } , [theme]);
-  console.log(theme)
+  
 
 
   const handleToggle = (e) => {
-    console.log(e.target.checked);
+    
       if(e.target.checked){
           setTheme('night')
       }
@@ -183,7 +183,7 @@ const Navbar = () => {
             </NavLink>
           </li>
           <li className="flex justify-between items-center">
-            <NavLink className="border border-1 w-full px-3 py-1">News</NavLink>
+            <NavLink to="/news" className="border border-1 w-full px-3 py-1">News</NavLink>
           </li>
           <li className="flex justify-between items-center">
             <NavLink className="border border-1 w-full px-3 py-1">

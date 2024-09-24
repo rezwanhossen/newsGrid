@@ -7,6 +7,7 @@ import Compare from "../Components/Home/FeaturedSection/Compare/Compare";
 import SignUp from "../Components/LoginRegister/SingUp/SignUp";
 import Login from "../Components/LoginRegister/Login/Login";
 import Erroe from "../Components/Pages/Error/Erroe";
+import News from "../Components/Pages/News/News";
 
 const router = createBrowserRouter([
   {
@@ -18,10 +19,7 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home />,
       },
-      {
-        path: "/compare/:keyword",
-        element: <Compare></Compare>,
-      },
+      
       {
         path: "/compare/:keyword",
         element: <Compare></Compare>,
@@ -34,6 +32,10 @@ const router = createBrowserRouter([
         path: "/login",
         element: <Login></Login>,
       },
+      {
+        path: '/news',
+        element : <News></News>
+      }
     ],
   },
 ]);
