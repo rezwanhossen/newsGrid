@@ -7,6 +7,8 @@ import Compare from "../Components/Home/FeaturedSection/Compare/Compare";
 import SignUp from "../Components/LoginRegister/SingUp/SignUp";
 import Login from "../Components/LoginRegister/Login/Login";
 import Erroe from "../Components/Pages/Error/Erroe";
+import Dashbord from "../Components/Layout/Dashbord";
+import AddNews from "../Components/DashbordPage/AddNews/AddNews";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +35,16 @@ const router = createBrowserRouter([
       {
         path: "/login",
         element: <Login></Login>,
+      },
+    ],
+  },
+  {
+    path: "dashbord",
+    element: <Dashbord></Dashbord>,
+    children: [
+      {
+        path: "addnews",
+        element: <AddNews></AddNews>,
       },
     ],
   },

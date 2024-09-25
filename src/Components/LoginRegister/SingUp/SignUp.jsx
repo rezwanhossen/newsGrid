@@ -1,12 +1,13 @@
 import { useContext, useState } from "react";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import toast from "react-hot-toast";
 import { AuthContext } from "../../Fairbase/AuthProvider";
 
 const SignUp = () => {
+  const naviget = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
   const togglePasswordVisibility = () => setShowPassword(!showPassword);
   const { register, handleSubmit } = useForm();
@@ -15,32 +16,22 @@ const SignUp = () => {
 
   const onSubmit = async (data) => {
     const { name, image, email, password } = data;
-
+    console.log(data);
+    const imgfile = { image: data.image[0] };
     try {
+      const { data } = await axios.post(
+        "https://api.imgbb.com/1/upload?key=087bee3d0e630a5c74abd26b0f4decb1",
+        imgfile,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      );
+      console.log(data.data.display_url);
       const result = await creatuser(email, password);
-      const loguser = result.user;
-      console.log(loguser);
-
-      if (image && image[0]) {
-        const imgFile = new FormData();
-        imgFile.append("image", image[0]);
-
-        const imgResponse = await axios.post(
-          "https://api.imgbb.com/1/upload?key=3b6cd99e0e4ff78e7f4d30e6eeca326f",
-          imgFile,
-          {
-            headers: {
-              "Content-Type": "multipart/form-data",
-            },
-          }
-        );
-        const imageUrl = imgResponse.data.data.display_url;
-
-        await updatprofil(name, imageUrl);
-      } else {
-        await updatprofil(name, null);
-      }
-
+      await updatprofil(name, data.data.display_url);
+      naviget("/");
       toast.success("Sign up Successful!");
     } catch (error) {
       toast.error(error.message);
@@ -66,7 +57,7 @@ const SignUp = () => {
         {/* Photo Input */}
         <div className="mb-4">
           <label> Your photo: </label>
-          <input type="file" {...register("image")} name="photo" />
+          <input type="file" {...register("image")} name="image" />
         </div>
 
         {/* Email Input */}
