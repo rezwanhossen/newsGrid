@@ -7,8 +7,12 @@ import Compare from "../Components/Home/FeaturedSection/Compare/Compare";
 import SignUp from "../Components/LoginRegister/SingUp/SignUp";
 import Login from "../Components/LoginRegister/Login/Login";
 import Erroe from "../Components/Pages/Error/Erroe";
+
+import News from "../Components/Pages/News/News";
+
 import Dashbord from "../Components/Layout/Dashbord";
 import AddNews from "../Components/DashbordPage/AddNews/AddNews";
+
 
 const router = createBrowserRouter([
   {
@@ -20,15 +24,13 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home />,
       },
+      
       {
         path: "/compare/:keyword",
         element: <Compare></Compare>,
       },
       {
-        path: "/compare/:keyword",
-        element: <Compare></Compare>,
-      },
-      {
+        
         path: "/singup",
         element: <SignUp></SignUp>,
       },
@@ -36,6 +38,16 @@ const router = createBrowserRouter([
         path: "/login",
         element: <Login></Login>,
       },
+
+      {
+        path: '/news',
+        element : <News></News>
+      }
+    
+    ]}
+  ])
+
+
     ],
   },
   {
@@ -49,4 +61,5 @@ const router = createBrowserRouter([
     ],
   },
 ]);
+
 export default router;

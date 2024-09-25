@@ -1,18 +1,26 @@
 import { useState } from "react";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import { useForm } from "react-hook-form";
+
+
+
 import { Link, useLocation, useNavigate } from "react-router-dom";
+
 import Socalmedia from "../Socalmedia";
 import useAuth from "../../../Hook/useAuth/useAuth";
 import toast from "react-hot-toast";
+
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const togglePasswordVisibility = () => setShowPassword(!showPassword);
   const { register, handleSubmit } = useForm();
   const { login } = useAuth();
+
+
   const naviget = useNavigate();
   const location = useLocation();
   const from = location?.state || "/";
+
   const onSubmit = async (data) => {
     const { email, password } = data;
     try {
@@ -25,8 +33,11 @@ const Login = () => {
   };
 
   return (
+    
     <div className="w-full md:w-[40%] mx-auto p-6 rounded-lg my-10 bg-white shadow-lg">
       <form onSubmit={handleSubmit(onSubmit)}>
+    
+    
         <h2 className="text-center text-2xl font-semibold mb-6">Login</h2>
 
         {/* Email Input */}
@@ -37,6 +48,7 @@ const Login = () => {
             type="email"
             name="email"
             {...register("email")}
+            {...register("email")}
           />
         </div>
 
@@ -45,6 +57,7 @@ const Login = () => {
           <input
             className="w-full border border-gray-300 py-3 px-4 rounded outline-none focus:border-red-500"
             placeholder="Your Password"
+            {...register("password")}
             {...register("password")}
             type={showPassword ? "text" : "password"}
             name="password"
@@ -67,6 +80,7 @@ const Login = () => {
           value="Login"
         />
       </form>
+      
       <p className=" text-center">
         if you arn't registed ! please <span> </span>
         <Link to="/singup" className=" text-rose-600">
@@ -76,6 +90,8 @@ const Login = () => {
 
       {/* OR Divider */}
       <div className="text-center my-4 text-gray-500">OR</div>
+      {/* OR Divider */}
+      
 
       {/* Google Login Button */}
       {/* <button className="w-full  text-black py-3 rounded flex justify-center items-center hover:bg-red-600 hover:text-white transition duration-300">
@@ -83,6 +99,7 @@ const Login = () => {
         Login with Google
       </button> */}
       <Socalmedia></Socalmedia>
+      
     </div>
   );
 };
