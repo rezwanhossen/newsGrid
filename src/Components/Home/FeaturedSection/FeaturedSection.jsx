@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import useAuth from "../../../Hook/useAuth/useAuth";
-
+import { FaBookmark } from "react-icons/fa";
 
 const FeaturedSection = () => {
-  const {user}= useAuth();
+  const { user } = useAuth();
   const [newsData, setNewsData] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [categories, setCategories] = useState([]);
-  
+
   useEffect(() => {
     // Fetch the JSON data
     fetch("/newsData.json")
@@ -87,7 +87,8 @@ const FeaturedSection = () => {
                   {newsItem.websitename}
                 </p>
 
-                <div className="space-x-4  absolute left-1/2 transform -translate-x-1/2 bottom-3">
+                <div className="flex items-center justify-between">
+                  <div className="space-x-4">
                   <a
                     href={newsItem.link}
                     target="_blank"
@@ -101,7 +102,11 @@ const FeaturedSection = () => {
                     className="text-orange-500 underline hover:text-orange-700 transition duration-300"
                   >
                     Compare
-                 </Link>                
+                  </Link>
+                  </div>
+                  <Link  className="hover:text-orange-700 transition duration-300">
+                    <FaBookmark />
+                  </Link>
                 </div>
               </div>
             ))
