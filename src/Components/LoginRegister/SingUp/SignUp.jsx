@@ -13,7 +13,7 @@ const SignUp = () => {
   const { register, handleSubmit } = useForm();
 
   const { creatuser, updatprofil } = useContext(AuthContext);
-
+  //VITE_IMGBB_key=087bee3d0e630a5c74abd26b0f4decb1
   const onSubmit = async (data) => {
     const { name, image, email, password } = data;
     console.log(data);
