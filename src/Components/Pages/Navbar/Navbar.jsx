@@ -151,6 +151,9 @@ const Navbar = () => {
                     <li>
                       <a>{user.displayName}</a>
                     </li>
+                    <li>
+                      <Link to="/dashbord/addnews">Dashbord</Link>
+                    </li>
 
                     <li>
                       <button onClick={logout}>Logout</button>
