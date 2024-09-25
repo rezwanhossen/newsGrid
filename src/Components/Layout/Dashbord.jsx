@@ -40,6 +40,9 @@ const Dashbord = () => {
           <li>
             <a href="/settings">My News</a>
           </li>
+          <li>
+            <a href="/settings">rating</a>
+          </li>
         </ul>
       </div>
     </div>
