@@ -1,22 +1,47 @@
-import { useQuery } from "@tanstack/react-query";
-import axios from "axios";
+
+
+
 import TwoColumnLayout from "./TwoColumnLayout/TwoColumnLayout";
 import { Parallax } from "react-parallax";
 import ThreeColumnLayout from "./ThreeColumnLayout/ThreeColumnLayout";
 import Carousel from "./Carousel/Carousel";
+import { useEffect, useState } from "react";
+
+
+
+
+
+
+
 
 
 
 
 const News = () => {
+    const [newsData, setNewsData] = useState([]);
+    const [country , setCountry] = useState('us')
+    const [category , setCategory] = useState('sports');
 
-    const {data : news = [] , isLoading} = useQuery({
-        queryKey : ['news'],
-        queryFn : async() => {
-                const res = await axios.get('/newsData.json')
-                return res.data;
-            }
-    })
+
+    const getNews = () => {
+        fetch(`https://newsapi.org/v2/top-headlines?country=us&apiKey=4eb7896db1c540fb9de9160b3d0dcf0f`)
+        .then(res => res.json())
+        .then(data => {
+            console.log(data?.articles)
+            setNewsData(data?.articles)
+        })
+    }
+    useEffect(() => {
+            getNews()
+    } , [])
+    
+    if(!newsData){
+        return <div className="h-screen">Loading ....</div>
+    }
+
+    
+
+
     
 
     return (
@@ -43,16 +68,39 @@ const News = () => {
 
             {/* news */}
             <div className="max-w-7xl mx-auto mt-4">
-                {/* two column layout */}
-                <TwoColumnLayout data={news?.slice(0 , 2)}></TwoColumnLayout>
-                <ThreeColumnLayout data={news?.slice(2 , 14)}></ThreeColumnLayout>
+                {/* two column layout  */}
+                 <TwoColumnLayout data={newsData?.slice(0 , 2)}></TwoColumnLayout>
+                <ThreeColumnLayout data={newsData?.slice(2 , 14)}></ThreeColumnLayout> 
             </div>
-            <Carousel data ={news}></Carousel>
+             <Carousel data ={newsData?.slice(14 , 20)}></Carousel>
 
+             
+             
+             {/* Pagination বাটন */}
+            {/* <div> */}
+                {/* <button
+                    onClick={() => setPage((prev) => Math.max(prev - 1, 1))}
+                    disabled={page === 1}
+                    className="btn"
+                >
+                    Previous Page
+                </button>
+
+                <button
+                    onClick={() => setPage((prev) => prev + 1)}
+                    disabled={news.length < itemsPerPage}
+                    className="btn"
+                >
+                    Next Page
+                </button> */}
+            {/* </div> */}
 
 
 
         </div>
+
+        
+
     );
 };
 

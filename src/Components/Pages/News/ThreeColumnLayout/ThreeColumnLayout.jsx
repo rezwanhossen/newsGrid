@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 const ThreeColumnLayout = ({data}) => {
@@ -11,7 +12,7 @@ const ThreeColumnLayout = ({data}) => {
       >
         <div className="h-[80px] w-[80px]">
           <img
-            src={news?.image}
+            src={news?.urlToImage}
             alt=""
             className="w-[80px] h-[80px]"
           />
@@ -22,6 +23,7 @@ const ThreeColumnLayout = ({data}) => {
           <h1 className="font-bold hover:text-zinc-500">
             {news?.title.slice(0, 77)}...
           </h1>
+          <Link to={news?.url} target='_blank' className="text-red-400 hover:underline  mt-3 font-semibold font-sans">Read More...</Link>
         </div>
       </div>
     );

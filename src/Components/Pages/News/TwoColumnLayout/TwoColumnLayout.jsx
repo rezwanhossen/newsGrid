@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 
 const TwoColumnLayout = ({data}) => {
@@ -15,12 +16,13 @@ const TwoColumnLayout = ({data}) => {
                                 
 
                                 
-                                <img src={news?.image} alt=""className="h-full" />
+                                <img src={news?.urlToImage} alt=""className="h-full" />
                             </div>
                             {/* content */}
                             <div className="font-sans">
                                 <h3 className="text-lg text-blue-700 bg-base-300 rounded font-semibold inline-block  px-2 mt-2">{news?.category}</h3>
                                 <h2 className="text-2xl font-bold hover:underline">{news?.title}</h2>
+                                <Link to={news?.url} target='_blank' className="text-red-400 hover:underline  mt-3 font-semibold font-sans">Read More...</Link>
                             </div>
                     </div>
                     

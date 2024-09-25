@@ -9,7 +9,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import Socalmedia from "../Socalmedia";
 import useAuth from "../../../Hook/useAuth/useAuth";
 import toast from "react-hot-toast";
-import toast from "react-hot-toast";
+
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const togglePasswordVisibility = () => setShowPassword(!showPassword);
@@ -79,19 +79,6 @@ const Login = () => {
           className=" w-full bg-red-500 text-white py-3 rounded hover:bg-red-600 transition duration-300 mb-4"
           value="Login"
         />
-      
-
-      <p className=" text-center">
-        if you arn't registed ! please <span> </span>
-        <Link to="/singup" className=" text-rose-600">
-          register
-        </Link>
-      </p>
-        <input
-          type="submit"
-          className=" w-full bg-red-500 text-white py-3 rounded hover:bg-red-600 transition duration-300 mb-4"
-          value="Login"
-        />
       </form>
       
       <p className=" text-center">
@@ -104,7 +91,7 @@ const Login = () => {
       {/* OR Divider */}
       <div className="text-center my-4 text-gray-500">OR</div>
       {/* OR Divider */}
-      <div className="text-center my-4 text-gray-500">OR</div>
+      
 
       {/* Google Login Button */}
       {/* <button className="w-full  text-black py-3 rounded flex justify-center items-center hover:bg-red-600 hover:text-white transition duration-300">
@@ -112,12 +99,7 @@ const Login = () => {
         Login with Google
       </button> */}
       <Socalmedia></Socalmedia>
-      {/* Google Login Button */}
-      {/* <button className="w-full  text-black py-3 rounded flex justify-center items-center hover:bg-red-600 hover:text-white transition duration-300">
-        <AiFillGoogleCircle size={24} className="mr-2" />
-        Login with Google
-      </button> */}
-      <Socalmedia></Socalmedia>
+      
     </div>
   );
 };
