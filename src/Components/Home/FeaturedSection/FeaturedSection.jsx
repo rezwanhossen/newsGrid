@@ -98,7 +98,7 @@ const FeaturedSection = () => {
                     className="text-orange-500 underline hover:text-orange-700 transition duration-300"
                   >
                     Compare
-                  </Link>
+                 </Link>                
                 </div>
               </div>
             ))
