@@ -12,7 +12,7 @@ import News from "../Components/Pages/News/News";
 
 import Dashbord from "../Components/Layout/Dashbord";
 import AddNews from "../Components/DashbordPage/AddNews/AddNews";
-
+import Alluser from "../Components/DashbordPage/AdminPage/AllUser/Alluser";
 
 const router = createBrowserRouter([
   {
@@ -24,13 +24,12 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home />,
       },
-      
+
       {
         path: "/compare/:keyword",
         element: <Compare></Compare>,
       },
       {
-        
         path: "/singup",
         element: <SignUp></SignUp>,
       },
@@ -40,16 +39,12 @@ const router = createBrowserRouter([
       },
 
       {
-        path: '/news',
-        element : <News></News>
-      }
-    
-    ]}
-  ])
-
-
+        path: "/news",
+        element: <News></News>,
+      },
     ],
   },
+
   {
     path: "dashbord",
     element: <Dashbord></Dashbord>,
@@ -57,6 +52,11 @@ const router = createBrowserRouter([
       {
         path: "addnews",
         element: <AddNews></AddNews>,
+      },
+      //admin route
+      {
+        path: "users",
+        element: <Alluser></Alluser>,
       },
     ],
   },
