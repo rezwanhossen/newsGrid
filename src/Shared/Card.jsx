@@ -1,13 +1,15 @@
 import React from 'react';
+import ReadMoreLink from './ReadMoreLink';
 
 const Card = ({news}) => {
     return (
         <div>
             <div className="h-[237px] relative">
-                <img src={news?.img} alt="" className='h-full object-cover w-full'/>
+                <img src={news?.urlToImage} alt="" className='h-full object-cover w-full'/>
 
-                <div className='absolute bottom-0 text-white bg-gradient-to-r from-[#151515] to-[rgba(21 , 21, 21 , 0)]'>
-                    <h3 className="text-lg font-bold">{news?.title}</h3>
+                <div className='absolute p-2 bottom-0 text-white bg-gradient-to-r from-[#151515] to-[rgba(21 , 21, 21 , 0)]'>
+                    <h3 className="text-lg font-bold">{news?.title.slice(0 , 45)}...</h3>
+                    <ReadMoreLink news={news}></ReadMoreLink>
                 </div>
             </div>
             

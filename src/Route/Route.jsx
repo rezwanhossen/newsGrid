@@ -44,22 +44,26 @@ const router = createBrowserRouter([
         element : <News></News>
       }
     
-    ]}
+    ],},
+
+
+
+    // dashboard
+    [
+      {
+        path: "dashbord",
+        element: <Dashbord></Dashbord>,
+        children: [
+          {
+            path: "addnews",
+            element: <AddNews></AddNews>,
+          },
+        ],
+      },
+    ]
   ])
 
 
-    ],
-  },
-  {
-    path: "dashbord",
-    element: <Dashbord></Dashbord>,
-    children: [
-      {
-        path: "addnews",
-        element: <AddNews></AddNews>,
-      },
-    ],
-  },
-]);
+   
 
 export default router;
