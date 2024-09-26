@@ -1,7 +1,6 @@
 import FeaturedSection from "./FeaturedSection/FeaturedSection";
 import Banner from "./Banner/Banner/Banner";
 import Sponsors from "./Sponsors/Sponsors";
-import Sports from "./Sports/Sports";
 import News from "../Pages/News/News";
 import Another from "./AnotherNews/Another";
 const Home = () => {
