@@ -1,12 +1,17 @@
 import FeaturedSection from "./FeaturedSection/FeaturedSection";
 import Banner from "./Banner/Banner/Banner";
 import Sponsors from "./Sponsors/Sponsors";
+
 import Another from "./AnotherNews/Another";
 import News from "../Pages/News/News";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Loading from "../Loading/Loading";
 import { useQuery } from "@tanstack/react-query";
+
+
+
+import Sports from "./Sports/Sports";
 
 
 const Home = () => {

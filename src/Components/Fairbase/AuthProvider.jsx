@@ -9,12 +9,17 @@ import {
 } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import { getAuth } from "firebase/auth";
+import useAxiosCommon from "../../Hook/useAxiosCommon";
 import app from "./firbase.config";
 import axios from "axios";
+
 export const AuthContext = createContext(null);
 const auth = getAuth(app);
 const googlepro = new GoogleAuthProvider();
+
 const AuthProvider = ({ children }) => {
+  const axiosCommon = useAxiosCommon();
+
   const [user, setUser] = useState(null);
   const [loding, setLoding] = useState(true);
 
@@ -61,23 +66,22 @@ const AuthProvider = ({ children }) => {
   useEffect(() => {
     const unsubscrib = onAuthStateChanged(auth, (curentuser) => {
       setUser(curentuser);
-      console.log(curentuser);
-      saveUser(curentuser);
+      //saveUser(curentuser);
 
-      // if (curentuser) {
-      //   // const userinfo = { email: user.email };
-      //   // axiosCommon.post("/jwt", userinfo).then((res) => {
-      //   //   if (res.data.token) {
-      //   //     localStorage.setItem("access-token", res.data.token);
-      //   //     setLoding(false);
-      //   //   }
-      //   // });
+      if (curentuser) {
+        const userinfo = { email: curentuser.email };
+        axiosCommon.post("/jwt", userinfo).then((res) => {
+          if (res.data.token) {
+            localStorage.setItem("access-token", res.data.token);
+            setLoding(false);
+          }
+        });
 
-      //   saveUser(curentuser);
-      // } else {
-      //   // localStorage.removeItem("access-token");
-      //   setLoding(false);
-      // }
+        saveUser(curentuser);
+      } else {
+        localStorage.removeItem("access-token");
+        setLoding(false);
+      }
     });
     return () => {
       return unsubscrib;
