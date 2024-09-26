@@ -3,9 +3,10 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import useNews from "../../../../hooks/useNews";
 import { Link } from "react-router-dom";
 
-const Slider = () => {
-  const [newsData] = useNews();
-  console.log(newsData);
+const Slider = ({newsData}) => {
+  
+  
+  
   return (
     <div className="rounded-lg">
     <div>

@@ -2,17 +2,17 @@ import React from 'react';
 import useNews from '../../../hooks/useNews';
 import ReadMoreLink from '../../../Shared/ReadMoreLink';
 
-const RightSide = () => {
-    const [newsData] = useNews();
+const RightSide = ({newsData}) => {
+    
 
     return (
         <>
             {/* right side */}
             <div>
                 {
-                    newsData?.slice(56 , 95).map(news => {
+                    newsData?.slice(45).map(news => {
                         return(
-                            <div className="py-4  border-t border-b border-dashed border-gray-500">
+                            <div className="py-4  border-t border-b border-dashed border-gray-500 mx-4 lg:mx-0">
                                 <div className="flex  font-sans">
                                     
                                     <div className="px-3">

@@ -18,29 +18,20 @@ import useNews from "../../../hooks/useNews";
 
 
 
-const News = () => {
-    const [newsData] = useNews();
-    console.log(newsData);
-    
-    if(!newsData){
-        return <div className="h-screen">Loading ....</div>
-    }
-
+const News = ({newsData}) => {
     
 
 
-    
 
     return (
         <div>
-            {/* news banner */}
-            {/* <SimpleParallax scale={1.7}> */}
+            
+            
+                
+                    
 
 
-            
-                                 
-                                
-            
+
 
 
             {/* news */}
