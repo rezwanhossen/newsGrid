@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import useAuth from "../../../Hook/useAuth/useAuth";
 import { FaBookmark } from "react-icons/fa";
+import toast from "react-hot-toast";
+import Swal from "sweetalert2";
 
 const FeaturedSection = () => {
   const { user } = useAuth();
@@ -9,6 +11,39 @@ const FeaturedSection = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [categories, setCategories] = useState([]);
 
+  const handleBookmark = (newsItem) => {
+    const image = newsItem.img;
+    const title = newsItem.title;
+    const email = user?.email;
+
+    const listOfBookmark = {
+      image,
+      title,
+      email,
+    };
+
+    fetch("http://localhost:5000/bookmarks", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(listOfBookmark),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.insertedId && user) {
+          Swal.fire({
+            title: "Success!",
+            text: "News Successfully Added to Bookmark",
+            icon: "success",
+            confirmButtonText: "Ok",
+          });
+        } else {
+          return toast.error("You Can't Add Data Before SignIn");
+        }
+        
+      });
+  };
   useEffect(() => {
     // Fetch the JSON data
     fetch("/newsData.json")
@@ -89,22 +124,25 @@ const FeaturedSection = () => {
 
                 <div className="flex items-center justify-between">
                   <div className="space-x-4">
-                  <a
-                    href={newsItem.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-orange-500 underline hover:text-orange-700 transition duration-300"
-                  >
-                    Read more
-                  </a>
-                  <Link
-                    to={`/compare/${newsItem?.keyword}`}
-                    className="text-orange-500 underline hover:text-orange-700 transition duration-300"
-                  >
-                    Compare
-                  </Link>
+                    <a
+                      href={newsItem.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-orange-500 underline hover:text-orange-700 transition duration-300"
+                    >
+                      Read more
+                    </a>
+                    <Link
+                      to={`/compare/${newsItem?.keyword}`}
+                      className="text-orange-500 underline hover:text-orange-700 transition duration-300"
+                    >
+                      Compare
+                    </Link>
                   </div>
-                  <Link  className="hover:text-orange-700 transition duration-300">
+                  <Link
+                    onClick={() => handleBookmark(newsItem)}
+                    className="hover:text-orange-700 transition duration-300"
+                  >
                     <FaBookmark />
                   </Link>
                 </div>

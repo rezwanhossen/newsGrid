@@ -1,14 +1,14 @@
 import { createBrowserRouter } from "react-router-dom";
 import Root from "../Components/Layout/Root";
 import Home from "../Components/Home/Home";
-
 import Compare from "../Components/Home/FeaturedSection/Compare/Compare";
-
 import SignUp from "../Components/LoginRegister/SingUp/SignUp";
 import Login from "../Components/LoginRegister/Login/Login";
 import Erroe from "../Components/Pages/Error/Erroe";
 import Dashbord from "../Components/Layout/Dashbord";
 import AddNews from "../Components/DashbordPage/AddNews/AddNews";
+import Bookmark from "../Components/Bookmark/Bookmark";
+
 
 const router = createBrowserRouter([
   {
@@ -46,6 +46,11 @@ const router = createBrowserRouter([
         path: "addnews",
         element: <AddNews></AddNews>,
       },
+      {
+        path: "bookmark",
+        element: <Bookmark></Bookmark>
+      }
+     
     ],
   },
 ]);

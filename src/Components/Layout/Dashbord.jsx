@@ -35,6 +35,9 @@ const Dashbord = () => {
             <a href="/">User Home</a>
           </li>
           <li>
+            <a href="/bookmark">My Bookmarks</a>
+          </li>
+          <li>
             <a href="/profile">Add News</a>
           </li>
           <li>
