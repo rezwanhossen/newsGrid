@@ -10,6 +10,7 @@ import {
 import { createContext, useEffect, useState } from "react";
 import { getAuth } from "firebase/auth";
 import app from "./firbase.config";
+import axios from "axios";
 export const AuthContext = createContext(null);
 const auth = getAuth(app);
 const googlepro = new GoogleAuthProvider();
@@ -47,12 +48,36 @@ const AuthProvider = ({ children }) => {
     setUser(null);
     return signOut(auth);
   };
+  //save user
 
+  const saveUser = async (user) => {
+    const cuser = {
+      name: user?.displayName,
+      email: user?.email,
+    };
+    const { data } = await axios.post(`http://localhost:5000/users`, cuser);
+    return data;
+  };
   useEffect(() => {
     const unsubscrib = onAuthStateChanged(auth, (curentuser) => {
       setUser(curentuser);
       console.log(curentuser);
-      setLoding(false);
+      saveUser(curentuser);
+
+      // if (curentuser) {
+      //   // const userinfo = { email: user.email };
+      //   // axiosCommon.post("/jwt", userinfo).then((res) => {
+      //   //   if (res.data.token) {
+      //   //     localStorage.setItem("access-token", res.data.token);
+      //   //     setLoding(false);
+      //   //   }
+      //   // });
+
+      //   saveUser(curentuser);
+      // } else {
+      //   // localStorage.removeItem("access-token");
+      //   setLoding(false);
+      // }
     });
     return () => {
       return unsubscrib;
