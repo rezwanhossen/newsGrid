@@ -19,10 +19,10 @@ const ThreeColumnLayout = ({data}) => {
         </div>
         {/* content */}
         <div className="w-[330px] font-sans">
-          <h1>hello</h1>
+          
           <h3 className="text-blue-600 font-semibold">{news?.category}</h3>
           <h1 className="font-bold hover:text-zinc-500">
-            {news?.title.slice(0, 77)}...
+            {news?.title.slice(0, 70)}...
           </h1>
           <Link to={news?.url} target='_blank' className="text-red-400 hover:underline  mt-3 font-semibold font-sans">Read More...</Link>
         </div>

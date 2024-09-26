@@ -2,13 +2,15 @@ import FeaturedSection from "./FeaturedSection/FeaturedSection";
 import Banner from "./Banner/Banner/Banner";
 import Sponsors from "./Sponsors/Sponsors";
 import Sports from "./Sports/Sports";
+import Another from "./AnotherNews/Another";
 const Home = () => {
   return (
     <div>
       <Banner />
       <FeaturedSection></FeaturedSection>
       <Sponsors></Sponsors>
-      <Sports></Sports>
+      <Another></Another>
+      {/* <Sports></Sports> */}
     </div>
   );
 };
