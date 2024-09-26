@@ -46,6 +46,7 @@ const SignUp = () => {
         {/* Name Input */}
         <div className="mb-4">
           <input
+            required
             className="w-full border border-gray-300 py-3 px-4 rounded outline-none focus:border-red-500"
             placeholder="Type Your Name"
             type="text"
@@ -57,7 +58,7 @@ const SignUp = () => {
         {/* Photo Input */}
         <div className="mb-4">
           <label> Your photo: </label>
-          <input type="file" {...register("image")} name="image" />
+          <input required type="file" {...register("image")} name="image" />
         </div>
 
         {/* Email Input */}

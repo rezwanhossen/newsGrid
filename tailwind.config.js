@@ -14,5 +14,5 @@ export default {
     extend: {},
   },
   plugins: [require("daisyui")],
-  daisyui: { themes: ["light"] },
+  daisyui: { themes: ["light" , "night"] },
 };
