@@ -7,9 +7,9 @@ const Slider = () => {
   const [newsData] = useNews();
   console.log(newsData);
   return (
+    <div className="rounded-lg">
     <div>
-    <div>
-      <Carousel
+      <Carousel className="rounded-lg"
         showThumbs={false}
         infiniteLoop={true}
         autoPlay={true}
@@ -26,14 +26,14 @@ const Slider = () => {
               
             return (
             
-        <div className="relative h-[350px] md:h-[489px]"key={idx}>
+        <div className="relative h-[350px] md:h-[489px] rounded-lg"key={idx}>
         <img
           src={news?.urlToImage}
-          className="h-full object-cover"
+          className="h-full object-cover rounded-lg"
           alt="Bangladesh vs India"
         />
         {/* Content */}
-        <div className="absolute bg-black opacity-75 px-4 pt-5 w-full bottom-0 pb-10">
+        <div className="absolute bg-black opacity-75 px-4 pt-5 w-full rounded-lg bottom-0 pb-10">
           <div className="text-white">
             <h1 className="text-xl font-semibold">{news?.title.slice(0 , 100)}...</h1>
             
