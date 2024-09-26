@@ -6,16 +6,14 @@ import toast from "react-hot-toast";
 import Swal from "sweetalert2";
 
 const FeaturedSection = () => {
-  const { user } = useAuth();
+  const { user, loding } = useAuth();
   const [newsData, setNewsData] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [categories, setCategories] = useState([]);
-
   const handleBookmark = (newsItem) => {
-    const image = newsItem.img;
+    const image = newsItem.image;
     const title = newsItem.title;
     const email = user?.email;
-
     const listOfBookmark = {
       image,
       title,
@@ -31,6 +29,7 @@ const FeaturedSection = () => {
     })
       .then((res) => res.json())
       .then((data) => {
+       
         if (data.insertedId && user) {
           Swal.fire({
             title: "Success!",
@@ -41,9 +40,10 @@ const FeaturedSection = () => {
         } else {
           return toast.error("You Can't Add Data Before SignIn");
         }
-        
+        loding(true)
       });
   };
+
   useEffect(() => {
     // Fetch the JSON data
     fetch("/newsData.json")

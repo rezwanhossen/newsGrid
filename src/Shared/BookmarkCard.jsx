@@ -3,10 +3,13 @@
 import { useState } from "react";
 import { MdDeleteForever } from "react-icons/md";
 import Swal from "sweetalert2";
+import useAuth from "../Hook/useAuth/useAuth";
+import { Link } from "react-router-dom";
 
 const BookmarkCard = ({ bookmark }) => {
-    const [myBookmarks, setMyBookmarks] = useState(null);
-  const { image, title, _id } = bookmark;
+  const [myBookmarks, setMyBookmarks] = useState(null);
+  const { image, title } = bookmark;
+  const { loding } = useAuth();
 
   const handleDelete = (_id) => {
     Swal.fire({
@@ -18,6 +21,7 @@ const BookmarkCard = ({ bookmark }) => {
       cancelButtonColor: "#d33",
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
+      loding(true);
       if (result.isConfirmed)
         fetch(`http://localhost:5000/bookmarks/${_id}`, {
           method: "DELETE",
@@ -32,24 +36,24 @@ const BookmarkCard = ({ bookmark }) => {
                 icon: "success",
               });
             }
-            const remaining = myBookmarks.filter((myBookmark) =>
-                 myBookmark._id !== _id);
+            const remaining = myBookmarks.filter(
+              (myBookmark) => myBookmark._id !== _id
+            );
             setMyBookmarks(remaining);
           });
-        })
-        };     
+    });
+  };
   return (
     <div>
       <div className="card glass">
-        <figure>    
-              <img
-                src={image}
-                className="object-cover object-center w-full rounded-t-md h-72 dark:bg-gray-500"
-              />
-        </figure>
+        <img
+          src={image}
+          className="object-cover object-center w-full rounded-t-md dark:bg-gray-500"
+        />
+
         <div className="card-body">
           <h2 className="text-xl font-semibold">{title}</h2>
-          
+
           <div className="card-actions justify-between mt-4">
             <button
               onClick={() => handleDelete(bookmark._id)}
@@ -57,6 +61,11 @@ const BookmarkCard = ({ bookmark }) => {
             >
               <MdDeleteForever />
             </button>
+            <Link
+              className="text-orange-500 underline hover:text-orange-700 transition duration-300"
+            >
+              Read more
+            </Link>
           </div>
         </div>
       </div>

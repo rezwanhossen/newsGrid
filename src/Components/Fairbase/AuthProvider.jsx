@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import {
   createUserWithEmailAndPassword,
   onAuthStateChanged,
@@ -90,7 +91,7 @@ const AuthProvider = ({ children }) => {
     updatprofil,
     login,
     googlelogin,
-    logout,
+    logout
   };
   return (
     <AuthContext.Provider value={authinfo}>{children}</AuthContext.Provider>
