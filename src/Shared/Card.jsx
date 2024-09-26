@@ -1,5 +1,7 @@
+
 import React from 'react';
 import ReadMoreLink from './ReadMoreLink';
+
 
 const Card = ({news}) => {
     return (
@@ -11,6 +13,7 @@ const Card = ({news}) => {
                     <h3 className="text-lg font-bold">{news?.title.slice(0 , 45)}...</h3>
                     <ReadMoreLink news={news}></ReadMoreLink>
                 </div>
+                
             </div>
             
 

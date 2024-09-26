@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import {
   createUserWithEmailAndPassword,
   onAuthStateChanged,
@@ -66,7 +67,8 @@ const AuthProvider = ({ children }) => {
   useEffect(() => {
     const unsubscrib = onAuthStateChanged(auth, (curentuser) => {
       setUser(curentuser);
-      //saveUser(curentuser);
+
+
 
       if (curentuser) {
         const userinfo = { email: curentuser.email };
@@ -95,7 +97,7 @@ const AuthProvider = ({ children }) => {
     updatprofil,
     login,
     googlelogin,
-    logout,
+    logout
   };
   return (
     <AuthContext.Provider value={authinfo}>{children}</AuthContext.Provider>

@@ -194,6 +194,13 @@ const Navbar = () => {
               Sport
             </NavLink>
           </li>
+           {user && (
+            <li className="flex justify-between items-center">
+            <NavLink className="border border-1 w-full px-3 py-1" to="/bookmark">
+              My Bookmarks
+            </NavLink>
+          </li>
+           )}
         </ul>
       </div>
     </div>

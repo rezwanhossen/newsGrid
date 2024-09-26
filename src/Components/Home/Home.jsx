@@ -58,6 +58,11 @@ const Home = () => {
     }
   return (
     <div>
+
+
+      <Banner />
+      <FeaturedSection></FeaturedSection>
+
       <div className="bg-sky-800 py-4 mt-2 fixed top-20 z-[19] w-full">
           <ul className="flex flex-wrap gap-4 items-center justify-center text-lg font-bold text-white font-sans">
           
@@ -77,6 +82,7 @@ const Home = () => {
       <div className="mt-[210px] lg:mt-[170px] mb-[100px]">
       <Banner newsData={newsData}/>
       <News newsData={newsData}></News>
+
       <Sponsors></Sponsors>
       <Another newsData={newsData}></Another>
       </div>

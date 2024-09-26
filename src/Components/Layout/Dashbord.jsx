@@ -33,6 +33,7 @@ const Dashbord = () => {
         ></label>
 
         <ul className="menu bg-base-200 text-base-content min-h-full w-64 p-4">
+
           {isAdmin ? (
             <>
               <li>
@@ -47,17 +48,24 @@ const Dashbord = () => {
             </>
           ) : (
             <>
-              <li>
-                <a href="/">User Home</a>
-              </li>
-              <li>
-                <NavLink to="/dashboed/addnews">Add News</NavLink>
-              </li>
-              <li>
-                <a href="/settings">My News</a>
-              </li>
+               <li>
+            <a href="/">User Home</a>
+          </li>
+          <li>
+            <a href="bookmark">My Bookmarks</a>
+          </li>
+          <li>
+            <a href="/profile">Add News</a>
+          </li>
+          <li>
+            <a href="/settings">My News</a>
+          </li>
+          <li>
+            <a href="/settings">rating</a>
+          </li>
             </>
           )}
+
         </ul>
       </div>
     </div>
