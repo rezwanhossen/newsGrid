@@ -6,6 +6,7 @@ const LeftSide = () => {
     const [newsData] = useNews();
     return (
         <>
+        {/* left side */}
             <div>
                     {
                         newsData?.slice(29 , 60).map(news => {
