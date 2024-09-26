@@ -3,6 +3,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Link } from "react-router-dom";
+import { Parallax } from "react-parallax";
+import ReadMoreLink from "../../../../Shared/ReadMoreLink";
 
 const Carousel = ({data}) => {
 
@@ -22,27 +24,26 @@ const Carousel = ({data}) => {
     return (
         <>
         
-            <div className="bg-cyan-900 text-white flex flex-col justify-center h-[450px] w-[100%]  px-10 mb-10">
-
-                <div className="mb-6">
-                    <h1 className="text-2xl font-sans text-white border-t-4 border-red-50 py-4 border-b-4 text-center">More News</h1>
-                </div>
+            
+            <Parallax bgImage={"https://static.vecteezy.com/system/resources/previews/033/212/422/non_2x/modern-television-studio-for-world-breaking-news-with-equipment-for-leading-reporters-and-announcers-free-photo.jpg"} strength={500} className="h-[600px] flex flex-col justify-center">
+      <div className="h-full  w-[100%]  px-10 mb-10">
+        
+        
             <div className="slider-container">
         <Slider {...settings}>
             {
                     data?.map((news , index) => {
                         return (
-                            <div className="px-2">
+                            <div className=" p-4 bg-black h-[282px]">
                                 <div className="h-[170px] w-full">
                                     <img src={news?.urlToImage} alt=""className="h-full w-full object-cover" />
                                 </div>
                                 {/* content */}
-                                <div className="mt-2">
+                                <div className="mt-2 text-white">
                                     
-                                    <h1 className="font-semibold font-sans hover:text-red-300">{news?.title.slice(0 , 70)}</h1>
+                                    <h1 className="font-semibold font-sans ">{news?.title.slice(0 , 50)}</h1>
 
-                                    <Link
-                                     to={news?.url} target='_blank' className="text-red-400 hover:underline  mt-3 font-semibold font-sans">Read More...</Link>
+                                    <ReadMoreLink></ReadMoreLink>
                                 </div>
                             </div>
                         )
@@ -50,7 +51,12 @@ const Carousel = ({data}) => {
             }
         </Slider>
       </div>
-            </div>
+         
+      </div>
+    </Parallax>
+
+            
+            
         
         </>
     );
