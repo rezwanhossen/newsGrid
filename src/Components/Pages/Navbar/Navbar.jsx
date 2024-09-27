@@ -85,11 +85,11 @@ const Navbar = () => {
 
 
   return (
-    <div className="fixed top-0 left-0 z-20 w-full bg-white h-[88px]">
+    <div className="fixed top-0 left-0 z-20 w-full bg-slate-400 h-[88px] ">
       {/* <nav className=" shadow-md shadow-emerald-700 p-4"> */}
   
     <div className=" ">
-      <nav className=" shadow-md p-4  bg-base-100 border-2  top-0 z-10">
+      <nav className=" shadow-md p-4  bg-slate-400   top-0 z-10">
         <div className="container mx-auto flex items-center justify-between">
           <div className="flex items-center space-x-4">
             <button
@@ -175,23 +175,20 @@ const Navbar = () => {
 
       {/* Dashboard  */}
       <div
-        className={`shadow-lg bg-white max-w-[300px]  mt-2 transition-transform duration-300 ease-in-out transform fixed top-0 left-0 h-full bg-white w-[250px] z-40 shadow-lg transition-transform duration-300 ease-in-out transform ${ isDashboardOpen ? 'translate-x-0' : '-translate-x-full' }`}
+        className={`shadow-lg z-50 bg-white max-w-[300px]  transition-transform duration-300 ease-in-out transform fixed top-0 left-0 h-full bg-white w-[250px]  shadow-lg transition-transform duration-300 ease-in-out transform ${ isDashboardOpen ? 'translate-x-0' : '-translate-x-full' }`}
       >
         {/* Close Menu Icon */}
         <button onClick={toggleDashboard} className="text-black p-4">
           <FiX className="w-6 h-6" />
         </button>
 
-        <ul className="p-4 space-y-4  max-w-[300px]">
+        <ul className="p-4 space-y-4  max-w-[300px] z-auto">
           <li className="flex justify-between items-center">
             <NavLink className="border border-1 w-full px-3 py-1" to="/">
               Home
             </NavLink>
           </li>
-          <li className="flex justify-between items-center">
-            <NavLink to="/news" className="border border-1 w-full px-3 py-1">News</NavLink>
-            
-          </li>
+          
           <li className="flex justify-between items-center">
             <NavLink className="border border-1 w-full px-3 py-1">
               Sport
