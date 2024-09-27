@@ -49,6 +49,9 @@ const Dashbord = () => {
                 <NavLink to="/dashbord/userHome">User Home</NavLink>
               </li>
               <li>
+                <NavLink to="/dashbord/userProfile">User Profile</NavLink>
+              </li>
+              <li>
                 <a href="bookmark">My Bookmarks</a>
               </li>
               <li>
