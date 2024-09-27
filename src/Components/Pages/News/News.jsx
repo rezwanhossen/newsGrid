@@ -19,8 +19,10 @@ import useNews from "../../../hooks/useNews";
 
 
 const News = () => {
-    const [newsData] = useNews();
-    console.log(newsData);
+    const [country , setCountry] = useState('us');
+    const [category , setCategory] = useState('business');
+    const [newsData] = useNews(country , category);
+    
     
     if(!newsData){
         return <div className="h-screen">Loading ....</div>
@@ -29,18 +31,72 @@ const News = () => {
     
 
 
+
+        const handleCategoryChange= (e) => {
+                console.log(e.target.value);
+                setCategory(e.target.value);
+        }
+        const handleCountryChange = (e) => {
+            console.log(e.target.value);
+            setCountry(e.target.value);
+        }
     
+
+
 
     return (
         <div>
-            {/* news banner */}
-            {/* <SimpleParallax scale={1.7}> */}
+            {/* category */}
+            
+                <div className="flex justify-between max-w-7xl mx-auto">
+                    <div>
+                        <h1 className="text-xl font-bold">Real Time NEWS</h1>
+                    </div>
+                        {/* category */}
+                        <div>
+                        {/* value={selectedOption} */}
+                        <label htmlFor="options">Category</label>
+                        
+                        
+                            <select id="options"  onChange={handleCategoryChange}>
+                            
+                            <option value="business">Business</option>
+                            <option value="entertainment">Entertainment</option>
+                            <option value="sports">Sports</option>
+                            <option value="general">General</option>
+                            <option value="technology">Technology</option>
+                            <option value="health">Health</option>
+                            <option value="science">Science</option>
+                        </select>
+                        </div>
+                        {/* Country */}
+                        <div>
+                        {/* value={selectedOption} */}
+                        <label htmlFor="options">Country</label>
+                            <select id="options"onChange={handleCountryChange}>
 
+                            <option value="us">United State Of America</option>
+                            <option value="bd">Bangladesh</option>
+                            <option value="au">Australia</option>
+                            <option value="in">India</option>
+                            <option value="de">Germany</option>
+                            <option value="fr">France</option>
+                            <option value="jp">Japan</option>
+                            <option value="cn">China</option>
+                            <option value="it">Italy</option>
+                            
+                        </select>
+                        </div>
+
+                </div>
 
             
                                  
                                 
             
+
+
+
 
 
             {/* news */}

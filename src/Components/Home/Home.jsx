@@ -1,14 +1,18 @@
 import FeaturedSection from "./FeaturedSection/FeaturedSection";
 import Banner from "./Banner/Banner/Banner";
 import Sponsors from "./Sponsors/Sponsors";
-import Sports from "./Sports/Sports";
+import Another from "./AnotherNews/Another";
+import News from "../Pages/News/News";
+
 const Home = () => {
   return (
     <div>
+      
       <Banner />
-      <FeaturedSection></FeaturedSection>
+      <News></News>
       <Sponsors></Sponsors>
       <Another></Another>
+      {/* <FeaturedSection></FeaturedSection> */}
       {/* <Sports></Sports> */}
     </div>
   );

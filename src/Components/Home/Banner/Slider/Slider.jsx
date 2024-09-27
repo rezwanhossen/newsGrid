@@ -4,8 +4,9 @@ import useNews from "../../../../hooks/useNews";
 import { Link } from "react-router-dom";
 
 const Slider = () => {
+  
   const [newsData] = useNews();
-  console.log(newsData);
+  console.log(newsData);      
   return (
     <div className="rounded-lg">
     <div>
