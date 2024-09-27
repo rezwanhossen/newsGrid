@@ -8,17 +8,17 @@ const ThreeColumnLayout = ({data}) => {
   {data?.map((news, index) => {
     return (
       <div
-        className={`flex flex-col lg:flex-row gap-3`}
+        className={`flex flex-row items-center gap-3 mx-4 lg:mx-0`}
       >
-        <div className="h-[80px] w-[80px]">
+        <div className="w-[150px] lg:w-[80px] h-[70px] lg:h-[80px]">
           <img
             src={news?.urlToImage}
             alt=""
-            className="w-[80px] h-[80px]"
+            className="w-[150px] lg:w-[80px] h-[70px]  lg:h-[80px] object-cover"
           />
         </div>
         {/* content */}
-        <div className="w-[330px] font-sans">
+        <div className="lg:w-[330px] font-sans">
           
           <h3 className="text-blue-600 font-semibold">{news?.category}</h3>
           <h1 className="font-bold hover:text-zinc-500">

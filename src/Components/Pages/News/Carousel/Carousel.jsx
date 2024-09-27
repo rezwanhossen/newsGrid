@@ -12,7 +12,34 @@ const Carousel = ({data}) => {
         className: "center",
         infinite: true,
         centerPadding: "60px",
-        slidesToShow: 4,
+        slidesToShow : 4,
+        
+        responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 4,
+                slidesToScroll: 3,
+                infinite: true,
+                dots: true
+              }
+            },
+            {
+              breakpoint: 800,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                initialSlide: 2
+              }
+            },
+            {
+              breakpoint: 450,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+          ],
         swipeToSlide: true,
         afterChange: function(index) {
           console.log(
@@ -25,7 +52,7 @@ const Carousel = ({data}) => {
         <>
         
             
-            <Parallax bgImage={"https://static.vecteezy.com/system/resources/previews/033/212/422/non_2x/modern-television-studio-for-world-breaking-news-with-equipment-for-leading-reporters-and-announcers-free-photo.jpg"} strength={500} className="h-[600px] flex flex-col justify-center">
+            <Parallax bgImage={"https://static.vecteezy.com/system/resources/previews/033/212/422/non_2x/modern-television-studio-for-world-breaking-news-with-equipment-for-leading-reporters-and-announcers-free-photo.jpg"} strength={500} className="h-[400px] lg:h-[600px] flex flex-col justify-center">
       <div className="h-full  w-[100%]  px-10 mb-10">
         
         
