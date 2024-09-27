@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FaBookmark, FaShareAlt } from "react-icons/fa";
-import { FacebookShareButton, TwitterShareButton, LinkedinShareButton } from "react-share";
+import {
+  FacebookShareButton,
+  TwitterShareButton,
+  LinkedinShareButton,
+} from "react-share";
 import { FacebookIcon, TwitterIcon, LinkedinIcon } from "react-share";
 import Swal from "sweetalert2";
 import toast from "react-hot-toast";
@@ -45,7 +49,9 @@ const FeaturedSection = () => {
       .then((response) => response.json())
       .then((data) => {
         setNewsData(data);
-        const uniqueCategories = [...new Set(data.map((item) => item.category))];
+        const uniqueCategories = [
+          ...new Set(data.map((item) => item.category)),
+        ];
         setCategories(uniqueCategories);
       })
       .catch((error) => console.error("Error fetching data:", error));
@@ -105,7 +111,9 @@ const FeaturedSection = () => {
                 className="w-full h-40 object-cover mb-4 rounded"
               />
               <h3 className="text-lg font-bold mb-2">{newsItem.title}</h3>
-              <p className="text-sm text-gray-600 mb-4">{newsItem.websitename}</p>
+              <p className="text-sm text-gray-600 mb-4">
+                {newsItem.websitename}
+              </p>
 
               <div className="space-x-4 absolute left-1/2 transform -translate-x-1/2 bottom-3">
                 <Link
