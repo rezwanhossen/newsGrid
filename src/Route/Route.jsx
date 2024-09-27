@@ -13,9 +13,9 @@ import AddNews from "../Components/DashbordPage/AddNews/AddNews";
 
 import Bookmark from "../Components/Bookmark/Bookmark";
 
-
 import Alluser from "../Components/DashbordPage/AdminPage/AllUser/Alluser";
-
+import PrivateRoute from "../Components/Fairbase/PrivateRoute";
+import UserHome from "../Components/DashbordPage/UserPage/UserHome";
 
 const router = createBrowserRouter([
   {
@@ -43,15 +43,27 @@ const router = createBrowserRouter([
 
       {
         path: "/bookmark",
-        element: <Bookmark></Bookmark>
-      }
+        element: <Bookmark></Bookmark>,
+      },
+      {
+        path: "/news",
+        element: <News />,
+      },
     ],
   },
 
   {
     path: "dashbord",
-    element: <Dashbord></Dashbord>,
+    element: (
+      <PrivateRoute>
+        <Dashbord></Dashbord>
+      </PrivateRoute>
+    ),
     children: [
+      {
+        path: "userHome",
+        element: <UserHome></UserHome>,
+      },
       {
         path: "addnews",
         element: <AddNews></AddNews>,
@@ -62,7 +74,6 @@ const router = createBrowserRouter([
         path: "users",
         element: <Alluser></Alluser>,
       },
-
     ],
   },
 ]);

@@ -2,10 +2,12 @@ import React from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 
 import { NavLink, Outlet } from "react-router-dom";
+import useAdmin from "../../Hook/useAdmin";
 
 const Dashbord = () => {
   //todo
-  const isAdmin = true;
+  // const isAdmin = true;
+  const [isAdmin] = useAdmin();
   return (
     <div className="drawer lg:drawer-open">
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
@@ -33,39 +35,35 @@ const Dashbord = () => {
         ></label>
 
         <ul className="menu bg-base-200 text-base-content min-h-full w-64 p-4">
-
           {isAdmin ? (
             <>
               <li>
                 <NavLink to="/dashbord/users">All Users</NavLink>
               </li>
-              {/* <li>
-                <a href="/">All Users</a>
-              </li> */}
+
               <li>
                 <a href="/">All News</a>
               </li>
             </>
           ) : (
             <>
-               <li>
-            <a href="/">User Home</a>
-          </li>
-          <li>
-            <a href="bookmark">My Bookmarks</a>
-          </li>
-          <li>
-            <a href="/profile">Add News</a>
-          </li>
-          <li>
-            <a href="/settings">My News</a>
-          </li>
-          <li>
-            <a href="/settings">rating</a>
-          </li>
+              <li>
+                <NavLink to="/dashbord/userHome">User Home</NavLink>
+              </li>
+              <li>
+                <a href="bookmark">My Bookmarks</a>
+              </li>
+              <li>
+                <a href="/profile">Add News</a>
+              </li>
+              <li>
+                <a href="/settings">My News</a>
+              </li>
+              <li>
+                <a href="/settings">rating</a>
+              </li>
             </>
           )}
-
         </ul>
       </div>
     </div>
