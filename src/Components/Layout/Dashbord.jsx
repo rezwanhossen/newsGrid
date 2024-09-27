@@ -5,8 +5,6 @@ import { NavLink, Outlet } from "react-router-dom";
 import useAdmin from "../../Hook/useAdmin";
 
 const Dashbord = () => {
-  //todo
-  // const isAdmin = true;
   const [isAdmin] = useAdmin();
   return (
     <div className="drawer lg:drawer-open">

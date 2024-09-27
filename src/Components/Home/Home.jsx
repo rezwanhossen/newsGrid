@@ -39,8 +39,8 @@ const Home = () => {
   }
   return (
     <div>
-      <Banner />
-      <FeaturedSection></FeaturedSection>
+      {/* <Banner /> */}
+      {/* <FeaturedSection></FeaturedSection> */}
 
       <div className="bg-sky-800 py-4 mt-2 fixed top-20 z-[19] w-full">
         <ul className="flex flex-wrap gap-4 items-center justify-center text-lg font-bold text-white font-sans">
@@ -89,6 +89,7 @@ const Home = () => {
 
         <Sponsors></Sponsors>
         <Another newsData={newsData}></Another>
+        <FeaturedSection></FeaturedSection>
       </div>
       {/* <FeaturedSection></FeaturedSection> */}
       {/* <Sports></Sports> */}
