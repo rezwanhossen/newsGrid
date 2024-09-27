@@ -3,6 +3,7 @@ import Slider from "../Slider/Slider";
 
 
 
+
 const Banner = () => {
     return (
         <>
@@ -21,3 +22,4 @@ const Banner = () => {
 };
 
 export default Banner;
+

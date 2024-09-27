@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import Card from '../../../../Shared/Card';
 
@@ -18,3 +19,4 @@ const CardLayout = () => {
 };
 
 export default CardLayout;
+

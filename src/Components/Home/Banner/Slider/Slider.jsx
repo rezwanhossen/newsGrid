@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 
 import { Carousel } from 'react-responsive-carousel';
@@ -72,3 +73,4 @@ const Slider = () => {
 };
 
 export default Slider;
+
