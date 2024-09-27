@@ -16,6 +16,8 @@ import Bookmark from "../Components/Bookmark/Bookmark";
 import Alluser from "../Components/DashbordPage/AdminPage/AllUser/Alluser";
 import PrivateRoute from "../Components/Fairbase/PrivateRoute";
 import UserHome from "../Components/DashbordPage/UserPage/UserHome";
+import UsersDeshboard from './../Components/UsersDeshboard/UsersDeshboard';
+ 
 
 const router = createBrowserRouter([
   {
@@ -60,6 +62,10 @@ const router = createBrowserRouter([
       </PrivateRoute>
     ),
     children: [
+      {
+        path: "userProfile",
+        element:  <UsersDeshboard></UsersDeshboard>,
+      },
       {
         path: "userHome",
         element: <UserHome></UserHome>,
