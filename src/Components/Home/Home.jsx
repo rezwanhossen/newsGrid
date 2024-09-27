@@ -1,3 +1,4 @@
+
 import FeaturedSection from "./FeaturedSection/FeaturedSection";
 // import Banner from "./Banner/Banner/Banner";
 import Sponsors from "./Sponsors/Sponsors";
@@ -94,6 +95,7 @@ const Home = () => {
       {/* <Sports></Sports> */}
     </div>
   );
+
 };
 
 export default Home;
