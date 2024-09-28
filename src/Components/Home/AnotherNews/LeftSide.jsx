@@ -25,7 +25,7 @@ const LeftSide = ({ newsData }) => {
                   <h2 className="text-xl font-semibold">
                     {news?.title.slice(0, 70)}...
                   </h2>
-                  <p className="">{news?.description.slice(0, 120)}...</p>
+                  <p className="">{news?.description?.slice(0, 120)}...</p>
 
                   <div className="mt-2">
                     <ReadMoreLink news={news}></ReadMoreLink>
