@@ -8,6 +8,7 @@ const LeftSide = ({ newsData }) => {
         {newsData?.slice(29, 60).map((news) => {
           return (
             <div className="py-4  border-t border-b border-dashed border-gray-500 mx-4 lg:mx-0">
+              {/* left side nav */}
               <div className="flex flex-col-reverse lg:flex-row  font-sans">
                 <p className="font-semibold w-full lg:w-[15%]">
                   {news?.publishedAt}
@@ -20,7 +21,7 @@ const LeftSide = ({ newsData }) => {
                   <h2 className="text-xl font-bold">
                     {news?.title.slice(0, 70)}...
                   </h2>
-                  {/* <p className="mt-2">{news?.description.slice(0 , 120)}...</p> */}
+                  
 
                   <h2 className="text-xl font-semibold">
                     {news?.title.slice(0, 70)}...
