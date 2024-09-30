@@ -11,7 +11,7 @@ const TwoColumnLayout = ({data}) => {
             {data?.map((news , index) => {
                 return(
                     
-                        <div className={`${index === 0 ? 'border-b lg:border-r border-current lg:pr-6' : index === 1 ? 'lg:pl-2' : ''} pb-3 mx-4 lg:mx-0`}>
+                        <div className={`${index === 0 ? 'lg:border-r border-current lg:pr-6' : index === 1 ? 'lg:pl-2' : ''} pb-3 mx-4 lg:mx-0`}>
                             <div className="h-[373px]">
                                 
 

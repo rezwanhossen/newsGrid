@@ -10,7 +10,7 @@ const RightSide = ({newsData}) => {
             {/* right side */}
             <div>
                 {
-                    newsData?.slice(45).map(news => {
+                    newsData?.slice(52).map(news => {
                         return(
                             <div className="py-4  border-t border-b border-dashed border-gray-500 mx-4 lg:mx-0">
                                 <div className="flex  font-sans">
