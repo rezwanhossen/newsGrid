@@ -38,15 +38,15 @@ const CategoriesNews = () => {
     return (
         <div>
             <div className="mt-36">
-            <Parallax bgImage={"https://static.vecteezy.com/system/resources/previews/033/212/422/non_2x/modern-television-studio-for-world-breaking-news-with-equipment-for-leading-reporters-and-announcers-free-photo.jpg"} strength={500} className="h-[400px] lg:h-[600px]  w-full border-red-900 bg-black opacity-100 border">
-      <div className="h-[400px] lg:h-[600px]  border w-[100%] bg-black opacity-100 flex items-center"> 
+            <Parallax bgImage={"https://static.vecteezy.com/system/resources/previews/033/212/422/non_2x/modern-television-studio-for-world-breaking-news-with-equipment-for-leading-reporters-and-announcers-free-photo.jpg"} strength={500} className="h-[400px] lg:h-[500px]  w-full ">
+      <div className="h-[400px] lg:h-[500px]   w-[100%] bg-black opacity-75 flex justify-center items-center"> 
                 <h1 className="text-4xl text-center text-white font-bold uppercase font-mono">HOME || {category}</h1>
          
       </div>
     </Parallax>
             </div>
 
-        <div className="max-w-7xl mx-auto mt-56 lg:mt-48 mb-20">
+        <div className="max-w-7xl mx-auto  my-20">
               
 
             
