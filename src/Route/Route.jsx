@@ -17,6 +17,7 @@ import Alluser from "../Components/DashbordPage/AdminPage/AllUser/Alluser";
 import PrivateRoute from "../Components/Fairbase/PrivateRoute";
 import UserHome from "../Components/DashbordPage/UserPage/UserHome";
 import UsersDeshboard from './../Components/UsersDeshboard/UsersDeshboard';
+import CategoriesNews from "../Components/Pages/CategoriesNews/CategoriesNews";
  
 
 const router = createBrowserRouter([
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
         path: "/news",
         element: <News />,
       },
+      {
+        path: '/categoriesNews/:category',
+        element : <CategoriesNews></CategoriesNews>
+      }
     ],
   },
 

@@ -5,6 +5,7 @@ import logo from "../../../assets/logo-r.png";
 import { Link, NavLink } from "react-router-dom";
 import useAuth from "../../../Hook/useAuth/useAuth";
 import useAdmin from "../../../Hook/useAdmin";
+import useNews from "../../../hooks/useNews";
 const Navbar = () => {
   const [isDashboardOpen, setIsDashboardOpen] = useState(false);
   const [isAdmin, isLoading] = useAdmin();
@@ -31,8 +32,27 @@ const Navbar = () => {
     }
   };
 
+
+
+
+
+
+
+  const categories = ["Home" , "business" , "entertainment" , "general" , "health" , "science" , "sports" , "technology" , "politics"];
+
+    
+    
+      const [active , setActive] = useState("all-news");
+  
+    
+    const handleActive = (data) => {
+        setActive(data)
+    }
+  
+
   return (
-    <div className="fixed top-0 left-0 z-20 w-full bg-slate-400 h-[60pxpx] ">
+    <div>
+        <div className="fixed top-0 left-0 z-20 w-full bg-slate-400 ">
       {/* <nav className=" shadow-md shadow-emerald-700 p-4"> */}
 
       <div className=" ">
@@ -173,6 +193,22 @@ const Navbar = () => {
         </div>
       </div>
     </div>
+
+
+<div className="bg-sky-800 py-4 mt-2 fixed top-20 z-[19] w-full">
+        <ul className="flex flex-wrap gap-4 items-center justify-center  font-bold text-white font-sans">
+        
+            {
+              categories?.map(category => {
+               return (
+                category === 'Home'  ? <li className={`font-bold font-sans uppercase hover:cursor-pointer ${active === category ? 'text-orange-500 underline': ''}`} onClick={() =>  handleActive(category)}><Link to="/">Home</Link></li> : <li  className={`${active === category ? 'text-orange-500 underline': ''} hover:cursor-pointer`} onClick={() =>  handleActive(category)}> <Link to={`/categoriesNews/${category}`}>{category.toUpperCase()}</Link></li>
+               )
+              })
+            }
+        </ul>
+      </div>
+    </div>
+    
   );
 };
 
