@@ -13,6 +13,7 @@ import Banner from "./Banner/Banner/Banner";
 
 import { Navigate } from "react-router-dom";
 import useNews from "../../hooks/useNews";
+import TrendingNews from "./TrendingNews/TrendingNews";
 
 
 
@@ -35,7 +36,7 @@ const Home = () => {
 
         <Sponsors></Sponsors>
         <Another newsData={newsData}></Another>
-        <FeaturedSection></FeaturedSection>
+        <TrendingNews></TrendingNews>
       </div>
       
     </div>
