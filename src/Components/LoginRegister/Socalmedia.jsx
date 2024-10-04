@@ -35,7 +35,7 @@
 // };
 
 // export default Socalmedia;
-import React from "react";
+ 
 import { FaGoogle } from "react-icons/fa";
 import useAuth from "../../Hook/useAuth/useAuth";
 import { useNavigate } from "react-router-dom";
@@ -69,7 +69,7 @@ const SocialMedia = () => {
         <div className="flex justify-center">
           <button
             onClick={handleGoogleLogin}
-            className="w-full text-black py-3 rounded flex justify-center items-center hover:bg-red-600 hover:text-white transition duration-300"
+            className="w-full text-black py-3 rounded flex justify-center items-center  hover:text-white transition duration-300"
           >
             <FaGoogle className="mr-2" /> Login with Google
           </button>
