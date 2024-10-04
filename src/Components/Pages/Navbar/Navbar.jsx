@@ -5,8 +5,21 @@ import logo from "../../../assets/logo-r.png";
 import { Link, NavLink } from "react-router-dom";
 import useAuth from "../../../Hook/useAuth/useAuth";
 import useAdmin from "../../../Hook/useAdmin";
-import useNews from "../../../hooks/useNews";
+
+
+
+
+
+
+
+
+
+
 const Navbar = () => {
+  
+
+
+
   const [isDashboardOpen, setIsDashboardOpen] = useState(false);
   const [isAdmin, isLoading] = useAdmin();
   const toggleDashboard = () => {
@@ -52,16 +65,16 @@ const Navbar = () => {
 
   return (
     <div>
-        <div className="fixed top-0 left-0 z-20 w-full bg-slate-400 ">
+        <div className="fixed top-0 left-0 z-20 w-full heebo">
       {/* <nav className=" shadow-md shadow-emerald-700 p-4"> */}
 
-      <div className=" ">
-        <nav className=" shadow-md p-4  bg-slate-400   top-0 z-10">
+      <div className="bg-slate-200 ">
+        <nav className=" shadow-md p-4    top-0 z-10">
           <div className="container mx-auto flex items-center justify-between">
             <div className="flex items-center space-x-4">
               <button
                 onClick={toggleDashboard}
-                className="text-black hover:text-gray-500 focus:outline-none"
+                className="text-black  focus:outline-none"
               >
                 {isDashboardOpen ? (
                   <FiX className="w-6 h-6" />
@@ -189,19 +202,27 @@ const Navbar = () => {
                 </NavLink>
               </li>
             )}
+            <li className="flex justify-between items-center">
+                <NavLink
+                  className="border border-1 w-full px-3 py-1"
+                  to="/downloads"
+                >
+                  Downloads
+                </NavLink>
+              </li>
           </ul>
         </div>
       </div>
     </div>
 
 
-<div className="bg-sky-800 py-4 mt-2 fixed top-20 z-[19] w-full">
-        <ul className="flex flex-wrap gap-4 items-center justify-center  font-bold text-white font-sans">
+<div className="py-4 mt-[15px] bg-slate-200 border-t fixed top-20 z-[19] w-full  border-b border-current">
+        <ul className="flex flex-wrap gap-4 items-center justify-center  font-bold  heebo">
         
             {
               categories?.map(category => {
                return (
-                category === 'Home'  ? <li className={`font-bold font-sans uppercase hover:cursor-pointer ${active === category ? 'text-orange-500 underline': ''}`} onClick={() =>  handleActive(category)}><Link to="/">Home</Link></li> : <li  className={`${active === category ? 'text-orange-500 underline': ''} hover:cursor-pointer`} onClick={() =>  handleActive(category)}> <Link to={`/categoriesNews/${category}`}>{category.toUpperCase()}</Link></li>
+                category === 'Home'  ? <li className={`font-bold text-[14px] text-[#232323]    uppercase hover:cursor-pointer ${active === category ? 'text-[#005689] selection: underline': ''}`} onClick={() =>  handleActive(category)}><Link to="/">Home</Link></li> : <li  className={`font-bold text-[14px] text-[#232323] ${active === category ? 'text-[#005689] underline': ''} hover:cursor-pointer`} onClick={() =>  handleActive(category)}> <Link to={`/categoriesNews/${category}`}>{category.toUpperCase()}</Link></li>
                )
               })
             }

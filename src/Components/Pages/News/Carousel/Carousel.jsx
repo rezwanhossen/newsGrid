@@ -5,8 +5,18 @@ import "slick-carousel/slick/slick-theme.css";
 import { Link } from "react-router-dom";
 import { Parallax } from "react-parallax";
 import ReadMoreLink from "../../../../Shared/ReadMoreLink";
+import { FaDownload } from "react-icons/fa";
+import useNewsDownload from "../../../../hooks/useNewsDownload";
+import './Carousel.css';
 
 const Carousel = ({data}) => {
+
+
+
+
+  
+  const [handleNews , download , idx] = useNewsDownload();
+  
 
     const settings = {
         className: "center",
@@ -51,36 +61,45 @@ const Carousel = ({data}) => {
     return (
         <>
         
-            
-            <Parallax bgImage={"https://static.vecteezy.com/system/resources/previews/033/212/422/non_2x/modern-television-studio-for-world-breaking-news-with-equipment-for-leading-reporters-and-announcers-free-photo.jpg"} strength={500} className="h-[400px] lg:h-[600px] flex flex-col justify-center">
-      <div className="h-full  w-[100%]  px-10 mb-10">
+          <div>
+          
+          <div className="container  mx-auto my-10  flex flex-col justify-center  w-[100%]  lg:px-10 ">
+          <div className="heebo border-l-8 my-4  px-4  border-[#005689] mx-3 lg:mx-0">
+                                                <h2 className="text-2xl lg:text-4xl font-bold py-4">News</h2>
+                                        </div>
         
         
-            <div className="slider-container">
-        <Slider {...settings}>
-            {
-                    data?.map((news , index) => {
-                        return (
-                            <div className=" p-4 bg-black h-[282px]">
-                                <div className="h-[170px] w-full">
-                                    <img src={news?.urlToImage} alt=""className="h-full w-full object-cover" />
-                                </div>
-                                {/* content */}
-                                <div className="mt-2 text-white">
-                                    
-                                    <h1 className="font-semibold font-sans ">{news?.title.slice(0 , 50)}</h1>
-
-                                    <ReadMoreLink></ReadMoreLink>
-                                </div>
+        <div className="slider-container bg-base-200 mx-3 lg:mx-0">
+    <Slider {...settings}>
+        {
+                data?.map((news , index) => {
+                    return (
+                        <div className=" p-4  h-[282px] ">
+                            <div className="h-[170px] w-full">
+                                <img src={news?.urlToImage} alt=""className="h-full w-full object-cover" />
                             </div>
-                        )
-                    })
-            }
-        </Slider>
-      </div>
-         
-      </div>
-    </Parallax>
+                            {/* content */}
+                            <div className="mt-2 ">
+                                
+                                <h1 className="font-semibold  ">{news?.title.slice(0 , 50)}</h1>
+
+                                
+                                <div className="flex justify-between">
+                                <ReadMoreLink></ReadMoreLink>
+                                
+                                </div>
+                                
+                            </div>
+                        </div>
+                    )
+                })
+        }
+    </Slider>
+  </div>
+     
+  </div>
+            </div>  
+          
 
             
             

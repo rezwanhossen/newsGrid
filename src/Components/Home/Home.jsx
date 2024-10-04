@@ -17,6 +17,7 @@ import TrendingNews from "./TrendingNews/TrendingNews";
 
 
 
+
 const Home = () => {
     const [newsData , isLoading] = useNews();
 
@@ -30,12 +31,14 @@ const Home = () => {
 
       
 
-      <div className="mt-[210px] lg:mt-[170px] mb-[100px]">
+      <div className="mt-[187px] lg:mt-[150px] mb-[100px]">
         <Banner newsData={newsData} />
         <News newsData={newsData}></News>
 
-        <Sponsors></Sponsors>
         <Another newsData={newsData}></Another>
+
+        <Sponsors></Sponsors>
+
         <TrendingNews></TrendingNews>
       </div>
       

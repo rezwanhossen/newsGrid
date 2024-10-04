@@ -7,7 +7,7 @@ const Sponsors = () => {
             <div>
                     <h1 className='text-3xl font-semibold text-center font-serif mb-5'>Sponsored By</h1>
             </div>
-            <Marquee className="max-w-7xl  mx-auto shadow-lg shadow-slate-500 border py-6">
+            <Marquee className="container  mx-auto shadow-lg shadow-slate-500 border py-6">
             <div className='flex items-center gap-16'>
             <div className="w-32 md:w-44">
                     <img src="https://www.react-fast-marquee.com/static/media/microsoft.4a9a93f0.png" alt="" />

@@ -46,7 +46,7 @@ const CategoriesNews = () => {
     </Parallax>
             </div>
 
-        <div className="max-w-7xl mx-auto  my-20">
+        <div className="container mx-auto  my-20">
               
 
             
@@ -59,7 +59,7 @@ const CategoriesNews = () => {
                             
                 <div className="py-4  border-t  border-dashed border-gray-500 mx-4 lg:mx-0">
               {/* left side nav */}
-              <div className="flex flex-col-reverse lg:flex-row  font-sans">
+              <div className="flex flex-col-reverse lg:flex-row  ">
                 <p className="font-semibold w-full lg:w-[16%]">
                   {news?.publishedAt}
                 </p>
