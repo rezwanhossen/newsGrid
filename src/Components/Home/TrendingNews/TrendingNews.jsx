@@ -18,13 +18,13 @@ const TrendingNews = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const navigate = useNavigate();
-    const apiKey = '6f3f93b16b576e746fad8f6b44546560';
+    const apiKey = 'uX-Tbv7wo0kWPez-lDxwvpryFy8240yUQek_C5a_qIYVl6kb';
 
     // Fetch news articles from the GNews API
     const fetchNews = async () => {
         setLoading(true);
         try {
-            const response = await axios.get('https://gnews.io/api/v4/top-headlines', {
+            const response = await axios.get('https://api.currentsapi.services/v1/trending-news', {
                 params: {
                     token: apiKey,
                     lang: 'en',
