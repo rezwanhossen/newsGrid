@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import { FaBookmark, FaShareAlt } from 'react-icons/fa';
+import { FaBookmark } from 'react-icons/fa';
 import {
     FacebookShareButton,
     TwitterShareButton,
@@ -17,8 +17,12 @@ const TrendingNews = () => {
     const [articles, setArticles] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const [showAll, setShowAll] = useState(false); // State to control "Show More" functionality
     const navigate = useNavigate();
     const apiKey = '6f3f93b16b576e746fad8f6b44546560';
+
+    // Simulate logged-in user status (you can replace this with actual authentication logic)
+    const isLoggedIn = false; // Change this to `true` if the user is logged in
 
     // Fetch news articles from the GNews API
     const fetchNews = async () => {
@@ -31,56 +35,13 @@ const TrendingNews = () => {
                     max: 10,
                 },
             });
-            setArticles(response.data.articles.slice(0, 9));
+            setArticles(response.data.articles.slice(0, 10)); 
             setLoading(false);
         } catch (error) {
             setError('Failed to fetch news. Please try again later.');
             setLoading(false);
             console.log(error);
         }
-    };
-
-    // Bookmark article
-    const handleBookmark = (article) => {
-        const isLoggedIn = localStorage.getItem("userToken");
-        if (!isLoggedIn) {
-            Swal.fire({
-                title: "Not Logged In!",
-                text: "You need to log in to bookmark this article.",
-                icon: "warning",
-                confirmButtonText: "Login", 
-                preConfirm: () => {
-                    navigate("/login"); 
-                },
-            });
-            return; 
-        }
-
-        const { url, title, image } = article;
-        const email = "user@example.com";
-        const bookmarkData = { url, title, image, email };
-
-        fetch("http://localhost:5000/bookmarks", {
-            method: "POST",
-            headers: {
-                "content-type": "application/json",
-            },
-            body: JSON.stringify(bookmarkData),
-        })
-            .then((res) => res.json())
-            .then((data) => {
-                if (data.insertedId) {
-                    Swal.fire({
-                        title: "Success!",
-                        text: "News successfully added to bookmarks",
-                        icon: "success",
-                        confirmButtonText: "Ok",
-                    });
-                } else {
-                    toast.error("Failed to bookmark. Please try again.");
-                }
-            })
-            .catch((err) => console.error("Error bookmarking article:", err));
     };
 
     useEffect(() => {
@@ -90,74 +51,104 @@ const TrendingNews = () => {
     if (loading) return <div className="text-center text-lg">Loading news...</div>;
     if (error) return <div className="text-center text-lg text-red-500">{error}</div>;
 
+    // Function to show more articles
+    const handleShowMore = () => {
+        setShowAll(true);
+    };
+
+    // Function to handle bookmarking
+    const handleBookmark = (article) => {
+        if (!isLoggedIn) {
+            Swal.fire({
+                title: 'You need to be logged in!',
+                text: 'Please log in to bookmark articles.',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Login',
+                cancelButtonText: 'Cancel',
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    navigate('/login'); // Navigate to login page if "Login" is clicked
+                }
+            });
+        } else {
+            // Example bookmark action using toast or any storage logic
+            toast.success(`Bookmarked: ${article.title}`);
+        }
+    };
+
+    // Only show 2 articles by default, show all when "Show More" is clicked
+    const displayedArticles = showAll ? articles : articles.slice(0, 2);
+
     return (
         <div className="mx-auto container px-4 py-8">
-            <h1 className="text-4xl font-extrabold mb-10">Trending & Most Popular News</h1>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {articles.map((article, index) => (
-                    <div
-                        key={index}
-                        className="relative bg-white rounded-lg shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105 overflow-hidden"
-                    >
-                        {/* Image Section */}
+            <h1 className="text-4xl font-extrabold mb-6">Trending News</h1>
+
+            {/* News list, two items by default */}
+            <div className="grid grid-cols-1 gap-6">
+                {displayedArticles.map((article, index) => (
+                    <div key={index} className="flex items-start gap-4 p-4 bg-white shadow rounded-lg">
+                        {/* Image */}
                         {article.image && (
-                            <div className="relative">
-                                <img
-                                    src={article.image}
-                                    alt={article.title}
-                                    className="w-full h-60 object-cover rounded-t-lg"
-                                />
-                                {/* Floating Trending Badge */}
-                                <div className="absolute top-4 left-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-xs font-semibold py-1 px-3 rounded-full shadow-lg">
-                                    Trending
-                                </div>
-                            </div>
+                            <img
+                                src={article.image}
+                                alt={article.title}
+                                className="w-40 h-28 object-cover rounded-lg"
+                            />
                         )}
 
-                        {/* Card Content */}
-                        <div className="p-6 rounded-b-lg">
-                            <h2 className="font-bold text-2xl text-gray-900 leading-tight mb-3">{article.title}</h2>
-                            <p className="text-sm text-gray-600 mb-4">{article.description}</p>
+                        {/* Content */}
+                        <div className="flex-1">
+                            <h2 className="font-bold text-xl text-gray-900 mb-2">{article.title}</h2>
+                            <p className="text-gray-600 text-sm mb-2">{article.description}</p>
+                            <a
+                                href={article.url}
+                                className="text-blue-600 hover:underline"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Read more
+                            </a>
 
-                            {/* Share and Bookmark Buttons */}
-                            <div className="flex justify-between items-center">
-                                <a
-                                    href={article.url}
-                                    className="text-indigo-600 font-semibold hover:underline"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    Read more
-                                </a>
-                            </div>
+                            {/* Social sharing icons */}
+                            <div className="mt-4 flex items-center gap-4">
+                                <span className="text-gray-500">Share: </span>
+                                <FacebookShareButton url={article.url}>
+                                    <FacebookIcon size={32} round />
+                                </FacebookShareButton>
+                                <TwitterShareButton url={article.url}>
+                                    <TwitterIcon size={32} round />
+                                </TwitterShareButton>
+                                <LinkedinShareButton url={article.url}>
+                                    <LinkedinIcon size={32} round />
+                                </LinkedinShareButton>
 
-                            <div className="flex justify-between items-center mt-4">
-                                {/* Social Sharing Icons */}
-                                <div className="flex items-center gap-3">
-                                    <FaShareAlt className="text-gray-600" />
-                                    <FacebookShareButton url={article.url} className="hover:scale-110 transition-transform">
-                                        <FacebookIcon size={32} round />
-                                    </FacebookShareButton>
-                                    <TwitterShareButton url={article.url} className="hover:scale-110 transition-transform">
-                                        <TwitterIcon size={32} round />
-                                    </TwitterShareButton>
-                                    <LinkedinShareButton url={article.url} className="hover:scale-110 transition-transform">
-                                        <LinkedinIcon size={32} round />
-                                    </LinkedinShareButton>
-                                </div>
-
-                                {/* Bookmark Button */}
+                                {/* Bookmark icon with text */}
                                 <button
                                     onClick={() => handleBookmark(article)}
-                                    className="flex items-center text-gray-600 hover:text-pink-500 transition-colors"
+                                    className="ml-4 flex items-center text-gray-600 hover:text-blue-500"
+                                    aria-label="Bookmark"
                                 >
-                                    <FaBookmark className="mr-1" /> Bookmark
+                                    <FaBookmark size={24} className="mr-2" />
+                                    Bookmark
                                 </button>
                             </div>
                         </div>
                     </div>
                 ))}
             </div>
+
+            {/* Show more button */}
+            {!showAll && articles.length > 2 && (
+                <div className="mt-6 text-center">
+                    <button
+                        onClick={handleShowMore}
+                        className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition"
+                    >
+                        Show More
+                    </button>
+                </div>
+            )}
         </div>
     );
 };

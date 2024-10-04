@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 
 import { FiMenu, FiX } from "react-icons/fi";
 import logo from "../../../assets/logo-r.png";
 import { Link, NavLink } from "react-router-dom";
 import useAuth from "../../../Hook/useAuth/useAuth";
 import useAdmin from "../../../Hook/useAdmin";
-import useNews from "../../../hooks/useNews";
 const Navbar = () => {
   const [isDashboardOpen, setIsDashboardOpen] = useState(false);
   const [isAdmin, isLoading] = useAdmin();
