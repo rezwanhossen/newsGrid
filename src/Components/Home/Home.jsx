@@ -36,7 +36,9 @@ const Home = () => {
         <News newsData={newsData}></News>
 
         <Another newsData={newsData}></Another>
+
         <Sponsors></Sponsors>
+
         <TrendingNews></TrendingNews>
       </div>
       
