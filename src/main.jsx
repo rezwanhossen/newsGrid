@@ -6,6 +6,7 @@ import { RouterProvider } from "react-router-dom";
 import router from "./Route/Route.jsx";
 import AuthProvider from "./Components/Fairbase/AuthProvider.jsx";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import  './main.css';
 
 
 

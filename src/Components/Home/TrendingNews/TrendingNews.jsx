@@ -19,23 +19,22 @@ const TrendingNews = () => {
     const [error, setError] = useState(null);
     const [showAll, setShowAll] = useState(false); // State to control "Show More" functionality
     const navigate = useNavigate();
-    const apiKey = '6f3f93b16b576e746fad8f6b44546560';
+    const apiKey = 'uX-Tbv7wo0kWPez-lDxwvpryFy8240yUQek_C5a_qIYVl6kb'; // Currents API token
 
     // Simulate logged-in user status (you can replace this with actual authentication logic)
     const isLoggedIn = false; // Change this to `true` if the user is logged in
 
-    // Fetch news articles from the GNews API
+    // Fetch news articles from the Currents API
     const fetchNews = async () => {
         setLoading(true);
         try {
-            const response = await axios.get('https://gnews.io/api/v4/top-headlines', {
+            const response = await axios.get('https://api.currentsapi.services/v1/latest-news', {
                 params: {
-                    token: apiKey,
-                    lang: 'en',
-                    max: 10,
+                    apiKey: apiKey,
+                    language: 'en',
                 },
             });
-            setArticles(response.data.articles.slice(0, 10)); 
+            setArticles(response.data.news.slice(0, 10)); 
             setLoading(false);
         } catch (error) {
             setError('Failed to fetch news. Please try again later.');

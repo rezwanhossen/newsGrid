@@ -6,17 +6,20 @@ import ReadMoreLink from './ReadMoreLink';
 
 const Card = ({news}) => {
     return (
-        <div className="rounded-lg">
-            <div className="h-[237px] relative rounded-lg">
-                <img src={news?.urlToImage} alt="" className='h-full object-cover w-full rounded-lg'/>
+        <div className=" bg-white transition-all duration-500 transform hover:scale-105 overflow-hidden">
+            <div className="   relative ">
+                <div className="w-full h-[166px]">
+                <img src={news?.urlToImage} alt="" className='h-full  object-cover w-full '/>
+                </div>
 
-                <div className='absolute p-2 bottom-0 text-white bg-black opacity-75 rounded-b-lg'>
-                    <h3 className="text-lg font-bold">{news?.title.slice(0 , 45)}...</h3>
+                <div className=' p-5   heebo '>
+                    <h3 className="text-[15px] font-medium">{news?.title.slice(0 , 45)}...</h3>
                     <ReadMoreLink news={news}></ReadMoreLink>
                 </div>
                 
 
             </div>
+
             
 
             

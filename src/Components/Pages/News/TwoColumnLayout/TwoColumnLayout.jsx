@@ -19,10 +19,10 @@ const TwoColumnLayout = ({data}) => {
                                 <img src={news?.urlToImage} alt=""className="h-full w-full object-cover rounded-lg lg:rounded-none" />
                             </div>
                             {/* content */}
-                            <div className="font-sans">
+                            <div className="">
                                 <h3 className="text-lg text-blue-700 bg-base-300 rounded font-semibold inline-block  px-2 mt-2">{news?.category}</h3>
                                 <h2 className="text-xl lg:text-2xl font-bold">{news?.title}</h2>
-                                <Link to={news?.url} target='_blank' className="text-red-400 hover:underline  mt-3 font-semibold font-sans">Read More...</Link>
+                                <Link to={news?.url} target='_blank' className="text-red-400 hover:underline  mt-3 font-semibold ">Read More...</Link>
                             </div>
                     </div>
                     
