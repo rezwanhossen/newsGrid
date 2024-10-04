@@ -13,6 +13,7 @@ import Banner from "./Banner/Banner/Banner";
 
 import { Navigate } from "react-router-dom";
 import useNews from "../../hooks/useNews";
+import TrendingNews from "./TrendingNews/TrendingNews";
 
 
 
@@ -29,13 +30,13 @@ const Home = () => {
 
       
 
-      <div className="mt-[210px] lg:mt-[150px] mb-[100px]">
+      <div className="mt-[187px] lg:mt-[150px] mb-[100px]">
         <Banner newsData={newsData} />
         <News newsData={newsData}></News>
 
-        <Sponsors></Sponsors>
         <Another newsData={newsData}></Another>
-        <FeaturedSection></FeaturedSection>
+        <Sponsors></Sponsors>
+        <TrendingNews></TrendingNews>
       </div>
       
     </div>

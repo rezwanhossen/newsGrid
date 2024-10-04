@@ -68,7 +68,7 @@ const Navbar = () => {
         <div className="fixed top-0 left-0 z-20 w-full heebo">
       {/* <nav className=" shadow-md shadow-emerald-700 p-4"> */}
 
-      <div className="bg-base-200 ">
+      <div className="bg-slate-200 ">
         <nav className=" shadow-md p-4    top-0 z-10">
           <div className="container mx-auto flex items-center justify-between">
             <div className="flex items-center space-x-4">
@@ -216,7 +216,7 @@ const Navbar = () => {
     </div>
 
 
-<div className="py-4 mt-[15px] bg-base-200 border-t fixed top-20 z-[19] w-full  border-b border-current">
+<div className="py-4 mt-[15px] bg-slate-200 border-t fixed top-20 z-[19] w-full  border-b border-current">
         <ul className="flex flex-wrap gap-4 items-center justify-center  font-bold  heebo">
         
             {

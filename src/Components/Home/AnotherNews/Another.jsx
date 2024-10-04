@@ -9,11 +9,11 @@ const Another = ({newsData}) => {
         
         
         <div className="container mx-auto">
-            <div className="grid grid-cols-12 gap-10">
-                <div  className="col-span-8 pr-10 border-r border-current">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
+                <div  className="lg:col-span-8 lg:pr-10 border-r border-current">
                 <LeftSide newsData={newsData}></LeftSide>
                 </div>
-                <div className="col-span-4">
+                <div className="lg:col-span-4">
                 <RightSide newsData={newsData}></RightSide>
                 </div>
 

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FaBookmark, FaShareAlt } from "react-icons/fa";
 import {
@@ -12,7 +12,7 @@ import toast from "react-hot-toast";
 import useAuth from "../../../Hook/useAuth/useAuth";
 
 const FeaturedSection = () => {
-  const { user, loding } = useAuth();
+  const { user } = useAuth();
   const [newsData, setNewsData] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [categories, setCategories] = useState([]);
