@@ -7,15 +7,17 @@ import Slider from "../Slider/Slider";
 const Banner = ({newsData}) => {
     return (
         <>
-                <div className="flex gap-4 max-w-7xl mx-auto flex-col lg:flex-row">
+                <div className="bg-base-200 pt-10">
+                <div className="flex gap-4 container mx-auto flex-col lg:flex-row">
                         {/* carousel */}
-                        <div className="w-full lg:w-[55%]">
+                        <div className="w-full lg:w-[70%]">
                                 <Slider newsData={newsData}></Slider>
                         </div>
                         {/* grid layout */}
-                        <div className="w-full lg:w-[45%]">
+                        <div className="w-full lg:w-[30%]">
                                 <CardLayout newsData={newsData}></CardLayout>
                         </div>
+                </div>
                 </div>
         </>
     );

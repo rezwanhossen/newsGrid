@@ -9,7 +9,7 @@ const News = ({ newsData }) => {
   return (
     <div>
       {/* news */}
-      <div className="max-w-7xl mx-auto mt-4">
+      <div className="container mx-auto mt-4">
         {/* two column layout  */}
         <TwoColumnLayout data={newsData?.slice(8, 10)}></TwoColumnLayout>
         <ThreeColumnLayout data={newsData?.slice(10, 22)}></ThreeColumnLayout>

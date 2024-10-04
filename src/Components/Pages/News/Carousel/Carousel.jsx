@@ -5,8 +5,18 @@ import "slick-carousel/slick/slick-theme.css";
 import { Link } from "react-router-dom";
 import { Parallax } from "react-parallax";
 import ReadMoreLink from "../../../../Shared/ReadMoreLink";
+import { FaDownload } from "react-icons/fa";
+import useNewsDownload from "../../../../hooks/useNewsDownload";
+import { useState } from "react";
 
 const Carousel = ({data}) => {
+
+
+
+
+  
+  const [handleNews , download , idx] = useNewsDownload();
+  
 
     const settings = {
         className: "center",
@@ -68,9 +78,16 @@ const Carousel = ({data}) => {
                                 {/* content */}
                                 <div className="mt-2 text-white">
                                     
-                                    <h1 className="font-semibold font-sans ">{news?.title.slice(0 , 50)}</h1>
+                                    <h1 className="font-semibold  ">{news?.title.slice(0 , 50)}</h1>
 
+                                    
+                                    <div className="flex justify-between">
                                     <ReadMoreLink></ReadMoreLink>
+                                    <div  onClick={() => handleNews(news , index)}>
+                                      <FaDownload className="text-xl hover:cursor-pointer"></FaDownload>
+                                    </div>
+                                    </div>
+                                    
                                 </div>
                             </div>
                         )

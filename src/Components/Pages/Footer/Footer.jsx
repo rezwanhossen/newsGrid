@@ -2,7 +2,7 @@ import footlogo from "../../../assets/fotlogo.png";
 const Footer = () => {
   return (
     <footer className="w-full bg-gray-900 text-gray-300 py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Footer Top */}
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 text-center md:text-left">
           {/* About Section */}

@@ -29,7 +29,7 @@ const Home = () => {
 
       
 
-      <div className="mt-[210px] lg:mt-[170px] mb-[100px]">
+      <div className="mt-[210px] lg:mt-[150px] mb-[100px]">
         <Banner newsData={newsData} />
         <News newsData={newsData}></News>
 

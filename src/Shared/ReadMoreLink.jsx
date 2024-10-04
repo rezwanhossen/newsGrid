@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const ReadMoreLink = ({news}) => {
     return (
         <div>
-                         <Link to={news?.url} target='_blank' className="text-red-400 hover:underline  mt-3 font-semibold font-sans">Read More...</Link>
+                         <Link to={news?.url} className='text-[#005689] font-semibold hover:underline'>Read More...</Link>
         </div>
     );
 };
