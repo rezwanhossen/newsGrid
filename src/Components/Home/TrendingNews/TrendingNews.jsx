@@ -80,11 +80,10 @@ const TrendingNews = () => {
     const displayedArticles = showAll ? articles : articles.slice(0, 2);
 
     return (
-        <div className="mx-auto container px-4 py-8">
-            <h1 className="text-4xl font-extrabold mb-6">Trending News</h1>
-
+        <div className=" py-8">
+            <h1 className="text-4xl border-b-4 pb-4 border-red-500 font-extrabold mb-6">Trending News</h1>
             {/* News list, two items by default */}
-            <div className="grid grid-cols-1 gap-6">
+            <div className="grid grid-cols-1 mt-5 gap-6">
                 {displayedArticles.map((article, index) => (
                     <div key={index} className="flex items-start gap-4 p-4 bg-white shadow rounded-lg">
                         {/* Image */}
@@ -102,7 +101,7 @@ const TrendingNews = () => {
                             <p className="text-gray-600 text-sm mb-2">{article.description}</p>
                             <a
                                 href={article.url}
-                                className="text-blue-600 hover:underline"
+                                className="text-orange-600 hover:underline"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
@@ -125,7 +124,7 @@ const TrendingNews = () => {
                                 {/* Bookmark icon with text */}
                                 <button
                                     onClick={() => handleBookmark(article)}
-                                    className="ml-4 flex items-center text-gray-600 hover:text-blue-500"
+                                    className="ml-4 flex items-center text-gray-600 hover:text-orange-500"
                                     aria-label="Bookmark"
                                 >
                                     <FaBookmark size={24} className="mr-2" />
@@ -142,7 +141,7 @@ const TrendingNews = () => {
                 <div className="mt-6 text-center">
                     <button
                         onClick={handleShowMore}
-                        className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition"
+                        className="px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 transition"
                     >
                         Show More
                     </button>
