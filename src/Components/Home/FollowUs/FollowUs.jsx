@@ -4,7 +4,7 @@ import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/f
 const FollowUs = () => {
   return (
     <div className="bg-white shadow-md rounded-lg p-6 mb-6">
-      <h2 className="text-2xl font-bold mb-4 text-blue-700 border-b-2 border-blue-500 pb-2">Follow Us</h2>
+      <h2 className="text-2xl font-bold mb-4 border-b-2 border-red-500 pb-2">Follow Us</h2>
       <p className="text-gray-600 mb-4">Stay connected with us on social media for the latest updates and news!</p>
       <ul className="space-y-4">
         <li>

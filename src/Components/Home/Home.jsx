@@ -1,63 +1,47 @@
 import Sponsors from "./Sponsors/Sponsors";
-import Another from "./AnotherNews/Another";
-import News from "../Pages/News/News";
 import Loading from "../Loading/Loading";
 import Banner from "./Banner/Banner/Banner";
 import useNews from "../../hooks/useNews";
 import TrendingNews from "./TrendingNews/TrendingNews";
-import BreakingNews from "./BreakingNews/BreakingNews"; // Assuming BreakingNews is defined
-import NewsSlider from "./NewSlider/NewSlider";
-import LatestNews from "./LatestNews/LatestNews";
+import BreakingNews from "./BreakingNews/BreakingNews";
 import FollowUs from "./FollowUs/FollowUs";
+import RecommendedNews from "./RecommendedNews/RecommendedNews";
 
 const Home = () => {
     const [newsData, isLoading] = useNews();
 
     if (isLoading) {
-        return <Loading />;
+        return <Loading></Loading>;
     }
 
     return (
-        <div className="container mx-auto mt-20">
+        <div className="mx-auto container py-6 px-4 lg:px-0">
+            {/* Main Layout */}
+            <div className="flex flex-col lg:flex-row gap-8">
+                
+                {/* Left Section: Banner and Trending News */}
+                <div className="w-full lg:w-[70%]">
+                    {/* Banner */}
+                    <Banner newsData={newsData} />
 
-            {/* Main Content and Sidebar */}
-            <div className="lg:flex lg:gap-6 mt-6">
-                {/* Main Content */}
-                <div className="lg:w-2/3">
-                    {/* Trending News Section */}
-                    <section className="trending-news mb-12 bg-white shadow-lg p-6 rounded-lg">
-                        <NewsSlider/>
-                    </section>
+                    {/* Trending News */}
+                    <TrendingNews />
 
-                    {/* News Section */}
-                    <section className="news-section mb-12 bg-white shadow-lg p-6 rounded-lg">
-                        <LatestNews/>
-                    </section>
-
-                    {/* Trending News Section */}
-                    <section className="trending-news mb-12 bg-white shadow-lg p-6 rounded-lg">
-                        <TrendingNews />
-                    </section>
+                    {/* Recommended News */}
+                    <RecommendedNews />
                 </div>
-
-                {/* Sidebar */}
-                <aside className="lg:w-1/3 lg:pl-6">
+                
+                {/* Right Section: Breaking News, Sponsor, Follow Us */}
+                <div className="w-full lg:w-[30%] p-2 flex flex-col gap-6">
                     {/* Breaking News */}
-                    <section className="breaking-news mb-12 bg-red-50 shadow-lg p-6 rounded-lg">
-                        <h2 className="text-2xl font-bold text-red-600 mb-4">Breaking News</h2>
-                        <BreakingNews />
-                    </section>
+                    <BreakingNews />
 
-                    {/* Sidebar Sponsors */}
-                    <section className="sidebar-sponsors bg-white shadow-lg p-6 rounded-lg">
-                        <h2 className="text-2xl font-bold mb-4">Sponsored</h2>
-                        <Sponsors />
-                    </section>
-                    {/* Sidebar Follow Us */}
-                    <section className="sidebar-sponsors bg-white shadow-lg p-6 my-8 rounded-lg">
-                        <FollowUs/>
-                    </section>
-                </aside>
+                    {/* Sponsor Section */}
+                    <Sponsors />
+
+                    {/* Follow Us Section */}
+                    <FollowUs />
+                </div>
             </div>
         </div>
     );
