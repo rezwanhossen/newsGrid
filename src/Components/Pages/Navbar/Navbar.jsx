@@ -15,6 +15,7 @@ import useAdmin from "../../../Hook/useAdmin";
 
 
 
+
 const Navbar = () => {
   
 
@@ -52,6 +53,8 @@ const Navbar = () => {
 
 
   const categories = ["Home" , "business" , "entertainment" , "general" , "health" , "science" , "sports" , "technology" , "politics"];
+
+
 
     
     
@@ -163,6 +166,9 @@ const Navbar = () => {
             </div>
           </div>
         </nav>
+
+
+       
 
         {/* Dashboard  */}
         <div

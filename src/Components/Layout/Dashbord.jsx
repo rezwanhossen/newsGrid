@@ -6,6 +6,7 @@ import useAdmin from "../../Hook/useAdmin";
 
 const Dashbord = () => {
   const [isAdmin] = useAdmin();
+  
   return (
     <div className="drawer lg:drawer-open">
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
@@ -38,9 +39,18 @@ const Dashbord = () => {
               <li>
                 <NavLink to="/dashbord/users">All Users</NavLink>
               </li>
+              <li>
+                <NavLink to="/dashbord/addedNews">Added News</NavLink>
+              </li>
+              
+
 
               <li>
                 <a href="/">All News</a>
+              </li>
+
+              <li className="pt-2 border-t">
+                <NavLink to="/">Home</NavLink>
               </li>
             </>
           ) : (
@@ -55,14 +65,18 @@ const Dashbord = () => {
                 <a href="bookmark">My Bookmarks</a>
               </li>
               <li>
-                <a href="/profile">Add News</a>
+                <a href="addnews">Add News</a>
               </li>
               <li>
-                <a href="/settings">My News</a>
+                <a href="myNews">My News</a>
               </li>
               <li>
                 <a href="/settings">rating</a>
               </li>
+
+
+              
+              <li className="border-t pt-2"><NavLink to="/">Home</NavLink></li>
             </>
           )}
         </ul>

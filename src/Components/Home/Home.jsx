@@ -20,6 +20,7 @@ import TrendingNews from "./TrendingNews/TrendingNews";
 
 const Home = () => {
     const [newsData , isLoading] = useNews();
+    
 
   if (isLoading) {
     return <Loading></Loading>;
