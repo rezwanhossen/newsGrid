@@ -41,7 +41,7 @@ const Sponsors = () => {
         <div className="my-16 mx-2 md:mx-0">
             {/* Header */}
             <div>
-                <h1 className='text-3xl font-semibold text-center font-serif mb-8'>Sponsored By</h1>
+                <h1 className='text-3xl text-[#4A4A4A] font-semibold text-center font-serif mb-8'><span className="text-[#007E7E]">Sponsored</span> By</h1>
             </div>
 
             {/* Sponsor Card Section */}
@@ -62,7 +62,7 @@ const Sponsors = () => {
                     <div 
                         key={index}
                         className={`w-3 h-3 rounded-full ${
-                            index === currentSponsorIndex ? 'bg-orange-600' : 'bg-gray-300'
+                            index === currentSponsorIndex ? 'bg-[#00A6A6]' : 'bg-gray-300'
                         } transition-colors duration-300`}
                     />
                 ))}

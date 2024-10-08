@@ -21,16 +21,16 @@ const Banner = ({ newsData }) => {
 
     return (
         <>
-            <div className=" py-10">
+            <div className=" mt-10 mb-10 ">
                 <div className="flex flex-col gap-6 lg:flex-row">
                     {/* Carousel: Full width */}
                     <div className="w-full">
                         <Slider newsData={newsData} />
 
                         {/* 3-column card layout with pagination */}
-                        <div className="lg:mx-0 mt-4">
+                        <div className="lg:mx-0 mt-5  p-5 rounded-lg bg-[#F5F5F5]">
                             <div className=" ">
-                                <h2 className="text-2xl md:text-3xl border-b-4 pb-4 border-red-500 font-bold">Latest News</h2>
+                                <h2 className="text-2xl md:text-3xl border-b-4 pb-4 text-[#3BAFDA] border-[#007E7E] font-bold">Latest News</h2>
                             </div>
 
                             <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-8 lg:gap-8">
@@ -46,7 +46,7 @@ const Banner = ({ newsData }) => {
                                 <div className="flex justify-end mt-4">
                                     <button 
                                         onClick={handleNextPage} 
-                                        className="flex items-center bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition duration-300"
+                                        className="flex items-center bg-[#00A6A6] text-white px-4 py-2 rounded-lg hover:bg-[#007E7E] transition duration-300"
                                     >
                                         <span>Show More</span>
                                         <svg 

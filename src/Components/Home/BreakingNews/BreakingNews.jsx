@@ -40,52 +40,65 @@ const BreakingNews = () => {
   };
 
   return (
-    <div className="mt-8  w-full">
-      <h1 className="text-2xl md:text-3xl border-b-2 border-gray-200 font-extrabold mb-6 pb-2">Breaking News</h1>
-      <div className="bg-white p-4 rounded-lg shadow-md">
+    <div className="mt-8 bg-[#F2F4F6] px-5 pt-3 pb-7 rounded-lg w-full">
+      {/* Heading with Teal */}
+      <h1 className="text-2xl md:text-3xl text-[#00A6A6] border-b-2 border-[#007E7E] font-extrabold mb-6 pb-2">
+        Breaking News
+      </h1>
+
+      {/* First Card for Featured News */}
+      <div className=" p-4 rounded-lg ">
         {breakingNews.length > 0 && (
-          <div className="mb-6 relative">
+          <div className="bg-white rounded-lg p-4 mb-6 relative">
             <img
               src={breakingNews[0].image}
               alt={breakingNews[0].title}
               className="w-full h-64 object-cover rounded-lg mb-4"
             />
-            <div className="absolute bottom-2 left-2 bg-black bg-opacity-50 text-white px-3 py-1 rounded">
+            <div className="absolute bottom-2 left-2 bg-black bg-opacity-50  px-3 py-1 rounded">
               <span className="text-sm">Breaking News</span>
             </div>
-            <h3 className="text-xl font-semibold leading-tight">{breakingNews[0].title}</h3>
-            <p className="text-sm text-gray-600 mt-2 leading-snug">{breakingNews[0].description}</p>
+            <h3 className="text-xl font-semibold text-[#4A4A4A] leading-tight">
+              {breakingNews[0].title}
+            </h3>
+            <p className="text-sm text-[#767676] mt-2 leading-snug">
+              {breakingNews[0].description}
+            </p>
             <a
               href={breakingNews[0].url}
               target="_blank"
-              rel="noopener noreferrer"
-              className="text-orange-500 text-sm mt-2 block"
+              className="text-[#FF6F61] hover:text-[#007E7E] hover:underline  mt-2 block"
             >
               Read more
             </a>
           </div>
         )}
 
-        <h3 className="text-xl font-semibold mb-2 border-b border-gray-300 pb-1">More Breaking News</h3>
+        {/* More News Section */}
+        <h3 className="text-xl font-semibold mb-2 text-[#3BAFDA] border-b border-[#007E7E] pb-1">
+          More Breaking News
+        </h3>
 
         <div>
           {breakingNews.slice(1, visibleNewsCount).map((article, index) => (
-            <div key={index} className="flex items-center mb-4">
+            <div key={index} className="flex items-center mb-4 bg-white rounded-lg p-3">
               <img
                 src={article.image}
                 alt={article.title}
-                className="w-20 h-20 object-cover rounded-lg mr-4"
+                className="w-32 h-20 object-cover rounded-lg mr-4"
               />
               <div className="flex-1">
-                <h4 className="text-md font-semibold leading-tight">{article.title}</h4>
-                <p className="text-xs text-gray-500">
+                <h4 className="text-md font-semibold leading-tight text-[#4A4A4A]">
+                  {article.title}
+                </h4>
+                <p className="text-xs text-[#767676]">
                   {article.source} - {new Date(article.published).toLocaleDateString()}
                 </p>
                 <a
                   href={article.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-orange-500 text-xs"
+                  className="text-[#FF6F61] hover:text-[#007E7E] hover:underline text-xs"
                 >
                   Read more
                 </a>
@@ -94,10 +107,11 @@ const BreakingNews = () => {
           ))}
         </div>
 
+        {/* Show More Button */}
         {visibleNewsCount < breakingNews.length && (
           <button
             onClick={handleShowMore}
-            className="bg-red-600 text-white rounded px-4 py-2 mt-4 w-full"
+            className="bg-[#00A6A6] text-white rounded-md hover:bg-[#007E7E] px-4 py-2 mt-4 w-full "
           >
             Show More
           </button>
