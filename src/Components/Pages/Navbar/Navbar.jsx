@@ -67,7 +67,7 @@ const Navbar = () => {
       <div className="fixed top-0 left-0 z-20 w-full ">
         {/* <nav className=" shadow-md shadow-emerald-700 p-4"> */}
 
-        <div className="bg-white ">
+        <div className="bg-[#E0E4E8] text-[#2F2F2F] ">
           <nav className=" shadow-md p-4    top-0 z-10">
             <div className="container mx-auto flex items-center justify-between">
               <div className="flex items-center space-x-4">

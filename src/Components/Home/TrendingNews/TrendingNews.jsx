@@ -80,8 +80,8 @@ const TrendingNews = () => {
     const displayedArticles = showAll ? articles : articles.slice(0, 2);
 
     return (
-        <div className=" py-8">
-            <h1 className="text-4xl border-b-4 pb-4 border-red-500 font-extrabold mb-6">Trending News</h1>
+        <div className=" p-5 bg-[#F5F5F5] rounded-lg">
+            <h1 className="text-4xl text-[#3BAFDA] border-b-4 pb-4 border-[#007E7E] font-extrabold mb-6">Trending News</h1>
             {/* News list, two items by default */}
             <div className="grid grid-cols-1 mt-5 gap-6">
                 {displayedArticles.map((article, index) => (
@@ -97,11 +97,11 @@ const TrendingNews = () => {
 
                         {/* Content */}
                         <div className="flex-1">
-                            <h2 className="font-bold text-xl text-gray-900 mb-2">{article.title}</h2>
-                            <p className="text-gray-600 text-sm mb-2">{article.description}</p>
+                            <h2 className="font-bold text-xl text-[#4A4A4A] mb-2">{article.title}</h2>
+                            <p className="text-[#767676] text-sm mb-2">{article.description}</p>
                             <a
                                 href={article.url}
-                                className="text-orange-600 hover:underline"
+                                className="text-[#FF9A8B] hover:text-[#00A6A6] hover:underline"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
@@ -110,7 +110,7 @@ const TrendingNews = () => {
 
                             {/* Social sharing icons */}
                             <div className="mt-4 flex items-center gap-4">
-                                <span className="text-gray-500">Share: </span>
+                                <span className="text-[#4A4A4A] font-bold">Share: </span>
                                 <FacebookShareButton url={article.url}>
                                     <FacebookIcon size={32} round />
                                 </FacebookShareButton>
@@ -141,7 +141,7 @@ const TrendingNews = () => {
                 <div className="mt-6 text-center">
                     <button
                         onClick={handleShowMore}
-                        className="px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 transition"
+                        className="px-4 py-2 bg-[#00A6A6] text-white rounded-md hover:bg-[#007E7E] transition"
                     >
                         Show More
                     </button>
