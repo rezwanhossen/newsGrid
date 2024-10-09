@@ -8,6 +8,7 @@ import FollowUs from "./FollowUs/FollowUs";
 import RecommendedNews from "./RecommendedNews/RecommendedNews";
 import { useEffect, useState } from "react";
 import {  useOutletContext } from "react-router-dom";
+import VideoNews from "./VideoNews/VideoNews";
 
 
 const Home = () => {
@@ -47,19 +48,14 @@ const Home = () => {
 
                     {/* Trending News */}
 
-                    <TrendingNews />
-
-                    {/* Recommended News */}
-                    <RecommendedNews />
-
-                    {/* Video News */}
-                    <VideoNews />
-                    
-
                     <TrendingNews setAllNewsTrending={setAllNewsTrending}/>
 
                     {/* Recommended News */}
                     <RecommendedNews setAllNewsRecommended={setAllNewsRecommended}/>
+
+                    {/* Video News */}
+                    <VideoNews />
+                    
 
                 </div>
                 
