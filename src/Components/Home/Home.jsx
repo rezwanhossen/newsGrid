@@ -6,6 +6,7 @@ import TrendingNews from "./TrendingNews/TrendingNews";
 import BreakingNews from "./BreakingNews/BreakingNews";
 import FollowUs from "./FollowUs/FollowUs";
 import RecommendedNews from "./RecommendedNews/RecommendedNews";
+import VideoNews from "./VideoNews/VideoNews";
 
 const Home = () => {
     const [newsData, isLoading] = useNews();
@@ -27,6 +28,10 @@ const Home = () => {
                     {/* Trending News */}
                     <TrendingNews />
 
+
+                    {/* Video News */}
+                    <VideoNews />
+                    
                     {/* Recommended News */}
                     <RecommendedNews />
                 </div>
