@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { FaBookmark, FaShareAlt, FaStop, FaVolumeUp, } from "react-icons/fa";
+import { FaBookmark, FaShareAlt } from "react-icons/fa";
 import {
   FacebookShareButton,
   TwitterShareButton,
@@ -16,7 +16,7 @@ const FeaturedSection = () => {
   const [newsData, setNewsData] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [categories, setCategories] = useState([]);
-  const [isSpeaking, setIsSpeaking] = useState(false);
+  
 
   // Fetch news data
   useEffect(() => {
@@ -61,21 +61,6 @@ const FeaturedSection = () => {
       });
   };
 
-  // Handle reading news out loud
-  const handleSpeak = (text) => {
-    if (isSpeaking) {
-      window.speechSynthesis.cancel();
-      setIsSpeaking(false);
-    } else {
-      const utterance = new SpeechSynthesisUtterance(text);
-      utterance.lang = "en-US";
-      utterance.onend = () => {
-        setIsSpeaking(false);
-      };
-      window.speechSynthesis.speak(utterance);
-      setIsSpeaking(true);
-    }
-  };
 
   const displayedNews = selectedCategory
     ? newsData.filter((item) => item.category === selectedCategory)
@@ -152,16 +137,6 @@ const FeaturedSection = () => {
                 >
                   <FaBookmark className="mr-2" /> Bookmark
                 </button>
-
-                {/* Read Feature */}
-                {/* <button
-                  onClick={() => handleSpeak(newsItem.title)}
-                  className="flex items-center text-gray-600 hover:text-orange-700 transition"
-                >
-                  {isSpeaking ? <FaStop className="mr-2" /> : <FaVolumeUp className="mr-2" />}
-                  {isSpeaking ? "Stop Reading" : "Listen"}
-                </button> */}
-
 
                 {/* Share Options */}
                 <div className="flex items-center gap-2">
