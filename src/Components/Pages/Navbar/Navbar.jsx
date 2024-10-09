@@ -5,20 +5,7 @@ import { Link, NavLink } from "react-router-dom";
 import useAuth from "../../../Hook/useAuth/useAuth";
 import useAdmin from "../../../Hook/useAdmin";
 
-
-
-
-
-
-
-
-
-
 const Navbar = () => {
-
-
-
-
   const [isDashboardOpen, setIsDashboardOpen] = useState(false);
   const [isAdmin, isLoading] = useAdmin();
   const toggleDashboard = () => {
@@ -44,23 +31,23 @@ const Navbar = () => {
     }
   };
 
-
-
-
-
-
-
-  const categories = ["Home", "business", "entertainment", "general", "health", "science", "sports", "technology", "politics"];
-
-
+  const categories = [
+    "Home",
+    "business",
+    "entertainment",
+    "general",
+    "health",
+    "science",
+    "sports",
+    "technology",
+    "politics",
+  ];
 
   const [active, setActive] = useState("all-news");
 
-
   const handleActive = (data) => {
-    setActive(data)
-  }
-
+    setActive(data);
+  };
 
   return (
     <div>
@@ -166,22 +153,32 @@ const Navbar = () => {
           {/* Categories Navbar */}
           <div className="bg-white pb-2 pt-2 border-b-4 border-red-500">
             <ul className="flex flex-col sm:flex-row gap-2 sm:gap-4 items-center justify-center font-bold text-center">
-              {categories.map(category => (
-                <li key={category} className={`font-bold text-lg sm:text-2xl px-2 sm:px-4 text-[#232323] ${active === category ? 'text-red-500 underline' : ''} hover:cursor-pointer`}>
-                  <Link to={category === 'Home' ? "/" : `/categoriesNews/${category}`} onClick={() => setActive(category)}>
+              {categories.map((category) => (
+                <li
+                  key={category}
+                  className={`font-bold text-lg sm:text-2xl px-2 sm:px-4 text-[#232323] ${
+                    active === category ? "text-red-500 underline" : ""
+                  } hover:cursor-pointer`}
+                >
+                  <Link
+                    to={
+                      category === "Home" ? "/" : `/categoriesNews/${category}`
+                    }
+                    onClick={() => setActive(category)}
+                  >
                     {category.toUpperCase()}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
-
         </div>
 
         {/* Dashboard  */}
         <div
-          className={`shadow-lg z-50 bg-white max-w-[300px]  ease-in-out transform fixed top-0 left-0 h-full  w-[250px]   transition-transform duration-300  ${isDashboardOpen ? "translate-x-0" : "-translate-x-full"
-            }`}
+          className={`shadow-lg z-50 bg-white max-w-[300px]  ease-in-out transform fixed top-0 left-0 h-full  w-[250px]   transition-transform duration-300  ${
+            isDashboardOpen ? "translate-x-0" : "-translate-x-full"
+          }`}
         >
           {/* Close Menu Icon */}
           <button onClick={toggleDashboard} className="text-black p-4">
@@ -227,7 +224,6 @@ const Navbar = () => {
         </div>
       </div>
     </div>
-
   );
 };
 
