@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NewsDetail from "./Home/FeaturedSection/NewsDetail/NewsDetail";
 import FeaturedSection from "./Home/FeaturedSection/FeaturedSection";
+import 'regenerator-runtime/runtime';
 
 function App() {
   return (

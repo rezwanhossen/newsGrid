@@ -17,8 +17,12 @@ import Alluser from "../Components/DashbordPage/AdminPage/AllUser/Alluser";
 import PrivateRoute from "../Components/Fairbase/PrivateRoute";
 import UserHome from "../Components/DashbordPage/UserPage/UserHome";
 import UsersDeshboard from './../Components/UsersDeshboard/UsersDeshboard';
-import CategoriesNews from "../Components/Pages/CategoriesNews/CategoriesNews";
+
 import DownloadsNews from "../Components/DownloadsNews/DownloadsNews";
+import MyNews from "../Components/DashbordPage/MyNews/MyNews";
+import AddedNews from "../Components/DashbordPage/AdminPage/AddedNews/AddedNews";
+import CategoriesNews from "../Components/Pages/CategoriesNews/NewsCategory/CategoriesNews";
+import NewsSearch from "../Components/Pages/NewsSearch/NewsSearch";
  
 
 const router = createBrowserRouter([
@@ -60,6 +64,10 @@ const router = createBrowserRouter([
       {
         path : '/downloads',
         element : <DownloadsNews></DownloadsNews>
+      },
+      {
+        path : '/newsSearch',
+        element : <NewsSearch></NewsSearch>
       }
     ],
   },
@@ -84,11 +92,19 @@ const router = createBrowserRouter([
         path: "addnews",
         element: <AddNews></AddNews>,
       },
+      {
+        path : 'myNews',
+        element : <MyNews></MyNews>
+      },
 
       //admin route
       {
         path: "users",
         element: <Alluser></Alluser>,
+      },
+      {
+        path : 'addedNews',
+        element : <AddedNews></AddedNews>
       }
       
     ],
