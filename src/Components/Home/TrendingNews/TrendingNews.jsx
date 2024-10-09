@@ -18,13 +18,11 @@ const TrendingNews = ({setAllNewsTrending}) => {
     const [articles, setArticles] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+
     const [showAll, setShowAll] = useState(false); // State to control "Show More" functionality
 
 
     
-
-
-
     const navigate = useNavigate();
     const apiKey = 'uX-Tbv7wo0kWPez-lDxwvpryFy8240yUQek_C5a_qIYVl6kb'; // Currents API token
 
@@ -76,7 +74,7 @@ const TrendingNews = ({setAllNewsTrending}) => {
                 cancelButtonText: 'Cancel',
             }).then((result) => {
                 if (result.isConfirmed) {
-                    navigate('/login'); // Navigate to login page if "Login" is clicked
+                    navigate('/login'); 
                 }
             });
         } else {

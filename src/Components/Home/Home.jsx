@@ -9,6 +9,7 @@ import RecommendedNews from "./RecommendedNews/RecommendedNews";
 import { useEffect, useState } from "react";
 import {  useOutletContext } from "react-router-dom";
 
+
 const Home = () => {
     const [newsData , isLoading] = useNews();
     // const navigate = useNavigate();
@@ -45,10 +46,21 @@ const Home = () => {
                     <Banner newsData={newsData} />
 
                     {/* Trending News */}
+
+                    <TrendingNews />
+
+                    {/* Recommended News */}
+                    <RecommendedNews />
+
+                    {/* Video News */}
+                    <VideoNews />
+                    
+
                     <TrendingNews setAllNewsTrending={setAllNewsTrending}/>
 
                     {/* Recommended News */}
                     <RecommendedNews setAllNewsRecommended={setAllNewsRecommended}/>
+
                 </div>
                 
                 {/* Right Section: Breaking News, Sponsor, Follow Us */}
@@ -58,6 +70,7 @@ const Home = () => {
 
                     {/* Sponsor Section */}
                     <Sponsors />
+
 
                     {/* Follow Us Section */}
                     <FollowUs />
