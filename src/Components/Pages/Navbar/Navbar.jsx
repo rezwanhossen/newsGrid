@@ -54,13 +54,13 @@ const Navbar = () => {
       <div className="fixed top-0 left-0 z-20 w-full ">
         {/* <nav className=" shadow-md shadow-emerald-700 p-4"> */}
 
-        <div className="bg-white ">
+        <div className="bg-[#004E5B] text-white ">
           <nav className=" shadow-md p-4    top-0 z-10">
             <div className="container mx-auto flex items-center justify-between">
               <div className="flex items-center space-x-4">
                 <button
                   onClick={toggleDashboard}
-                  className="text-black  focus:outline-none"
+                  className="text-white  focus:outline-none"
                 >
                   {isDashboardOpen ? (
                     <FiX className="w-6 h-6" />
@@ -72,7 +72,7 @@ const Navbar = () => {
 
               <div className="flex-1 flex justify-center">
                 <Link to="/">
-                  <img className="h-14" src={logo} alt="logo" />
+                  <img className="h-14 " src={logo} alt="logo" />
                 </Link>
               </div>
 
@@ -116,7 +116,7 @@ const Navbar = () => {
                       </div>
                       <ul
                         tabIndex={0}
-                        className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
+                        className="dropdown-content z-[1] menu p-2 shadow bg-lime-400 rounded-box w-52"
                       >
                         <li>
                           <a>{user.displayName}</a>
@@ -141,7 +141,7 @@ const Navbar = () => {
                 ) : (
                   <Link
                     to="/login"
-                    className="text-black border border-black px-4 py-2 rounded hover:bg-gray-100"
+                    className="text-white border border-white px-4 py-2 rounded hover:bg-white hover:text-black"
                   >
                     Login
                   </Link>
