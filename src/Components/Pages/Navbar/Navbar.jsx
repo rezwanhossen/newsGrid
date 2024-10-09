@@ -67,13 +67,13 @@ const Navbar = () => {
       <div className="fixed top-0 left-0 z-20 w-full ">
         {/* <nav className=" shadow-md shadow-emerald-700 p-4"> */}
 
-        <div className="bg-white ">
+        <div className="bg-[#004E5B] text-white ">
           <nav className=" shadow-md p-4    top-0 z-10">
             <div className="container mx-auto flex items-center justify-between">
               <div className="flex items-center space-x-4">
                 <button
                   onClick={toggleDashboard}
-                  className="text-black  focus:outline-none"
+                  className="text-white  focus:outline-none"
                 >
                   {isDashboardOpen ? (
                     <FiX className="w-6 h-6" />
@@ -85,7 +85,7 @@ const Navbar = () => {
 
               <div className="flex-1 flex justify-center">
                 <Link to="/">
-                  <img className="h-14" src={logo} alt="logo" />
+                  <img className="h-14 " src={logo} alt="logo" />
                 </Link>
               </div>
 
@@ -154,7 +154,7 @@ const Navbar = () => {
                 ) : (
                   <Link
                     to="/login"
-                    className="text-black border border-black px-4 py-2 rounded hover:bg-gray-100"
+                    className="text-white border border-white px-4 py-2 rounded hover:bg-white hover:text-black"
                   >
                     Login
                   </Link>
@@ -164,16 +164,18 @@ const Navbar = () => {
           </nav>
 
           {/* Categories Navbar */}
-          <div className="bg-white pb-2 pt-2 border-b-4 border-red-500">
-            <ul className="flex flex-col sm:flex-row gap-2 sm:gap-4 items-center justify-center font-bold text-center">
-              {categories.map(category => (
-                <li key={category} className={`font-bold text-lg sm:text-2xl px-2 sm:px-4 text-[#232323] ${active === category ? 'text-red-500 underline' : ''} hover:cursor-pointer`}>
-                  <Link to={category === 'Home' ? "/" : `/categoriesNews/${category}`} onClick={() => setActive(category)}>
-                    {category.toUpperCase()}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+          <div className="bg-white">
+            <div className=" container mx-auto pb-2 pt-2 border-b-4 border-[#007E7E]">
+              <ul className="flex flex-col sm:flex-row gap-2 sm:gap-4 items-center justify-center font-bold text-center">
+                {categories.map(category => (
+                  <li key={category} className={`font-bold text-lg sm:text-2xl px-2 sm:px-4 text-[#232323] ${active === category ? 'text-red-500 underline' : ''} hover:cursor-pointer`}>
+                    <Link to={category === 'Home' ? "/" : `/categoriesNews/${category}`} onClick={() => setActive(category)}>
+                      {category.toUpperCase()}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
         </div>

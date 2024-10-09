@@ -6,7 +6,7 @@ const RecommendedNews = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [showAll, setShowAll] = useState(false);
-    const apiKey = 'pub_5554319d28e13bc8be1aab4736ea6ca4bbb0c'; // NewsData.io API Key
+    const apiKey = 'pub_5554319d28e13bc8be1aab4736ea6ca4bbb0c'; 
 
     // Fetch recommended news from NewsData.io API
     const fetchRecommendedNews = async () => {
@@ -45,8 +45,8 @@ const RecommendedNews = () => {
     const displayedArticles = showAll ? articles : articles.slice(0, 3);
 
     return (
-        <div className="py-8">
-            <h1 className="text-4xl border-b-4 pb-4 border-red-500 font-extrabold mb-6">Recommended News</h1>
+        <div className="p-5 mt-10 rounded-lg bg-[#F5F5F5]">
+            <h1 className="text-4xl border-b-4 pb-4 text-[#3BAFDA] border-[#007E7E] font-extrabold mb-6">Recommended News</h1>
             {/* News list, two items by default */}
             <div className="grid grid-cols-1 mt-5 gap-6">
                 {displayedArticles.map((article, index) => (
@@ -62,11 +62,11 @@ const RecommendedNews = () => {
 
                         {/* Content */}
                         <div className="flex-1">
-                            <h2 className="font-bold text-xl text-gray-900 mb-2">{article.title}</h2>
-                            <p className="text-gray-600 text-sm mb-2">{article.description}</p>
+                            <h2 className="font-bold text-xl text-[#4A4A4A] mb-2">{article.title}</h2>
+                            <p className="text-[#767676] text-sm mb-2">{article.description}</p>
                             <a
                                 href={article.link}
-                                className="text-orange-600 hover:underline"
+                                className="text-orange-600 hover:text-[#00A6A6] hover:underline"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
@@ -82,7 +82,7 @@ const RecommendedNews = () => {
                 <div className="mt-6 text-center">
                     <button
                         onClick={handleShowMore}
-                        className="px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 transition"
+                        className="px-4 py-2 bg-[#00A6A6] text-white rounded-md hover:bg-[#007E7E] transition"
                     >
                         Show More
                     </button>
