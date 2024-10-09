@@ -7,7 +7,7 @@ const BreakingNews = () => {
   const [visibleNewsCount, setVisibleNewsCount] = useState(7);
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
-  const [currentUtterance, setCurrentUtterance] = useState(null); // Store the current utterance
+  const [currentUtterance, setCurrentUtterance] = useState(null); 
   const apiKey = "uX-Tbv7wo0kWPez-lDxwvpryFy8240yUQek_C5a_qIYVl6kb"; // Currents API Key
 
   // Fetch real-time breaking news

@@ -176,7 +176,7 @@ const TrendingNews = () => {
                   Bookmark
                 </button>
 
-                {/* Read aloud button */}
+                {/* Listen button */}
                 <button
                   onClick={() => handleSpeak(`${article.title}. ${article.description}`)}
                   className="ml-4 flex items-center text-gray-600 hover:text-blue-500"
@@ -186,7 +186,7 @@ const TrendingNews = () => {
                   {isSpeaking ? "Stop" : "Listen in Audio"}
                 </button>
 
-                {/* Pause/Resume button */}
+                {/* Pause and Resume button */}
                 {isSpeaking && (
                   <button
                     onClick={handlePause}
