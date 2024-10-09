@@ -69,9 +69,9 @@ const SocialMedia = () => {
         <div className="flex justify-center">
           <button
             onClick={handleGoogleLogin}
-            className="w-full text-black py-3 rounded flex justify-center items-center  hover:text-white transition duration-300"
+            className="w-full text-black py-3 bg-orange-400 rounded flex justify-center items-center  hover:text-white transition duration-300"
           >
-            <FaGoogle className="mr-2" /> Login with Google
+            <FaGoogle className="mr-2 " /> Login with Google
           </button>
         </div>
       </div>
