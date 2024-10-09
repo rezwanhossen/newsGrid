@@ -13,13 +13,16 @@ import Swal from "sweetalert2";
 import toast from "react-hot-toast";
 import { useNavigate } from 'react-router-dom';
 
-const TrendingNews = () => {
+
+const TrendingNews = ({setAllNewsTrending}) => {
     const [articles, setArticles] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-    const [showAll, setShowAll] = useState(false);
-    
 
+    const [showAll, setShowAll] = useState(false); // State to control "Show More" functionality
+
+
+    
     const navigate = useNavigate();
     const apiKey = 'uX-Tbv7wo0kWPez-lDxwvpryFy8240yUQek_C5a_qIYVl6kb'; // Currents API token
 
@@ -36,7 +39,9 @@ const TrendingNews = () => {
                     language: 'en',
                 },
             });
+            
             setArticles(response.data.news.slice(0, 10)); 
+            setAllNewsTrending(response?.data?.news)
             setLoading(false);
         } catch (error) {
             setError('Failed to fetch news. Please try again later.');
