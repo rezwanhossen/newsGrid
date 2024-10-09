@@ -39,7 +39,7 @@ const NewsSlider = () => {
           <div className="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-4">
             <h2 className="text-2xl font-bold">{article.fields.headline}</h2>
           </div>
-        </div>
+        </div>   
       ))}
     </Slider>
   );
