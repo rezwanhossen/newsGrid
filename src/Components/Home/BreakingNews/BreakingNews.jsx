@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-const BreakingNews = () => {
+const BreakingNews = ({setAllNewsBreaking}) => {
   const [breakingNews, setBreakingNews] = useState([]);
   const [visibleNewsCount, setVisibleNewsCount] = useState(7);
   const apiKey = 'uX-Tbv7wo0kWPez-lDxwvpryFy8240yUQek_C5a_qIYVl6kb'; // Currents API Key
@@ -22,6 +22,7 @@ const BreakingNews = () => {
       );
       const responses = await Promise.all(promises);
       const combinedNews = responses.flatMap((response) => response.data.news);
+      setAllNewsBreaking(combinedNews);
       combinedNews.sort((a, b) => new Date(b.published) - new Date(a.published));
       setBreakingNews(combinedNews);
     } catch (error) {

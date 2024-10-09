@@ -1,12 +1,18 @@
 import { useQuery } from "@tanstack/react-query";
-import ThreeColumnLayout from "../News/ThreeColumnLayout/ThreeColumnLayout";
-import TwoColumnLayout from "../News/TwoColumnLayout/TwoColumnLayout";
+
 
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import Loading from "../../Loading/Loading";
-import ReadMoreLink from "../../../Shared/ReadMoreLink";
+
+
 import { Parallax } from "react-parallax";
+
+import TwoColumnLayout from "../../News/TwoColumnLayout/TwoColumnLayout";
+import ThreeColumnLayout from "../../News/ThreeColumnLayout/ThreeColumnLayout";
+import Loading from "../../../Loading/Loading";
+import ReadMoreLink from "../../../../Shared/ReadMoreLink";
+import UserAddedNews from "../UserAddedNews";
+import { useEffect, useState } from "react";
 
 
 
@@ -14,7 +20,7 @@ const CategoriesNews = () => {
     
      
      const {category} = useParams();
-    //  console.log("category" , category)
+     
 
     const {data : newsData , isLoading} = useQuery({
         queryKey : ['categoriesNews' , category] , 
@@ -31,6 +37,17 @@ const CategoriesNews = () => {
         }
     
     })
+
+
+
+    const [categoryNews , setCategoryNews] = useState([]);
+    useEffect( () => {
+        axios.get(`http://localhost:5000/myNews/category?category=${category}`)
+        .then(res => {
+            console.log("res : " , res.data)
+            setCategoryNews(res.data);
+        })
+    }, [category])
     if(isLoading){
         return <Loading></Loading>
     }
@@ -97,7 +114,12 @@ const CategoriesNews = () => {
                 }
                 </div>
 
+
+
+        <UserAddedNews categoryNews={categoryNews}></UserAddedNews>
         </div>
+
+
         </div>
     );
 };
