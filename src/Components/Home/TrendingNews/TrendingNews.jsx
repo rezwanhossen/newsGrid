@@ -107,7 +107,13 @@ const TrendingNews = () => {
             confirmButtonText: "Ok",
           });
         } else {
-          return toast.error("You need to Login first");
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "You Are Not Login Yet!!!",
+                footer: '<a href="login">==> Click to Login <==</a>',
+                color: "red"
+              });
         }
       });
   };
