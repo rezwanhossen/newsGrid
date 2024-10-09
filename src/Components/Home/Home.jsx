@@ -8,6 +8,7 @@ import FollowUs from "./FollowUs/FollowUs";
 import RecommendedNews from "./RecommendedNews/RecommendedNews";
 import VideoNews from "./VideoNews/VideoNews";
 
+
 const Home = () => {
     const [newsData, isLoading] = useNews();
 
@@ -28,12 +29,12 @@ const Home = () => {
                     {/* Trending News */}
                     <TrendingNews />
 
+                    {/* Recommended News */}
+                    <RecommendedNews />
 
                     {/* Video News */}
                     <VideoNews />
                     
-                    {/* Recommended News */}
-                    <RecommendedNews />
                 </div>
                 
                 {/* Right Section: Breaking News, Sponsor, Follow Us */}
@@ -43,6 +44,7 @@ const Home = () => {
 
                     {/* Sponsor Section */}
                     <Sponsors />
+
 
                     {/* Follow Us Section */}
                     <FollowUs />
