@@ -95,17 +95,29 @@ const Navbar = ({ allNews}) => {
     }
   };
 
-
-
-
-
-
-
-  const categories = ["Home", "business", "entertainment", "general", "health", "science", "sports", "technology", "politics"];
-
-
+  const categories = [
+    "Home",
+    "business",
+    "entertainment",
+    "general",
+    "health",
+    "science",
+    "sports",
+    "technology",
+    "politics",
+  ];
 
   const [active, setActive] = useState("all-news");
+
+
+
+
+
+  
+
+
+
+  
 
 
   const handleActive = (data) => {
@@ -315,7 +327,6 @@ const Navbar = ({ allNews}) => {
         </div>
       </div>
     </div>
-
   );
 };
 
