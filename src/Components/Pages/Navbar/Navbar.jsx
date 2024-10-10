@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import logo from "../../../assets/logo-r.png";
