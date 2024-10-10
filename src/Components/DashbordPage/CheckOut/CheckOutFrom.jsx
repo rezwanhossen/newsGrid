@@ -83,6 +83,7 @@ const CheckOutFrom = () => {
 
       try {
         await axioscommon.post("/payment", paymentinfo);
+        toast.success("succesfully data save on server");
         navigate("/dashbord/addnews");
       } catch (err) {
         toast.error(err.message);

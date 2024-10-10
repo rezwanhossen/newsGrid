@@ -10,7 +10,6 @@ import {
   LinkedinIcon,
 } from "react-share";
 import Swal from "sweetalert2";
-import toast from "react-hot-toast";
 import useAuth from "../../../Hook/useAuth/useAuth";
 
 const TrendingNews = () => {
