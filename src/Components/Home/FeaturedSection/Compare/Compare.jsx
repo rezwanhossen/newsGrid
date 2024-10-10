@@ -49,7 +49,7 @@ const Compare = () => {
             }
                 </div>
                 :
-                <div className= "px-8 py-3 text-center my-10">
+                <div className= "px-8 py-3 text-center my-10 border-2 border-red-600 w-full">
                     <h1 className="text-2xl font-bold mb-4">No data found related this news</h1>
                     
                     <div className="max-w-sm mx-auto rounded-xl">

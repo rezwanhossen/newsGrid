@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { FaVolumeUp, FaPause, FaPlay } from "react-icons/fa";
 
-const BreakingNews = () => {
+const BreakingNews = ({setAllNewsBreaking}) => {
   const [breakingNews, setBreakingNews] = useState([]);
   const [visibleNewsCount, setVisibleNewsCount] = useState(7);
   const [isSpeaking, setIsSpeaking] = useState(false);
