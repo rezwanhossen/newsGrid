@@ -49,7 +49,7 @@ const AddNews = () => {
 
     console.log(addNews);
 
-    // const res = axios.post(`${axiosPublic}/addNews` , addNews)
+    const res = axios.post(`${axiosPublic}/addNews` , addNews)
      axiosPublic.post('/addNews' , addNews)
     .then(res => {
       console.log(res.data)
@@ -87,7 +87,7 @@ const AddNews = () => {
           <label className="label">
             <span className="text-base font-semibold text-[#005689]">Author <span className="text-lg text-red-600">  *</span></span>
           </label>
-          <input type="text"name="author" placeholder="author" className="border-b-2  border-[#005689] focus:border-b-2 focus:border-[#7baac5] outline-none" required />
+          <input type="text"name="author" placeholder="author" defaultValue={user?.displayName} className="border-b-2  border-[#005689] focus:border-b-2 focus:border-[#7baac5] outline-none" required />
           
         </div>
         <div className="form-control w-full">
@@ -148,7 +148,18 @@ const AddNews = () => {
           <label className="label">
             <span className="text-base font-semibold text-[#005689]">Category News <span className="text-lg text-red-600">  *</span></span>
           </label>
-          <input type="text" placeholder="category news"name="category" className="border-b-2  border-[#005689] focus:border-b-2 focus:border-[#7baac5] outline-none"required />
+          {/* <input type="text" placeholder="category news"name="category" className="border-b-2  border-[#005689] focus:border-b-2 focus:border-[#7baac5] outline-none"required /> */}
+          <select className="border-b-2  border-[#005689] focus:border-b-2 focus:border-[#7baac5] outline-none"name="category" required>
+  
+  <option value="business">Business</option>
+  <option value="entertainment">Entertainment</option>
+  <option value="general">General</option>
+  <option value="health">Health</option>
+  <option value="science">Science</option>
+  <option value="sports">Sports</option>
+  <option value="technology">Technology</option>
+  <option value="politics">Politics</option>
+</select>
           
         </div>
         <div className="form-control w-full bg-white rounded-lg py-5 px-4">
