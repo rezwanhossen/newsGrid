@@ -22,7 +22,7 @@ const useNews = () => {
           const news = response?.data?.data?.articles.filter(
             (news) => news.title && news.urlToImage
           );
-          console.log("newssss : " , news);
+          // console.log("newssss : " , news);
   
           return news;
       },

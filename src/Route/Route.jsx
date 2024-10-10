@@ -22,6 +22,7 @@ import DownloadsNews from "../Components/DownloadsNews/DownloadsNews";
 import MyNews from "../Components/DashbordPage/MyNews/MyNews";
 import AddedNews from "../Components/DashbordPage/AdminPage/AddedNews/AddedNews";
 import CategoriesNews from "../Components/Pages/CategoriesNews/NewsCategory/CategoriesNews";
+import NewsSearch from "../Components/Pages/NewsSearch/NewsSearch";
  
 
 const router = createBrowserRouter([
@@ -63,6 +64,10 @@ const router = createBrowserRouter([
       {
         path : '/downloads',
         element : <DownloadsNews></DownloadsNews>
+      },
+      {
+        path : '/newsSearch',
+        element : <NewsSearch></NewsSearch>
       }
     ],
   },

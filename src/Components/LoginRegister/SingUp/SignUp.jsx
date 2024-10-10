@@ -7,106 +7,125 @@ import toast from "react-hot-toast";
 import { AuthContext } from "../../Fairbase/AuthProvider";
 
 const SignUp = () => {
-  const naviget = useNavigate();
+  const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
   const togglePasswordVisibility = () => setShowPassword(!showPassword);
-  const { register, handleSubmit } = useForm();
 
-  const { creatuser, updatprofil } = useContext(AuthContext);
-  //VITE_IMGBB_key=087bee3d0e630a5c74abd26b0f4decb1
+  // react-hook-form setup
+  const { register, handleSubmit, formState: { errors } } = useForm();
+
+  // AuthContext functions
+  const { createuser, updateprofile } = useContext(AuthContext);
+
+  // Handle form submission
   const onSubmit = async (data) => {
     const { name, image, email, password } = data;
-    console.log(data);
-    const imgfile = { image: data.image[0] };
+    const imgFile = new FormData();
+    imgFile.append("image", image[0]);
+
     try {
-      const { data } = await axios.post(
+      // Uploading image to imgbb
+      const { data: imgData } = await axios.post(
         "https://api.imgbb.com/1/upload?key=087bee3d0e630a5c74abd26b0f4decb1",
-        imgfile,
+        imgFile,
         {
-          headers: {
-            "Content-Type": "multipart/form-data",
-          },
+          headers: { "Content-Type": "multipart/form-data" },
         }
       );
-      console.log(data.data.display_url);
-      const result = await creatuser(email, password);
-      await updatprofil(name, data.data.display_url);
-      naviget("/");
+
+      // Create user with Firebase
+      const result = await createuser(email, password);
+      console.log(result);
+      
+
+      // Update profile with name and image URL
+      await updateprofile(name, imgData.data.display_url);
+
+      // Navigate to homepage
+      navigate("/");
       toast.success("Sign up Successful!");
+
     } catch (error) {
+      // Show error toast if something fails
       toast.error(error.message);
     }
   };
 
   return (
-    <div className="w-full md:w-[40%] mx-auto p-6  rounded-lg my-10 bg-white shadow-lg">
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <h2 className="text-center text-2xl font-semibold mb-6">Sign Up</h2>
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-purple-600 to-blue-600">
+      <div className="w-full  md:w-8/12 lg:w-5/12 p-10 bg-white/20 backdrop-blur-md rounded-xl my-32 shadow-lg mx-auto">
+        {/* Form Header */}
+        <h2 className="text-3xl font-bold text-white text-center mb-8">Create an Account</h2>
 
-        {/* Name Input */}
-        <div className="mb-4">
-          <input
-            required
-            className="w-full border border-gray-300 py-3 px-4 rounded outline-none focus:border-red-500"
-            placeholder="Type Your Name"
-            type="text"
-            {...register("name")}
-            name="name"
-          />
-        </div>
-
-        {/* Photo Input */}
-        <div className="mb-4">
-          <label> Your photo: </label>
-          <input required type="file" {...register("image")} name="image" />
-        </div>
-
-        {/* Email Input */}
-        <div className="mb-4">
-          <input
-            required
-            className="w-full border border-gray-300 py-3 px-4 rounded outline-none focus:border-red-500"
-            placeholder="Type Your Email"
-            type="email"
-            {...register("email")}
-            name="email"
-          />
-        </div>
-
-        {/* Password Input */}
-        <div className="mb-4 relative">
-          <input
-            required
-            className="w-full border border-gray-300 py-3 px-4 rounded outline-none focus:border-red-500"
-            placeholder="Your Password"
-            {...register("password")}
-            type={showPassword ? "text" : "password"}
-            name="password"
-          />
-          <div
-            className="absolute right-4 top-3 cursor-pointer text-gray-500"
-            onClick={togglePasswordVisibility}
-          >
-            {showPassword ? (
-              <AiFillEyeInvisible size={24} />
-            ) : (
-              <AiFillEye size={24} />
-            )}
+        {/* Form Start */}
+        <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+          {/* Name Input */}
+          <div className="space-y-2">
+            <label htmlFor="name" className="block text-white font-semibold">Your Name</label>
+            <input
+              className={`w-full bg-white/30 backdrop-blur-md border border-gray-300 py-3 px-4 rounded-lg focus:outline-none focus:border-red-500 ${errors.name ? 'border-red-500' : ''}`}
+              placeholder="Your Name"
+              type="text"
+              {...register("name", { required: "Name is required" })}
+            />
+            {errors.name && <p className="text-red-500">{errors.name.message}</p>}
           </div>
-        </div>
 
-        {/* Submit Button */}
-        <input
-          className="w-full cursor-pointer bg-red-500 text-white py-3 rounded hover:bg-red-600 transition duration-300"
-          type="submit"
-          value="Sign Up"
-        />
-      </form>
-      <div className="mt-4 text-center">
-        Already have an account?{" "}
-        <Link to="/login" className="text-blue-600 mb-2 underline">
-          Login
-        </Link>
+          {/* Image Upload */}
+          <div className="space-y-2">
+            <label htmlFor="image" className="block text-white font-semibold">Profile Picture</label>
+            <input
+              className="w-full bg-white/30 backdrop-blur-md py-3 px-4 rounded-lg"
+              type="file"
+              {...register("image", { required: "Profile picture is required" })}
+            />
+            {errors.image && <p className="text-red-500">{errors.image.message}</p>}
+          </div>
+
+          {/* Email Input */}
+          <div className="space-y-2">
+            <label htmlFor="email" className="block text-white font-semibold">Email Address</label>
+            <input
+              className={`w-full bg-white/30 backdrop-blur-md border border-gray-300 py-3 px-4 rounded-lg focus:outline-none focus:border-red-500 ${errors.email ? 'border-red-500' : ''}`}
+              placeholder="Your Email"
+              type="email"
+              {...register("email", { required: "Email is required" })}
+            />
+            {errors.email && <p className="text-red-500">{errors.email.message}</p>}
+          </div>
+
+          {/* Password Input */}
+          <div className="space-y-2 relative">
+            <label htmlFor="password" className="block text-white font-semibold">Password</label>
+            <input
+              className={`w-full bg-white/30 backdrop-blur-md border border-gray-300 py-3 px-4 rounded-lg focus:outline-none focus:border-red-500 ${errors.password ? 'border-red-500' : ''}`}
+              placeholder="Your Password"
+              {...register("password", { required: "Password is required" })}
+              type={showPassword ? "text" : "password"}
+            />
+            <div
+              className="absolute right-4 top-10 cursor-pointer text-gray-300"
+              onClick={togglePasswordVisibility}
+            >
+              {showPassword ? <AiFillEyeInvisible size={24} /> : <AiFillEye size={24} />}
+            </div>
+            {errors.password && <p className="text-red-500">{errors.password.message}</p>}
+          </div>
+
+          {/* Submit Button */}
+          <div className="mt-6">
+            <input
+              type="submit"
+              className="w-full bg-pink-500 text-white py-3 rounded-lg hover:bg-pink-600 transition duration-300 cursor-pointer"
+              value="Sign Up"
+            />
+          </div>
+        </form>
+
+        {/* Login Link */}
+        <p className="text-center text-white mt-6">
+          Already have an account? <Link to="/login" className="text-red-400 underline">Login here</Link>
+        </p>
       </div>
     </div>
   );
