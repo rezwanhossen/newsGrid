@@ -16,14 +16,14 @@ import Bookmark from "../Components/Bookmark/Bookmark";
 import Alluser from "../Components/DashbordPage/AdminPage/AllUser/Alluser";
 import PrivateRoute from "../Components/Fairbase/PrivateRoute";
 import UserHome from "../Components/DashbordPage/UserPage/UserHome";
-import UsersDeshboard from './../Components/UsersDeshboard/UsersDeshboard';
+import UsersDeshboard from "./../Components/UsersDeshboard/UsersDeshboard";
 
 import DownloadsNews from "../Components/DownloadsNews/DownloadsNews";
 import MyNews from "../Components/DashbordPage/MyNews/MyNews";
 import AddedNews from "../Components/DashbordPage/AdminPage/AddedNews/AddedNews";
 import CategoriesNews from "../Components/Pages/CategoriesNews/NewsCategory/CategoriesNews";
 import NewsSearch from "../Components/Pages/NewsSearch/NewsSearch";
- 
+import Payment from "../Components/DashbordPage/Payment/Payment";
 
 const router = createBrowserRouter([
   {
@@ -58,17 +58,17 @@ const router = createBrowserRouter([
         element: <News />,
       },
       {
-        path: '/categoriesNews/:category',
-        element : <CategoriesNews></CategoriesNews>
+        path: "/categoriesNews/:category",
+        element: <CategoriesNews></CategoriesNews>,
       },
       {
-        path : '/downloads',
-        element : <DownloadsNews></DownloadsNews>
+        path: "/downloads",
+        element: <DownloadsNews></DownloadsNews>,
       },
       {
-        path : '/newsSearch',
-        element : <NewsSearch></NewsSearch>
-      }
+        path: "/newsSearch",
+        element: <NewsSearch></NewsSearch>,
+      },
     ],
   },
 
@@ -82,7 +82,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "userProfile",
-        element:  <UsersDeshboard></UsersDeshboard>,
+        element: <UsersDeshboard></UsersDeshboard>,
       },
       {
         path: "userHome",
@@ -93,8 +93,12 @@ const router = createBrowserRouter([
         element: <AddNews></AddNews>,
       },
       {
-        path : 'myNews',
-        element : <MyNews></MyNews>
+        path: "myNews",
+        element: <MyNews></MyNews>,
+      },
+      {
+        path: "payment",
+        element: <Payment />,
       },
 
       //admin route
@@ -103,10 +107,9 @@ const router = createBrowserRouter([
         element: <Alluser></Alluser>,
       },
       {
-        path : 'addedNews',
-        element : <AddedNews></AddedNews>
-      }
-      
+        path: "addedNews",
+        element: <AddedNews></AddedNews>,
+      },
     ],
   },
 ]);
