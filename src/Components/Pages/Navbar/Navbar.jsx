@@ -5,22 +5,34 @@ import { Link, NavLink, useNavigate, useOutletContext } from "react-router-dom";
 import useAuth from "../../../Hook/useAuth/useAuth";
 import useAdmin from "../../../Hook/useAdmin";
 import { MdKeyboardVoice } from "react-icons/md";
+
 import 'regenerator-runtime/runtime'
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 
 
 
 
+
+// import "regenerator-runtime/runtime";
+// import SpeechRecognition, {
+//   useSpeechRecognition,
+// } from "react-speech-recognition";
+// import  from 'lodash';
+
+
 const Navbar = ({ allNews }) => {
   const navigate = useNavigate();
   const [searchNews, setNewsSearch] = useState([]);
   const [loading, setLoading] = useState(false);
+
   const [inputValue, setInputValue] = useState('');
 
 
 
 
 
+
+  
   const handleSearch = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -30,14 +42,23 @@ const Navbar = ({ allNews }) => {
     setInputValue(searchValue);
 
 
-    const searchResults = allNews?.filter(news =>
-      news?.title.toLowerCase().includes(searchValue.toLowerCase()) || news?.description.toLowerCase().includes(searchValue.toLowerCase())
+
+     const searchResults = allNews?.filter(news =>
+     news?.title.toLowerCase().includes(searchValue.toLowerCase()) || news?.description.toLowerCase().includes(searchValue.toLowerCase())
+
+
+//     const searchResults = allNews?.filter(
+//       (news) =>
+//         news?.title.toLowerCase().includes(searchValue.toLowerCase()) ||
+//         news?.description.toLowerCase().includes(searchValue.toLowerCase())
+
     );
     console.log(searchResults);
     if (searchResults) {
       // form.reset();
       navigate("/newsSearch", { state: { searchResults: searchResults } });
     }
+
 
   }
 
@@ -49,10 +70,20 @@ const Navbar = ({ allNews }) => {
   // voice search implement
   const { transcript, listening, resetTranscript,
     browserSupportsSpeechRecognition } = useSpeechRecognition();
+
+   };
+
+//   // voice search implement
+  const {
+    transcript,
+    listening,
+    resetTranscript,
+    browserSupportsSpeechRecognition,
+  } = useSpeechRecognition();
+
   if (!browserSupportsSpeechRecognition) {
     return <span>Browser doesn't support speech recognition.</span>;
   }
-
 
 
   const handleInputChange = (e) => {
@@ -62,12 +93,6 @@ const Navbar = ({ allNews }) => {
   useEffect(() => {
     setInputValue(transcript);
   }, [transcript]);
-
-
-
-
-
-
 
 
   const [isDashboardOpen, setIsDashboardOpen] = useState(false);
@@ -109,28 +134,10 @@ const Navbar = ({ allNews }) => {
 
   const [active, setActive] = useState("all-news");
 
-
-
-
-
-
-
-
-
-
-
-
+ 
   const handleActive = (data) => {
-    setActive(data)
-  }
-
-
-
-
-
-
-
-
+    setActive(data);
+  };
 
 
   return (
@@ -168,21 +175,57 @@ const Navbar = ({ allNews }) => {
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 16 16"
                     fill="currentColor"
+
                     className="h-4 w-4 opacity-70">
                     <path
                       fillRule="evenodd"
                       d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
                       clipRule="evenodd" />
+
+                    className="h-4 w-4 opacity-70"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+                      clipRule="evenodd"
+                    />
+
                   </svg>
                   <form className="flex items-center" onSubmit={handleSearch}>
                     {/* value={inputValue} */}
                     {/* value={inputValue} */}
+
                     <input type="text" name="search" className="grow" onChange={handleInputChange} placeholder="Search" value={inputValue} />
                     {
                       listening ? <MdKeyboardVoice className="text-2xl text-red-600" onClick={SpeechRecognition.stopListening} /> : <MdKeyboardVoice className="text-2xl" onClick={SpeechRecognition.startListening} />
 
                     }
                     <button className="btn btn-sm ml-2 text-white font-bold bg-[#005689] hover:bg-[#023553]">Search</button>
+                  </form>
+
+
+                    <input
+                      type="text"
+                      name="search"
+                      className="grow"
+                      onChange={handleInputChange}
+                      placeholder="Search"
+                      value={inputValue}
+                    />
+                    {listening ? (
+                      <MdKeyboardVoice
+                        className="text-2xl text-red-600"
+                        onClick={SpeechRecognition.stopListening}
+                      />
+                    ) : (
+                      <MdKeyboardVoice
+                        className="text-2xl"
+                        onClick={SpeechRecognition.startListening}
+                      />
+                    )}
+                    <button className="btn btn-sm ml-2 text-white font-bold bg-[#005689] hover:bg-[#023553]">
+                      Search
+                    </button>
                   </form>
 
                 </label>
@@ -261,6 +304,7 @@ const Navbar = ({ allNews }) => {
           </nav>
 
           {/* Categories Navbar */}
+
           <div className=" bg-white">
             <div className="mx-auto container pb-2 pt-2 border-b-4 border-[#007E7E]">
               <ul className="flex flex-col sm:flex-row gap-2 sm:gap-4 items-center justify-center font-bold text-center">
@@ -273,17 +317,36 @@ const Navbar = ({ allNews }) => {
                 ))}
               </ul>
             </div>
+
+//           <div className="bg-white pb-2 pt-2 border-b-4 border-red-500">
+//             <ul className="flex flex-col sm:flex-row gap-2 sm:gap-4 items-center justify-center font-bold text-center">
+//               {categories.map((category) => (
+//                 <li
+//                   key={category}
+//                   className={`font-bold text-lg sm:text-2xl px-2 sm:px-4 text-[#232323] ${
+//                     active === category ? "text-red-500 underline" : ""
+//                   } hover:cursor-pointer`}
+//                 >
+//                   <Link
+//                     to={
+//                       category === "Home" ? "/" : `/categoriesNews/${category}`
+//                     }
+//                     onClick={() => setActive(category)}
+//                   >
+//                     {category.toUpperCase()}
+//                   </Link>
+//                 </li>
+//               ))}
+//             </ul>
+
           </div>
-
         </div>
-
-
-
 
         {/* Dashboard  */}
         <div
-          className={`shadow-lg z-50 bg-white max-w-[300px]  ease-in-out transform fixed top-0 left-0 h-full  w-[250px]   transition-transform duration-300  ${isDashboardOpen ? "translate-x-0" : "-translate-x-full"
-            }`}
+          className={`shadow-lg z-50 bg-white max-w-[300px]  ease-in-out transform fixed top-0 left-0 h-full  w-[250px]   transition-transform duration-300  ${
+            isDashboardOpen ? "translate-x-0" : "-translate-x-full"
+          }`}
         >
           {/* Close Menu Icon */}
           <button onClick={toggleDashboard} className="text-black p-4">

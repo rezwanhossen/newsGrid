@@ -7,6 +7,7 @@ import BreakingNews from "./BreakingNews/BreakingNews";
 import FollowUs from "./FollowUs/FollowUs";
 import RecommendedNews from "./RecommendedNews/RecommendedNews";
 import { useEffect, useState } from "react";
+
 import {  useOutletContext } from "react-router-dom";
 import VideoNews from "./VideoNews/VideoNews";
 
@@ -64,16 +65,20 @@ const Home = () => {
                     {/* Breaking News */}
                     <BreakingNews setAllNewsBreaking={setAllNewsBreaking}/>
 
-                    {/* Sponsor Section */}
-                    <Sponsors />
+        {/* Right Section: Breaking News, Sponsor, Follow Us */}
+        <div className="w-full lg:w-[30%] p-2 flex flex-col gap-6">
+          {/* Breaking News */}
+          <BreakingNews setAllNewsBreaking={setAllNewsBreaking} />
 
+          {/* Sponsor Section */}
+          <Sponsors />
 
-                    {/* Follow Us Section */}
-                    <FollowUs />
-                </div>
-            </div>
+          {/* Follow Us Section */}
+          <FollowUs />
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default Home;
