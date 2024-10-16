@@ -12,7 +12,7 @@ import {
 import Swal from "sweetalert2";
 import useAuth from "../../../Hook/useAuth/useAuth";
 
-const TrendingNews = () => {
+const TrendingNews = ({setAllNewsTrending}) => {
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -36,6 +36,7 @@ const TrendingNews = () => {
         }
       );
       setArticles(response.data.news.slice(0, 10));
+      setAllNewsTrending(response?.data?.news);
       setLoading(false);
     } catch (error) {
       setError("Failed to fetch news. Please try again later.");

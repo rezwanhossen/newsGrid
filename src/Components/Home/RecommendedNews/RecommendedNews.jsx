@@ -3,7 +3,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { FaVolumeUp, FaPause, FaPlay } from "react-icons/fa";
 
-const RecommendedNews = () => {
+const RecommendedNews = ({setAllNewsRecommended}) => {
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -28,6 +28,7 @@ const RecommendedNews = () => {
         },
       });
       setArticles(response.data.results.slice(0, 10));
+      setAllNewsRecommended(response?.data?.results);
       setLoading(false);
     } catch (error) {
       setError("Failed to fetch recommended news. Please try again later.");

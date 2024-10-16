@@ -97,6 +97,7 @@ const Home = () => {
   const [allBreakingNews, setAllNewsBreaking] = useState([]);
   const [allTrendingNews, setAllNewsTrending] = useState([]);
   const [allRecomendedNews, setAllNewsRecommended] = useState([]);
+  const [allVideosNews , setAllVideosNews] = useState([]);
 
   useEffect(() => {
     const news = [
@@ -106,7 +107,7 @@ const Home = () => {
       ...allTrendingNews,
     ];
     setAllNews(news);
-  }, [newsData, allBreakingNews, allRecomendedNews, allTrendingNews]);
+  }, [newsData, allBreakingNews, allRecomendedNews, allTrendingNews , allVideosNews]);
 
   if (isLoading) {
     return <Loading></Loading>;
@@ -123,24 +124,24 @@ const Home = () => {
 
           {/* Trending News */}
 
-          <TrendingNews />
+          <TrendingNews setAllNewsRecommended={setAllNewsRecommended}/>
 
           {/* Recommended News */}
-          <RecommendedNews />
+          <RecommendedNews setAllNewsRecommended={setAllNewsRecommended}/>
 
           {/* Video News */}
-          <VideoNews />
+          <VideoNews setAllVideosNews={setAllVideosNews}/>
 
           <TrendingNews setAllNewsTrending={setAllNewsTrending} />
 
           {/* Recommended News */}
-          <RecommendedNews setAllNewsRecommended={setAllNewsRecommended} />
+          <RecommendedNews setAllNewsRecommended={setAllNewsRecommended}/>
         </div>
 
         {/* Right Section: Breaking News, Sponsor, Follow Us */}
         <div className="w-full lg:w-[30%] p-2 flex flex-col gap-6">
           {/* Breaking News */}
-          <BreakingNews setAllNewsBreaking={setAllNewsBreaking} />
+          <BreakingNews setAllNewsBreaking={setAllNewsBreaking}  />
 
           {/* Sponsor Section */}
           <Sponsors />
