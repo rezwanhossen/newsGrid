@@ -24,6 +24,7 @@ import AddedNews from "../Components/DashbordPage/AdminPage/AddedNews/AddedNews"
 import CategoriesNews from "../Components/Pages/CategoriesNews/NewsCategory/CategoriesNews";
 import NewsSearch from "../Components/Pages/NewsSearch/NewsSearch";
 import Payment from "../Components/DashbordPage/Payment/Payment";
+import LocationBasedNews from "../Components/Pages/LocationBasedNews/LocationBasedNews";
 
 const router = createBrowserRouter([
   {
@@ -69,6 +70,10 @@ const router = createBrowserRouter([
         path: "/newsSearch",
         element: <NewsSearch></NewsSearch>,
       },
+      {
+        path : '/locationBasedNews',
+        element : <LocationBasedNews></LocationBasedNews>
+      }
     ],
   },
 

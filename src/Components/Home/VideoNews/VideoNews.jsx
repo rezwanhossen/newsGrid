@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import ReactPlayer from "react-player";
 
-const VideoNews = () => {
+const VideoNews = ({setAllVideosNews}) => {
   const [videoNews, setVideoNews] = useState([]);
   const [selectedVideo, setSelectedVideo] = useState(null);
 
@@ -28,7 +28,10 @@ const VideoNews = () => {
         }
       );
       setVideoNews(response.data.items);
-      setSelectedVideo(response.data.items[0]);
+
+      setAllVideosNews(response?.data?.items);
+      setSelectedVideo(response.data.items[0]); 
+
     } catch (error) {
       console.error("Error fetching video news:", error);
     }
