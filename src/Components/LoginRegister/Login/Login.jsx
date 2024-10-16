@@ -9,7 +9,11 @@ import toast from "react-hot-toast";
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const togglePasswordVisibility = () => setShowPassword(!showPassword);
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
   const { login } = useAuth();
 
   const navigate = useNavigate();

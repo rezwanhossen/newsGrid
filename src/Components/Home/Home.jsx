@@ -12,41 +12,38 @@ import VideoNews from "./VideoNews/VideoNews";
 
 
 const Home = () => {
-    const [newsData , isLoading] = useNews();
-    // const navigate = useNavigate();
-    const {setAllNews} = useOutletContext();
+  const [newsData, isLoading] = useNews();
+  // const navigate = useNavigate();
+  const { setAllNews } = useOutletContext();
 
-    
-    
-    
-    
-    const [allBreakingNews , setAllNewsBreaking] = useState([]);
-    const [allTrendingNews , setAllNewsTrending] = useState([]);
-    const [allRecomendedNews , setAllNewsRecommended] = useState([]);
+  const [allBreakingNews, setAllNewsBreaking] = useState([]);
+  const [allTrendingNews, setAllNewsTrending] = useState([]);
+  const [allRecomendedNews, setAllNewsRecommended] = useState([]);
 
+  useEffect(() => {
+    const news = [
+      ...newsData,
+      ...allBreakingNews,
+      ...allRecomendedNews,
+      ...allTrendingNews,
+    ];
+    setAllNews(news);
+  }, [newsData, allBreakingNews, allRecomendedNews, allTrendingNews]);
 
-    useEffect(() => {
-        const news = [...newsData , ...allBreakingNews , ...allRecomendedNews , ...allTrendingNews];
-        setAllNews(news);
-    } , [newsData, allBreakingNews, allRecomendedNews, allTrendingNews])
-    
-    if (isLoading) {
-        return <Loading></Loading>;
-    }
+  if (isLoading) {
+    return <Loading></Loading>;
+  }
 
-        
-    return (
-        <div className="mx-auto container py-6 px-4 lg:px-0">
-            {/* Main Layout */}
-            <div className="flex flex-col lg:flex-row gap-8">
-                
-                
-                {/* Left Section: Banner and Trending News */}
-                <div className="w-full lg:w-[70%]">
-                    {/* Banner */}
-                    <Banner newsData={newsData} />
+  return (
+    <div className="mx-auto container py-6 px-4 lg:px-0">
+      {/* Main Layout */}
+      <div className="flex flex-col lg:flex-row gap-8">
+        {/* Left Section: Banner and Trending News */}
+        <div className="w-full lg:w-[70%]">
+          {/* Banner */}
+          <Banner newsData={newsData} />
 
-                    {/* Trending News */}
+          {/* Trending News */}
 
                     <TrendingNews setAllNewsTrending={setAllNewsTrending}/>
 
@@ -73,7 +70,7 @@ const Home = () => {
                 </div>
             </div>
         </div>
-    );
+  );
 };
 
 export default Home;
