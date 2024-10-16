@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { FaBookmark, FaVolumeUp, FaPause, FaPlay } from "react-icons/fa"; 
+import { FaBookmark, FaVolumeUp, FaPause, FaPlay } from "react-icons/fa";
 import {
   FacebookShareButton,
   TwitterShareButton,
@@ -17,11 +17,11 @@ const TrendingNews = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [showAll, setShowAll] = useState(false);
-  const [isSpeaking, setIsSpeaking] = useState(false); 
-  const [isPaused, setIsPaused] = useState(false); 
+  const [isSpeaking, setIsSpeaking] = useState(false);
+  const [isPaused, setIsPaused] = useState(false);
   const apiKey = "uX-Tbv7wo0kWPez-lDxwvpryFy8240yUQek_C5a_qIYVl6kb";
 
-  const {user} = useAuth(); 
+  const { user } = useAuth();
 
   const fetchNews = async () => {
     setLoading(true);
@@ -40,7 +40,6 @@ const TrendingNews = () => {
     } catch (error) {
       setError("Failed to fetch news. Please try again later.");
       setLoading(false);
-      console.log(error);
     }
   };
 
@@ -53,17 +52,16 @@ const TrendingNews = () => {
   if (error)
     return <div className="text-center text-lg text-red-500">{error}</div>;
 
-  // Handle speech for reading out articles
   const handleSpeak = (text) => {
     if (isSpeaking) {
-      window.speechSynthesis.cancel(); 
+      window.speechSynthesis.cancel();
       setIsSpeaking(false);
       setIsPaused(false);
     } else {
       const utterance = new SpeechSynthesisUtterance(text);
       utterance.lang = "en-US";
       utterance.onend = () => {
-        setIsSpeaking(false); 
+        setIsSpeaking(false);
         setIsPaused(false);
       };
       window.speechSynthesis.speak(utterance);
@@ -71,18 +69,16 @@ const TrendingNews = () => {
     }
   };
 
-  // Handle pause and resume
   const handlePause = () => {
     if (isSpeaking && !isPaused) {
-      window.speechSynthesis.pause(); 
+      window.speechSynthesis.pause();
       setIsPaused(true);
     } else if (isSpeaking && isPaused) {
-      window.speechSynthesis.resume(); 
+      window.speechSynthesis.resume();
       setIsPaused(false);
     }
   };
 
-//   Bookmark Handling
   const handleBookmark = (newsItem) => {
     const image = newsItem.image;
     const title = newsItem.title;
@@ -106,17 +102,16 @@ const TrendingNews = () => {
             confirmButtonText: "Ok",
           });
         } else {
-            Swal.fire({
-                icon: "error",
-                title: "Oops...",
-                text: "You Are Not Login Yet!!!",
-                footer: '<a href="login">==> Click to Login <==</a>',
-                color: "red"
-              });
+          Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "You Are Not Logged In Yet!!!",
+            footer: '<a href="login">==> Click to Login <==</a>',
+            color: "red",
+          });
         }
       });
   };
-
 
   const handleShowMore = () => {
     setShowAll(true);
@@ -126,28 +121,28 @@ const TrendingNews = () => {
 
   return (
     <div className="p-5 bg-[#F5F5F5] rounded-lg">
-      <h1 className="text-4xl text-[#3BAFDA] border-b-4 pb-4 border-[#007E7E] font-extrabold mb-6">
+      <h1 className="text-2xl md:text-3xl lg:text-4xl text-[#3BAFDA] border-b-4 pb-4 border-[#007E7E] font-extrabold mb-6">
         Trending News
       </h1>
-      <div className="grid grid-cols-1 mt-5 gap-6">
+      <div className="grid grid-cols-1 gap-6 mt-5">
         {displayedArticles.map((article, index) => (
           <div
             key={index}
-            className="flex items-start gap-4 p-4 bg-white shadow rounded-lg"
+            className="flex flex-col md:flex-row items-start gap-4 p-4 bg-white shadow rounded-lg"
           >
             {article.image && (
               <img
                 src={article.image}
                 alt={article.title}
-                className="w-40 h-28 object-cover rounded-lg"
+                className="w-full md:w-40 lg:w-48 h-32 object-cover rounded-lg"
               />
             )}
 
             <div className="flex-1">
-              <h2 className="font-bold text-xl text-[#4A4A4A] mb-2">
+              <h2 className="font-bold text-xl md:text-lg lg:text-xl text-[#4A4A4A] mb-2">
                 {article.title}
               </h2>
-              <p className="text-[#767676] text-sm mb-2">
+              <p className="text-[#767676] text-sm md:text-xs lg:text-sm mb-2">
                 {article.description}
               </p>
               <a
@@ -159,7 +154,7 @@ const TrendingNews = () => {
                 Read more
               </a>
 
-              <div className="mt-4 flex items-center gap-4">
+              <div className="mt-4 flex flex-wrap items-center gap-4">
                 <span className="text-[#4A4A4A] font-bold">Share: </span>
                 <FacebookShareButton url={article.url}>
                   <FacebookIcon size={32} round />
@@ -171,7 +166,6 @@ const TrendingNews = () => {
                   <LinkedinIcon size={32} round />
                 </LinkedinShareButton>
 
-                {/* Bookmark button */}
                 <button
                   onClick={() => handleBookmark(article)}
                   className="ml-4 flex items-center text-gray-600 hover:text-orange-500"
@@ -181,7 +175,6 @@ const TrendingNews = () => {
                   Bookmark
                 </button>
 
-                {/* Listen button */}
                 <button
                   onClick={() => handleSpeak(`${article.title}. ${article.description}`)}
                   className="ml-4 flex items-center text-gray-600 hover:text-blue-500"
@@ -191,7 +184,6 @@ const TrendingNews = () => {
                   {isSpeaking ? "Stop" : "Listen in Audio"}
                 </button>
 
-                {/* Pause and Resume button */}
                 {isSpeaking && (
                   <button
                     onClick={handlePause}
