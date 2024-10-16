@@ -153,10 +153,12 @@ const Navbar = ({ allNews }) => {
 
   return (
     <div>
+
       <div className="fixed top-0 left-0 z-20 w-full ">
         
 
-        <div className="bg-[#E0E4E8] text-[#2F2F2F] ">
+
+        <div className="bg-[#004E5B] text-white  ">
           <nav className=" shadow-md p-4    top-0 z-10">
             <div className="container mx-auto flex items-center justify-between">
               <div className="flex items-center space-x-4">
@@ -179,7 +181,7 @@ const Navbar = ({ allNews }) => {
               </div>
 
               <div className="flex items-center space-x-4">
-                <label className="input input-bordered flex items-center gap-2">
+                <label className="input input-bordered hidden md:flex items-center gap-2">
                   {/* Search news */}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -311,7 +313,7 @@ const Navbar = ({ allNews }) => {
 
           {/* Categories Navbar */}
           <div className="bg-white pb-2 pt-2 border-b-4 border-red-500">
-            <ul className="flex flex-col sm:flex-row gap-2 sm:gap-4 items-center justify-center font-bold text-center">
+            <ul className="flex flex-wrap lg:flex-row gap-2 sm:gap-4 items-center justify-center font-bold text-center">
               {categories.map((category) => (
                 <li
                   key={category}

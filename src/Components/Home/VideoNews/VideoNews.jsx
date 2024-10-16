@@ -1,21 +1,23 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import ReactPlayer from "react-player"; 
+import ReactPlayer from "react-player";
 
 const VideoNews = ({setAllVideosNews}) => {
   const [videoNews, setVideoNews] = useState([]);
   const [selectedVideo, setSelectedVideo] = useState(null);
-  
+
   // Your provided YouTube API key
-  const apiKey = "AIzaSyBnSgli3bdGR7oqrSICUxzHu9CyL_ol0Ps";
-  
-  const searchQuery = "breaking news"; 
+  // const apiKey = "AIzaSyBnSgli3bdGR7oqrSICUxzHu9CyL_ol0Ps";
+  const apiKey = "AIzaSyCGh6eBslRDTuBdQJgluhQlYblhST-USmA";
+
+  const searchQuery = "breaking news";
 
   // Fetch video news from YouTube API
   const fetchVideoNews = async () => {
     try {
       const response = await axios.get(
-        `https://www.googleapis.com/youtube/v3/search`, {
+        `https://www.googleapis.com/youtube/v3/search`,
+        {
           params: {
             part: "snippet",
             maxResults: 9,
@@ -26,8 +28,10 @@ const VideoNews = ({setAllVideosNews}) => {
         }
       );
       setVideoNews(response.data.items);
+
       setAllVideosNews(response?.data?.items);
       setSelectedVideo(response.data.items[0]); 
+
     } catch (error) {
       console.error("Error fetching video news:", error);
     }

@@ -12,8 +12,8 @@ const RecommendedNews = ({setAllNewsRecommended}) => {
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
   const [currentUtterance, setCurrentUtterance] = useState(null);
-
-  const apiKey = "pub_5554319d28e13bc8be1aab4736ea6ca4bbb0c";
+  //pub_5554319d28e13bc8be1aab4736ea6ca4bbb0c
+  const apiKey = "pub_55870f30242195533c47f6655ed1ec3bca846";
 
   // Fetch recommended news from NewsData.io API
   const fetchRecommendedNews = async () => {

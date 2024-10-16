@@ -108,6 +108,12 @@ const Dashbord = () => {
               {/* Free Section */}
               <div className="p-4 border flex-1 rounded-lg text-center">
                 <h3 className="text-lg font-semibold">Use Free</h3>
+                <ul>
+                  <li>
+                    If you are using free then you should write description
+                    between 250 to 300 world
+                  </li>
+                </ul>
 
                 <button
                   className="mt-4 px-4 py-2 bg-green-500 text-white rounded"
@@ -120,11 +126,18 @@ const Dashbord = () => {
               {/* Prime Section */}
               <div className="p-4 border flex-1 rounded-lg text-center">
                 <h3 className="text-lg font-semibold">Use Prime</h3>
+                <ul>
+                  <li>
+                    If you use Prime then you can see as many descriptions as
+                    you want without any limit
+                  </li>
+                  <li>payment one time.</li>
+                </ul>
                 <button
                   className="mt-4 px-4 py-2 bg-yellow-500 text-white rounded"
                   onClick={handlePrimeClick}
                 >
-                  Prime
+                  pay 120 $
                 </button>
               </div>
             </div>

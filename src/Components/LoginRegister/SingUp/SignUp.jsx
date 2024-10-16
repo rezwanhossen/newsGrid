@@ -12,7 +12,11 @@ const SignUp = () => {
   const togglePasswordVisibility = () => setShowPassword(!showPassword);
 
   // react-hook-form setup
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
 
   // AuthContext functions
   const { createuser, updateprofile } = useContext(AuthContext);
@@ -43,7 +47,6 @@ const SignUp = () => {
       // Navigate to homepage
       navigate("/");
       toast.success("Sign up Successful!");
-
     } catch (error) {
       // Show error toast if something fails
       toast.error(error.message);
@@ -54,50 +57,77 @@ const SignUp = () => {
     <div className="min-h-screen flex items-center justify-center bg-[#3BAFDA]">
       <div className="w-full md:w-8/12 lg:w-5/12 p-10 bg-[#007E7E] backdrop-blur-md rounded-xl my-32 shadow-lg mx-auto">
         {/* Form Header */}
-        <h2 className="text-3xl font-bold text-white text-center mb-8">Create an Account</h2>
+        <h2 className="text-3xl font-bold text-white text-center mb-8">
+          Create an Account
+        </h2>
 
         {/* Form Start */}
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
           {/* Name Input */}
           <div className="space-y-2">
-            <label htmlFor="name" className="block text-white font-semibold">Your Name</label>
+            <label htmlFor="name" className="block text-white font-semibold">
+              Your Name
+            </label>
             <input
-              className={`w-full bg-white backdrop-blur-md  py-3 px-4 rounded-lg focus:outline-none border focus:border-[#3BAFDA] ${errors.name ? 'border-red-500' : ''}`}
+              className={`w-full bg-white backdrop-blur-md  py-3 px-4 rounded-lg focus:outline-none border focus:border-[#3BAFDA] ${
+                errors.name ? "border-red-500" : ""
+              }`}
               placeholder="Your Name"
               type="text"
               {...register("name", { required: "Name is required" })}
             />
-            {errors.name && <p className="text-red-500">{errors.name.message}</p>}
+            {errors.name && (
+              <p className="text-red-500">{errors.name.message}</p>
+            )}
           </div>
 
           {/* Image Upload */}
           <div className="space-y-2">
-            <label htmlFor="image" className="block text-white font-semibold">Profile Picture</label>
+            <label htmlFor="image" className="block text-white font-semibold">
+              Profile Picture
+            </label>
             <input
               className="w-full bg-white backdrop-blur-md py-3 px-4 rounded-lg"
               type="file"
-              {...register("image", { required: "Profile picture is required" })}
+              {...register("image", {
+                required: "Profile picture is required",
+              })}
             />
-            {errors.image && <p className="text-red-500">{errors.image.message}</p>}
+            {errors.image && (
+              <p className="text-red-500">{errors.image.message}</p>
+            )}
           </div>
 
           {/* Email Input */}
           <div className="space-y-2">
-            <label htmlFor="email" className="block text-white font-semibold">Email Address</label>
+            <label htmlFor="email" className="block text-white font-semibold">
+              Email Address
+            </label>
             <input
-              className={`w-full bg-white backdrop-blur-md  py-3 px-4 rounded-lg focus:outline-none border focus:border-[#3BAFDA] ${errors.email ? 'border-red-500' : ''}`}
+              className={`w-full bg-white backdrop-blur-md  py-3 px-4 rounded-lg focus:outline-none border focus:border-[#3BAFDA] ${
+                errors.email ? "border-red-500" : ""
+              }`}
               placeholder="Your Email"
               type="email"
               {...register("email", { required: "Email is required" })}
             />
-            {errors.email && <p className="text-red-500">{errors.email.message}</p>}
+            {errors.email && (
+              <p className="text-red-500">{errors.email.message}</p>
+            )}
           </div>
 
           {/* Password Input */}
           <div className="space-y-2 relative">
-            <label htmlFor="password" className="block text-white font-semibold">Password</label>
+            <label
+              htmlFor="password"
+              className="block text-white font-semibold"
+            >
+              Password
+            </label>
             <input
-              className={`w-full bg-white backdrop-blur-md  py-3 px-4 rounded-lg focus:outline-none border focus:border-[#3BAFDA] ${errors.password ? 'border-red-500' : ''}`}
+              className={`w-full bg-white backdrop-blur-md  py-3 px-4 rounded-lg focus:outline-none border focus:border-[#3BAFDA] ${
+                errors.password ? "border-red-500" : ""
+              }`}
               placeholder="Your Password"
               {...register("password", { required: "Password is required" })}
               type={showPassword ? "text" : "password"}
@@ -106,9 +136,15 @@ const SignUp = () => {
               className="absolute right-4 top-10 cursor-pointer text-black"
               onClick={togglePasswordVisibility}
             >
-              {showPassword ? <AiFillEyeInvisible size={24} /> : <AiFillEye size={24} />}
+              {showPassword ? (
+                <AiFillEyeInvisible size={24} />
+              ) : (
+                <AiFillEye size={24} />
+              )}
             </div>
-            {errors.password && <p className="text-red-500">{errors.password.message}</p>}
+            {errors.password && (
+              <p className="text-red-500">{errors.password.message}</p>
+            )}
           </div>
 
           {/* Submit Button */}
@@ -123,7 +159,10 @@ const SignUp = () => {
 
         {/* Login Link */}
         <p className="text-center text-black mt-6">
-          Already have an account? <Link to="/login" className="text-white font-bold hover:underline">Login here</Link>
+          Already have an account?{" "}
+          <Link to="/login" className="text-white font-bold hover:underline">
+            Login here
+          </Link>
         </p>
       </div>
     </div>
