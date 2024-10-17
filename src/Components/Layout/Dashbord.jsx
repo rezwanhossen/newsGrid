@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 
 import { Link, NavLink, Outlet, useNavigate } from "react-router-dom";
@@ -88,6 +88,9 @@ const Dashbord = () => {
 
               <li className="border-t pt-2">
                 <NavLink to="/">Home</NavLink>
+              </li>
+              <li className="border-t pt-2">
+                <NavLink to="/dashbord/personalnews">Customized news</NavLink>
               </li>
             </>
           )}

@@ -212,7 +212,11 @@ const Navbar = ({ allNews }) => {
                         className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
                       >
                         <li>
-                          <a>{user.displayName}</a>
+                          {user.displayName ? (
+                            <img src={user?.displayName} alt="" />
+                          ) : (
+                            <p>Not Find Image</p>
+                          )}
                         </li>
                         {user && isAdmin && (
                           <li>
@@ -246,10 +250,17 @@ const Navbar = ({ allNews }) => {
           {/* Categories Navbar */}
           <div className="bg-white pb-2 pt-2 border-b-4 border-red-500">
             <ul className="flex flex-col sm:flex-row gap-2 sm:gap-4 items-center justify-center font-bold text-center">
+            <Link
+                className={`font-bold text-xl sm:text-2xl px-2 sm:px-4 cursor-pointer text-[#232323] hover:cursor-pointer`}
+                to={"/CustomizedNews"}
+              >
+                Custom News
+              </Link>
+
               {categories.map((category) => (
                 <li
                   key={category}
-                  className={`font-bold text-lg sm:text-2xl px-2 sm:px-4 text-[#232323] ${
+                  className={`font-bold text-lg sm:text-xl px-2 sm:px-4 text-[#232323] ${
                     active === category ? "text-red-500 underline" : ""
                   } hover:cursor-pointer`}
                 >
@@ -304,6 +315,7 @@ const Navbar = ({ allNews }) => {
                   My Bookmarks
                 </NavLink>
               </li>
+          
             )}
             <li className="flex justify-between items-center">
               <NavLink
@@ -312,6 +324,9 @@ const Navbar = ({ allNews }) => {
               >
                 Downloads
               </NavLink>
+            </li>
+            <li>
+              
             </li>
           </ul>
         </div>
