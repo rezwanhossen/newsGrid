@@ -86,8 +86,9 @@ import BreakingNews from "./BreakingNews/BreakingNews";
 import FollowUs from "./FollowUs/FollowUs";
 import RecommendedNews from "./RecommendedNews/RecommendedNews";
 import { useEffect, useState } from "react";
-import { useOutletContext } from "react-router-dom";
+import {  useOutletContext } from "react-router-dom";
 import VideoNews from "./VideoNews/VideoNews";
+
 
 const Home = () => {
   const [newsData, isLoading] = useNews();
@@ -124,33 +125,31 @@ const Home = () => {
 
           {/* Trending News */}
 
-          <TrendingNews setAllNewsRecommended={setAllNewsRecommended}/>
+                    <TrendingNews setAllNewsTrending={setAllNewsTrending}/>
 
-          {/* Recommended News */}
-          <RecommendedNews setAllNewsRecommended={setAllNewsRecommended}/>
+                    {/* Recommended News */}
+                    <RecommendedNews setAllNewsRecommended={setAllNewsRecommended}/>
 
-          {/* Video News */}
-          <VideoNews setAllVideosNews={setAllVideosNews}/>
+                    {/* Video News */}
+                    <VideoNews />
+                    
 
-          <TrendingNews setAllNewsTrending={setAllNewsTrending} />
+                </div>
+                
+                {/* Right Section: Breaking News, Sponsor, Follow Us */}
+                <div className="w-full lg:w-[30%] p-2 flex flex-col gap-6">
+                    {/* Breaking News */}
+                    <BreakingNews setAllNewsBreaking={setAllNewsBreaking}/>
 
-          {/* Recommended News */}
-          <RecommendedNews setAllNewsRecommended={setAllNewsRecommended}/>
+                    {/* Sponsor Section */}
+                    <Sponsors />
+
+
+                    {/* Follow Us Section */}
+                    <FollowUs />
+                </div>
+            </div>
         </div>
-
-        {/* Right Section: Breaking News, Sponsor, Follow Us */}
-        <div className="w-full lg:w-[30%] p-2 flex flex-col gap-6">
-          {/* Breaking News */}
-          <BreakingNews setAllNewsBreaking={setAllNewsBreaking}  />
-
-          {/* Sponsor Section */}
-          <Sponsors />
-
-          {/* Follow Us Section */}
-          <FollowUs />
-        </div>
-      </div>
-    </div>
   );
 };
 

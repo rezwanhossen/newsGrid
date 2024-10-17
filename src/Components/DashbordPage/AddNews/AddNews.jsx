@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import  { useContext, useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import useAxiosPublic from "../../../hooks/useAxiosPublic";
@@ -73,14 +73,14 @@ const AddNews = () => {
     <div className="my-5">
       
       <div className="text-center heebo">
-          <h2 className="text-2xl font-bold">Add News</h2>
+          <h2 className="text-2xl font-bold mt-8 text-white">Add News</h2>
         </div>
       <div className="hero  min-h-screen">
       
         
     
   <div className="hero-content">
-    <div className="card bg-slate-200  shadow-lg rounded-none ">
+    <div className="card  bg-white   shadow-lg rounded-lg ">
       <form className="card-body lg:w-[700px]" onSubmit={handleSubmit}>
           <div className="flex gap-16 flex-col lg:flex-row items-center bg-white rounded-lg py-5 px-4">
           <div className="form-control w-full ">

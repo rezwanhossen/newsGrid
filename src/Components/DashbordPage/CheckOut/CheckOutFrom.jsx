@@ -1,5 +1,5 @@
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import useAuth from "../../../Hook/useAuth/useAuth";
 import toast from "react-hot-toast";
 import useAxiosCommon from "../../../Hook/useAxiosCommon";
@@ -16,10 +16,9 @@ const CheckOutFrom = () => {
   const axiosSecure = useAxiosSecure();
   const axioscommon = useAxiosCommon();
   const price = parseInt(120);
-  console.log(price);
+
   useEffect(() => {
     axiosSecure.post("/create-payment-intent", { price: price }).then((res) => {
-      console.log(res.data.clientSecret);
       setclientSecret(res.data.clientSecret);
     });
   }, [axiosSecure, price]);
@@ -43,15 +42,13 @@ const CheckOutFrom = () => {
     });
 
     if (error) {
-      console.log("[error]", error);
       toast.error(error.message);
       setpro(false);
       return;
     } else {
-      console.log("[PaymentMethod]", paymentMethod);
-
-      toast.success("Pay successfully");
+      toast.success("Payment successful!");
     }
+
     const { error: confError, paymentIntent } = await stripe.confirmCardPayment(
       clientSecret,
       {
@@ -64,53 +61,58 @@ const CheckOutFrom = () => {
         },
       }
     );
+
     if (confError) {
-      console.log(confError);
       toast.error(confError.message);
       setpro(false);
       return;
     }
+
     if (paymentIntent.status === "succeeded") {
-      const paymentinfo = {
+      const paymentInfo = {
         price: price,
         transactionId: paymentIntent.id,
-        data: new Date(),
+        date: new Date(),
         email: user?.email,
         name: user?.displayName,
       };
 
-      delete paymentinfo._id;
-
       try {
-        await axioscommon.post("/payment", paymentinfo);
-        toast.success("succesfully data save on server");
-        navigate("/dashbord/addnews");
+        await axioscommon.post("/payment", paymentInfo);
+        toast.success("Payment data successfully saved on server");
+        navigate("/dashboard/addnews");
       } catch (err) {
         toast.error(err.message);
       }
     }
   };
+
   return (
-    <div>
+    <div className="p-6 bg-white rounded-lg shadow-lg max-w-md mx-auto">
       <form onSubmit={handleSubmit}>
-        <CardElement
-          options={{
-            style: {
-              base: {
-                fontSize: "16px",
-                color: "#424770",
-                "::placeholder": {
-                  color: "#aab7c4",
+        <div className="mb-6">
+          <CardElement
+            options={{
+              style: {
+                base: {
+                  fontSize: "16px",
+                  color: "#424770",
+                  backgroundColor: "#F8F9FA",
+                  fontFamily: "Arial, sans-serif",
+                  "::placeholder": {
+                    color: "#aab7c4",
+                  },
+                },
+                invalid: {
+                  color: "#9e2146",
                 },
               },
-              invalid: {
-                color: "#9e2146",
-              },
-            },
-          }}
-        />
+            }}
+            className="p-3 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+        </div>
         <button
-          className="btn btn-outline btn-primary my-6"
+          className="w-full py-3 bg-gradient-to-r from-[#004E5B] via-[#007E7E] to-[#3BAFDA] text-white font-bold rounded-lg shadow-lg hover:opacity-90 transition-opacity duration-300"
           type="submit"
           disabled={!stripe || !clientSecret || pro}
         >
