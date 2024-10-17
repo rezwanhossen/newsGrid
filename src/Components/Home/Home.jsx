@@ -86,8 +86,9 @@ import BreakingNews from "./BreakingNews/BreakingNews";
 import FollowUs from "./FollowUs/FollowUs";
 import RecommendedNews from "./RecommendedNews/RecommendedNews";
 import { useEffect, useState } from "react";
-import { useOutletContext } from "react-router-dom";
+import {  useOutletContext } from "react-router-dom";
 import VideoNews from "./VideoNews/VideoNews";
+
 
 const Home = () => {
   const [newsData, isLoading] = useNews();
@@ -97,6 +98,7 @@ const Home = () => {
   const [allBreakingNews, setAllNewsBreaking] = useState([]);
   const [allTrendingNews, setAllNewsTrending] = useState([]);
   const [allRecomendedNews, setAllNewsRecommended] = useState([]);
+  const [allVideosNews , setAllVideosNews] = useState([]);
 
   useEffect(() => {
     const news = [
@@ -106,7 +108,7 @@ const Home = () => {
       ...allTrendingNews,
     ];
     setAllNews(news);
-  }, [newsData, allBreakingNews, allRecomendedNews, allTrendingNews]);
+  }, [newsData, allBreakingNews, allRecomendedNews, allTrendingNews , allVideosNews]);
 
   if (isLoading) {
     return <Loading></Loading>;
@@ -123,33 +125,31 @@ const Home = () => {
 
           {/* Trending News */}
 
-          <TrendingNews />
+                    <TrendingNews setAllNewsTrending={setAllNewsTrending}/>
 
-          {/* Recommended News */}
-          <RecommendedNews />
+                    {/* Recommended News */}
+                    <RecommendedNews setAllNewsRecommended={setAllNewsRecommended}/>
 
-          {/* Video News */}
-          <VideoNews />
+                    {/* Video News */}
+                    <VideoNews />
+                    
 
-          <TrendingNews setAllNewsTrending={setAllNewsTrending} />
+                </div>
+                
+                {/* Right Section: Breaking News, Sponsor, Follow Us */}
+                <div className="w-full lg:w-[30%] p-2 flex flex-col gap-6">
+                    {/* Breaking News */}
+                    <BreakingNews setAllNewsBreaking={setAllNewsBreaking}/>
 
-          {/* Recommended News */}
-          <RecommendedNews setAllNewsRecommended={setAllNewsRecommended} />
+                    {/* Sponsor Section */}
+                    <Sponsors />
+
+
+                    {/* Follow Us Section */}
+                    <FollowUs />
+                </div>
+            </div>
         </div>
-
-        {/* Right Section: Breaking News, Sponsor, Follow Us */}
-        <div className="w-full lg:w-[30%] p-2 flex flex-col gap-6">
-          {/* Breaking News */}
-          <BreakingNews setAllNewsBreaking={setAllNewsBreaking} />
-
-          {/* Sponsor Section */}
-          <Sponsors />
-
-          {/* Follow Us Section */}
-          <FollowUs />
-        </div>
-      </div>
-    </div>
   );
 };
 

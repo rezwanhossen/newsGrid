@@ -3,7 +3,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { FaVolumeUp, FaPause, FaPlay } from "react-icons/fa";
 
-const RecommendedNews = () => {
+const RecommendedNews = ({setAllNewsRecommended}) => {
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -12,8 +12,8 @@ const RecommendedNews = () => {
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
   const [currentUtterance, setCurrentUtterance] = useState(null);
-
-  const apiKey = "pub_5554319d28e13bc8be1aab4736ea6ca4bbb0c";
+  //pub_5554319d28e13bc8be1aab4736ea6ca4bbb0c
+  const apiKey = "pub_55870f30242195533c47f6655ed1ec3bca846";
 
   // Fetch recommended news from NewsData.io API
   const fetchRecommendedNews = async () => {
@@ -28,6 +28,7 @@ const RecommendedNews = () => {
         },
       });
       setArticles(response.data.results.slice(0, 10));
+      setAllNewsRecommended(response?.data?.results);
       setLoading(false);
     } catch (error) {
       setError("Failed to fetch recommended news. Please try again later.");

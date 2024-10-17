@@ -24,9 +24,13 @@ import AddedNews from "../Components/DashbordPage/AdminPage/AddedNews/AddedNews"
 import CategoriesNews from "../Components/Pages/CategoriesNews/NewsCategory/CategoriesNews";
 import NewsSearch from "../Components/Pages/NewsSearch/NewsSearch";
 import Payment from "../Components/DashbordPage/Payment/Payment";
+
 import PersonalizedNews from "../Components/PersonalizedNews/PersonalizedNews";
 import NewsPersonal from "../Components/NewsPersonal/NewsPersonal";
  
+
+import LocationBasedNews from "../Components/Pages/LocationBasedNews/LocationBasedNews";
+
 
 const router = createBrowserRouter([
   {
@@ -79,8 +83,14 @@ const router = createBrowserRouter([
         element: <NewsSearch></NewsSearch>,
       },
       {
+
         path: '/personalnews',
         element: <PersonalizedNews></PersonalizedNews>
+      },
+  {
+        path : '/locationBasedNews',
+        element : <LocationBasedNews></LocationBasedNews>
+
       }
     ],
   },
