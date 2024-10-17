@@ -108,6 +108,9 @@ const Dashbord = () => {
               <li className="border-t pt-2 border border-white rounded-md hover:text-black hover:bg-white font-semibold mt-8">
                 <Link to="/">Home</Link>
               </li>
+              <li className="border-t pt-2">
+                <NavLink to="/dashbord/personalnews">Customized news</NavLink>
+              </li>
             </>
           )}
         </ul>
