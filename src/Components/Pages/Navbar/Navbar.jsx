@@ -17,7 +17,13 @@ const Navbar = ({ allNews }) => {
   const [searchNews, setNewsSearch] = useState([]);
   const [loading, setLoading] = useState(false);
   const [inputValue, setInputValue] = useState('');
+  const [categoryActive, setCategoryActive] = useState('Home');
 
+
+
+  useEffect(() => {
+    setCategoryActive('Home');
+  }, []);
 
 
 
@@ -48,8 +54,8 @@ const Navbar = ({ allNews }) => {
 
 
   // voice search implement
-  const {transcript , listening , resetTranscript , 
-    browserSupportsSpeechRecognition} =  useSpeechRecognition();
+  const { transcript, listening, resetTranscript,
+    browserSupportsSpeechRecognition } = useSpeechRecognition();
   if (!browserSupportsSpeechRecognition) {
     return <span>Browser doesn't support speech recognition.</span>;
   }
@@ -78,53 +84,53 @@ const Navbar = ({ allNews }) => {
     localStorage.setItem("readingMode", readingMode);
 
     const localTheme = localStorage.getItem("readingMode");
-    
-    if(localTheme === 'false'){
-        document.querySelector("html").classList.add('valueFalse');
-        document.querySelector("html").classList.remove('valueTrue');
+
+    if (localTheme === 'false') {
+      document.querySelector("html").classList.add('valueFalse');
+      document.querySelector("html").classList.remove('valueTrue');
 
     }
-    else{ 
+    else {
       document.querySelector("html").classList.add('valueTrue');
       document.querySelector("html").classList.remove('valueFalse');
 
     }
   }, [readingMode]);
   // color temperature
-    const [temperature , setTemperature] = useState(5000);
-    const handleSliderChange = (e) => {
-      setTemperature(e.target.value);
-    
-
-      const temperature = e.target.value;
-      console.log("temperature : " , temperature);
+  const [temperature, setTemperature] = useState(5000);
+  const handleSliderChange = (e) => {
+    setTemperature(e.target.value);
 
 
+    const temperature = e.target.value;
+    console.log("temperature : ", temperature);
 
 
 
-      const rootElement = document.documentElement; // পুরো HTML এফেক্ট প্রয়োগ করতে
-
-  // Temperature অনুযায়ী hue এবং brightness সেট করা
-  const hueRotation = (temperature - 5000) / 100;
-  const brightness = temperature < 5000 ? 0.9 : 1.1; // কম temp-এ dimmer, বেশি temp-এ brighter
-  
-  // ব্যাকগ্রাউন্ড কালার পরিবর্তন করা
-  rootElement.style.backgroundColor = `rgb(${255 - hueRotation * 10}, ${224 - hueRotation * 5}, ${180 - hueRotation * 3})`;
-
-  // ফিল্টার অ্যাপ্লাই করা
-  // rootElement.style.filter = ``;
-  // hue-rotate(${hueRotation}deg)
-    }
-
-    // document.addEventListener("DOMContentLoaded", function () {
-    //   // প্রাথমিক ভাবে 5000K এ সেট করতে পারেন
-    //   updateColorTemperature(5000);})
 
 
+    const rootElement = document.documentElement; // পুরো HTML এফেক্ট প্রয়োগ করতে
 
-    
-    // console.log("temperature " , temperature);
+    // Temperature অনুযায়ী hue এবং brightness সেট করা
+    const hueRotation = (temperature - 5000) / 100;
+    const brightness = temperature < 5000 ? 0.9 : 1.1; // কম temp-এ dimmer, বেশি temp-এ brighter
+
+    // ব্যাকগ্রাউন্ড কালার পরিবর্তন করা
+    rootElement.style.backgroundColor = `rgb(${255 - hueRotation * 10}, ${224 - hueRotation * 5}, ${180 - hueRotation * 3})`;
+
+    // ফিল্টার অ্যাপ্লাই করা
+    // rootElement.style.filter = ``;
+    // hue-rotate(${hueRotation}deg)
+  }
+
+  // document.addEventListener("DOMContentLoaded", function () {
+  //   // প্রাথমিক ভাবে 5000K এ সেট করতে পারেন
+  //   updateColorTemperature(5000);})
+
+
+
+
+  // console.log("temperature " , temperature);
 
   // ------------------
 
@@ -168,18 +174,18 @@ const Navbar = ({ allNews }) => {
 
 
 
-    
-    
-      
-  
-  
-  
+
+
+
+
+
+
 
   return (
     <div>
 
       <div className="fixed top-0 left-0 z-20 w-full ">
-        
+
 
 
         <div className="bg-[#004E5B] text-white  ">
@@ -205,31 +211,31 @@ const Navbar = ({ allNews }) => {
               </div>
 
               <div className="flex items-center space-x-4">
-              <label className="input input-bordered flex items-center gap-2">
+                <label className="input input-bordered flex items-center gap-2">
 
-                {/* Search news */}
-                <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 16 16"
-    fill="currentColor"
-    className="h-4 w-4 opacity-70">
-    <path
-      fillRule="evenodd"
-      d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
-      clipRule="evenodd" />
-  </svg>
-  <form className="flex items-center"onSubmit={handleSearch}>
-  {/* value={inputValue} */}
-  {/* value={inputValue} */}
-  <input type="text"name="search"className="grow"onChange={handleInputChange} placeholder="Search"value={inputValue} />
-  {
-    listening ? <MdKeyboardVoice className="text-2xl text-red-600"onClick={SpeechRecognition.stopListening} /> : <MdKeyboardVoice className="text-2xl"onClick={SpeechRecognition.startListening} />
-    
-  }
-  <button className="btn btn-sm ml-2 text-white font-bold bg-[#005689] hover:bg-[#023553]">Search</button>
-  </form>
-  
-</label>
+                  {/* Search news */}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 16 16"
+                    fill="currentColor"
+                    className="h-4 w-4 opacity-70">
+                    <path
+                      fillRule="evenodd"
+                      d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+                      clipRule="evenodd" />
+                  </svg>
+                  <form className="flex items-center" onSubmit={handleSearch}>
+                    {/* value={inputValue} */}
+                    {/* value={inputValue} */}
+                    <input type="text" name="search" className="grow" onChange={handleInputChange} placeholder="Search" value={inputValue} />
+                    {
+                      listening ? <MdKeyboardVoice className="text-2xl text-red-600" onClick={SpeechRecognition.stopListening} /> : <MdKeyboardVoice className="text-2xl" onClick={SpeechRecognition.startListening} />
+
+                    }
+                    <button className="btn btn-sm ml-2 text-white font-bold bg-[#005689] hover:bg-[#023553]">Search</button>
+                  </form>
+
+                </label>
 
                 <label className="swap swap-rotate">
                   {/* this hidden checkbox controls the state */}
@@ -259,17 +265,17 @@ const Navbar = ({ allNews }) => {
                 </label>
                 {/* color temperature */}
 
-                     {
-                      readingMode &&  <label htmlFor="">
-                      <input type="range"
-                        min={1000}
-                        max={10000}
-                        value={temperature}
-                        onChange={handleSliderChange}
-                        step="100"
-                      />
-                    </label>
-                     }
+                {
+                  readingMode && <label htmlFor="">
+                    <input type="range"
+                      min={1000}
+                      max={10000}
+                      value={temperature}
+                      onChange={handleSliderChange}
+                      step="100"
+                    />
+                  </label>
+                }
 
                 {/* -------------- */}
 
@@ -285,23 +291,23 @@ const Navbar = ({ allNews }) => {
                       </div>
                       <ul
                         tabIndex={0}
-                        className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
+                        className="dropdown-content z-[1] menu p-2 shadow bg-[#004E5B] rounded-box w-52"
                       >
-                        <li>
+                        <li className="hover:bg-white hover:text-black hover:rounded-lg">
                           <a>{user.displayName}</a>
                         </li>
                         {user && isAdmin && (
-                          <li>
+                          <li className="hover:bg-white hover:text-black hover:rounded-lg">
                             <Link to="/dashbord/users">Dashboard</Link>
                           </li>
                         )}
                         {user && !isAdmin && (
-                          <li>
+                          <li className="hover:bg-white hover:text-black hover:rounded-lg">
                             <Link to="/dashbord/userHome">Dashboard</Link>
                           </li>
                         )}
 
-                        <li>
+                        <li className="hover:bg-white hover:text-black hover:rounded-lg">
                           <button onClick={logout}>Logout</button>
                         </li>
                       </ul>
@@ -310,7 +316,7 @@ const Navbar = ({ allNews }) => {
                 ) : (
                   <Link
                     to="/login"
-                    className="text-black border border-black px-4 py-2 rounded hover:bg-gray-100"
+                    className="text-white border border-white px-4 py-2 rounded hover:text-black hover:bg-gray-100"
                   >
                     Login
                   </Link>
@@ -320,17 +326,26 @@ const Navbar = ({ allNews }) => {
           </nav>
 
           {/* Categories Navbar */}
-          <div className="bg-white pb-2 pt-2 border-b-4 border-red-500">
-            <ul className="flex flex-col sm:flex-row gap-2 sm:gap-4 items-center justify-center font-bold text-center">
-              {categories.map(category => (
-                <li key={category} className={`font-bold text-lg sm:text-2xl px-2 sm:px-4 text-[#232323] ${active === category ? 'text-red-500 underline' : ''} hover:cursor-pointer`}>
-                  <Link to={category === 'Home' ? "/" : `/categoriesNews/${category}`} onClick={() => setActive(category)}>
-                    {category.toUpperCase()}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+          <div className="bg-[#3BAFDA] border-b-4 border-[#004E5B]">
+            <div className="container mx-auto pb-2 pt-2">
+              <ul className="flex flex-col sm:flex-row gap-2 sm:gap-4 items-center justify-center font-bold text-center">
+                {categories.map(category => (
+                  <li key={category} className="font-bold text-lg sm:text-2xl">
+                    <Link
+                      to={category === 'Home' ? "/" : `/categoriesNews/${category}`}
+                      onClick={() => setCategoryActive(category)}
+                      className={`inline-block  px-4 py-2 rounded-lg transition-all duration-300 
+                  ${categoryActive === category ? 'bg-[#004E5B] text-white' : 'bg-transparent text-[#232323] hover:bg-[#004E5B] hover:text-white'} 
+                  hover:shadow-lg hover:cursor-pointer`}
+                    >
+                      {category.toUpperCase()}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
+
 
         </div>
 
@@ -339,9 +354,8 @@ const Navbar = ({ allNews }) => {
 
         {/* Dashboard  */}
         <div
-          className={`shadow-lg z-50 bg-white max-w-[300px]  ease-in-out transform fixed top-0 left-0 h-full  w-[250px]   transition-transform duration-300  ${
-            isDashboardOpen ? "translate-x-0" : "-translate-x-full"
-          }`}
+          className={`shadow-lg z-50 bg-white max-w-[300px]  ease-in-out transform fixed top-0 left-0 h-full  w-[250px]   transition-transform duration-300  ${isDashboardOpen ? "translate-x-0" : "-translate-x-full"
+            }`}
         >
           {/* Close Menu Icon */}
           <button onClick={toggleDashboard} className="text-black p-4">
