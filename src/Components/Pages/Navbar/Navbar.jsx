@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import logo from "../../../assets/logo-r.png";
@@ -63,13 +64,6 @@ const Navbar = ({ allNews }) => {
     setInputValue(transcript);
   }, [transcript]);
 
-
-
-
-
-
-
-
   const [isDashboardOpen, setIsDashboardOpen] = useState(false);
   const [isAdmin, isLoading] = useAdmin();
   const toggleDashboard = () => {
@@ -78,20 +72,68 @@ const Navbar = ({ allNews }) => {
   const { user, logout } = useAuth();
 
   // theme
-  const [theme, setTheme] = useState("light");
+  const [readingMode, setReadingMode] = useState(false);
 
   useEffect(() => {
-    localStorage.setItem("theme", theme);
+    localStorage.setItem("readingMode", readingMode);
 
-    const localTheme = localStorage.getItem("theme");
-    document.querySelector("html").setAttribute("data-theme", localTheme);
-  }, [theme]);
+    const localTheme = localStorage.getItem("readingMode");
+    
+    if(localTheme === 'false'){
+        document.querySelector("html").classList.add('valueFalse');
+        document.querySelector("html").classList.remove('valueTrue');
+
+    }
+    else{ 
+      document.querySelector("html").classList.add('valueTrue');
+      document.querySelector("html").classList.remove('valueFalse');
+
+    }
+  }, [readingMode]);
+  // color temperature
+    const [temperature , setTemperature] = useState(5000);
+    const handleSliderChange = (e) => {
+      setTemperature(e.target.value);
+    
+
+      const temperature = e.target.value;
+      console.log("temperature : " , temperature);
+
+
+
+
+
+      const rootElement = document.documentElement; // পুরো HTML এফেক্ট প্রয়োগ করতে
+
+  // Temperature অনুযায়ী hue এবং brightness সেট করা
+  const hueRotation = (temperature - 5000) / 100;
+  const brightness = temperature < 5000 ? 0.9 : 1.1; // কম temp-এ dimmer, বেশি temp-এ brighter
+  
+  // ব্যাকগ্রাউন্ড কালার পরিবর্তন করা
+  rootElement.style.backgroundColor = `rgb(${255 - hueRotation * 10}, ${224 - hueRotation * 5}, ${180 - hueRotation * 3})`;
+
+  // ফিল্টার অ্যাপ্লাই করা
+  // rootElement.style.filter = ``;
+  // hue-rotate(${hueRotation}deg)
+    }
+
+    // document.addEventListener("DOMContentLoaded", function () {
+    //   // প্রাথমিক ভাবে 5000K এ সেট করতে পারেন
+    //   updateColorTemperature(5000);})
+
+
+
+    
+    // console.log("temperature " , temperature);
+
+  // ------------------
+
 
   const handleToggle = (e) => {
     if (e.target.checked) {
-      setTheme("night");
+      setReadingMode(true);
     } else {
-      setTheme("light");
+      setReadingMode(false);
     }
   };
 
@@ -135,16 +177,18 @@ const Navbar = ({ allNews }) => {
 
   return (
     <div>
-      <div className="fixed top-0 left-0 z-20 w-full ">
-        {/* <nav className=" shadow-md shadow-emerald-700 p-4"> */}
 
-        <div className="bg-[#004E5B] text-white ">
+      <div className="fixed top-0 left-0 z-20 w-full ">
+        
+
+
+        <div className="bg-[#004E5B] text-white  ">
           <nav className=" shadow-md p-4    top-0 z-10">
             <div className="container mx-auto flex items-center justify-between">
               <div className="flex items-center space-x-4">
                 <button
                   onClick={toggleDashboard}
-                  className="text-white  focus:outline-none"
+                  className="text-black  focus:outline-none"
                 >
                   {isDashboardOpen ? (
                     <FiX className="w-6 h-6" />
@@ -213,6 +257,21 @@ const Navbar = ({ allNews }) => {
                     <path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
                   </svg>
                 </label>
+                {/* color temperature */}
+
+                     {
+                      readingMode &&  <label htmlFor="">
+                      <input type="range"
+                        min={1000}
+                        max={10000}
+                        value={temperature}
+                        onChange={handleSliderChange}
+                        step="100"
+                      />
+                    </label>
+                     }
+
+                {/* -------------- */}
 
                 {user ? (
                   <div>
@@ -251,7 +310,7 @@ const Navbar = ({ allNews }) => {
                 ) : (
                   <Link
                     to="/login"
-                    className="text-black bg-white border  px-4 py-2 rounded hover:bg-gray-100"
+                    className="text-black border border-black px-4 py-2 rounded hover:bg-gray-100"
                   >
                     Login
                   </Link>
@@ -296,14 +355,14 @@ const Navbar = ({ allNews }) => {
               </NavLink>
             </li>
 
-            <li className="flex justify-between items-center">
+            {/* <li className="flex justify-between items-center">
               <NavLink className="border border-1 w-full px-3 py-1">
                 Sport
               </NavLink>
-            </li>
+            </li> */}
             <li className="flex justify-between items-center">
-              <NavLink to="/news" className="border border-1 w-full px-3 py-1">
-                News
+              <NavLink to="/locationBasedNews" className="border border-1 w-full px-3 py-1">
+                Location Based News
               </NavLink>
             </li>
             {user && (
@@ -316,19 +375,21 @@ const Navbar = ({ allNews }) => {
                 </NavLink>
               </li>
             )}
-            <li className="flex justify-between items-center">
+            {/* <li className="flex justify-between items-center">
               <NavLink
                 className="border border-1 w-full px-3 py-1"
                 to="/downloads"
               >
                 Downloads
               </NavLink>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>
     </div>
   );
+
 };
+
 
 export default Navbar;

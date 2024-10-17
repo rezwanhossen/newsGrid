@@ -1,4 +1,4 @@
-import  { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FaBookmark, FaShareAlt } from "react-icons/fa";
 import {
@@ -16,9 +16,26 @@ const FeaturedSection = () => {
   const [newsData, setNewsData] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [categories, setCategories] = useState([]);
+  
 
+  // Fetch news data
+  useEffect(() => {
+    fetch("/newsData.json")
+      .then((response) => response.json())
+      .then((data) => {
+        setNewsData(data);
+        const uniqueCategories = [
+          ...new Set(data.map((item) => item.category)),
+        ];
+        setCategories(uniqueCategories);
+      })
+      .catch((error) => console.error("Error fetching data:", error));
+  }, []);
+
+  // Handle bookmarking
   const handleBookmark = (newsItem) => {
-    const { image, title } = newsItem;
+    const image = newsItem.image;
+    const title = newsItem.title;
     const email = user?.email;
     const listOfBookmark = { image, title, email };
 
@@ -44,18 +61,6 @@ const FeaturedSection = () => {
       });
   };
 
-  useEffect(() => {
-    fetch("/newsData.json")
-      .then((response) => response.json())
-      .then((data) => {
-        setNewsData(data);
-        const uniqueCategories = [
-          ...new Set(data.map((item) => item.category)),
-        ];
-        setCategories(uniqueCategories);
-      })
-      .catch((error) => console.error("Error fetching data:", error));
-  }, []);
 
   const displayedNews = selectedCategory
     ? newsData.filter((item) => item.category === selectedCategory)
@@ -167,3 +172,4 @@ const FeaturedSection = () => {
 };
 
 export default FeaturedSection;
+

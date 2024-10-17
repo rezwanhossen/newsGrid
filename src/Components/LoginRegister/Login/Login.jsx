@@ -35,31 +35,52 @@ const Login = () => {
     <div className="min-h-screen flex items-center justify-center bg-[#3BAFDA]">
       {/* Main container */}
       <div className="w-full max-w-md mx-auto bg-[#007E7E] backdrop-blur-lg rounded-lg shadow-lg p-8">
-        <h2 className="text-3xl font-extrabold text-white text-center mb-8">Login</h2>
+        <h2 className="text-3xl font-extrabold text-white text-center mb-8">
+          Login
+        </h2>
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-          
           {/* Email Input */}
           <div className="space-y-2">
-            <label htmlFor="email" className="block text-lg font-semibold text-white">Email Address</label>
+            <label
+              htmlFor="email"
+              className="block text-lg font-semibold text-white"
+            >
+              Email Address
+            </label>
             <input
               type="email"
-              className={`w-full bg-white border py-3 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#3BAFDA] ${errors.email ? 'border-red-500' : 'border-gray-300'}`}
+              className={`w-full bg-white border py-3 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#3BAFDA] ${
+                errors.email ? "border-red-500" : "border-gray-300"
+              }`}
               placeholder="Enter your email"
               {...register("email", { required: "Email is required" })}
             />
-            {errors.email && <p className="text-red-500 text-sm">{errors.email.message}</p>}
+            {errors.email && (
+              <p className="text-red-500 text-sm">{errors.email.message}</p>
+            )}
           </div>
 
           {/* Password Input */}
           <div className="space-y-2 relative">
-            <label htmlFor="password" className="block text-lg font-semibold text-white">Password</label>
+            <label
+              htmlFor="password"
+              className="block text-lg font-semibold text-white"
+            >
+              Password
+            </label>
             <input
               type={showPassword ? "text" : "password"}
-              className={`w-full bg-white border py-3 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#3BAFDA] ${errors.password ? '' : 'border-gray-300'}`}
+              className={`w-full bg-white border py-3 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#3BAFDA] ${
+                errors.password ? "" : "border-gray-300"
+              }`}
               placeholder="Enter your password"
               {...register("password", { required: "Password is required" })}
             />
-            {errors.password && <p className="text-[#007E7E] text-sm">{errors.password.message}</p>}
+            {errors.password && (
+              <p className="text-[#007E7E] text-sm">
+                {errors.password.message}
+              </p>
+            )}
             <div
               className="absolute right-4 top-10 cursor-pointer text-black"
               onClick={togglePasswordVisibility}
@@ -85,7 +106,10 @@ const Login = () => {
 
         <p className="text-center text-black mt-6">
           Don’t have an account?{" "}
-          <Link to="/signup" className="text-white font-bold hover:underline transition duration-300">
+          <Link
+            to="/signup"
+            className="text-white font-bold hover:underline transition duration-300"
+          >
             Register here
           </Link>
         </p>

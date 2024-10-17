@@ -5,7 +5,7 @@ const UsersDashboard = () => {
   const { displayName, email, photoURL, emailVerified } = user;
 
   return (
-    <div className="flex flex-col items-center min-h-screen py-10 px-6">
+    <div className="flex flex-col justify-center items-center min-h-screen py-10 px-6">
       {/* Profile Section */}
       <div className="bg-white shadow-lg rounded-lg p-8 max-w-sm w-full">
         <div className="flex flex-col items-center">
