@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-key */
 import { useQuery } from "@tanstack/react-query";
 
 

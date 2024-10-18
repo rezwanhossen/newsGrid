@@ -657,7 +657,7 @@ const Navbar = ({ allNews }) => {
 
           {/* Categories Navbar */}
           <div className="bg-white pb-2 pt-2 border-b-4 border-red-500">
-            <ul className="flex flex-col sm:flex-row gap-2 sm:gap-4 items-center justify-center font-bold text-center">
+            <ul className="flex flex-wrap  gap-2 sm:gap-4 items-center justify-center font-bold text-center">
               {categories.map((category) => (
                 <li
                   key={category}

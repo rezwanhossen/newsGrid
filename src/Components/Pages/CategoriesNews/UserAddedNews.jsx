@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
 import Card from '../../../Shared/Card';
