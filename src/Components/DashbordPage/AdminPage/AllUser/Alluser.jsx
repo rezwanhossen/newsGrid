@@ -55,7 +55,11 @@ const Alluser = () => {
     });
   };
   if (isLoading)
-    return <span className="loading loading-bars loading-lg"></span>;
+    return (
+      <div className=" flex justify-center">
+        <span className="loading loading-bars loading-lg"></span>
+      </div>
+    );
 
   return (
     <div className=" w-[90%] mx-auto">
