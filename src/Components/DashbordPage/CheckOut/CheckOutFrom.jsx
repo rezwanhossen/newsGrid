@@ -1,5 +1,5 @@
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
-import  { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import useAuth from "../../../Hook/useAuth/useAuth";
 import toast from "react-hot-toast";
 import useAxiosCommon from "../../../Hook/useAxiosCommon";
@@ -25,7 +25,7 @@ const CheckOutFrom = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-
+    setpro(true);
     if (!stripe || !elements) {
       return;
     }
@@ -80,7 +80,7 @@ const CheckOutFrom = () => {
       try {
         await axioscommon.post("/payment", paymentInfo);
         toast.success("Payment data successfully saved on server");
-        navigate("/dashboard/addnews");
+        navigate("/dashbord/addnews");
       } catch (err) {
         toast.error(err.message);
       }
@@ -108,7 +108,6 @@ const CheckOutFrom = () => {
                 },
               },
             }}
-            className="p-3 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
         </div>
         <button

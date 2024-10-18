@@ -2,7 +2,7 @@ import { useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { Link, NavLink, Outlet, useNavigate } from "react-router-dom";
 import useAdmin from "../../Hook/useAdmin";
-
+import logo from "../../assets/fotlogo.png";
 const Dashbord = () => {
   const [isAdmin] = useAdmin();
   const [showModal, setShowModal] = useState(false);
@@ -20,7 +20,6 @@ const Dashbord = () => {
     <div className="drawer lg:drawer-open">
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content flex flex-col">
-
         <div className="flex justify-between items-center p-4 bg-blue-600 text-white lg:hidden">
           <h1 className="text-lg font-bold">My Dashbord</h1>
           <label
@@ -49,19 +48,48 @@ const Dashbord = () => {
           className="drawer-overlay "
         ></label>
 
-
         <ul className="menu bg-[#004E5B] text-white min-h-full w-64 p-4">
           {isAdmin ? (
             <>
+              <li className=" border-white rounded-md hover:text-black hover:bg-white font-semibold mb-4 mt-8">
+                <NavLink
+                  to="/dashbord/adminHome"
+                  className={({ isActive }) =>
+                    isActive ? "bg-white text-black" : ""
+                  }
+                >
+                  <img src={logo} alt="" />
+                </NavLink>
+              </li>
               <li className="border border-white rounded-md hover:text-black hover:bg-white font-semibold mb-4 mt-8">
-                <NavLink to="/dashbord/users" className={({ isActive }) => (isActive ? "bg-white text-black" : "")}>
+                <NavLink
+                  to="/dashbord/users"
+                  className={({ isActive }) =>
+                    isActive ? "bg-white text-black" : ""
+                  }
+                >
                   All Users
                 </NavLink>
               </li>
 
               <li className="border border-white rounded-md hover:text-black hover:bg-white font-semibold mb-4">
-                <NavLink to="/dashbord/addedNews" className={({ isActive }) => (isActive ? "bg-white text-black" : "")}>
+                <NavLink
+                  to="/dashbord/addedNews"
+                  className={({ isActive }) =>
+                    isActive ? "bg-white text-black" : ""
+                  }
+                >
                   Added News
+                </NavLink>
+              </li>
+              <li className="border border-white rounded-md hover:text-black hover:bg-white font-semibold mb-4">
+                <NavLink
+                  to="/dashbord/pymentHistory"
+                  className={({ isActive }) =>
+                    isActive ? "bg-white text-black" : ""
+                  }
+                >
+                  Pyment Hestory
                 </NavLink>
               </li>
 
@@ -77,13 +105,23 @@ const Dashbord = () => {
             </>
           ) : (
             <>
-              <li className="border border-white rounded-md hover:text-black hover:bg-white font-semibold mb-4 mt-8">
-                <NavLink to="/dashbord/userHome" className={({ isActive }) => (isActive ? "bg-white text-black" : "")}>
-                  User Home
+              <li className=" border-white rounded-md hover:text-black hover:bg-white font-semibold mb-4 mt-8">
+                <NavLink
+                  to="/dashbord/userHome"
+                  className={({ isActive }) =>
+                    isActive ? "bg-white text-black" : ""
+                  }
+                >
+                  <img src={logo} alt="" />
                 </NavLink>
               </li>
               <li className="border border-white rounded-md hover:text-black hover:bg-white font-semibold mb-4">
-                <NavLink to="/dashbord/userProfile" className={({ isActive }) => (isActive ? "bg-white text-black" : "")}>
+                <NavLink
+                  to="/dashbord/userProfile"
+                  className={({ isActive }) =>
+                    isActive ? "bg-white text-black" : ""
+                  }
+                >
                   User Profile
                 </NavLink>
               </li>
