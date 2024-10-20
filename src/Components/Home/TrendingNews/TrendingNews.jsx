@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { FaBookmark, FaVolumeUp, FaPause, FaPlay } from "react-icons/fa";
@@ -12,29 +13,36 @@ import {
 import Swal from "sweetalert2";
 import useAuth from "../../../Hook/useAuth/useAuth";
 
-const TrendingNews = ({setAllNewsTrending}) => {
+const TrendingNews = ({ setAllNewsTrending }) => {
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [showAll, setShowAll] = useState(false);
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
+  const [date, setDate] = useState(""); 
   const apiKey = "uX-Tbv7wo0kWPez-lDxwvpryFy8240yUQek_C5a_qIYVl6kb";
 
   const { user } = useAuth();
 
-  const fetchNews = async () => {
+  const fetchNews = async (selectedDate = "") => {
     setLoading(true);
     try {
-      const response = await axios.get(
-        "https://api.currentsapi.services/v1/latest-news",
-        {
-          params: {
+      // Use the selected date if available, otherwise fetch the latest news
+      const url = selectedDate
+        ? `https://api.currentsapi.services/v1/search`
+        : `https://api.currentsapi.services/v1/latest-news`;
+
+      const params = selectedDate
+        ? {
             apiKey: apiKey,
             language: "en",
-          },
-        }
-      );
+            start_date: selectedDate,
+            end_date: selectedDate,
+          }
+        : { apiKey: apiKey, language: "en" };
+
+      const response = await axios.get(url, { params });
       setArticles(response.data.news.slice(0, 10));
       setAllNewsTrending(response?.data?.news);
       setLoading(false);
@@ -118,6 +126,14 @@ const TrendingNews = ({setAllNewsTrending}) => {
     setShowAll(true);
   };
 
+  const handleDateChange = (e) => {
+    setDate(e.target.value); 
+  };
+
+  const handleSearchByDate = () => {
+    fetchNews(date); 
+  };
+
   const displayedArticles = showAll ? articles : articles.slice(0, 2);
 
   return (
@@ -125,6 +141,23 @@ const TrendingNews = ({setAllNewsTrending}) => {
       <h1 className="text-2xl md:text-3xl lg:text-4xl text-[#3BAFDA] border-b-4 pb-4 border-[#007E7E] font-extrabold mb-6">
         Trending News
       </h1>
+
+      {/* Date input for Time-Travel News Explorer */}
+      <div className="mb-6">
+        <input
+          type="date"
+          className="p-2 border border-gray-300 rounded-lg"
+          value={date}
+          onChange={handleDateChange}
+        />
+        <button
+          onClick={handleSearchByDate}
+          className="ml-4 px-4 py-2 bg-[#00A6A6] text-white rounded-md hover:bg-[#007E7E] transition"
+        >
+          Search News by Date
+        </button>
+      </div>
+
       <div className="grid grid-cols-1 gap-6 mt-5">
         {displayedArticles.map((article, index) => (
           <div
@@ -177,7 +210,9 @@ const TrendingNews = ({setAllNewsTrending}) => {
                 </button>
 
                 <button
-                  onClick={() => handleSpeak(`${article.title}. ${article.description}`)}
+                  onClick={() =>
+                    handleSpeak(`${article.title}. ${article.description}`)
+                  }
                   className="ml-4 flex items-center text-gray-600 hover:text-blue-500"
                   aria-label="Listen in Audio"
                 >
