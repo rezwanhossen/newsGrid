@@ -14,16 +14,14 @@ import Loading from "../../../Loading/Loading";
 import ReadMoreLink from "../../../../Shared/ReadMoreLink";
 import UserAddedNews from "../UserAddedNews";
 import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
 
 
 
-const CategoriesNews = () => {
-     // redux
-     const inputSearchValue = useSelector((state) => state.newsSearch );
-     const dispatch = useDispatch();
+
+const CategoriesNews = ({allNews}) => {
+    //  console.log("allNews" , allNews);
      
-     console.log("searchValue " , inputSearchValue);
+     
     
      
      const {category} = useParams();

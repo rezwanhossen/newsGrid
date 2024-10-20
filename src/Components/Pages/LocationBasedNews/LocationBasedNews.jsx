@@ -5,6 +5,7 @@ import ReadMoreLink from "../../../Shared/ReadMoreLink";
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import Loading from "../../Loading/Loading";
+import { useDispatch } from "react-redux";
 
 const LocationBasedNews = () => {
   const [location, setLocation] = useState({ latitude: null, longitude: null });
@@ -14,8 +15,17 @@ const LocationBasedNews = () => {
   const [locationBasedNews, setLocationBasedNews] = useState([]);
   const [loading , setLoading] = useState(true);
 
+  // redux
+  const dispatch = useDispatch();
+
+
+
+
+
+
+
   const [menuValue, setMenuValue] = useState("2");
-  console.log("menuValue : ", menuValue);
+  // console.log("menuValue : ", menuValue);
   const handleMenu = (value) => {
     setMenuValue(value);
   };
@@ -47,6 +57,7 @@ const LocationBasedNews = () => {
                   // console.log(res?.data)-8/
 
                   setLocationBasedNews(res?.data?.articles);
+
                   setLoading(false);
                 });
             })

@@ -30,7 +30,7 @@ const BreakingNews = ({ setAllNewsBreaking }) => {
         (a, b) => new Date(b.published) - new Date(a.published)
       );
       setBreakingNews(combinedNews);
-      // setAllNewsBreaking()
+      setAllNewsBreaking(combinedNews);
     } catch (error) {
       console.error("Error fetching breaking news:", error);
     }

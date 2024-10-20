@@ -17,7 +17,7 @@ const Root = () => {
       <div className="mt-32">
       {/* [inputValue] , */}
       
-      <Outlet context={{setAllNews}}></Outlet>
+      <Outlet allNews={allNews} context={{setAllNews}}></Outlet>
       </div>
       <Footer></Footer>
     </div>
