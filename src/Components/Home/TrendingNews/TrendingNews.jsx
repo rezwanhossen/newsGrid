@@ -12,6 +12,7 @@ import {
 } from "react-share";
 import Swal from "sweetalert2";
 import useAuth from "../../../Hook/useAuth/useAuth";
+import { Navigate } from "react-router-dom";
 
 const TrendingNews = ({ setAllNewsTrending }) => {
   const [articles, setArticles] = useState([]);
@@ -20,29 +21,35 @@ const TrendingNews = ({ setAllNewsTrending }) => {
   const [showAll, setShowAll] = useState(false);
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
-  const [date, setDate] = useState(""); 
+  const [date, setDate] = useState("");
   const apiKey = "uX-Tbv7wo0kWPez-lDxwvpryFy8240yUQek_C5a_qIYVl6kb";
 
   const { user } = useAuth();
 
   const fetchNews = async (selectedDate = "") => {
     setLoading(true);
-    try {
-      // Use the selected date if available, otherwise fetch the latest news
-      const url = selectedDate
-        ? `https://api.currentsapi.services/v1/search`
-        : `https://api.currentsapi.services/v1/latest-news`;
 
-      const params = selectedDate
-        ? {
-            apiKey: apiKey,
-            language: "en",
-            start_date: selectedDate,
-            end_date: selectedDate,
-          }
-        : { apiKey: apiKey, language: "en" };
+
+    try {
+      const url = `https://api.currentsapi.services/v1/search`;
+      const params = {
+        apiKey: apiKey,
+        language: "en",
+        start_date: selectedDate,
+        end_date: selectedDate,
+      };
 
       const response = await axios.get(url, { params });
+
+      // Check if no news is found for the selected date
+      if (response.data.news.length === 0) {
+        setError("No news found for this date.");
+        setLoading(false);
+        return;
+       
+      }
+
+      // Update articles if news is found
       setArticles(response.data.news.slice(0, 10));
       setAllNewsTrending(response?.data?.news);
       setLoading(false);
@@ -127,11 +134,11 @@ const TrendingNews = ({ setAllNewsTrending }) => {
   };
 
   const handleDateChange = (e) => {
-    setDate(e.target.value); 
+    setDate(e.target.value);
   };
 
   const handleSearchByDate = () => {
-    fetchNews(date); 
+    fetchNews(date);
   };
 
   const displayedArticles = showAll ? articles : articles.slice(0, 2);
