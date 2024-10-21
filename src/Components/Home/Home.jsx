@@ -88,6 +88,8 @@ import RecommendedNews from "./RecommendedNews/RecommendedNews";
 import { useEffect, useState } from "react";
 import {  useOutletContext } from "react-router-dom";
 import VideoNews from "./VideoNews/VideoNews";
+import DateTime from "./DateTime/DateTime";
+import WeatherNews from "./WeatherNews/WeatherNews";
 
 
 const Home = () => {
@@ -147,6 +149,12 @@ const Home = () => {
 
                     {/* Follow Us Section */}
                     <FollowUs />
+
+                    {/* Date Time Section */}
+                    <DateTime />
+
+                    {/* Weather News Section */}
+                    <WeatherNews />
                 </div>
             </div>
         </div>

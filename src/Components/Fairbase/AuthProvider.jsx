@@ -25,12 +25,12 @@ const AuthProvider = ({ children }) => {
   const [loding, setLoding] = useState(true);
 
   //user create
-  const creatuser = (email, password) => {
+  const createuser = (email, password) => {
     setLoding(true);
     return createUserWithEmailAndPassword(auth, email, password);
   };
-  //updat profil
-  const updatprofil = (name, image) => {
+  //updat profile
+  const updateprofile = (name, image) => {
     return updateProfile(auth.currentUser, {
       displayName: name,
       photoURL: image,
@@ -90,8 +90,8 @@ const AuthProvider = ({ children }) => {
   const authinfo = {
     user,
     loding,
-    creatuser,
-    updatprofil,
+    createuser,
+    updateprofile,
     login,
     googlelogin,
     logout,

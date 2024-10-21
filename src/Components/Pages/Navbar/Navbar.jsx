@@ -345,8 +345,6 @@ const Navbar = ({ allNews }) => {
               </ul>
             </div>
           </div>
-
-
         </div>
 
 
@@ -388,7 +386,12 @@ const Navbar = ({ allNews }) => {
                   My Bookmarks
                 </NavLink>
               </li>
+          
             )}
+            <li className="flex justify-between items-center">
+              <NavLink className="border border-1 w-full px-3 py-1"
+                  to="/contact">Contact Us</NavLink>
+            </li>
             {/* <li className="flex justify-between items-center">
               <NavLink
                 className="border border-1 w-full px-3 py-1"
@@ -396,7 +399,14 @@ const Navbar = ({ allNews }) => {
               >
                 Downloads
               </NavLink>
+
+            </li>
+            <li>
+              
+            </li>
+
             </li> */}
+
           </ul>
         </div>
       </div>

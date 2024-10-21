@@ -7,7 +7,7 @@ const VideoNews = ({setAllVideosNews}) => {
   const [selectedVideo, setSelectedVideo] = useState(null);
 
   // Your provided YouTube API key
-  const apiKey = "AIzaSyCGh6eBslRDTuBdQJgluhQlYblhST-USmA";
+  const apiKey = "AIzaSyAr_gVn7k9Q8Q2aVA8TslOyXVpomFEWcPU";
   
   const searchQuery = "breaking news"; 
 
