@@ -456,8 +456,8 @@ const Navbar = ({ allNews }) => {
 
     const searchResults = allNews?.filter(
       (news) =>
-        news?.title.toLowerCase().includes(searchValue.toLowerCase()) ||
-        news?.description.toLowerCase().includes(searchValue.toLowerCase())
+        news?.title?.toLowerCase().includes(searchValue?.toLowerCase()) ||
+        news?.description?.toLowerCase().includes(searchValue?.toLowerCase())
     );
     console.log("searchResults" , searchResults);
     if (searchResults) {

@@ -52,7 +52,7 @@ const LocationBasedNews = () => {
 
               axios
                 .get(
-                  `https://newsapi.org/v2/everything?q=${response?.data?.address?.city}&apiKey=4eb7896db1c540fb9de9160b3d0dcf0f`
+                  `https://newsapi.org/v2/everything?q=${response?.data?.address?.city}&apiKey=950d4efc55c24a31bf9a060eaf29f5fb`
                 )
                 .then((res) => {
                   // console.log(res?.data)-8/
@@ -99,7 +99,7 @@ const LocationBasedNews = () => {
           <div>
           {
     location?.latitude && location?.longitude &&
-      <MapContainer center={[location?.latitude, location?.longitude]} zoom={13} style={{ height: "500px", width: "100%" }} className="mt-[141px] z-10">
+      <MapContainer center={[location?.latitude, location?.longitude]} zoom={13} style={{ height: "500px", width: "100%" }} className="mt-[137px] z-10">
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

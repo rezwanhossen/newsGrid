@@ -12,7 +12,7 @@ const Card = ({news}) => {
                 </div>
 
                 <div className=' p-5   heebo '>
-                    <h3 className="text-xl text-[#4A4A4A] font-medium">{news?.title.slice(0 , 45)}...</h3>
+                    <h3 className="text-xl text-[#4A4A4A] font-medium">{news?.title.slice(0 , 35)}...</h3>
                     <ReadMoreLink news={news}></ReadMoreLink>
                 </div>
                 

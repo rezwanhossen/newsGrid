@@ -7,43 +7,43 @@ import { useSelector } from "react-redux";
 const Root = () => {
   
   const [allNews , setAllNews] = useState([]);
-  const [allNewsData , setAlNewsData] = useState([]);
+  
   const [allNewsLocalStorage , setAllNewsLocalStorage] = useState([]);
+  // console.log("allNewsLocalStorage" , allNewsLocalStorage);
+
+  // redux
   const locationBasedNews = useSelector((state) => state?.allNews?.locationBasedNews);
+  const categoriesNews = useSelector((state) => state?.allNews?.categoriesNews);
+  
 
   
   
 
-  useEffect(() => {
-    if(allNews?.length > 0 && locationBasedNews?.length > 0){
-      console.log("ottoi")
-        localStorage.setItem("allNewsData" , JSON.stringify(allNewsData));
   
   
-        const data = localStorage.getItem('allNewsData');
-    const news = JSON.parse(data);
-    // console.log("newsssssss : " , news)
-    setAllNewsLocalStorage(news)
-    }
-    // console.log("locationBasedNews : " , locationBasedNews , allNewsData?.length);
-  } , [allNewsData])
-  // console.log("allNewsRoot" , allNews);
   useEffect(() => {
       const news = [
           ...allNews,
-          ...locationBasedNews
+          ...locationBasedNews,
+          ...categoriesNews
       ]
-      setAlNewsData(news);
-  } , [allNews , locationBasedNews])
+      localStorage.setItem("allNewsData" , JSON.stringify(news));
+  
+  
+      const data = localStorage.getItem('allNewsData');
+  const newsAll = JSON.parse(data);
+  
+  setAllNewsLocalStorage(newsAll)
+  } , [allNews , locationBasedNews, categoriesNews])
 
   
   return (
     <div>
-      {/* inputValue={inputValue} setInputValue={setInputValue} */}
+      
       
       <Navbar allNews={allNewsLocalStorage}/>
       <div className="mt-32">
-      {/* [inputValue] , */}
+      
       
       <Outlet context={{setAllNews}}></Outlet>
       </div>

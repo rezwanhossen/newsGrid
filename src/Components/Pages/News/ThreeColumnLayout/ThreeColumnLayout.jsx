@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import ReadMoreLink from "../../../../Shared/ReadMoreLink";
 
 
 const ThreeColumnLayout = ({data}) => {
@@ -18,13 +19,13 @@ const ThreeColumnLayout = ({data}) => {
           />
         </div>
         {/* content */}
-        <div className="lg:w-[330px] ">
+        <div className="lg:w-[330px] heebo">
           
           <h3 className="text-blue-600 font-semibold">{news?.category}</h3>
           <h1 className="font-bold hover:text-zinc-500">
             {news?.title.slice(0, 70)}...
           </h1>
-          <Link to={news?.url} target='_blank' className="text-red-400 hover:underline  mt-3 font-semibold ">Read More...</Link>
+        <ReadMoreLink news={news}></ReadMoreLink>
         </div>
       </div>
     );

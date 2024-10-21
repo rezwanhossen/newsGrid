@@ -4,7 +4,8 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
     // categoriesNews : [],
-    locationBasedNews: []
+    locationBasedNews: [],
+    categoriesNews : [],
   };
   
 
@@ -17,6 +18,12 @@ const allNewsSlice = createSlice({
             ...state,
             locationBasedNews :  action.payload || state
         }
+         },
+         setCategoriesNews : (state , action) => {
+                return {
+                    ...state,
+                    categoriesNews : action.payload || state
+                }
          }
     }
 
@@ -24,4 +31,4 @@ const allNewsSlice = createSlice({
 
 
 export default allNewsSlice.reducer;
-export const { setLocationBasedNews  } = allNewsSlice.actions;
+export const { setLocationBasedNews , setCategoriesNews } = allNewsSlice.actions;
