@@ -737,7 +737,15 @@ const Navbar = ({ allNews }) => {
                 className="border border-1 w-full px-3 py-1"
                 to={"/locationBasedNews"}
               >
-                locationBasedNews
+                Location Based News
+              </NavLink>
+            </li>
+            <li className="flex justify-between items-center">
+              <NavLink
+                className="border border-1 w-full px-3 py-1"
+                to={"/usersNews"}
+              >
+                Users News
               </NavLink>
             </li>
           </ul>
