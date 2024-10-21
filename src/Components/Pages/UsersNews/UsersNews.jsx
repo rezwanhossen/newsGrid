@@ -36,7 +36,9 @@ const UsersNews = () => {
                 <h1 className="text-2xl font-semibold text-center py-4 bg-white">Home / Users News  </h1>
             </div>
                     <div  className='mt-10 container mx-auto flex gap-8 pb-16'>
-                    <div className="bg-white w-[400px] h-[330px] rounded p-5">
+                        <div>
+                                    <div  className="sticky top-36">
+                                    <div className="bg-white w-[350px] h-[330px] rounded p-5">
                         <h1 className="text-xl font-bold border-b-2 border-[#005689] pb-2">News By Categories</h1>
 
                         <div className="space-y-3 mt-4 uppercase">
@@ -44,8 +46,19 @@ const UsersNews = () => {
                                 myNews?.map(news => <li className="text-lg heebo font-semibold hover:cursor-pointer">{news?.category}</li>)
                             }
                         </div>
+                       
+                        
 
                     </div>
+                        <div className="w-[350px] mt-4">
+                            <h1 className="text-2xl rounded heebo bg-white py-4 font-bold px-3 mb-3">Sponsors</h1>
+
+                            <img src="https://katieloxton.com/media/wysiwyg/wwdw-bag-gif.gif" className="w-full rounded h-[400px] object-cover" alt="" />
+                        </div>
+                                    </div>
+                        </div>
+                   
+                    
                     <div className="w-full">
                     <div className="flex flex-col md:flex-row justify-center md:justify-between mx-3 md:mx-0 md:px-6 py-4 rounded bg-white   items-center  mb-10">
           <h1 className="text-xl md:text-2xl    font-bold heebo text-[#4A4A4A] ">
