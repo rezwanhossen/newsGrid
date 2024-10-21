@@ -6,13 +6,14 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import Loading from "../../Loading/Loading";
 import { useDispatch } from "react-redux";
+import { setLocationBasedNews } from "../../../features/allNews/allNewsSlice";
 
 const LocationBasedNews = () => {
   const [location, setLocation] = useState({ latitude: null, longitude: null });
   const [city, setCity] = useState("");
   const [country, setCountry] = useState("");
   const [error, setError] = useState("");
-  const [locationBasedNews, setLocationBasedNews] = useState([]);
+  const [locationBasedNews, setLocationBasednews] = useState([]);
   const [loading , setLoading] = useState(true);
 
   // redux
@@ -51,13 +52,13 @@ const LocationBasedNews = () => {
 
               axios
                 .get(
-                  `https://newsapi.org/v2/everything?q=${response?.data?.address?.city}&apiKey=87a6b0c8d4b94ef0bdaf9f3769e106bc`
+                  `https://newsapi.org/v2/everything?q=${response?.data?.address?.city}&apiKey=4eb7896db1c540fb9de9160b3d0dcf0f`
                 )
                 .then((res) => {
                   // console.log(res?.data)-8/
 
-                  setLocationBasedNews(res?.data?.articles);
-
+                  setLocationBasednews(res?.data?.articles);
+                  dispatch(setLocationBasedNews(res?.data?.articles))
                   setLoading(false);
                 });
             })
@@ -73,7 +74,7 @@ const LocationBasedNews = () => {
     } else {
       setError("Geolocation is not supported by your browser");
     }
-  }, [city]);
+  }, [city , dispatch]);
 
 
   if(loading){

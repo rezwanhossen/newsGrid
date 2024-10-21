@@ -32,10 +32,10 @@ const CategoriesNews = ({allNews}) => {
         queryFn : async() => {
             const response = await axios.get(`http://localhost:5000/top-headlines?category=${category}`);
             
-            console.log(response.data , 'dddddd')
+            // console.log(response.data , 'dddddd')
     const news = response?.data?.data?.articles.filter(
       (news) => news.title && news.urlToImage)
-      console.log("newsttttt : " , news);
+      // console.log("newsttttt : " , news);
 
       return news;
 
@@ -49,7 +49,7 @@ const CategoriesNews = ({allNews}) => {
     useEffect( () => {
         axios.get(`http://localhost:5000/myNews/category?category=${category}`)
         .then(res => {
-            console.log("res : " , res.data)
+            // console.log("res : " , res.data)
             setCategoryNews(res.data);
         })
     }, [category])

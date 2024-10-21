@@ -13,7 +13,10 @@ const allNewsSlice = createSlice({
     initialState ,
     reducers : {
          setLocationBasedNews : (state , action) => {
-               return state.locationBasedNews = action.payload || state
+            return{
+            ...state,
+            locationBasedNews :  action.payload || state
+        }
          }
     }
 

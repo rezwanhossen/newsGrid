@@ -4,11 +4,11 @@ import React from 'react';
 import Card from '../../../Shared/Card';
 
 const UserAddedNews = ({categoryNews}) => {
-    console.log("categoryyyyyy : " , categoryNews);
+    // console.log("categoryyyyyy : " , categoryNews);
     
 
     
-    console.log("category" , categoryNews)
+    // console.log("category" , categoryNews)
     return (
         <div className="mt-20">
                 <div className="heebo">
