@@ -52,7 +52,7 @@ const LocationBasedNews = () => {
 
               axios
                 .get(
-                  `https://newsapi.org/v2/everything?q=${response?.data?.address?.city}&apiKey=950d4efc55c24a31bf9a060eaf29f5fb`
+                  `https://newsapi.org/v2/everything?q=${response?.data?.address?.city}&apiKey=${import.meta.env.VITE_NAIMUL_API_KEY || '950d4efc55c24a31bf9a060eaf29f5fb'}`
                 )
                 .then((res) => {
                   // console.log(res?.data)-8/

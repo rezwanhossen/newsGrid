@@ -23,6 +23,8 @@ import { IoMdTime } from "react-icons/io";
 
 const CategoriesNews = ({allNews}) => {
     //  console.log("allNews" , allNews);
+
+    const apiKey = import.meta.env.VITE_NAIMUL_API_KEY;
      
      
     
@@ -34,7 +36,7 @@ const CategoriesNews = ({allNews}) => {
     const {data : newsData , isLoading} = useQuery({
         queryKey : ['categoriesNews' , category] , 
         queryFn : async() => {
-            const response = await axios.get(`https://newsapi.org/v2/top-headlines?category=${category}&language=en&apiKey=950d4efc55c24a31bf9a060eaf29f5fb`);
+            const response = await axios.get(`https://newsapi.org/v2/top-headlines?category=${category}&language=en&apiKey=${apiKey || '950d4efc55c24a31bf9a060eaf29f5fb'}`);
             
             
       const news = response?.data?.articles.filter(
