@@ -211,7 +211,7 @@ const BreakingNews = ({ setAllNewsBreaking }) => {
             </a>
 
             {/* Bookmark Button */}
-            <button onClick={() => handleBookmark(breakingNews[0])}>
+            <button className="flex items-center gap-2" onClick={() => handleBookmark(breakingNews[0])}>
               <FaBookmark /> Bookmark
             </button>
 
