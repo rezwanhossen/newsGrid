@@ -12,7 +12,11 @@ const LocationBasedNews = () => {
   const [country, setCountry] = useState("");
   const [error, setError] = useState("");
   const [locationBasedNews, setLocationBasedNews] = useState([]);
-  const [loading , setLoading] = useState(true);
+
+  const [loding, setLoding] = useState(true);
+  // const [locationData , setLocationData] = useState([]);
+  // console.log(locationData);
+
 
   const [menuValue, setMenuValue] = useState("2");
   console.log("menuValue : ", menuValue);
@@ -47,7 +51,9 @@ const LocationBasedNews = () => {
                   // console.log(res?.data)-8/
 
                   setLocationBasedNews(res?.data?.articles);
-                  setLoading(false);
+
+                  setLoding(false);
+
                 });
             })
             .catch((error) => {
@@ -63,6 +69,7 @@ const LocationBasedNews = () => {
       setError("Geolocation is not supported by your browser");
     }
   }, [city]);
+  if (loding) return <p>loging...</p>;
 
 
   if(loading){
