@@ -1,4 +1,5 @@
 
+
 import { useEffect, useState } from "react";
 
 import { FiMenu, FiX } from "react-icons/fi";
@@ -45,8 +46,8 @@ const Navbar = ({ allNews }) => {
 
     const searchResults = allNews?.filter(
       (news) =>
-        news?.title.toLowerCase().includes(searchValue.toLowerCase()) ||
-        news?.description.toLowerCase().includes(searchValue.toLowerCase())
+        news?.title?.toLowerCase().includes(searchValue?.toLowerCase()) ||
+        news?.description?.toLowerCase().includes(searchValue?.toLowerCase())
     );
     console.log("searchResults" , searchResults);
     if (searchResults) {
@@ -197,7 +198,7 @@ const Navbar = ({ allNews }) => {
 
                   {/* sun icon */}
                   <svg
-                    className="swap-off h-10 w-10 fill-current "
+                    className="swap-off h-10 w-10 fill-current"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                   >
@@ -206,7 +207,7 @@ const Navbar = ({ allNews }) => {
 
                   {/* moon icon */}
                   <svg
-                    className="swap-on h-10 w-10 fill-current text-black"
+                    className="swap-on h-10 w-10 fill-current"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                   >
@@ -291,7 +292,7 @@ const Navbar = ({ allNews }) => {
           }`}
         >
           {/* Close Menu Icon */}
-          <button onClick={toggleDashboard} className="text-black p-4">
+          <button onClick={toggleDashboard} className="text-white p-4">
             <FiX className="w-6 h-6" />
           </button>
 
@@ -326,7 +327,15 @@ const Navbar = ({ allNews }) => {
                 className="border border-1 w-full px-3 py-1"
                 to={"/locationBasedNews"}
               >
-                locationBasedNews
+                Location Based News
+              </NavLink>
+            </li>
+            <li className="flex justify-between items-center">
+              <NavLink
+                className="border border-1 w-full px-3 py-1"
+                to={"/usersNews"}
+              >
+                Users News
               </NavLink>
             </li>
           </ul>

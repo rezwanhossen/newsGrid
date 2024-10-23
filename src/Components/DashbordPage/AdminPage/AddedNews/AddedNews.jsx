@@ -32,7 +32,7 @@ const AddedNews = () => {
     return (
         <div className='heebo'>
           {/* add news */}
-                <h1 className="text-2xl font-bold my-5">Added News </h1>
+                <h1 className="text-2xl font-bold my-5 text-[#005689]">Added News </h1>
                 
                 
                 
