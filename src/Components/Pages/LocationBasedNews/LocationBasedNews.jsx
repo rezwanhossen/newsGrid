@@ -2,6 +2,9 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Card from "../../../Shared/Card";
 import ReadMoreLink from "../../../Shared/ReadMoreLink";
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import 'leaflet/dist/leaflet.css';
+import Loading from "../../Loading/Loading";
 
 const LocationBasedNews = () => {
   const [location, setLocation] = useState({ latitude: null, longitude: null });
@@ -9,9 +12,11 @@ const LocationBasedNews = () => {
   const [country, setCountry] = useState("");
   const [error, setError] = useState("");
   const [locationBasedNews, setLocationBasedNews] = useState([]);
+
   const [loding, setLoding] = useState(true);
   // const [locationData , setLocationData] = useState([]);
   // console.log(locationData);
+
 
   const [menuValue, setMenuValue] = useState("2");
   console.log("menuValue : ", menuValue);
@@ -46,7 +51,9 @@ const LocationBasedNews = () => {
                   // console.log(res?.data)-8/
 
                   setLocationBasedNews(res?.data?.articles);
+
                   setLoding(false);
+
                 });
             })
             .catch((error) => {
@@ -64,10 +71,15 @@ const LocationBasedNews = () => {
   }, [city]);
   if (loding) return <p>loging...</p>;
 
+
+  if(loading){
+    return <Loading></Loading>
+  }
+
   return (
     <div>
       {/* Map */}
-      <div className="overflow-hidden h-[400px] lg:h-0  pb-[30%] relative">
+      {/* <div className="overflow-hidden h-[400px] lg:h-0  pb-[30%] relative">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29379.239300227346!2d91.3965056!3d23.008900499999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m3!3e0!4m0!4m0!5e0!3m2!1sen!2sbd!4v1729058397582!5m2!1sen!2sbd"
           width="100%"
@@ -76,7 +88,26 @@ const LocationBasedNews = () => {
           referrerPolicy="no-referrer-when-downgrade"
           className="border-none  left-0 top-0 absolute h-[500px] lg:h-[600px]"
         ></iframe>
-      </div>
+      </div> */}
+
+
+          <div>
+          {
+    location?.latitude && location?.longitude &&
+      <MapContainer center={[location?.latitude, location?.longitude]} zoom={13} style={{ height: "500px", width: "100%" }} className="mt-[141px] z-10">
+      <TileLayer
+        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      />
+      <Marker position={[location?.latitude, location?.longitude]}>
+        <Popup>{city}</Popup>
+      </Marker>
+    </MapContainer> 
+}
+
+          </div>
+
+      {/* ----------------- */}
 
       <div className="my-10 md:my-20 container mx-auto heebo">
         <div className="flex flex-col md:flex-row justify-center md:justify-between mx-3 md:mx-0 md:px-6 py-4 rounded bg-base-300  items-center  mb-10">
@@ -129,7 +160,7 @@ const LocationBasedNews = () => {
 
         {!error ? (
           <div
-            className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-${menuValue} gap-8`}
+            className={`grid grid-cols-1 lg:grid-cols-${menuValue} gap-8`}
           >
             {locationBasedNews?.map((news) => {
               return menuValue === "1" ? (

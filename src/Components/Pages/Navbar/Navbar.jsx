@@ -1,7 +1,9 @@
+
 import { useEffect, useState } from "react";
+
 import { FiMenu, FiX } from "react-icons/fi";
 import logo from "../../../assets/logo-r.png";
-import { Link, NavLink, useNavigate, useOutletContext } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import useAuth from "../../../Hook/useAuth/useAuth";
 import useAdmin from "../../../Hook/useAdmin";
 import { MdKeyboardVoice } from "react-icons/md";
@@ -9,28 +11,44 @@ import "regenerator-runtime/runtime";
 import SpeechRecognition, {
   useSpeechRecognition,
 } from "react-speech-recognition";
+import { useDispatch, useSelector } from "react-redux";
+import { searchNews } from "../../../features/searchNews/searchNewsSlice";
+
+
 // import  from 'lodash';
 
 const Navbar = ({ allNews }) => {
+  
+
   const navigate = useNavigate();
-  const [searchNews, setNewsSearch] = useState([]);
+  // const [searchNews, setNewsSearch] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [inputValue, setInputValue] = useState("");
+  const [inputValue, setInputValue] = useState(""); 
+
+  // redux
+  const inputSearchValue = useSelector((state) => state.newsSearch );
+  const dispatch = useDispatch();
+  // console.log("searchValue " , inputSearchValue);
+
+
+
 
   const handleSearch = (e) => {
+    
     e.preventDefault();
     const form = e.target;
     const searchValue = form.search.value;
 
+    // setInputValue(searchValue);
+    dispatch(searchNews(searchValue))
     console.log(searchValue, allNews);
-    setInputValue(searchValue);
 
     const searchResults = allNews?.filter(
       (news) =>
         news?.title.toLowerCase().includes(searchValue.toLowerCase()) ||
         news?.description.toLowerCase().includes(searchValue.toLowerCase())
     );
-    console.log(searchResults);
+    console.log("searchResults" , searchResults);
     if (searchResults) {
       // form.reset();
       navigate("/newsSearch", { state: { searchResults: searchResults } });
@@ -101,7 +119,7 @@ const Navbar = ({ allNews }) => {
 
   return (
     <div>
-      <div className="fixed top-0 left-0 z-20 w-full ">
+      <div className="fixed top-0 left-0 z-40 w-full ">
         {/* <nav className=" shadow-md shadow-emerald-700 p-4"> */}
 
         <div className="bg-[#E0E4E8] text-[#2F2F2F] ">
@@ -147,7 +165,7 @@ const Navbar = ({ allNews }) => {
                     <input
                       type="text"
                       name="search"
-                      className="grow"
+                      className="grow bg-base-200"
                       onChange={handleInputChange}
                       placeholder="Search"
                       value={inputValue}
