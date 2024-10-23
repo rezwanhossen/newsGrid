@@ -56,6 +56,7 @@ const UsersNews = () => {
                             <div className="bg-white flex flex-row justify-between lg:justify-normal lg:flex-col mx-4 lg:mx-0 lg:w-[350px]  rounded p-5">
                                 <h1 className="text-xl hidden lg:block font-bold lg:border-b-2 lg:border-[#005689] pb-2">News By Categories</h1>
 
+                                {/* category */}
                                 <div className="lg:space-y-3 mt-4 uppercase  lg:block list-none  flex flex-wrap justify-center items-center gap-4">
                                     <li onClick={() => handleCategory('allNews')} className="text-lg heebo font-semibold hover:cursor-pointer">All News</li>
                                     
