@@ -148,7 +148,7 @@ const Dashbord = () => {
                 <Link onClick={() => setShowModal(true)}>Added News</Link>
               </li> */}
               <li className="border border-white rounded-md hover:text-black hover:bg-white font-semibold mb-4">
-                <Link onClick={handelAddNews}>Added News</Link>
+                <p onClick={handelAddNews}>Added News</p>
               </li>
               <li className="border border-white rounded-md hover:text-black hover:bg-white font-semibold mb-4">
                 <NavLink to={"/dashbord/myNews"}>My News</NavLink>

@@ -14,6 +14,7 @@ import Loading from "../../../Loading/Loading";
 import ReadMoreLink from "../../../../Shared/ReadMoreLink";
 import UserAddedNews from "../UserAddedNews";
 import { useEffect, useState } from "react";
+
 import { useDispatch } from "react-redux";
 import { setCategoriesNews } from "../../../../features/allNews/allNewsSlice";
 import { IoMdTime } from "react-icons/io";
@@ -26,7 +27,7 @@ const CategoriesNews = ({allNews}) => {
 
     const apiKey = import.meta.env.VITE_NAIMUL_API_KEY;
      
-     
+
     
      
      const {category} = useParams();
