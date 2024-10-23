@@ -7,40 +7,52 @@ const BreakingNews = ({ setAllNewsBreaking }) => {
   const [visibleNewsCount, setVisibleNewsCount] = useState(7);
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
   const [currentUtterance, setCurrentUtterance] = useState(null);
+  const [date, setDate] = useState("");
+
   const apiKey = "uX-Tbv7wo0kWPez-lDxwvpryFy8240yUQek_C5a_qIYVl6kb"; // Currents API Key
 
   // Fetch real-time breaking news
-  const fetchBreakingNews = async () => {
+  const fetchNews = async (selectedDate = "") => {
+    setLoading(true);
+
     try {
-      const categories = ["politics", "sports", "technology"];
-      const promises = categories.map((category) =>
-        axios.get(`https://api.currentsapi.services/v1/latest-news`, {
-          params: {
-            apiKey: apiKey,
-            category: category,
-            language: "en",
-            page_size: 5,
-          },
-        })
-      );
-      const responses = await Promise.all(promises);
-      const combinedNews = responses.flatMap((response) => response.data.news);
-      combinedNews.sort(
-        (a, b) => new Date(b.published) - new Date(a.published)
-      );
-      setBreakingNews(combinedNews);
-      // setAllNewsBreaking()
+      const url = `https://api.currentsapi.services/v1/search`;
+      const params = {
+        apiKey: apiKey,
+        language: "en",
+        start_date: selectedDate,
+        end_date: selectedDate,
+      };
+
+      const response = await axios.get(url, { params });
+
+      // Check if no news is found for the selected date
+      if (response.data.news.length === 0) {
+        setError("No breaking news found for this date.");
+        setLoading(false);
+        return;
+      }
+
+      // Update articles if news is found
+      setBreakingNews(response.data.news.slice(0, 10));
+      setAllNewsBreaking(response?.data?.news);
+      setLoading(false);
     } catch (error) {
-      console.error("Error fetching breaking news:", error);
+      setError("Failed to fetch breaking news. Please try again later.");
+      setLoading(false);
     }
   };
 
   useEffect(() => {
-    fetchBreakingNews();
-    const intervalId = setInterval(fetchBreakingNews, 5 * 60 * 1000);
-    return () => clearInterval(intervalId);
+    fetchNews();
   }, []);
+  if (loading)
+    return <div className="text-center text-lg">Loading breaking news...</div>;
+  if (error)
+    return <div className="text-center text-lg text-red-500">{error}</div>;
 
   const handleShowMore = () => {
     setVisibleNewsCount((prevCount) => prevCount + 7);
@@ -67,6 +79,14 @@ const BreakingNews = ({ setAllNewsBreaking }) => {
     }
   };
 
+  const handleDateChange = (e) => {
+    setDate(e.target.value);
+  };
+
+  const handleSearchByDate = () => {
+    fetchNews(date);
+  };
+
   // Handle Pause/Resume
   const handlePauseResume = () => {
     if (isSpeaking && !isPaused) {
@@ -84,6 +104,21 @@ const BreakingNews = ({ setAllNewsBreaking }) => {
       <h1 className="text-2xl md:text-3xl text-[#00A6A6] border-b-2 border-[#007E7E] font-extrabold mb-6 pb-2">
         Breaking News
       </h1>
+      {/* Date input for Time-Travel News Explorer */}
+      <div className="mb-6">
+        <input
+          type="date"
+          className="p-2 border border-gray-300 rounded-lg"
+          value={date}
+          onChange={handleDateChange}
+        />
+        <button
+          onClick={handleSearchByDate}
+          className="ml-4 px-4 py-2 bg-[#00A6A6] text-white rounded-md hover:bg-[#007E7E] transition"
+        >
+          Search News by Date
+        </button>
+      </div>
 
       {/* First Card for Featured News */}
       <div className="p-4 rounded-lg">
