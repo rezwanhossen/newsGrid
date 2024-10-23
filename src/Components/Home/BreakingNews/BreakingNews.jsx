@@ -1,46 +1,123 @@
+/* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { FaVolumeUp, FaPause, FaPlay } from "react-icons/fa";
+import { FaVolumeUp, FaPause, FaPlay, FaBookmark } from "react-icons/fa";
+import useAuth from "../../../Hook/useAuth/useAuth";
+import Swal from "sweetalert2";
 
 const BreakingNews = ({ setAllNewsBreaking }) => {
   const [breakingNews, setBreakingNews] = useState([]);
   const [visibleNewsCount, setVisibleNewsCount] = useState(7);
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
   const [currentUtterance, setCurrentUtterance] = useState(null);
+  const [date, setDate] = useState("");
+  const [bookmarkedArticles, setBookmarkedArticles] = useState([]); // State for bookmarks
+  const { user } = useAuth();
   const apiKey = "uX-Tbv7wo0kWPez-lDxwvpryFy8240yUQek_C5a_qIYVl6kb"; // Currents API Key
 
   // Fetch real-time breaking news
-  const fetchBreakingNews = async () => {
+  const fetchNews = async (selectedDate = "") => {
+    setLoading(true);
+
     try {
-      const categories = ["politics", "sports", "technology"];
-      const promises = categories.map((category) =>
-        axios.get(`https://api.currentsapi.services/v1/latest-news`, {
-          params: {
-            apiKey: apiKey,
-            category: category,
-            language: "en",
-            page_size: 5,
-          },
-        })
-      );
-      const responses = await Promise.all(promises);
-      const combinedNews = responses.flatMap((response) => response.data.news);
-      combinedNews.sort(
-        (a, b) => new Date(b.published) - new Date(a.published)
-      );
-      setBreakingNews(combinedNews);
-      // setAllNewsBreaking()
+      const url = `https://api.currentsapi.services/v1/search`;
+      const params = {
+        apiKey: apiKey,
+        language: "en",
+        start_date: selectedDate,
+        end_date: selectedDate,
+      };
+
+      const response = await axios.get(url, { params });
+
+      // Check if no news is found for the selected date
+      if (response.data.news.length === 0) {
+        setError("No breaking news found for this date.");
+        setLoading(false);
+        return;
+      }
+
+      // Update articles if news is found
+      setBreakingNews(response.data.news.slice(0, 10));
+      setAllNewsBreaking(response?.data?.news);
+      setLoading(false);
     } catch (error) {
-      console.error("Error fetching breaking news:", error);
+      setError("Failed to fetch breaking news. Please try again later.");
+      setLoading(false);
     }
   };
 
   useEffect(() => {
-    fetchBreakingNews();
-    const intervalId = setInterval(fetchBreakingNews, 5 * 60 * 1000);
-    return () => clearInterval(intervalId);
+    fetchNews();
   }, []);
+
+  // Bookmark handling
+  const handleBookmark = (article) => {
+    if (!user) {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "You are not logged in! Please log in to bookmark articles.",
+        footer: '<a href="login">==> Click to Login <==</a>',
+      });
+      return;
+    }
+
+    const bookmarkedUrls = new Set(bookmarkedArticles.map((a) => a.url));
+
+    if (bookmarkedUrls.has(article.url)) {
+      Swal.fire(
+        "Already Bookmarked",
+        "This article is already in your bookmarks.",
+        "info"
+      );
+      return;
+    }
+
+    const newBookmark = {
+      image: article.image,
+      title: article.title,
+      url: article.url,
+      email: user.email,
+    };
+
+    // Save bookmark to database
+    fetch("http://localhost:5000/bookmarks", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(newBookmark),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.insertedId) {
+          setBookmarkedArticles((prev) => [...prev, article]);
+          Swal.fire({
+            title: "Success!",
+            text: "Article successfully added to bookmarks.",
+            icon: "success",
+            confirmButtonText: "Ok",
+          });
+        }
+      })
+      .catch((error) => {
+        console.error("Error adding bookmark:", error);
+        Swal.fire({
+          icon: "error",
+          title: "Error",
+          text: "Failed to add bookmark. Please try again.",
+        });
+      });
+  };
+
+  if (loading)
+    return <div className="text-center text-lg">Loading breaking news...</div>;
+  if (error)
+    return <div className="text-center text-lg text-red-500">{error}</div>;
 
   const handleShowMore = () => {
     setVisibleNewsCount((prevCount) => prevCount + 7);
@@ -67,6 +144,14 @@ const BreakingNews = ({ setAllNewsBreaking }) => {
     }
   };
 
+  const handleDateChange = (e) => {
+    setDate(e.target.value);
+  };
+
+  const handleSearchByDate = () => {
+    fetchNews(date);
+  };
+
   // Handle Pause/Resume
   const handlePauseResume = () => {
     if (isSpeaking && !isPaused) {
@@ -84,6 +169,21 @@ const BreakingNews = ({ setAllNewsBreaking }) => {
       <h1 className="text-2xl md:text-3xl text-[#00A6A6] border-b-2 border-[#007E7E] font-extrabold mb-6 pb-2">
         Breaking News
       </h1>
+      {/* Date input for Time-Travel News Explorer */}
+      <div className="mb-6">
+        <input
+          type="date"
+          className="p-2 border border-gray-300 rounded-lg"
+          value={date}
+          onChange={handleDateChange}
+        />
+        <button
+          onClick={handleSearchByDate}
+          className="ml-4 px-4 py-2 bg-[#00A6A6] text-white rounded-md hover:bg-[#007E7E] transition"
+        >
+          Search News by Date
+        </button>
+      </div>
 
       {/* First Card for Featured News */}
       <div className="p-4 rounded-lg">
@@ -104,10 +204,16 @@ const BreakingNews = ({ setAllNewsBreaking }) => {
             <a
               href={breakingNews[0].url}
               target="_blank"
+              rel="noopener noreferrer"
               className="text-[#FF6F61] hover:text-[#007E7E] hover:underline mt-2 block"
             >
               Read more
             </a>
+
+            {/* Bookmark Button */}
+            <button onClick={() => handleBookmark(breakingNews[0])}>
+              <FaBookmark /> Bookmark
+            </button>
 
             {/* Read Button */}
             <button
@@ -177,12 +283,21 @@ const BreakingNews = ({ setAllNewsBreaking }) => {
                   Read more
                 </a>
 
+                {/* Bookmark Button */}
+                <button
+                  onClick={() => handleBookmark(article)}
+                  className="mt-2 text-gray-600 hover:text-blue-500 flex items-start"
+                >
+                  <FaBookmark className="mr-2" />
+                  Bookmark
+                </button>
+
                 {/* Read Button */}
                 <button
                   onClick={() =>
                     handleSpeak(`${article.title}. ${article.description}`)
                   }
-                  className="mt-2 text-gray-600 hover:text-blue-500 flex items-center"
+                  className="mt-2 text-gray-600 hover:text-blue-500 flex"
                 >
                   <FaVolumeUp className="mr-2" />
                   {isSpeaking ? "Stop" : "Listen in Audio"}
@@ -192,7 +307,7 @@ const BreakingNews = ({ setAllNewsBreaking }) => {
                 {isSpeaking && (
                   <button
                     onClick={handlePauseResume}
-                    className="mt-2 text-gray-600 hover:text-blue-500 flex items-center"
+                    className="mt-2 text-gray-600 hover:text-blue-500 flex items-start "
                   >
                     {isPaused ? (
                       <>
