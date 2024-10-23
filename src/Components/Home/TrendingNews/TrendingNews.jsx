@@ -12,7 +12,7 @@ import {
 } from "react-share";
 import Swal from "sweetalert2";
 import useAuth from "../../../Hook/useAuth/useAuth";
-import { Navigate } from "react-router-dom";
+
 
 const TrendingNews = ({ setAllNewsTrending }) => {
   const [articles, setArticles] = useState([]);
@@ -21,6 +21,7 @@ const TrendingNews = ({ setAllNewsTrending }) => {
   const [showAll, setShowAll] = useState(false);
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
+  const [bookmarkedArticles, setBookmarkedArticles] = useState([]);
   const [date, setDate] = useState("");
   const apiKey = "uX-Tbv7wo0kWPez-lDxwvpryFy8240yUQek_C5a_qIYVl6kb";
 
@@ -95,37 +96,65 @@ const TrendingNews = ({ setAllNewsTrending }) => {
     }
   };
 
-  const handleBookmark = (newsItem) => {
-    const image = newsItem.image;
-    const title = newsItem.title;
-    const email = user?.email;
-    const listOfBookmark = { image, title, email };
+  // Bookmark handling
+  const handleBookmark = (article) => {
+    if (!user) {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "You are not logged in! Please log in to bookmark articles.",
+        footer: '<a href="login">==> Click to Login <==</a>',
+      });
+      return;
+    }
 
+    const isAlreadyBookmarked = bookmarkedArticles.some(
+      (bookmarkedArticle) => bookmarkedArticle.url == article.url
+    );
+
+    if (isAlreadyBookmarked) {
+      Swal.fire({
+        icon: "info",
+        title: "Already Bookmarked",
+        text: "This article is already in your bookmarks.",
+      });
+      return;
+    }
+
+    const newBookmark = {
+      image: article.image,
+      title: article.title,
+      url: article.url,
+      email: user.email, 
+    };
+
+    // Save bookmark to database
     fetch("http://localhost:5000/bookmarks", {
       method: "POST",
       headers: {
         "content-type": "application/json",
       },
-      body: JSON.stringify(listOfBookmark),
+      body: JSON.stringify(newBookmark),
     })
       .then((res) => res.json())
       .then((data) => {
-        if (data.insertedId && user) {
+        if (data.insertedId) {
+          setBookmarkedArticles((prev) => [...prev, newBookmark]); 
           Swal.fire({
             title: "Success!",
-            text: "Article successfully added to bookmark",
+            text: "Article successfully added to bookmarks.",
             icon: "success",
             confirmButtonText: "Ok",
           });
-        } else {
-          Swal.fire({
-            icon: "error",
-            title: "Oops...",
-            text: "You Are Not Logged In Yet!!!",
-            footer: '<a href="login">==> Click to Login <==</a>',
-            color: "red",
-          });
         }
+      })
+      .catch((error) => {
+        console.error("Error adding bookmark:", error);
+        Swal.fire({
+          icon: "error",
+          title: "Error",
+          text: "Failed to add bookmark. Please try again.",
+        });
       });
   };
 
