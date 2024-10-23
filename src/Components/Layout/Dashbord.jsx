@@ -51,15 +51,10 @@ const Dashbord = () => {
         <ul className="menu bg-[#004E5B] text-white min-h-full w-64 p-4">
           {isAdmin ? (
             <>
-              <li className=" border-white rounded-md hover:text-black hover:bg-white font-semibold mb-4 mt-8">
-                <NavLink
-                  to="/dashbord/adminHome"
-                  className={({ isActive }) =>
-                    isActive ? "bg-white text-black" : ""
-                  }
-                >
+              <li className=" border-white rounded-md  font-semibold mb-4 mt-8">
+                <Link>
                   <img src={logo} alt="" />
-                </NavLink>
+                </Link>
               </li>
               <li className="border border-white rounded-md hover:text-black hover:bg-white font-semibold mb-4 mt-8">
                 <NavLink
@@ -93,10 +88,6 @@ const Dashbord = () => {
                 </NavLink>
               </li>
 
-              <li className="border border-white rounded-md hover:text-black hover:bg-white font-semibold mb-4">
-                <a href="/">All News</a>
-              </li>
-
               <p className="border border-white mt-10"></p>
 
               <li className="pt-2 border-t border border-white rounded-md hover:text-black hover:bg-white font-semibold mt-8">
@@ -105,15 +96,10 @@ const Dashbord = () => {
             </>
           ) : (
             <>
-              <li className=" border-white rounded-md hover:text-black hover:bg-white font-semibold mb-4 mt-8">
-                <NavLink
-                  to="/dashbord/userHome"
-                  className={({ isActive }) =>
-                    isActive ? "bg-white text-black" : ""
-                  }
-                >
+              <li className="  mb-4 mt-8">
+                <Link>
                   <img src={logo} alt="" />
-                </NavLink>
+                </Link>
               </li>
               <li className="border border-white rounded-md hover:text-black hover:bg-white font-semibold mb-4">
                 <NavLink
@@ -125,9 +111,9 @@ const Dashbord = () => {
                   User Profile
                 </NavLink>
               </li>
-              <li className="border border-white rounded-md hover:text-black hover:bg-white font-semibold mb-4">
+              {/* <li className="border border-white rounded-md hover:text-black hover:bg-white font-semibold mb-4">
                 <a href="bookmark">My Bookmarks</a>
-              </li>
+              </li> */}
               {/* <li className="border border-white rounded-md hover:text-black hover:bg-white font-semibold mb-4">
                 <NavLink to="/dashbord/addnews">Add News</NavLink>
               </li> */}
@@ -135,19 +121,17 @@ const Dashbord = () => {
                 <Link onClick={() => setShowModal(true)}>Added News</Link>
               </li>
               <li className="border border-white rounded-md hover:text-black hover:bg-white font-semibold mb-4">
-                <a href="myNews">My News</a>
+                <NavLink to={"/dashbord/myNews"}>My News</NavLink>
               </li>
-              <li className="border border-white rounded-md hover:text-black hover:bg-white font-semibold mb-4">
-                <a href="/settings">rating</a>
+
+              <li className="border-t  border border-white rounded-md hover:text-black hover:bg-white font-semibold ">
+                <NavLink to="/dashbord/personalnews">Customized news</NavLink>
               </li>
 
               <p className="border border-white mt-10"></p>
 
               <li className="border-t pt-2 border border-white rounded-md hover:text-black hover:bg-white font-semibold mt-8">
                 <Link to="/">Home</Link>
-              </li>
-              <li className="border-t pt-2">
-                <NavLink to="/dashbord/personalnews">Customized news</NavLink>
               </li>
             </>
           )}
