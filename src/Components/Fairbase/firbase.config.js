@@ -1,12 +1,12 @@
 import { initializeApp } from "firebase/app";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDSjwgHhXmeclKhutCS_zBCApGaZWOf_mE",
-  authDomain: "newsgrid-95245.firebaseapp.com",
-  projectId: "newsgrid-95245",
-  storageBucket: "newsgrid-95245.appspot.com",
-  messagingSenderId: "395499346338",
-  appId: "1:395499346338:web:bef182f58ab5592d39bafb",
+  apiKey: import.meta.env.VITE_apiKey,
+  authDomain: import.meta.env.VITE_authDomain,
+  projectId: import.meta.env.VITE_projectId,
+  storageBucket: import.meta.env.VITE_storageBucket,
+  messagingSenderId: import.meta.env.VITE_messagingSenderId,
+  appId: import.meta.env.VITE_appId,
 };
 
 // Initialize Firebase
