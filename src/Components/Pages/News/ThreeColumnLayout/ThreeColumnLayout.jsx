@@ -22,8 +22,11 @@ const ThreeColumnLayout = ({data}) => {
         <div className="lg:w-[330px] heebo">
           
           <h3 className="text-blue-600 font-semibold">{news?.category}</h3>
-          <h1 className="font-bold hover:text-zinc-500">
+          <h1 className="font-bold hidden lg:block hover:text-zinc-500">
             {news?.title.slice(0, 70)}...
+          </h1>
+          <h1 className="font-bold block  lg:hidden hover:text-zinc-500">
+            {news?.title.slice(0, 40)}...
           </h1>
         <ReadMoreLink news={news}></ReadMoreLink>
         </div>

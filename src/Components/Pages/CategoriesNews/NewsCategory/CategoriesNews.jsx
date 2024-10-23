@@ -48,7 +48,7 @@ const CategoriesNews = ({allNews}) => {
     
     })
 
-
+    console.log("newsDaata : " , newsData);
 
     const [categoryNews , setCategoryNews] = useState([]);
     useEffect( () => {
@@ -143,7 +143,7 @@ const CategoriesNews = ({allNews}) => {
                         
                      <div>
                      {
-                    newsData?.slice(15 , 18).map(news => {
+                    newsData?.length > 16 ? newsData?.slice(15 , 18).map(news => {
                         return (
                             
                           <div className="flex flex-col-reverse lg:flex-row  heebo border-t-4  border-dotted py-5 border-[#005689]">
@@ -185,6 +185,121 @@ const CategoriesNews = ({allNews}) => {
                         </div>
   )
                     })
+                    :
+                      <div>
+                          <div className="flex flex-col-reverse lg:flex-row  heebo border-t-4  border-dotted py-5 border-[#005689]">
+                    <p className="font-semibold w-full lg:w-[25%]  hidden md:block">
+                     <div className="flex gap-4">
+                     <IoMdTime className="text-lg"/><span>10-23-2024</span>
+                     </div>
+                   </p>
+                   <div className="w-full lg:w-[50%] lg:pr-6">
+                     <div className="flex items-center">
+                     <p className="text-[#005689] mb-2 mt-3 md:mt-0">
+                       Author : Naimul
+                     </p>
+                  
+
+                     </div>
+   
+                     <h2 className=" font-bold">
+                     Festivals of Dhaka: A Celebration of Culture
+                     </h2>
+                     
+   
+                     
+                     <p className="text-justify my-1 heebo text-[15px]">Born poor in colonial India and dead at 32, Ramanujan had fa...</p>
+   
+                     <div className="mt-2 flex justify-between items-center">
+                       <ReadMoreLink news={'https://en.wikipedia.org/wiki/Culture_of_Dhaka#Festivals'}></ReadMoreLink>
+                       
+
+                     </div>
+                   </div>
+                   <div className="w-full lg:w-[25%] flex  items-center">
+                     <img
+                       src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Mangal_Shobhajatra_in_Dhaka.jpg/640px-Mangal_Shobhajatra_in_Dhaka.jpg"
+                       alt=""
+                       className="w-full lg:h-[150px] object-cover"
+                     />
+                   </div>
+                 </div>
+                    <div className="flex flex-col-reverse lg:flex-row  heebo border-t-4  border-dotted py-5 border-[#005689]">
+                    <p className="font-semibold w-full lg:w-[25%]  hidden md:block">
+                     <div className="flex gap-4">
+                     <IoMdTime className="text-lg"/><span>10-23-2024</span>
+                     </div>
+                   </p>
+                   <div className="w-full lg:w-[50%] lg:pr-6">
+                     <div className="flex items-center">
+                     <p className="text-[#005689] mb-2 mt-3 md:mt-0">
+                       Author : Naimul
+                     </p>
+                  
+
+                     </div>
+   
+                     <h2 className=" font-bold">
+                     Festivals of Dhaka: A Celebration of Culture
+                     </h2>
+                     
+   
+                     
+                     <p className="text-justify my-1 heebo text-[15px]">Born poor in colonial India and dead at 32, Ramanujan had fa...</p>
+   
+                     <div className="mt-2 flex justify-between items-center">
+                       <ReadMoreLink news={'https://en.wikipedia.org/wiki/Culture_of_Dhaka#Festivals'}></ReadMoreLink>
+                       
+
+                     </div>
+                   </div>
+                   <div className="w-full lg:w-[25%] flex  items-center">
+                     <img
+                       src="https://thegreenpagebd.com/wp-content/uploads/2022/08/In-five-cities-of-Bangladesh-including-Dhaka-the-environment-is-rapidly-destroyed.jpg"
+                       alt=""
+                       className="w-full lg:h-[150px] object-cover"
+                     />
+                   </div>
+                 </div>
+                    <div className="flex flex-col-reverse lg:flex-row  heebo border-t-4  border-dotted py-5 border-[#005689]">
+                    <p className="font-semibold w-full lg:w-[25%]  hidden md:block">
+                     <div className="flex gap-4">
+                     <IoMdTime className="text-lg"/><span>10-23-2024</span>
+                     </div>
+                   </p>
+                   <div className="w-full lg:w-[50%] lg:pr-6">
+                     <div className="flex items-center">
+                     <p className="text-[#005689] mb-2 mt-3 md:mt-0">
+                       Author : Naimul
+                     </p>
+                  
+
+                     </div>
+   
+                     <h2 className=" font-bold">
+                     Festivals of Dhaka: A Celebration of Culture
+                     </h2>
+                     
+   
+                     
+                     <p className="text-justify my-1 heebo text-[15px]">Born poor in colonial India and dead at 32, Ramanujan had fa...</p>
+   
+                     <div className="mt-2 flex justify-between items-center">
+                       <ReadMoreLink news={'https://en.wikipedia.org/wiki/Culture_of_Dhaka#Festivals'}></ReadMoreLink>
+                       
+
+                     </div>
+                   </div>
+                   <div className="w-full lg:w-[25%] flex  items-center">
+                     <img
+                       src="https://www.evercarebd.com/wp-content/themes/wp-bootstrap-starter-child/asset/img/Evercare-Dhaka-scaled.jpeg"
+                       alt=""
+                       className="w-full lg:h-[150px] object-cover"
+                     />
+                   </div>
+                 </div>
+                      </div>
+
                 }
                      </div>
                       </div>
