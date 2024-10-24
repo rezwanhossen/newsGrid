@@ -48,7 +48,7 @@ const BookmarkCard = ({ bookmark }) => {
       <div className="card glass">
         <img
           src={image}
-          className="object-cover object-center w-full rounded-t-md dark:bg-gray-500"
+          className="object-cover object-center h-[300px] w-full rounded-t-md dark:bg-gray-500"
         />
 
         <div className="card-body">
@@ -61,9 +61,7 @@ const BookmarkCard = ({ bookmark }) => {
             >
               <MdDeleteForever />
             </button>
-            <Link
-              className="text-orange-500 underline hover:text-orange-700 transition duration-300"
-            >
+            <Link className="text-orange-500 underline hover:text-orange-700 transition duration-300">
               Read more
             </Link>
           </div>
