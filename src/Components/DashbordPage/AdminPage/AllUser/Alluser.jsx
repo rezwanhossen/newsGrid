@@ -55,7 +55,11 @@ const Alluser = () => {
     });
   };
   if (isLoading)
-    return <span className="loading loading-bars loading-lg"></span>;
+    return (
+      <div className=" flex justify-center">
+        <span className="loading loading-bars loading-lg"></span>
+      </div>
+    );
 
   return (
     <div className=" w-[90%] mx-auto">
@@ -67,10 +71,10 @@ const Alluser = () => {
       </div>
       <div>
         <div className="overflow-x-auto">
-          <table className="table">
+          <table className="table ">
             {/* head */}
-            <thead>
-              <tr>
+            <thead className="border-gray-300 ">
+              <tr className=" border-gray-300">
                 <th>#</th>
                 <th>Name</th>
                 <th>Email</th>
@@ -81,7 +85,7 @@ const Alluser = () => {
             <tbody>
               {/* row 1 */}
               {users.map((user, inx) => (
-                <tr key={user._id}>
+                <tr className=" border-gray-300" key={user._id}>
                   <th>{inx + 1}</th>
                   <td>{user.name} </td>
                   <td>{user.email}</td>

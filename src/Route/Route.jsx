@@ -27,11 +27,11 @@ import Payment from "../Components/DashbordPage/Payment/Payment";
 
 import PersonalizedNews from "../Components/PersonalizedNews/PersonalizedNews";
 import NewsPersonal from "../Components/NewsPersonal/NewsPersonal";
- 
 
 import LocationBasedNews from "../Components/Pages/LocationBasedNews/LocationBasedNews";
-import ContactUs from "../Components/Pages/Contact/ContactUs";
-
+import AdminHome from "../Components/DashbordPage/AdminPage/AdminHome/AdminHome";
+import AllpementHistory from "../Components/DashbordPage/AdminPage/AllPementHistory/AllpementHistory";
+import UsersNews from "../Components/Pages/UsersNews/UsersNews";
 
 const router = createBrowserRouter([
   {
@@ -44,9 +44,8 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: '/CustomizedNews',
-        element: <NewsPersonal></NewsPersonal>
-
+        path: "/CustomizedNews",
+        element: <NewsPersonal></NewsPersonal>,
       },
 
       {
@@ -84,18 +83,20 @@ const router = createBrowserRouter([
         element: <NewsSearch></NewsSearch>,
       },
       {
-
-        path: '/personalnews',
-        element: <PersonalizedNews></PersonalizedNews>
+        path: "/personalnews",
+        element: <PersonalizedNews></PersonalizedNews>,
       },
-  {
-        path : '/locationBasedNews',
-        element : <LocationBasedNews></LocationBasedNews>
-
+      {
+        path: "/locationBasedNews",
+        element: <LocationBasedNews></LocationBasedNews>,
+      },
+      {
+        path : '/usersNews',
+        element : <UsersNews></UsersNews>
       },
       {
         path: '/contact',
-        element: <ContactUs></ContactUs>
+        element: <ContactUs />
       }
     ],
   },
@@ -131,6 +132,10 @@ const router = createBrowserRouter([
 
       //admin route
       {
+        path: "adminHome",
+        element: <AdminHome />,
+      },
+      {
         path: "users",
         element: <Alluser></Alluser>,
       },
@@ -139,10 +144,13 @@ const router = createBrowserRouter([
         element: <AddedNews></AddedNews>,
       },
       {
+        path: "pymentHistory",
+        element: <AllpementHistory></AllpementHistory>,
+      },
+      {
         path: "personalnews",
-        element: <PersonalizedNews></PersonalizedNews>
-      }
-
+        element: <PersonalizedNews></PersonalizedNews>,
+      },
     ],
   },
 ]);

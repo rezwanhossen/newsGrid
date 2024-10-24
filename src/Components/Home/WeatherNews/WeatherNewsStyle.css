@@ -1,51 +1,15 @@
-/* @keyframes cloudFloat {
-    0% {
-      transform: translateX(0);
-    }
-    50% {
-      transform: translateX(10px);
-    }
-    100% {
-      transform: translateX(0);
-    }
+@keyframes cloudFloat {
+  0% {
+    transform: translateX(0);
   }
-  
-  .cloud-animation {
-    animation: cloudFloat 3s ease-in-out infinite;
-  } */
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 
-  /* Cloud Animation */
-.cloud-front {
-    position: absolute;
-    width: 150px;
-    height: 100px;
-    animation: moveCloudsFront 10s linear infinite;
-  }
-  
-  .cloud-back {
-    position: absolute;
-    width: 180px;
-    height: 120px;
-    animation: moveCloudsBack 15s linear infinite;
-    opacity: 0.7;
-  }
-  
-  /* Keyframes for Cloud Animations */
-  @keyframes moveCloudsFront {
-    0% {
-      transform: translateX(-200px);
-    }
-    100% {
-      transform: translateX(400px);
-    }
-  }
-  
-  @keyframes moveCloudsBack {
-    0% {
-      transform: translateX(200px);
-    }
-    100% {
-      transform: translateX(-400px);
-    }
-  }
-  
+.cloud-animation {
+  animation: cloudFloat 3s ease-in-out infinite;
+}

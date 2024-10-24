@@ -1,24 +1,36 @@
-/* eslint-disable react/prop-types */
+
+
 import { useEffect, useState } from "react";
+
 import { FiMenu, FiX } from "react-icons/fi";
 import logo from "../../../assets/logo-r.png";
-import { Link, NavLink, useNavigate, useOutletContext } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import useAuth from "../../../Hook/useAuth/useAuth";
 import useAdmin from "../../../Hook/useAdmin";
 import { MdKeyboardVoice } from "react-icons/md";
-import 'regenerator-runtime/runtime'
-import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
+import "regenerator-runtime/runtime";
+import SpeechRecognition, {
+  useSpeechRecognition,
+} from "react-speech-recognition";
+import { useDispatch, useSelector } from "react-redux";
+import { searchNews } from "../../../features/searchNews/searchNewsSlice";
 
 
-
+// import  from 'lodash';
 
 const Navbar = ({ allNews }) => {
-  const navigate = useNavigate();
-  const [searchNews, setNewsSearch] = useState([]);
-  const [loading, setLoading] = useState(false);
-  const [inputValue, setInputValue] = useState('');
-  const [categoryActive, setCategoryActive] = useState('Home');
+  
 
+  const navigate = useNavigate();
+  // const [searchNews, setNewsSearch] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [inputValue, setInputValue] = useState(""); 
+  const [categoryActive,setCategoryActive] = useState()
+
+  // redux
+  const inputSearchValue = useSelector((state) => state.newsSearch );
+  const dispatch = useDispatch();
+  // console.log("searchValue " , inputSearchValue);
 
 
   useEffect(() => {
@@ -29,38 +41,37 @@ const Navbar = ({ allNews }) => {
 
 
   const handleSearch = (e) => {
+    
     e.preventDefault();
     const form = e.target;
     const searchValue = form.search.value;
 
+    // setInputValue(searchValue);
+    dispatch(searchNews(searchValue))
     console.log(searchValue, allNews);
-    setInputValue(searchValue);
 
-
-    const searchResults = allNews?.filter(news =>
-      news?.title.toLowerCase().includes(searchValue.toLowerCase()) || news?.description.toLowerCase().includes(searchValue.toLowerCase())
+    const searchResults = allNews?.filter(
+      (news) =>
+        news?.title?.toLowerCase().includes(searchValue?.toLowerCase()) ||
+        news?.description?.toLowerCase().includes(searchValue?.toLowerCase())
     );
-    console.log(searchResults);
+    console.log("searchResults" , searchResults);
     if (searchResults) {
       // form.reset();
       navigate("/newsSearch", { state: { searchResults: searchResults } });
     }
-
-  }
-
-
-
-
-
+  };
 
   // voice search implement
-  const { transcript, listening, resetTranscript,
-    browserSupportsSpeechRecognition } = useSpeechRecognition();
+  const {
+    transcript,
+    listening,
+    resetTranscript,
+    browserSupportsSpeechRecognition,
+  } = useSpeechRecognition();
   if (!browserSupportsSpeechRecognition) {
     return <span>Browser doesn't support speech recognition.</span>;
   }
-
-
 
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
@@ -78,68 +89,20 @@ const Navbar = ({ allNews }) => {
   const { user, logout } = useAuth();
 
   // theme
-  const [readingMode, setReadingMode] = useState(false);
+  const [theme, setTheme] = useState("light");
 
   useEffect(() => {
-    localStorage.setItem("readingMode", readingMode);
+    localStorage.setItem("theme", theme);
 
-    const localTheme = localStorage.getItem("readingMode");
-
-    if (localTheme === 'false') {
-      document.querySelector("html").classList.add('valueFalse');
-      document.querySelector("html").classList.remove('valueTrue');
-
-    }
-    else {
-      document.querySelector("html").classList.add('valueTrue');
-      document.querySelector("html").classList.remove('valueFalse');
-
-    }
-  }, [readingMode]);
-  // color temperature
-  const [temperature, setTemperature] = useState(5000);
-  const handleSliderChange = (e) => {
-    setTemperature(e.target.value);
-
-
-    const temperature = e.target.value;
-    console.log("temperature : ", temperature);
-
-
-
-
-
-    const rootElement = document.documentElement; // পুরো HTML এফেক্ট প্রয়োগ করতে
-
-    // Temperature অনুযায়ী hue এবং brightness সেট করা
-    const hueRotation = (temperature - 5000) / 100;
-    const brightness = temperature < 5000 ? 0.9 : 1.1; // কম temp-এ dimmer, বেশি temp-এ brighter
-
-    // ব্যাকগ্রাউন্ড কালার পরিবর্তন করা
-    rootElement.style.backgroundColor = `rgb(${255 - hueRotation * 10}, ${224 - hueRotation * 5}, ${180 - hueRotation * 3})`;
-
-    // ফিল্টার অ্যাপ্লাই করা
-    // rootElement.style.filter = ``;
-    // hue-rotate(${hueRotation}deg)
-  }
-
-  // document.addEventListener("DOMContentLoaded", function () {
-  //   // প্রাথমিক ভাবে 5000K এ সেট করতে পারেন
-  //   updateColorTemperature(5000);})
-
-
-
-
-  // console.log("temperature " , temperature);
-
-  // ------------------
-
+    const localTheme = localStorage.getItem("theme");
+    document.querySelector("html").setAttribute("data-theme", localTheme);
+  }, [theme]);
 
   const handleToggle = (e) => {
     if (e.target.checked) {
-      setReadingMode(true);
+      setTheme("night");
     } else {
-      setReadingMode(false);
+      setTheme("light");
     }
   };
 
@@ -157,38 +120,16 @@ const Navbar = ({ allNews }) => {
 
   const [active, setActive] = useState("all-news");
 
-
-
-
-
-
-
-
-
-
-
-
   const handleActive = (data) => {
-    setActive(data)
-  }
-
-
-
-
-
-
-
-
-
+    setActive(data);
+  };
 
   return (
     <div>
+      <div className="fixed top-0 left-0 z-40 w-full ">
+        {/* <nav className=" shadow-md shadow-emerald-700 p-4"> */}
 
-      <div className="fixed top-0 left-0 z-20 w-full ">
-
-
-
-        <div className="bg-[#004E5B] text-white  ">
+        <div className="bg-[#E0E4E8] text-[#2F2F2F] ">
           <nav className=" shadow-md p-4    top-0 z-10">
             <div className="container mx-auto flex items-center justify-between">
               <div className="flex items-center space-x-4">
@@ -212,29 +153,45 @@ const Navbar = ({ allNews }) => {
 
               <div className="flex items-center space-x-4">
                 <label className="input input-bordered flex items-center gap-2">
-
                   {/* Search news */}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 16 16"
                     fill="currentColor"
-                    className="h-4 w-4 opacity-70">
+                    className="h-4 w-4 opacity-70"
+                  >
                     <path
                       fillRule="evenodd"
                       d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
-                      clipRule="evenodd" />
+                      clipRule="evenodd"
+                    />
                   </svg>
                   <form className="flex items-center" onSubmit={handleSearch}>
                     {/* value={inputValue} */}
                     {/* value={inputValue} */}
-                    <input type="text" name="search" className="grow" onChange={handleInputChange} placeholder="Search" value={inputValue} />
-                    {
-                      listening ? <MdKeyboardVoice className="text-2xl text-red-600" onClick={SpeechRecognition.stopListening} /> : <MdKeyboardVoice className="text-2xl" onClick={SpeechRecognition.startListening} />
-
-                    }
-                    <button className="btn btn-sm ml-2 text-white font-bold bg-[#005689] hover:bg-[#023553]">Search</button>
+                    <input
+                      type="text"
+                      name="search"
+                      className="grow bg-base-200"
+                      onChange={handleInputChange}
+                      placeholder="Search"
+                      value={inputValue}
+                    />
+                    {listening ? (
+                      <MdKeyboardVoice
+                        className="text-2xl text-red-600"
+                        onClick={SpeechRecognition.stopListening}
+                      />
+                    ) : (
+                      <MdKeyboardVoice
+                        className="text-2xl"
+                        onClick={SpeechRecognition.startListening}
+                      />
+                    )}
+                    <button className="btn btn-sm ml-2 text-white font-bold bg-[#005689] hover:bg-[#023553]">
+                      Search
+                    </button>
                   </form>
-
                 </label>
 
                 <label className="swap swap-rotate">
@@ -247,7 +204,7 @@ const Navbar = ({ allNews }) => {
 
                   {/* sun icon */}
                   <svg
-                    className="swap-off h-10 w-10 fill-current "
+                    className="swap-off h-10 w-10 fill-current"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                   >
@@ -256,28 +213,13 @@ const Navbar = ({ allNews }) => {
 
                   {/* moon icon */}
                   <svg
-                    className="swap-on h-10 w-10 fill-current text-black"
+                    className="swap-on h-10 w-10 fill-current"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                   >
                     <path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
                   </svg>
                 </label>
-                {/* color temperature */}
-
-                {
-                  readingMode && <label htmlFor="">
-                    <input type="range"
-                      min={1000}
-                      max={10000}
-                      value={temperature}
-                      onChange={handleSliderChange}
-                      step="100"
-                    />
-                  </label>
-                }
-
-                {/* -------------- */}
 
                 {user ? (
                   <div>
@@ -293,17 +235,17 @@ const Navbar = ({ allNews }) => {
                         tabIndex={0}
                         className="dropdown-content z-[1] menu p-2 shadow bg-[#004E5B] rounded-box w-52"
                       >
-                        <li className="hover:bg-white hover:text-black hover:rounded-lg">
-                          <a>{user.displayName}</a>
+                        <li>
+                          <a>{user?.displayName}</a>
                         </li>
                         {user && isAdmin && (
-                          <li className="hover:bg-white hover:text-black hover:rounded-lg">
-                            <Link to="/dashbord/users">Dashboard</Link>
+                          <li>
+                            <Link to="/dashbord/adminHome">Dashboard</Link>
                           </li>
                         )}
                         {user && !isAdmin && (
-                          <li className="hover:bg-white hover:text-black hover:rounded-lg">
-                            <Link to="/dashbord/userHome">Dashboard</Link>
+                          <li>
+                            <Link to="/dashbord/userProfile">Dashboard</Link>
                           </li>
                         )}
 
@@ -347,16 +289,13 @@ const Navbar = ({ allNews }) => {
           </div>
         </div>
 
-
-
-
         {/* Dashboard  */}
         <div
           className={`shadow-lg z-50 bg-white max-w-[300px]  ease-in-out transform fixed top-0 left-0 h-full  w-[250px]   transition-transform duration-300  ${isDashboardOpen ? "translate-x-0" : "-translate-x-full"
             }`}
         >
           {/* Close Menu Icon */}
-          <button onClick={toggleDashboard} className="text-black p-4">
+          <button onClick={toggleDashboard} className="text-white p-4">
             <FiX className="w-6 h-6" />
           </button>
 
@@ -367,16 +306,6 @@ const Navbar = ({ allNews }) => {
               </NavLink>
             </li>
 
-            {/* <li className="flex justify-between items-center">
-              <NavLink className="border border-1 w-full px-3 py-1">
-                Sport
-              </NavLink>
-            </li> */}
-            <li className="flex justify-between items-center">
-              <NavLink to="/locationBasedNews" className="border border-1 w-full px-3 py-1">
-                Location Based News
-              </NavLink>
-            </li>
             {user && (
               <li className="flex justify-between items-center">
                 <NavLink
@@ -386,34 +315,37 @@ const Navbar = ({ allNews }) => {
                   My Bookmarks
                 </NavLink>
               </li>
-          
             )}
+
             <li className="flex justify-between items-center">
-              <NavLink className="border border-1 w-full px-3 py-1"
-                  to="/contact">Contact Us</NavLink>
-            </li>
-            {/* <li className="flex justify-between items-center">
               <NavLink
                 className="border border-1 w-full px-3 py-1"
-                to="/downloads"
+                to={"/CustomizedNews"}
               >
-                Downloads
+                Custom News
               </NavLink>
-
             </li>
-            <li>
-              
+            <li className="flex justify-between items-center">
+              <NavLink
+                className="border border-1 w-full px-3 py-1"
+                to={"/locationBasedNews"}
+              >
+                Location Based News
+              </NavLink>
             </li>
-
-            </li> */}
-
+            <li className="flex justify-between items-center">
+              <NavLink
+                className="border border-1 w-full px-3 py-1"
+                to={"/usersNews"}
+              >
+                Users News
+              </NavLink>
+            </li>
           </ul>
         </div>
       </div>
     </div>
   );
-
 };
-
 
 export default Navbar;

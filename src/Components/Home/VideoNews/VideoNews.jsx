@@ -2,14 +2,14 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import ReactPlayer from "react-player";
 
-const VideoNews = ({setAllVideosNews}) => {
+const VideoNews = ({ setAllVideosNews }) => {
   const [videoNews, setVideoNews] = useState([]);
   const [selectedVideo, setSelectedVideo] = useState(null);
 
   // Your provided YouTube API key
   const apiKey = "AIzaSyAr_gVn7k9Q8Q2aVA8TslOyXVpomFEWcPU";
   
-  const searchQuery = "breaking news"; 
+  const searchQuery = "breaking news";
 
   // Fetch video news from YouTube API
   const fetchVideoNews = async () => {
@@ -26,11 +26,16 @@ const VideoNews = ({setAllVideosNews}) => {
           },
         }
       );
-      setVideoNews(response.data.items);
 
-      setAllVideosNews(response?.data?.items);
-      setSelectedVideo(response.data.items[0]); 
+      const videos = response.data.items;
+      setVideoNews(videos);
 
+      // Ensure videos exist before setting
+      if (videos.length > 0) {
+        setSelectedVideo(videos[0]);
+      }
+
+      setAllVideosNews(videos);
     } catch (error) {
       console.error("Error fetching video news:", error);
     }
@@ -47,7 +52,7 @@ const VideoNews = ({setAllVideosNews}) => {
       </h1>
 
       {/* Video Player Section */}
-      {selectedVideo && (
+      {selectedVideo && selectedVideo.id && selectedVideo.id.videoId && (
         <div className="mb-6">
           <ReactPlayer
             url={`https://www.youtube.com/watch?v=${selectedVideo.id.videoId}`}

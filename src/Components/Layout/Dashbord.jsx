@@ -2,11 +2,40 @@ import { useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { Link, NavLink, Outlet, useNavigate } from "react-router-dom";
 import useAdmin from "../../Hook/useAdmin";
-
+import logo from "../../assets/fotlogo.png";
+import useAuth from "../../Hook/useAuth/useAuth";
+import useAxiosSecure from "../../Hook/useAxiosSecure";
+import { useQuery } from "@tanstack/react-query";
+import Loading from "../Loading/Loading";
 const Dashbord = () => {
   const [isAdmin] = useAdmin();
   const [showModal, setShowModal] = useState(false);
   const navigate = useNavigate();
+  const { user } = useAuth();
+
+  const asioxSecure = useAxiosSecure();
+  const {
+    data: payment = [],
+    isLoading,
+    refetch,
+  } = useQuery({
+    queryKey: ["payment"],
+    queryFn: async () => {
+      const { data } = await asioxSecure.get("/payment");
+      return data;
+    },
+  });
+  if (isLoading) return <Loading></Loading>;
+  const handelAddNews = () => {
+    const alradyDun = payment.some((pay) => pay?.email === user?.email);
+    if (alradyDun) {
+      console.log("Payment found. Navigating to add news.");
+      navigate("/dashbord/addnews");
+    } else {
+      console.log("No payment found. Showing modal.");
+      setShowModal(true);
+    }
+  };
   const handleFreeClick = () => {
     navigate("/dashbord/addnews");
     setShowModal(false);
@@ -20,7 +49,6 @@ const Dashbord = () => {
     <div className="drawer lg:drawer-open">
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content flex flex-col">
-
         <div className="flex justify-between items-center p-4 bg-blue-600 text-white lg:hidden">
           <h1 className="text-lg font-bold">My Dashbord</h1>
           <label
@@ -49,24 +77,44 @@ const Dashbord = () => {
           className="drawer-overlay "
         ></label>
 
-
         <ul className="menu bg-[#004E5B] text-white min-h-full w-64 p-4">
           {isAdmin ? (
             <>
+              <li className=" border-white rounded-md  font-semibold mb-4 mt-8">
+                <Link>
+                  <img src={logo} alt="" />
+                </Link>
+              </li>
               <li className="border border-white rounded-md hover:text-black hover:bg-white font-semibold mb-4 mt-8">
-                <NavLink to="/dashbord/users" className={({ isActive }) => (isActive ? "bg-white text-black" : "")}>
+                <NavLink
+                  to="/dashbord/users"
+                  className={({ isActive }) =>
+                    isActive ? "bg-white text-black" : ""
+                  }
+                >
                   All Users
                 </NavLink>
               </li>
 
               <li className="border border-white rounded-md hover:text-black hover:bg-white font-semibold mb-4">
-                <NavLink to="/dashbord/addedNews" className={({ isActive }) => (isActive ? "bg-white text-black" : "")}>
+                <NavLink
+                  to="/dashbord/addedNews"
+                  className={({ isActive }) =>
+                    isActive ? "bg-white text-black" : ""
+                  }
+                >
                   Added News
                 </NavLink>
               </li>
-
               <li className="border border-white rounded-md hover:text-black hover:bg-white font-semibold mb-4">
-                <a href="/">All News</a>
+                <NavLink
+                  to="/dashbord/pymentHistory"
+                  className={({ isActive }) =>
+                    isActive ? "bg-white text-black" : ""
+                  }
+                >
+                  Pyment Hestory
+                </NavLink>
               </li>
 
               <p className="border border-white mt-10"></p>
@@ -77,39 +125,43 @@ const Dashbord = () => {
             </>
           ) : (
             <>
-              <li className="border border-white rounded-md hover:text-black hover:bg-white font-semibold mb-4 mt-8">
-                <NavLink to="/dashbord/userHome" className={({ isActive }) => (isActive ? "bg-white text-black" : "")}>
-                  User Home
-                </NavLink>
+              <li className="  mb-4 mt-8">
+                <Link>
+                  <img src={logo} alt="" />
+                </Link>
               </li>
               <li className="border border-white rounded-md hover:text-black hover:bg-white font-semibold mb-4">
-                <NavLink to="/dashbord/userProfile" className={({ isActive }) => (isActive ? "bg-white text-black" : "")}>
+                <NavLink
+                  to="/dashbord/userProfile"
+                  className={({ isActive }) =>
+                    isActive ? "bg-white text-black" : ""
+                  }
+                >
                   User Profile
                 </NavLink>
               </li>
-              <li className="border border-white rounded-md hover:text-black hover:bg-white font-semibold mb-4">
-                <a href="bookmark">My Bookmarks</a>
-              </li>
+
               {/* <li className="border border-white rounded-md hover:text-black hover:bg-white font-semibold mb-4">
                 <NavLink to="/dashbord/addnews">Add News</NavLink>
               </li> */}
-              <li className="border border-white rounded-md hover:text-black hover:bg-white font-semibold mb-4">
+              {/* <li className="border border-white rounded-md hover:text-black hover:bg-white font-semibold mb-4">
                 <Link onClick={() => setShowModal(true)}>Added News</Link>
+              </li> */}
+              <li className="border border-white rounded-md hover:text-black hover:bg-white font-semibold mb-4">
+                <Link onClick={handelAddNews}>Added News</Link>
               </li>
               <li className="border border-white rounded-md hover:text-black hover:bg-white font-semibold mb-4">
-                <a href="myNews">My News</a>
+                <NavLink to={"/dashbord/myNews"}>My News</NavLink>
               </li>
-              <li className="border border-white rounded-md hover:text-black hover:bg-white font-semibold mb-4">
-                <a href="/settings">rating</a>
+
+              <li className="border-t  border border-white rounded-md hover:text-black hover:bg-white font-semibold ">
+                <NavLink to="/dashbord/personalnews">Customized news</NavLink>
               </li>
 
               <p className="border border-white mt-10"></p>
 
               <li className="border-t pt-2 border border-white rounded-md hover:text-black hover:bg-white font-semibold mt-8">
                 <Link to="/">Home</Link>
-              </li>
-              <li className="border-t pt-2">
-                <NavLink to="/dashbord/personalnews">Customized news</NavLink>
               </li>
             </>
           )}
