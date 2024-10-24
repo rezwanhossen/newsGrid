@@ -8,7 +8,7 @@ const PersonalizedNews = () => {
   const [objectDataForStoreInMongodb, setObjDataForStoreInMongodb] =
     useState(null);
   console.log("alhamdulillah category is", selectedCategory);
-// alhamdulillah
+  // alhamdulillah
   const { user } = useAuth();
   const userEmail = user.email;
 
@@ -65,15 +65,12 @@ const PersonalizedNews = () => {
     }
   }, [selectedCategory, userEmail]);
 
-
-  
-
   useEffect(() => {
     if (objectDataForStoreInMongodb !== null) {
       const postSelectedCategoryInMongodb = async () => {
         try {
           const res = await axios.post(
-            "http://localhost:5000/storevalue",
+            "https://news-grid-server.vercel.app/storevalue",
             objectDataForStoreInMongodb
           );
 

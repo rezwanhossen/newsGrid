@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosCommon = axios.create({
-  baseURL: "http://localhost:5000",
+  baseURL: "https://news-grid-server.vercel.app",
 });
 const useAxiosCommon = () => {
   return axiosCommon;
