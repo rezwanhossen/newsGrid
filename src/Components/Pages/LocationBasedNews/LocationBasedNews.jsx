@@ -89,7 +89,7 @@ const LocationBasedNews = () => {
           <div>
           {
     location?.latitude && location?.longitude &&
-      <MapContainer center={[location?.latitude, location?.longitude]} zoom={13} style={{ height: "500px", width: "100%" }} className="mt-[137px] z-10">
+      <MapContainer center={[location?.latitude, location?.longitude]} zoom={13}  className="mt-[171px] lg:mt-[136px] z-10 w-full h-[350px] lg:h-[500px]">
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
