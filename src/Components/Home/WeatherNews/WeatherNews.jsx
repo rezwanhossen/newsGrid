@@ -11,7 +11,7 @@ const WeatherNews = () => {
   const [country, setCountry] = useState("");
 
  
-  const apiKey = "2550bd0b04ae47ccb107b3acf74a1f4c"; // Weatherbit API key
+  const apiKey = "78c5050fdb1c4ce6b494ec7b4df75e8d"; // Weatherbit API key
 
 
   useEffect( () => {
