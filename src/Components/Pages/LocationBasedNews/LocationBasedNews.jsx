@@ -56,7 +56,7 @@ const LocationBasedNews = () => {
 
               axios
                 .get(
-                  `https://newsapi.org/v2/everything?q=${response?.data?.address?.city}&apiKey=${import.meta.env.VITE_NAIMUL_API_KEY || '950d4efc55c24a31bf9a060eaf29f5fb'}`
+                  `https://newsapi.org/v2/everything?q=${response?.data?.address?.city}&apiKey=${import.meta.env.VITE_NAIMUL_API_KEY}`
                 )
                 .then((res) => {
                   // console.log(res?.data)-8/
@@ -100,9 +100,7 @@ const LocationBasedNews = () => {
           <div>
           {
     location?.latitude && location?.longitude &&
-
-      <MapContainer center={[location?.latitude, location?.longitude]} zoom={13} style={{ height: "500px", width: "100%" }} className="mt-[137px] z-10">
-
+      <MapContainer center={[location?.latitude, location?.longitude]} zoom={13}  className="mt-[171px] lg:mt-[136px] z-10 w-full h-[350px] lg:h-[500px]">
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -115,7 +113,7 @@ const LocationBasedNews = () => {
 
           </div>
 
-      {/* ----------------- */}
+      
 
       <div className="my-10 md:my-20 container mx-auto heebo">
         <div className="flex flex-col md:flex-row justify-center md:justify-between mx-3 md:mx-0 md:px-6 py-4 rounded bg-base-300  items-center  mb-10">
