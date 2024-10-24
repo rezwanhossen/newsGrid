@@ -1,12 +1,12 @@
 import { useQuery } from "@tanstack/react-query";
 import useAxiosSecure from "../../../../Hook/useAxiosSecure";
-import { DataGrid, GridToolbar } from '@mui/x-data-grid';
-import { Box, Button, Avatar } from '@mui/material';
+import { DataGrid, GridToolbar } from "@mui/x-data-grid";
+import { Box, Button, Avatar } from "@mui/material";
 import Swal from "sweetalert2";
 import { useState } from "react";
+import { FaTrashAlt } from "react-icons/fa";
 
 const Alluser = () => {
- 
   const asioxSecure = useAxiosSecure();
   const [rows, setRows] = useState([]);
   const {
@@ -24,12 +24,12 @@ const Alluser = () => {
     },
   });
 
-  const handelrol = (id) => {
+  const handleRole = (id) => {
     asioxSecure.patch(`/users/admin/${id}`).then((res) => {
       if (res.data.modifiedCount > 0) {
         refetch();
         Swal.fire({
-          position: "top-end",
+          position: "center",
           icon: "success",
           title: "User is now admin",
           showConfirmButton: false,
@@ -39,7 +39,7 @@ const Alluser = () => {
     });
   };
 
-  const handelDelet = (user) => {
+  const handelDelete = (user) => {
     Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to revert this!",
@@ -64,50 +64,48 @@ const Alluser = () => {
     });
   };
 
-
   // Columns definition for DataGrid
   const columns = [
-    { field: 'id', headerName: 'No:', width: 90, sortable: false },
-    { 
-      field: 'avatar', 
-      headerName: 'Avatar', 
-      width: 100, 
-      renderCell: (params) => (
-        <Avatar alt={params.row.name} src={params.row.photoURL || '/static/images/avatar/1.jpg'} />
-      )
-    },
-    { field: 'name', headerName: 'Name', flex: 1, editable: true },
-    { field: 'email', headerName: 'Email', flex: 1, editable: true },
+    { field: "id", headerName: "No:", width: 90, sortable: false },
     {
-      field: 'role',
-      headerName: 'Role',
-      width: 150,
+      field: "avatar",
+      headerName: "Avatar",
+      width: 100,
       renderCell: (params) => (
-        params.row.role === 'admin' ? (
+        <Avatar
+          alt={params.row.name}
+          src={params.row.photoURL || "/static/images/avatar/1.jpg"}
+        />
+      ),
+    },
+    { field: "name", headerName: "Name", flex: 1, editable: true },
+    { field: "email", headerName: "Email", flex: 1, editable: true },
+    {
+      field: "role",
+      headerName: "Role",
+      width: 150,
+      renderCell: (params) =>
+        params.row.role === "admin" ? (
           "Admin"
         ) : (
           <Button
             variant="contained"
             color="primary"
-            onClick={() => handelrol(params.row._id)}
+            onClick={() => handleRole(params.row._id)}
           >
             Make Admin
           </Button>
-        )
-      ),
+        ),
     },
     {
-      field: 'actions',
-      headerName: 'Action',
+      field: "actions",
+      headerName: "Action",
       width: 150,
       renderCell: (params) => (
-        <Button
-          variant="contained"
-          color="error"
-          onClick={() => handelDelet(params.row)}
-        >
-          Delete
-        </Button>
+          <FaTrashAlt
+            className="text-red-600 text-2xl m-4"
+            onClick={() => handelDelete(params.row)}
+          />
       ),
     },
   ];
@@ -129,7 +127,7 @@ const Alluser = () => {
     );
 
   return (
-    <Box sx={{ height: 500, width: '100%' }}>
+    <Box sx={{ height: 500, width: "100%" }}>
       <div className="flex justify-center mb-4">
         <h1 className="text-3xl font-bold m-4">All Users</h1>
       </div>
@@ -139,13 +137,13 @@ const Alluser = () => {
         pageSize={10}
         rowsPerPageOptions={[10]}
         components={{ Toolbar: GridToolbar }}
-        sortingOrder={['asc', 'desc']}
+        sortingOrder={["asc", "desc"]}
         disableColumnSelector={false}
         disableDensitySelector={false}
         sx={{
-          '& .MuiDataGrid-columnHeaders': {
-            backgroundColor: 'rgba(0, 0, 0, 0.1)',
-            fontSize: '1rem',
+          "& .MuiDataGrid-columnHeaders": {
+            backgroundColor: "rgba(0, 0, 0, 0.1)",
+            fontSize: "1rem",
           },
         }}
         getRowId={(row) => row._id}
