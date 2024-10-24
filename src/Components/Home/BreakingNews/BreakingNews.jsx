@@ -23,6 +23,26 @@ const BreakingNews = ({ setAllNewsBreaking }) => {
     setLoading(true);
 
     try {
+
+      const categories = ["politics", "sports", "technology"];
+      const promises = categories.map((category) =>
+        axios.get(`https://api.currentsapi.services/v1/latest-news`, {
+          params: {
+            apiKey: apiKey,
+            category: category,
+            language: "en",
+            page_size: 5,
+          },
+        })
+      );
+      const responses = await Promise.all(promises);
+      const combinedNews = responses.flatMap((response) => response.data.news);
+      combinedNews.sort(
+        (a, b) => new Date(b.published) - new Date(a.published)
+      );
+      setBreakingNews(combinedNews);
+      setAllNewsBreaking(combinedNews);
+
       const url = `https://api.currentsapi.services/v1/search`;
       const params = {
         apiKey: apiKey,
@@ -44,6 +64,7 @@ const BreakingNews = ({ setAllNewsBreaking }) => {
       setBreakingNews(response.data.news.slice(0, 10));
       setAllNewsBreaking(response?.data?.news);
       setLoading(false);
+
     } catch (error) {
       setError("Failed to fetch breaking news. Please try again later.");
       setLoading(false);
