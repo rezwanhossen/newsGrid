@@ -121,12 +121,9 @@ const Alluser = () => {
     role: user.role,
   }));
 
-  if (isLoading)
-    return (
-      <div className="flex justify-center">
-        <span className="loading loading-bars loading-lg"></span>
-      </div>
-    );
+  if (isLoading) {
+    return <div className="flex justify-center text-4xl">Loading...</div>;
+  }
     
   return (
     <Box sx={{ height: 500, width: "100%" }}>
