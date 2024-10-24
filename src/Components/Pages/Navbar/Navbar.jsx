@@ -198,7 +198,7 @@ const Navbar = ({ allNews }) => {
 
                   {/* sun icon */}
                   <svg
-                    className="swap-off h-10 w-10 fill-current "
+                    className="swap-off h-10 w-10 fill-current"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                   >
@@ -207,7 +207,7 @@ const Navbar = ({ allNews }) => {
 
                   {/* moon icon */}
                   <svg
-                    className="swap-on h-10 w-10 fill-current text-black"
+                    className="swap-on h-10 w-10 fill-current"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                   >
@@ -292,7 +292,7 @@ const Navbar = ({ allNews }) => {
           }`}
         >
           {/* Close Menu Icon */}
-          <button onClick={toggleDashboard} className="text-black p-4">
+          <button onClick={toggleDashboard} className="text-white p-4">
             <FiX className="w-6 h-6" />
           </button>
 
