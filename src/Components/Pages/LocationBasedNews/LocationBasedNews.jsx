@@ -8,16 +8,20 @@ import Loading from "../../Loading/Loading";
 import { useDispatch } from "react-redux";
 import { setLocationBasedNews } from "../../../features/allNews/allNewsSlice";
 
+
 const LocationBasedNews = () => {
   const [location, setLocation] = useState({ latitude: null, longitude: null });
   const [city, setCity] = useState("");
   const [country, setCountry] = useState("");
   const [error, setError] = useState("");
+
   const [locationBasedNews, setLocationBasednews] = useState([]);
   const [loading , setLoading] = useState(true);
 
   // redux
   const dispatch = useDispatch();
+
+
 
 
 
@@ -57,9 +61,11 @@ const LocationBasedNews = () => {
                 .then((res) => {
                   // console.log(res?.data)-8/
 
+
                   setLocationBasednews(res?.data?.articles);
                   dispatch(setLocationBasedNews(res?.data?.articles))
                   setLoading(false);
+
                 });
             })
             .catch((error) => {
@@ -81,15 +87,22 @@ const LocationBasedNews = () => {
     return <Loading></Loading>
   }
 
+
+  if(loading){
+    return <Loading></Loading>
+  }
+
   return (
     <div>
-     
+
 
 
           <div>
           {
     location?.latitude && location?.longitude &&
+
       <MapContainer center={[location?.latitude, location?.longitude]} zoom={13} style={{ height: "500px", width: "100%" }} className="mt-[137px] z-10">
+
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
