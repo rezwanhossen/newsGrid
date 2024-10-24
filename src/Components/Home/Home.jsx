@@ -9,6 +9,8 @@ import RecommendedNews from "./RecommendedNews/RecommendedNews";
 import { useEffect, useState } from "react";
 import { useOutletContext } from "react-router-dom";
 import VideoNews from "./VideoNews/VideoNews";
+import DateTime from "./DateTime/DateTime";
+import WeatherNews from "./WeatherNews/WeatherNews";
 
 const Home = () => {
   const [newsData, isLoading] = useNews();
@@ -62,8 +64,12 @@ const Home = () => {
 
         {/* Right Section: Breaking News, Sponsor, Follow Us */}
         <div className="w-full lg:w-[30%] p-2 flex flex-col gap-6">
+          
           {/* Breaking News */}
           <BreakingNews setAllNewsBreaking={setAllNewsBreaking} />
+
+          {/* Weather News Section */}
+          <WeatherNews />
 
           {/* Sponsor Section */}
           <Sponsors />

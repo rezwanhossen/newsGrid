@@ -25,11 +25,17 @@ const Navbar = ({ allNews }) => {
   // const [searchNews, setNewsSearch] = useState([]);
   const [loading, setLoading] = useState(false);
   const [inputValue, setInputValue] = useState(""); 
+  const [categoryActive,setCategoryActive] = useState()
 
   // redux
   const inputSearchValue = useSelector((state) => state.newsSearch );
   const dispatch = useDispatch();
   // console.log("searchValue " , inputSearchValue);
+
+
+  useEffect(() => {
+    setCategoryActive('Home');
+  }, []);
 
 
 
@@ -227,7 +233,7 @@ const Navbar = ({ allNews }) => {
                       </div>
                       <ul
                         tabIndex={0}
-                        className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
+                        className="dropdown-content z-[1] menu p-2 shadow bg-[#004E5B] rounded-box w-52"
                       >
                         <li>
                           <a>{user?.displayName}</a>
@@ -243,7 +249,7 @@ const Navbar = ({ allNews }) => {
                           </li>
                         )}
 
-                        <li>
+                        <li className="hover:bg-white hover:text-black hover:rounded-lg">
                           <button onClick={logout}>Logout</button>
                         </li>
                       </ul>
@@ -252,7 +258,7 @@ const Navbar = ({ allNews }) => {
                 ) : (
                   <Link
                     to="/login"
-                    className="text-black border border-black px-4 py-2 rounded hover:bg-gray-100"
+                    className="text-white border border-white px-4 py-2 rounded hover:text-black hover:bg-gray-100"
                   >
                     Login
                   </Link>
@@ -262,34 +268,31 @@ const Navbar = ({ allNews }) => {
           </nav>
 
           {/* Categories Navbar */}
-          <div className="bg-white pb-2 pt-2 border-b-4 border-red-500">
-            <ul className="flex flex-wrap  gap-2 sm:gap-4 items-center justify-center font-bold text-center">
-              {categories.map((category) => (
-                <li
-                  key={category}
-                  className={`font-bold text-lg sm:text-xl px-2 sm:px-4 text-[#232323] ${
-                    active === category ? "text-red-500 underline" : ""
-                  } hover:cursor-pointer`}
-                >
-                  <Link
-                    to={
-                      category === "Home" ? "/" : `/categoriesNews/${category}`
-                    }
-                    onClick={() => setActive(category)}
-                  >
-                    {category.toUpperCase()}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+          <div className="bg-[#3BAFDA] border-b-4 border-[#004E5B]">
+            <div className="container mx-auto pb-2 pt-2">
+              <ul className="flex flex-col sm:flex-row gap-2 sm:gap-4 items-center justify-center font-bold text-center">
+                {categories.map(category => (
+                  <li key={category} className="font-bold text-lg sm:text-2xl">
+                    <Link
+                      to={category === 'Home' ? "/" : `/categoriesNews/${category}`}
+                      onClick={() => setCategoryActive(category)}
+                      className={`inline-block  px-4 py-2 rounded-lg transition-all duration-300 
+                  ${categoryActive === category ? 'bg-[#004E5B] text-white' : 'bg-transparent text-[#232323] hover:bg-[#004E5B] hover:text-white'} 
+                  hover:shadow-lg hover:cursor-pointer`}
+                    >
+                      {category.toUpperCase()}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
 
         {/* Dashboard  */}
         <div
-          className={`shadow-lg z-50 bg-[#004E5B] text-white max-w-[300px]  ease-in-out transform fixed top-0 left-0 h-full  w-[250px]   transition-transform duration-300  ${
-            isDashboardOpen ? "translate-x-0" : "-translate-x-full"
-          }`}
+          className={`shadow-lg z-50 bg-white max-w-[300px]  ease-in-out transform fixed top-0 left-0 h-full  w-[250px]   transition-transform duration-300  ${isDashboardOpen ? "translate-x-0" : "-translate-x-full"
+            }`}
         >
           {/* Close Menu Icon */}
           <button onClick={toggleDashboard} className="text-white p-4">
