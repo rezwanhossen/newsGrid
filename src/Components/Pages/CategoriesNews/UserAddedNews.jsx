@@ -10,7 +10,7 @@ const UserAddedNews = ({categoryNews}) => {
     
     // console.log("category" , categoryNews)
     return (
-        <div className="my-10 mx-3 md:mx-0">
+        <div className="my-10 mx-5 md:mx-0">
                 <div className="heebo">
                     <h1 className="text-3xl font-bold mt-10 mb-6  border-l-[#005689] border-l-8 pl-3">{categoryNews?.length > 0 && 'News Added by User'}</h1>
                 </div>
