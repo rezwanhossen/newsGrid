@@ -3,10 +3,39 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { Link, NavLink, Outlet, useNavigate } from "react-router-dom";
 import useAdmin from "../../Hook/useAdmin";
 import logo from "../../assets/fotlogo.png";
+import useAuth from "../../Hook/useAuth/useAuth";
+import useAxiosSecure from "../../Hook/useAxiosSecure";
+import { useQuery } from "@tanstack/react-query";
+import Loading from "../Loading/Loading";
 const Dashbord = () => {
   const [isAdmin] = useAdmin();
   const [showModal, setShowModal] = useState(false);
   const navigate = useNavigate();
+  const { user } = useAuth();
+
+  const asioxSecure = useAxiosSecure();
+  const {
+    data: payment = [],
+    isLoading,
+    refetch,
+  } = useQuery({
+    queryKey: ["payment"],
+    queryFn: async () => {
+      const { data } = await asioxSecure.get("/payment");
+      return data;
+    },
+  });
+  if (isLoading) return <Loading></Loading>;
+  const handelAddNews = () => {
+    const alradyDun = payment.some((pay) => pay?.email === user?.email);
+    if (alradyDun) {
+      console.log("Payment found. Navigating to add news.");
+      navigate("/dashbord/addnews");
+    } else {
+      console.log("No payment found. Showing modal.");
+      setShowModal(true);
+    }
+  };
   const handleFreeClick = () => {
     navigate("/dashbord/addnews");
     setShowModal(false);
@@ -111,14 +140,15 @@ const Dashbord = () => {
                   User Profile
                 </NavLink>
               </li>
-              {/* <li className="border border-white rounded-md hover:text-black hover:bg-white font-semibold mb-4">
-                <a href="bookmark">My Bookmarks</a>
-              </li> */}
+
               {/* <li className="border border-white rounded-md hover:text-black hover:bg-white font-semibold mb-4">
                 <NavLink to="/dashbord/addnews">Add News</NavLink>
               </li> */}
-              <li className="border border-white rounded-md hover:text-black hover:bg-white font-semibold mb-4">
+              {/* <li className="border border-white rounded-md hover:text-black hover:bg-white font-semibold mb-4">
                 <Link onClick={() => setShowModal(true)}>Added News</Link>
+              </li> */}
+              <li className="border border-white rounded-md hover:text-black hover:bg-white font-semibold mb-4">
+                <p onClick={handelAddNews}>Added News</p>
               </li>
               <li className="border border-white rounded-md hover:text-black hover:bg-white font-semibold mb-4">
                 <NavLink to={"/dashbord/myNews"}>My News</NavLink>
