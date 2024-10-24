@@ -1,15 +1,14 @@
 import { useQuery } from "@tanstack/react-query";
 import useAxiosSecure from "../../../../Hook/useAxiosSecure";
 import { DataGrid, GridToolbar } from '@mui/x-data-grid';
-import { Box, Button } from '@mui/material';
+import { Box, Button, Avatar } from '@mui/material';
 import Swal from "sweetalert2";
 import { useState } from "react";
 
 const Alluser = () => {
+ 
   const asioxSecure = useAxiosSecure();
-  const [searchText, setSearchText] = useState("");
   const [rows, setRows] = useState([]);
-
   const {
     data: users = [],
     isLoading,
@@ -65,21 +64,18 @@ const Alluser = () => {
     });
   };
 
-  // Search filter logic
-  const handleSearch = (event) => {
-    const value = event.target.value;
-    setSearchText(value);
-
-    const filteredRows = users.filter((user) =>
-      user.name.toLowerCase().includes(value.toLowerCase()) ||
-      user.email.toLowerCase().includes(value.toLowerCase())
-    );
-    setRows(filteredRows);
-  };
 
   // Columns definition for DataGrid
   const columns = [
     { field: 'id', headerName: 'No:', width: 90, sortable: false },
+    { 
+      field: 'avatar', 
+      headerName: 'Avatar', 
+      width: 100, 
+      renderCell: (params) => (
+        <Avatar alt={params.row.name} src={params.row.photoURL || '/static/images/avatar/1.jpg'} />
+      )
+    },
     { field: 'name', headerName: 'Name', flex: 1, editable: true },
     { field: 'email', headerName: 'Email', flex: 1, editable: true },
     {
@@ -121,6 +117,7 @@ const Alluser = () => {
     _id: user._id,
     name: user.name,
     email: user.email,
+    avatar: user.photoURL,
     role: user.role,
   }));
 
@@ -133,26 +130,16 @@ const Alluser = () => {
 
   return (
     <Box sx={{ height: 500, width: '100%' }}>
-      <div className="flex justify-between mb-4">
+      <div className="flex justify-center mb-4">
         <h1 className="text-3xl font-bold m-4">All Users</h1>
-        <input
-          type="text"
-          placeholder="Search by name or email"
-          value={searchText}
-          onChange={handleSearch}
-          className="border p-2 rounded m-4"
-        />
       </div>
       <DataGrid
         rows={rows.length ? rows : processedRows}
         columns={columns}
         pageSize={10}
         rowsPerPageOptions={[10]}
-        
-        disableSelectionOnClick
         components={{ Toolbar: GridToolbar }}
         sortingOrder={['asc', 'desc']}
-        disableColumnFilter={false}
         disableColumnSelector={false}
         disableDensitySelector={false}
         sx={{
