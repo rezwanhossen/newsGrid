@@ -1,7 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import newsSearchReducer from "../features/searchNews/searchNewsSlice";
 
-=======
+
 import allNewsReducer from "../features/allNews/allNewsSlice";
 
 
