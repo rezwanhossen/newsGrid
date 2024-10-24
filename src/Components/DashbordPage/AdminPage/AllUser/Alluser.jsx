@@ -68,7 +68,7 @@ const Alluser = () => {
   const columns = [
     { field: "id", headerName: "No:", width: 90, sortable: false },
     {
-      field: "avatar",
+      field: "photoURL",
       headerName: "Avatar",
       width: 100,
       renderCell: (params) => (
@@ -76,7 +76,9 @@ const Alluser = () => {
           alt={params.row.name}
           src={params.row.photoURL || "/static/images/avatar/1.jpg"}
         />
+        
       ),
+      
     },
     { field: "name", headerName: "Name", flex: 1, editable: true },
     { field: "email", headerName: "Email", flex: 1, editable: true },
@@ -125,7 +127,7 @@ const Alluser = () => {
         <span className="loading loading-bars loading-lg"></span>
       </div>
     );
-
+    
   return (
     <Box sx={{ height: 500, width: "100%" }}>
       <div className="flex justify-center mb-4">
