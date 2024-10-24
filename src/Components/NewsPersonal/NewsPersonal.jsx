@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import useAuth from "../../Hook/useAuth/useAuth";
 import axios from "axios";
+import { BiLike } from "react-icons/bi";
+import { FaRegCommentDots } from "react-icons/fa";
 
 const NewsPersonal = () => {
   const { user } = useAuth();
@@ -124,7 +126,7 @@ const NewsPersonal = () => {
                   <p className="text-blue-500 font-semibold mb-2">{newsItem.category}</p>
 
                   {/* Show Title (truncated) */}
-                  <h2 className="text-lg font-bold mb-2">
+                  <h2 className="text-lg font-bold mb-2 h-10 mb-5">
                     {truncateText(newsItem.title, 50)} {/* Limit title length */}
                   </h2>
 
@@ -140,12 +142,30 @@ const NewsPersonal = () => {
                     href={newsItem.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-blue-500"
+                    className="text-blue-500 mb-3"
                   >
                     Read more
                   </a>
+                  <div className="flex gap-4">
+                      <div className="flex gap-2 justify-center items-center">
+                        <div><BiLike /></div>
+                        <div>Like</div>
+                      </div>
+                      <div className="flex gap-2 justify-center items-center">
+                        <div><FaRegCommentDots /></div>
+                        <div>Comment</div>
+                      </div>
+ 
+                      <div className="flex gap-2 justify-center items-center">
+                        <div><FaRegCommentDots /></div>
+                        <div>Shyer</div>
+                      </div>
+ 
                 </div>
+                </div>
+
               </div>
+ 
             ))
           ) : (
             <p>No news available for the selected category.</p>
