@@ -28,8 +28,6 @@ const Card = ({ news, idx }) => {
           `http://localhost:5000/getstoredata/${userEmail}`
         );
         setReactionData(res?.data || []);
-        
- 
       } catch (error) {
         console.error("Error fetching reaction data:", error);
       }
@@ -110,16 +108,13 @@ const Card = ({ news, idx }) => {
             "http://localhost:5000/storelike",
             reactionObj
           );
-          console.log('hi res',res);
-          
+          console.log("hi res", res);
+
           if (res.status == 200) {
-            alert('reaction changed');
-            location.reload();
-          
+            alert("reaction changed");
           }
           if (res.data.insertedId) {
             toast.success("Successfully added reaction data!");
-            location.reload();
           }
         } catch (error) {
           console.error("Error posting reaction data:", error);

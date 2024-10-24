@@ -4,13 +4,11 @@ import React from "react";
 import Card from "../../../Shared/Card";
 
 const UserAddedNews = ({ categoryNews }) => {
- 
-
   return (
     <div className="mt-20">
       <div className="heebo">
         <h1 className="text-3xl font-bold mt-10 mb-6  border-l-[#005689] border-l-8 pl-3">
-          {categoryNews?.length > 0 && "News Added by User"}
+          {categoryNews?.length > 0 && "News Added by Userss"}
         </h1>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
