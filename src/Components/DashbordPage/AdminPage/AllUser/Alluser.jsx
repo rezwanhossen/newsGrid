@@ -1,10 +1,15 @@
 import { useQuery } from "@tanstack/react-query";
 import useAxiosSecure from "../../../../Hook/useAxiosSecure";
-import { FaTrashAlt, FaUser } from "react-icons/fa";
+import { DataGrid, GridToolbar } from '@mui/x-data-grid';
+import { Box, Button } from '@mui/material';
 import Swal from "sweetalert2";
+import { useState } from "react";
 
 const Alluser = () => {
   const asioxSecure = useAxiosSecure();
+  const [searchText, setSearchText] = useState("");
+  const [rows, setRows] = useState([]);
+
   const {
     data: users = [],
     isLoading,
@@ -15,7 +20,11 @@ const Alluser = () => {
       const { data } = await asioxSecure.get("/users");
       return data;
     },
+    onSuccess: (data) => {
+      setRows(data);
+    },
   });
+
   const handelrol = (id) => {
     asioxSecure.patch(`/users/admin/${id}`).then((res) => {
       if (res.data.modifiedCount > 0) {
@@ -23,13 +32,14 @@ const Alluser = () => {
         Swal.fire({
           position: "top-end",
           icon: "success",
-          title: "is admin now",
+          title: "User is now admin",
           showConfirmButton: false,
           timer: 1500,
         });
       }
     });
   };
+
   const handelDelet = (user) => {
     Swal.fire({
       title: "Are you sure?",
@@ -46,7 +56,7 @@ const Alluser = () => {
             refetch();
             Swal.fire({
               title: "Deleted!",
-              text: "Your file has been deleted.",
+              text: "User has been deleted.",
               icon: "success",
             });
           }
@@ -54,65 +64,106 @@ const Alluser = () => {
       }
     });
   };
+
+  // Search filter logic
+  const handleSearch = (event) => {
+    const value = event.target.value;
+    setSearchText(value);
+
+    const filteredRows = users.filter((user) =>
+      user.name.toLowerCase().includes(value.toLowerCase()) ||
+      user.email.toLowerCase().includes(value.toLowerCase())
+    );
+    setRows(filteredRows);
+  };
+
+  // Columns definition for DataGrid
+  const columns = [
+    { field: 'id', headerName: 'No:', width: 90, sortable: false },
+    { field: 'name', headerName: 'Name', flex: 1, editable: true },
+    { field: 'email', headerName: 'Email', flex: 1, editable: true },
+    {
+      field: 'role',
+      headerName: 'Role',
+      width: 150,
+      renderCell: (params) => (
+        params.row.role === 'admin' ? (
+          "Admin"
+        ) : (
+          <Button
+            variant="contained"
+            color="primary"
+            onClick={() => handelrol(params.row._id)}
+          >
+            Make Admin
+          </Button>
+        )
+      ),
+    },
+    {
+      field: 'actions',
+      headerName: 'Action',
+      width: 150,
+      renderCell: (params) => (
+        <Button
+          variant="contained"
+          color="error"
+          onClick={() => handelDelet(params.row)}
+        >
+          Delete
+        </Button>
+      ),
+    },
+  ];
+
+  const processedRows = users.map((user, index) => ({
+    id: index + 1,
+    _id: user._id,
+    name: user.name,
+    email: user.email,
+    role: user.role,
+  }));
+
   if (isLoading)
     return (
-      <div className=" flex justify-center">
+      <div className="flex justify-center">
         <span className="loading loading-bars loading-lg"></span>
       </div>
     );
 
   return (
-    <div className=" w-[90%] mx-auto">
-      <div className="flex justify-between">
-        <h1 className="text-3xl font-bold">All Users</h1>
-        <h1 className="text-3xl font-bold">
-          Totla Users <sup>{users.length}</sup>
-        </h1>
+    <Box sx={{ height: 500, width: '100%' }}>
+      <div className="flex justify-between mb-4">
+        <h1 className="text-3xl font-bold m-4">All Users</h1>
+        <input
+          type="text"
+          placeholder="Search by name or email"
+          value={searchText}
+          onChange={handleSearch}
+          className="border p-2 rounded m-4"
+        />
       </div>
-      <div>
-        <div className="overflow-x-auto">
-          <table className="table ">
-            {/* head */}
-            <thead className="border-gray-300 ">
-              <tr className=" border-gray-300">
-                <th>#</th>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Role</th>
-                <th>Action</th>
-              </tr>
-            </thead>
-            <tbody>
-              {/* row 1 */}
-              {users.map((user, inx) => (
-                <tr className=" border-gray-300" key={user._id}>
-                  <th>{inx + 1}</th>
-                  <td>{user.name} </td>
-                  <td>{user.email}</td>
-                  <td>
-                    {user.role === "admin" ? (
-                      "Admin"
-                    ) : (
-                      <button
-                        className="btn"
-                        onClick={() => handelrol(user._id)}
-                      >
-                        <FaUser></FaUser>
-                      </button>
-                    )}
-                  </td>
-                  <td>
-                    <button onClick={() => handelDelet(user)} className="btn">
-                      <FaTrashAlt className=" text-red-500" />
-                    </button>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
+      <DataGrid
+        rows={rows.length ? rows : processedRows}
+        columns={columns}
+        pageSize={10}
+        rowsPerPageOptions={[10]}
+        
+        disableSelectionOnClick
+        components={{ Toolbar: GridToolbar }}
+        sortingOrder={['asc', 'desc']}
+        disableColumnFilter={false}
+        disableColumnSelector={false}
+        disableDensitySelector={false}
+        sx={{
+          '& .MuiDataGrid-columnHeaders': {
+            backgroundColor: 'rgba(0, 0, 0, 0.1)',
+            fontSize: '1rem',
+          },
+        }}
+        getRowId={(row) => row._id}
+      />
+    </Box>
   );
 };
 
