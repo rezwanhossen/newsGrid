@@ -154,7 +154,7 @@ const Dashbord = () => {
                 <NavLink to={"/dashbord/myNews"}>My News</NavLink>
               </li>
 
-              <li className="border-t  border border-white rounded-md hover:text-black hover:bg-white font-semibold ">
+              <li className="border-t  border border-white rounded-md hover:text-black hover:bg-white font-semibold mb-4 ">
                 <NavLink to="/dashbord/personalnews">Customized news</NavLink>
               </li>
 

@@ -37,7 +37,7 @@ const CategoriesNews = ({allNews}) => {
     const {data : newsData , isLoading} = useQuery({
         queryKey : ['categoriesNews' , category] , 
         queryFn : async() => {
-            const response = await axios.get(`https://newsapi.org/v2/top-headlines?category=${category}&language=en&apiKey=${apiKey || '950d4efc55c24a31bf9a060eaf29f5fb'}`);
+            const response = await axios.get(`https://newsapi.org/v2/top-headlines?category=${category}&language=en&apiKey=${apiKey}`);
             
             
       const news = response?.data?.articles.filter(
@@ -71,7 +71,7 @@ const CategoriesNews = ({allNews}) => {
 
     return (
         <div>
-            <div className="mt-[138px]">
+            <div className="mt-[136px]">
             <Parallax bgImage={"https://static.vecteezy.com/system/resources/previews/033/212/422/non_2x/modern-television-studio-for-world-breaking-news-with-equipment-for-leading-reporters-and-announcers-free-photo.jpg"} strength={500} className="h-[400px] lg:h-[500px]  w-full ">
       <div className="h-[400px] lg:h-[500px] heebo   w-[100%] bg-black opacity-75 flex justify-center items-center"> 
                 <h1 className="text-xl lg:text-3xl text-center text-white font-bold uppercase">HOME   <span className="px-3">||</span>  {category}</h1>

@@ -3,7 +3,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { FaVolumeUp, FaPause, FaPlay } from "react-icons/fa";
 
-const RecommendedNews = ({setAllNewsRecommended}) => {
+const RecommendedNews = ({ setAllNewsRecommended }) => {
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -12,8 +12,6 @@ const RecommendedNews = ({setAllNewsRecommended}) => {
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
   const [currentUtterance, setCurrentUtterance] = useState(null);
-  //pub_5554319d28e13bc8be1aab4736ea6ca4bbb0c
-  const apiKey = "pub_55870f30242195533c47f6655ed1ec3bca846";
 
   // Fetch recommended news from NewsData.io API
   const fetchRecommendedNews = async () => {
@@ -21,7 +19,7 @@ const RecommendedNews = ({setAllNewsRecommended}) => {
     try {
       const response = await axios.get("https://newsdata.io/api/1/news", {
         params: {
-          apikey: apiKey,
+          apikey: import.meta.env.VITE_recommended_apiKey,
           country: "us",
           category: "entertainment",
           language: "en",

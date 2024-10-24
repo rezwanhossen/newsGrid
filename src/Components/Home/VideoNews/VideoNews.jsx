@@ -8,7 +8,7 @@ const VideoNews = ({ setAllVideosNews }) => {
 
   // Your provided YouTube API key
   const apiKey = "AIzaSyAr_gVn7k9Q8Q2aVA8TslOyXVpomFEWcPU";
-  
+
   const searchQuery = "breaking news";
 
   // Fetch video news from YouTube API

@@ -13,7 +13,6 @@ import {
 import Swal from "sweetalert2";
 import useAuth from "../../../Hook/useAuth/useAuth";
 
-
 const TrendingNews = ({ setAllNewsTrending }) => {
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -23,18 +22,17 @@ const TrendingNews = ({ setAllNewsTrending }) => {
   const [isPaused, setIsPaused] = useState(false);
   const [bookmarkedArticles, setBookmarkedArticles] = useState([]);
   const [date, setDate] = useState("");
-  const apiKey = "uX-Tbv7wo0kWPez-lDxwvpryFy8240yUQek_C5a_qIYVl6kb";
+  // const apiKey = "uX-Tbv7wo0kWPez-lDxwvpryFy8240yUQek_C5a_qIYVl6kb";
 
   const { user } = useAuth();
 
   const fetchNews = async (selectedDate = "") => {
     setLoading(true);
 
-
     try {
       const url = `https://api.currentsapi.services/v1/search`;
       const params = {
-        apiKey: apiKey,
+        apiKey: import.meta.env.VITE_Breaking_apiKey,
         language: "en",
         start_date: selectedDate,
         end_date: selectedDate,
@@ -47,7 +45,6 @@ const TrendingNews = ({ setAllNewsTrending }) => {
         setError("No news found for this date.");
         setLoading(false);
         return;
-       
       }
 
       // Update articles if news is found
@@ -125,7 +122,7 @@ const TrendingNews = ({ setAllNewsTrending }) => {
       image: article.image,
       title: article.title,
       url: article.url,
-      email: user.email, 
+      email: user.email,
     };
 
     // Save bookmark to database
@@ -139,7 +136,7 @@ const TrendingNews = ({ setAllNewsTrending }) => {
       .then((res) => res.json())
       .then((data) => {
         if (data.insertedId) {
-          setBookmarkedArticles((prev) => [...prev, newBookmark]); 
+          setBookmarkedArticles((prev) => [...prev, newBookmark]);
           Swal.fire({
             title: "Success!",
             text: "Article successfully added to bookmarks.",
