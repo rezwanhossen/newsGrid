@@ -1,9 +1,8 @@
-
-
 import { useEffect, useState } from "react";
 
 import { FiMenu, FiX } from "react-icons/fi";
-import logo from "../../../assets/logo-r.png";
+import logo from "/fotlogo.png";
+// import logo from "../../../../public/fotlogo.png";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import useAuth from "../../../Hook/useAuth/useAuth";
 import useAdmin from "../../../Hook/useAdmin";
@@ -15,39 +14,31 @@ import SpeechRecognition, {
 import { useDispatch, useSelector } from "react-redux";
 import { searchNews } from "../../../features/searchNews/searchNewsSlice";
 
-
 // import  from 'lodash';
 
 const Navbar = ({ allNews }) => {
-  
-
   const navigate = useNavigate();
   // const [searchNews, setNewsSearch] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [inputValue, setInputValue] = useState(""); 
-  const [categoryActive,setCategoryActive] = useState()
+  const [inputValue, setInputValue] = useState("");
+  const [categoryActive, setCategoryActive] = useState();
 
   // redux
-  const inputSearchValue = useSelector((state) => state.newsSearch );
+  const inputSearchValue = useSelector((state) => state.newsSearch);
   const dispatch = useDispatch();
   // console.log("searchValue " , inputSearchValue);
 
-
   useEffect(() => {
-    setCategoryActive('Home');
+    setCategoryActive("Home");
   }, []);
 
-
-
-
   const handleSearch = (e) => {
-    
     e.preventDefault();
     const form = e.target;
     const searchValue = form.search.value;
 
     // setInputValue(searchValue);
-    dispatch(searchNews(searchValue))
+    dispatch(searchNews(searchValue));
     console.log(searchValue, allNews);
 
     const searchResults = allNews?.filter(
@@ -55,7 +46,7 @@ const Navbar = ({ allNews }) => {
         news?.title?.toLowerCase().includes(searchValue?.toLowerCase()) ||
         news?.description?.toLowerCase().includes(searchValue?.toLowerCase())
     );
-    console.log("searchResults" , searchResults);
+    console.log("searchResults", searchResults);
     if (searchResults) {
       // form.reset();
       navigate("/newsSearch", { state: { searchResults: searchResults } });
@@ -129,7 +120,7 @@ const Navbar = ({ allNews }) => {
       <div className="fixed top-0 left-0 z-40 w-full ">
         {/* <nav className=" shadow-md shadow-emerald-700 p-4"> */}
 
-        <div className="bg-[#E0E4E8] text-[#2F2F2F] ">
+        <div className="bg-[#004E5B] text-white ">
           <nav className=" shadow-md p-4    top-0 z-10">
             <div className="container mx-auto flex items-center justify-between">
               <div className="flex items-center space-x-4">
@@ -138,9 +129,9 @@ const Navbar = ({ allNews }) => {
                   className="text-black  focus:outline-none"
                 >
                   {isDashboardOpen ? (
-                    <FiX className="w-6 h-6" />
+                    <FiX className="w-6 h-6 text-white" />
                   ) : (
-                    <FiMenu className="w-6 h-6" />
+                    <FiMenu className="w-6 h-6 text-white" />
                   )}
                 </button>
               </div>
@@ -179,12 +170,12 @@ const Navbar = ({ allNews }) => {
                     />
                     {listening ? (
                       <MdKeyboardVoice
-                        className="text-2xl text-red-600"
+                        className="text-2xl text-red-600 "
                         onClick={SpeechRecognition.stopListening}
                       />
                     ) : (
                       <MdKeyboardVoice
-                        className="text-2xl"
+                        className="text-2xl text-black"
                         onClick={SpeechRecognition.startListening}
                       />
                     )}
@@ -270,14 +261,22 @@ const Navbar = ({ allNews }) => {
           {/* Categories Navbar */}
           <div className="bg-[#3BAFDA] border-b-4 border-[#004E5B]">
             <div className="container mx-auto pb-2 pt-2">
-              <ul className="flex flex-col sm:flex-row gap-2 sm:gap-4 items-center justify-center font-bold text-center">
-                {categories.map(category => (
+              <ul className="flex flex-wrap  gap-2 sm:gap-4 items-center justify-center font-bold text-center">
+                {categories.map((category) => (
                   <li key={category} className="font-bold text-lg sm:text-2xl">
                     <Link
-                      to={category === 'Home' ? "/" : `/categoriesNews/${category}`}
+                      to={
+                        category === "Home"
+                          ? "/"
+                          : `/categoriesNews/${category}`
+                      }
                       onClick={() => setCategoryActive(category)}
                       className={`inline-block  px-4 py-2 rounded-lg transition-all duration-300 
-                  ${categoryActive === category ? 'bg-[#004E5B] text-white' : 'bg-transparent text-[#232323] hover:bg-[#004E5B] hover:text-white'} 
+                  ${
+                    categoryActive === category
+                      ? "bg-[#004E5B] text-white"
+                      : "bg-transparent text-[#232323] hover:bg-[#004E5B] hover:text-white"
+                  } 
                   hover:shadow-lg hover:cursor-pointer`}
                     >
                       {category.toUpperCase()}
@@ -291,8 +290,9 @@ const Navbar = ({ allNews }) => {
 
         {/* Dashboard  */}
         <div
-          className={`shadow-lg z-50 bg-white max-w-[300px]  ease-in-out transform fixed top-0 left-0 h-full  w-[250px]   transition-transform duration-300  ${isDashboardOpen ? "translate-x-0" : "-translate-x-full"
-            }`}
+          className={`shadow-lg z-50 bg-[#004E5B] text-white max-w-[300px]  ease-in-out transform fixed top-0 left-0 h-full  w-[250px]   transition-transform duration-300  ${
+            isDashboardOpen ? "translate-x-0" : "-translate-x-full"
+          }`}
         >
           {/* Close Menu Icon */}
           <button onClick={toggleDashboard} className="text-white p-4">
@@ -339,6 +339,14 @@ const Navbar = ({ allNews }) => {
                 to={"/usersNews"}
               >
                 Users News
+              </NavLink>
+            </li>
+            <li className="flex justify-between items-center">
+              <NavLink
+                className="border border-1 w-full px-3 py-1"
+                to={"/contact"}
+              >
+                Contact Us
               </NavLink>
             </li>
           </ul>
