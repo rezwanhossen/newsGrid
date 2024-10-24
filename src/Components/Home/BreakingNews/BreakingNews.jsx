@@ -16,19 +16,17 @@ const BreakingNews = ({ setAllNewsBreaking }) => {
   const [date, setDate] = useState("");
   const [bookmarkedArticles, setBookmarkedArticles] = useState([]); // State for bookmarks
   const { user } = useAuth();
-  const apiKey = "uX-Tbv7wo0kWPez-lDxwvpryFy8240yUQek_C5a_qIYVl6kb"; // Currents API Key
 
   // Fetch real-time breaking news
   const fetchNews = async (selectedDate = "") => {
     setLoading(true);
 
     try {
-
       const categories = ["politics", "sports", "technology"];
       const promises = categories.map((category) =>
         axios.get(`https://api.currentsapi.services/v1/latest-news`, {
           params: {
-            apiKey: apiKey,
+            apiKey: import.meta.env.VITE_Breaking_apiKey,
             category: category,
             language: "en",
             page_size: 5,
@@ -45,7 +43,7 @@ const BreakingNews = ({ setAllNewsBreaking }) => {
 
       const url = `https://api.currentsapi.services/v1/search`;
       const params = {
-        apiKey: apiKey,
+        apiKey: import.meta.env.VITE_Breaking_apiKey,
         language: "en",
         start_date: selectedDate,
         end_date: selectedDate,
@@ -64,7 +62,6 @@ const BreakingNews = ({ setAllNewsBreaking }) => {
       setBreakingNews(response.data.news.slice(0, 10));
       setAllNewsBreaking(response?.data?.news);
       setLoading(false);
-
     } catch (error) {
       setError("Failed to fetch breaking news. Please try again later.");
       setLoading(false);
@@ -232,7 +229,10 @@ const BreakingNews = ({ setAllNewsBreaking }) => {
             </a>
 
             {/* Bookmark Button */}
-            <button className="flex items-center gap-2" onClick={() => handleBookmark(breakingNews[0])}>
+            <button
+              className="flex items-center gap-2"
+              onClick={() => handleBookmark(breakingNews[0])}
+            >
               <FaBookmark /> Bookmark
             </button>
 

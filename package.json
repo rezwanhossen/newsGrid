@@ -10,14 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
-
+    "@emailjs/browser": "^4.4.1",
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
     "@mui/material": "^6.1.5",
     "@mui/x-data-grid": "^7.21.0",
-
     "@reduxjs/toolkit": "^2.3.0",
-
     "@stripe/react-stripe-js": "^2.8.1",
     "@stripe/stripe-js": "^4.8.0",
     "@tanstack/match-sorter-utils": "^8.19.4",
