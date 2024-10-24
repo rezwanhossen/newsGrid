@@ -54,116 +54,136 @@ const SignUp = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-[#3BAFDA]">
-      <div className="w-full md:w-8/12 lg:w-5/12 p-10 bg-[#007E7E] backdrop-blur-md rounded-xl my-32 shadow-lg mx-auto">
-        {/* Form Header */}
-        <h2 className="text-3xl font-bold text-white text-center mb-8">
-          Create an Account
-        </h2>
-
-        {/* Form Start */}
-        <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-          {/* Name Input */}
-          <div className="space-y-2">
-            <label htmlFor="name" className="block text-white font-semibold">
-              Your Name
-            </label>
-            <input
-              className={`w-full bg-white backdrop-blur-md  py-3 px-4 rounded-lg focus:outline-none border focus:border-[#3BAFDA] ${
-                errors.name ? "border-red-500" : ""
-              }`}
-              placeholder="Your Name"
-              type="text"
-              {...register("name", { required: "Name is required" })}
-            />
-            {errors.name && (
-              <p className="text-red-500">{errors.name.message}</p>
-            )}
-          </div>
-
-          {/* Image Upload */}
-          <div className="space-y-2">
-            <label htmlFor="image" className="block text-white font-semibold">
-              Profile Picture
-            </label>
-            <input
-              className="w-full bg-white backdrop-blur-md py-3 px-4 rounded-lg"
-              type="file"
-              {...register("image", {
-                required: "Profile picture is required",
-              })}
-            />
-            {errors.image && (
-              <p className="text-red-500">{errors.image.message}</p>
-            )}
-          </div>
-
-          {/* Email Input */}
-          <div className="space-y-2">
-            <label htmlFor="email" className="block text-white font-semibold">
-              Email Address
-            </label>
-            <input
-              className={`w-full bg-white backdrop-blur-md  py-3 px-4 rounded-lg focus:outline-none border focus:border-[#3BAFDA] ${
-                errors.email ? "border-red-500" : ""
-              }`}
-              placeholder="Your Email"
-              type="email"
-              {...register("email", { required: "Email is required" })}
-            />
-            {errors.email && (
-              <p className="text-red-500">{errors.email.message}</p>
-            )}
-          </div>
-
-          {/* Password Input */}
-          <div className="space-y-2 relative">
-            <label
-              htmlFor="password"
-              className="block text-white font-semibold"
-            >
-              Password
-            </label>
-            <input
-              className={`w-full bg-white backdrop-blur-md  py-3 px-4 rounded-lg focus:outline-none border focus:border-[#3BAFDA] ${
-                errors.password ? "border-red-500" : ""
-              }`}
-              placeholder="Your Password"
-              {...register("password", { required: "Password is required" })}
-              type={showPassword ? "text" : "password"}
-            />
-            <div
-              className="absolute right-4 top-10 cursor-pointer text-black"
-              onClick={togglePasswordVisibility}
-            >
-              {showPassword ? (
-                <AiFillEyeInvisible size={24} />
-              ) : (
-                <AiFillEye size={24} />
+    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+      {/* Main container */}
+      <div className="w-full max-w-4xl flex bg-white rounded-lg shadow-lg overflow-hidden">
+        {/* Left side - Form */}
+        <div className="w-1/2 p-8 bg-white">
+          <h2 className="text-3xl font-bold text-gray-800 mb-6">Create an Account</h2>
+          <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+            {/* Name Input */}
+            <div className="space-y-2">
+              <label
+                htmlFor="name"
+                className="block text-lg font-semibold text-gray-700"
+              >
+                Your Name
+              </label>
+              <input
+                type="text"
+                className={`w-full bg-gray-100 border py-3 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${errors.name ? "border-red-500" : "border-gray-300"
+                  }`}
+                placeholder="Your Name"
+                {...register("name", { required: "Name is required" })}
+              />
+              {errors.name && (
+                <p className="text-red-500 text-sm">{errors.name.message}</p>
               )}
             </div>
-            {errors.password && (
-              <p className="text-red-500">{errors.password.message}</p>
-            )}
-          </div>
 
-          {/* Submit Button */}
-          <div className="mt-6">
-            <input
-              type="submit"
-              className="w-full bg-[#3BAFDA] text-white py-3 rounded-lg hover:bg-[#47bee9] transition duration-300 cursor-pointer"
-              value="Sign Up"
-            />
-          </div>
-        </form>
 
-        {/* Login Link */}
-        <p className="text-center text-black mt-6">
-          Already have an account?{" "}
-          <Link to="/login" className="text-white font-bold hover:underline">
-            Login here
-          </Link>
-        </p>
+
+            {/* Email Input */}
+            <div className="space-y-2">
+              <label
+                htmlFor="email"
+                className="block text-lg font-semibold text-gray-700"
+              >
+                Email Address
+              </label>
+              <input
+                type="email"
+                className={`w-full bg-gray-100 border py-3 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${errors.email ? "border-red-500" : "border-gray-300"
+                  }`}
+                placeholder="Your Email"
+                {...register("email", { required: "Email is required" })}
+              />
+              {errors.email && (
+                <p className="text-red-500 text-sm">{errors.email.message}</p>
+              )}
+            </div>
+
+            {/* Image Upload */}
+            <div className="space-y-2">
+              <label
+                htmlFor="image"
+                className="block text-lg font-semibold text-gray-700"
+              >
+                Profile Picture
+              </label>
+              <input
+                type="file"
+                className="w-full bg-gray-100 py-3 px-4 rounded-lg"
+                {...register("image", {
+                  required: "Profile picture is required",
+                })}
+              />
+              {errors.image && (
+                <p className="text-red-500 text-sm">{errors.image.message}</p>
+              )}
+            </div>
+
+            {/* Password Input */}
+            <div className="space-y-2 relative">
+              <label
+                htmlFor="password"
+                className="block text-lg font-semibold text-gray-700"
+              >
+                Password
+              </label>
+              <input
+                type={showPassword ? "text" : "password"}
+                className={`w-full bg-gray-100 border py-3 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${errors.password ? "border-red-500" : "border-gray-300"
+                  }`}
+                placeholder="Your Password"
+                {...register("password", { required: "Password is required" })}
+              />
+              {errors.password && (
+                <p className="text-red-500 text-sm">{errors.password.message}</p>
+              )}
+              <div
+                className="absolute right-4 top-10 cursor-pointer text-gray-600"
+                onClick={togglePasswordVisibility}
+              >
+                {showPassword ? (
+                  <AiFillEyeInvisible size={24} />
+                ) : (
+                  <AiFillEye size={24} />
+                )}
+              </div>
+            </div>
+
+            {/* Submit Button */}
+            <div>
+              <button
+                type="submit"
+                className="w-full py-3 bg-gray-800 text-white font-semibold rounded-lg hover:bg-gray-900 transition duration-300"
+              >
+                Sign Up
+              </button>
+            </div>
+          </form>
+
+          <p className="text-center text-gray-600 mt-6">
+            Already have an account?{" "}
+            <Link
+              to="/login"
+              className="text-blue-600 font-bold hover:underline transition duration-300"
+            >
+              Login here
+            </Link>
+          </p>
+        </div>
+
+        {/* Right side - Welcome message */}
+        <div className="w-1/2 bg-gray-600 text-white flex flex-col justify-center items-center p-10">
+          <h2 className="text-4xl font-bold mb-5">
+            Welcome to <span className="font-bold">News Grid!</span>
+          </h2>
+          <p className="text-lg text-center text-white">
+            Join us to stay updated with the latest news and trending stories from around the world.
+          </p>
+        </div>
       </div>
     </div>
   );
