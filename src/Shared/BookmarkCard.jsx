@@ -23,7 +23,7 @@ const BookmarkCard = ({ bookmark }) => {
     }).then((result) => {
       loding(true);
       if (result.isConfirmed)
-        fetch(`https://news-grid-server.vercel.app/bookmarks/${_id}`, {
+        fetch(`http://localhost:5000/bookmarks/${_id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

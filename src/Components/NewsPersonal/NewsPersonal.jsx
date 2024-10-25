@@ -16,7 +16,7 @@ const NewsPersonal = () => {
       const getUserSelectedCategories = async () => {
         try {
           const res = await axios.get(
-            `https://news-grid-server.vercel.app/getstorevalue/${userEmails}`
+            `http://localhost:5000/getstorevalue/${userEmails}`
           );
           setStoreSelectedCategory(res?.data?.selectedCategory || []);
         } catch (error) {

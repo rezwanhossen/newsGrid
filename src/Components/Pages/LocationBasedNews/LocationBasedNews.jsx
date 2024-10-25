@@ -115,9 +115,9 @@ const LocationBasedNews = () => {
 
       
 
-      <div className="my-10 md:my-20 container mx-auto heebo">
+      <div className="my-10 md:my-20 container mx-auto heebo text-black">
         <div className="flex flex-col md:flex-row justify-center md:justify-between mx-3 md:mx-0 md:px-6 py-4 rounded bg-base-300  items-center  mb-10">
-          <h1 className="text-xl md:text-2xl    font-bold heebo text-[#4A4A4A] ">
+          <h1 className="text-xl md:text-2xl    font-bold heebo  ">
             Location Based News
           </h1>
 
@@ -157,7 +157,7 @@ const LocationBasedNews = () => {
               </div>
             </div>
 
-            <h1 className="text-base md:text-xl text-[#4A4A4A]    font-bold heebo ">
+            <h1 className="text-base md:text-xl     font-bold heebo ">
               My City : {city} , {country}{" "}
             </h1>
           </div>
@@ -186,7 +186,7 @@ const LocationBasedNews = () => {
                     </div>
 
                     <div className="space-y-3 p-5 w-full md:w-[70%]   heebo ">
-                      <h3 className="text-xl text-[#4A4A4A] font-medium">
+                      <h3 className="text-xl  font-medium">
                         {news?.title.slice(0, 100)}...
                       </h3>
                       <p className="text-lg font-bold">
@@ -195,7 +195,7 @@ const LocationBasedNews = () => {
                           {news?.publishedAt.slice(0, 10)}
                         </span>
                       </p>
-                      <p className="text-lg text-[#4A4A4A]">
+                      <p className="text-lg ">
                         {news?.description.slice(0, 200)}
                       </p>
                       <ReadMoreLink news={news}></ReadMoreLink>
@@ -219,7 +219,7 @@ const LocationBasedNews = () => {
                     </div>
 
                     <div className="space-y-3 p-5 lg:w-[65%]   heebo ">
-                      <h3 className="text-lg md:text-xl text-[#4A4A4A] font-medium">
+                      <h3 className="text-lg md:text-xl  font-medium">
                         {news?.title.slice(0, 30)}...
                       </h3>
                       <p className="text-lg font-bold">
@@ -228,7 +228,7 @@ const LocationBasedNews = () => {
                           {news?.publishedAt.slice(0, 10)}
                         </span>
                       </p>
-                      <p className="text-lg hidden md:block text-[#4A4A4A]">
+                      <p className="text-lg hidden md:block ">
                         {news?.description.slice(0, 60)}
                       </p>
                       <ReadMoreLink news={news}></ReadMoreLink>
@@ -252,7 +252,7 @@ const LocationBasedNews = () => {
                     </div>
 
                     <div className=" p-5 space-y-2   heebo ">
-                      <h3 className="text-xl text-[#4A4A4A] font-medium">
+                      <h3 className="text-xl  font-medium">
                         {news?.title.slice(0, 45)}...
                       </h3>
                       <p className="text-lg font-bold">
@@ -261,7 +261,7 @@ const LocationBasedNews = () => {
                           {news?.publishedAt.slice(0, 10)}
                         </span>
                       </p>
-                      <p className="text -lg text-[#4A4A4A]">
+                      <p className="text -lg ">
                         {news?.description?.slice(0, 100)}
                       </p>
                       <ReadMoreLink news={news}></ReadMoreLink>

@@ -8,15 +8,7 @@ const useNews = () => {
   const { data: newsData = [], isLoading } = useQuery({
     queryKey: ["allnews"],
     queryFn: async () => {
-      // const response = await axios.get("https://news-grid-server.vercel.app/allnews");
-      // // console.log("response : ", response.data);
-      // const news = response?.data?.articles.filter(
-      //   (news) => news.title && news.urlToImage
-      //);
-      // return news;
-      const { data } = await axios.get(
-        "https://news-grid-server.vercel.app/allnews"
-      );
+      const { data } = await axios.get("http://localhost:5000/allnews");
       return data;
     },
   });

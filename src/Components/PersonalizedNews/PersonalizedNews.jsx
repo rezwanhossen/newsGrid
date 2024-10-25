@@ -70,7 +70,7 @@ const PersonalizedNews = () => {
       const postSelectedCategoryInMongodb = async () => {
         try {
           const res = await axios.post(
-            "https://news-grid-server.vercel.app/storevalue",
+            "http://localhost:5000/storevalue",
             objectDataForStoreInMongodb
           );
 

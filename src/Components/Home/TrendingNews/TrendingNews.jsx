@@ -12,8 +12,10 @@ import {
 } from "react-share";
 import Swal from "sweetalert2";
 import useAuth from "../../../Hook/useAuth/useAuth";
+import { useDispatch } from "react-redux";
+import { setAllNewsTrending } from "../../../features/allNews/allNewsSlice";
 
-const TrendingNews = ({ setAllNewsTrending }) => {
+const TrendingNews = () => {
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -24,6 +26,7 @@ const TrendingNews = ({ setAllNewsTrending }) => {
   const [date, setDate] = useState("");
   // const apiKey = "uX-Tbv7wo0kWPez-lDxwvpryFy8240yUQek_C5a_qIYVl6kb";
 
+  const dispatch = useDispatch();
   const { user } = useAuth();
 
   const fetchNews = async (selectedDate = "") => {
@@ -49,7 +52,9 @@ const TrendingNews = ({ setAllNewsTrending }) => {
 
       // Update articles if news is found
       setArticles(response.data.news.slice(0, 10));
-      setAllNewsTrending(response?.data?.news);
+      console.log("trending news : ", response?.data?.news);
+      dispatch(setAllNewsTrending(response?.data?.news));
+
       setLoading(false);
     } catch (error) {
       setError("Failed to fetch news. Please try again later.");
@@ -126,7 +131,7 @@ const TrendingNews = ({ setAllNewsTrending }) => {
     };
 
     // Save bookmark to database
-    fetch("https://news-grid-server.vercel.app/bookmarks", {
+    fetch("http://localhost:5000/bookmarks", {
       method: "POST",
       headers: {
         "content-type": "application/json",

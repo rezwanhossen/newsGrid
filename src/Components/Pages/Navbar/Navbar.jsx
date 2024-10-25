@@ -16,7 +16,61 @@ import { searchNews } from "../../../features/searchNews/searchNewsSlice";
 
 // import  from 'lodash';
 
-const Navbar = ({ allNews }) => {
+const Navbar = () => {
+  const [allNews , setAllNewsLocalStorage] = useState([]);
+
+
+  // redux
+  const locationBasedNews = useSelector((state) => state?.allNews?.locationBasedNews);
+  const categoriesNews = useSelector((state) => state?.allNews?.categoriesNews);
+  const newsData = useSelector((state) => state?.allNews?.newsData);
+  const allTrendingNews = useSelector((state) => state?.allNews?.allTrendingNews);
+  const recomendedNews = useSelector((state) => state?.allNews?.recomendedNews);
+  const breakingNews = useSelector((state) => state?.allNews?.breakingNews);
+  
+  
+  
+
+  
+  
+
+  
+  
+  useEffect(() => {
+      const news = [
+          
+          ...locationBasedNews,
+          ...categoriesNews,
+          ...newsData,
+          ...recomendedNews,
+          ...breakingNews,
+          
+          ...allTrendingNews
+      ]
+
+      console.log("news" , news)
+      if(news?.length > 0){
+
+        localStorage.setItem("allNewsData" , JSON.stringify(news));
+      }
+  
+  
+      const data = localStorage.getItem('allNewsData');
+  const newsAll = JSON.parse(data);
+  
+  setAllNewsLocalStorage(newsAll)
+  } , [])
+
+
+
+
+
+
+
+
+
+
+
   const navigate = useNavigate();
   // const [searchNews, setNewsSearch] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -91,7 +145,7 @@ const Navbar = ({ allNews }) => {
 
   const handleToggle = (e) => {
     if (e.target.checked) {
-      setTheme("night");
+      setTheme("black");
     } else {
       setTheme("light");
     }
@@ -149,7 +203,7 @@ const Navbar = ({ allNews }) => {
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 16 16"
                     fill="currentColor"
-                    className="h-4 w-4 opacity-70"
+                    className="h-4 w-4 opacity-70 text-black"
                   >
                     <path
                       fillRule="evenodd"
