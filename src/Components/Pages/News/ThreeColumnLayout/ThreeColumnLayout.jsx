@@ -21,7 +21,7 @@ const ThreeColumnLayout = ({data}) => {
         {/* content */}
         <div className="lg:w-[330px] heebo">
           
-          <h3 className="text-blue-600 font-semibold">{news?.category}</h3>
+          
           <h1 className="font-bold hidden lg:block hover:text-zinc-500">
             {news?.title.slice(0, 70)}...
           </h1>

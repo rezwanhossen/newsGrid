@@ -2,8 +2,10 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { FaVolumeUp, FaPause, FaPlay } from "react-icons/fa";
+import { useDispatch } from "react-redux";
+import { setAllRecommendedNews } from "../../../features/allNews/allNewsSlice";
 
-const RecommendedNews = ({ setAllNewsRecommended }) => {
+const RecommendedNews = () => {
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -12,6 +14,7 @@ const RecommendedNews = ({ setAllNewsRecommended }) => {
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
   const [currentUtterance, setCurrentUtterance] = useState(null);
+  const dispatch = useDispatch();
 
   // Fetch recommended news from NewsData.io API
   const fetchRecommendedNews = async () => {
@@ -26,7 +29,8 @@ const RecommendedNews = ({ setAllNewsRecommended }) => {
         },
       });
       setArticles(response.data.results.slice(0, 10));
-      setAllNewsRecommended(response?.data?.results);
+      
+      dispatch(setAllRecommendedNews(response?.data?.results))
       setLoading(false);
     } catch (error) {
       setError("Failed to fetch recommended news. Please try again later.");
