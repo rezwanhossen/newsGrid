@@ -1,4 +1,3 @@
-// import { useEffect, useState } from 'react';
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { FaVolumeUp, FaPause, FaPlay } from "react-icons/fa";
@@ -33,9 +32,19 @@ const RecommendedNews = () => {
       dispatch(setAllRecommendedNews(response?.data?.results))
       setLoading(false);
     } catch (error) {
-      setError("Failed to fetch recommended news. Please try again later.");
+      console.error(error);
+      loadBackupData();
+    }
+  };
+
+  // Load backup data from a JSON file
+  const loadBackupData = async () => {
+    try {
+      const response = await axios.get("/recommenddata.json"); 
+      setArticles(response.data.results.slice(0, 10)); 
       setLoading(false);
-      console.log(error);
+    } catch (error) {
+      setLoading(false);
     }
   };
 

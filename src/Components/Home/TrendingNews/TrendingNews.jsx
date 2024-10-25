@@ -24,7 +24,6 @@ const TrendingNews = () => {
   const [isPaused, setIsPaused] = useState(false);
   const [bookmarkedArticles, setBookmarkedArticles] = useState([]);
   const [date, setDate] = useState("");
-  // const apiKey = "uX-Tbv7wo0kWPez-lDxwvpryFy8240yUQek_C5a_qIYVl6kb";
 
   const dispatch = useDispatch();
   const { user } = useAuth();
@@ -57,8 +56,18 @@ const TrendingNews = () => {
 
       setLoading(false);
     } catch (error) {
-      setError("Failed to fetch news. Please try again later.");
-      setLoading(false);
+      console.error("API Fetch Error:", error);
+
+      // Fetch backup data from JSON file
+      try {
+        const backupResponse = await axios.get("/trendingdata.json");
+        setArticles(backupResponse.data.news.slice(0, 10)); // Adjust slice as needed
+        setLoading(false);
+      } catch (backupError) {
+        console.error("Backup Fetch Error:", backupError);
+        setError("Failed to load backup data. Please try again later.");
+        setLoading(false);
+      }
     }
   };
 
@@ -111,7 +120,7 @@ const TrendingNews = () => {
     }
 
     const isAlreadyBookmarked = bookmarkedArticles.some(
-      (bookmarkedArticle) => bookmarkedArticle.url == article.url
+      (bookmarkedArticle) => bookmarkedArticle.url === article.url
     );
 
     if (isAlreadyBookmarked) {
@@ -262,37 +271,30 @@ const TrendingNews = () => {
                   <button
                     onClick={handlePause}
                     className="ml-4 flex items-center text-gray-600 hover:text-blue-500"
-                    aria-label="Pause/Resume"
+                    aria-label="Pause/Resume Audio"
                   >
                     {isPaused ? (
-                      <>
-                        <FaPlay size={24} className="mr-2" />
-                        Resume
-                      </>
+                      <FaPlay size={24} className="mr-2" />
                     ) : (
-                      <>
-                        <FaPause size={24} className="mr-2" />
-                        Pause
-                      </>
+                      <FaPause size={24} className="mr-2" />
                     )}
+                    {isPaused ? "Resume" : "Pause"}
                   </button>
                 )}
               </div>
             </div>
           </div>
         ))}
-      </div>
 
-      {!showAll && articles.length > 2 && (
-        <div className="mt-6 text-center">
+        {!showAll && articles.length > 2 && (
           <button
             onClick={handleShowMore}
-            className="px-4 py-2 bg-[#00A6A6] text-white rounded-md hover:bg-[#007E7E] transition"
+            className="mt-4 w-full px-4 py-2 bg-[#00A6A6] text-white rounded-md hover:bg-[#007E7E] transition"
           >
             Show More
           </button>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 };
