@@ -4,8 +4,11 @@ import axios from "axios";
 import { FaVolumeUp, FaPause, FaPlay, FaBookmark } from "react-icons/fa";
 import useAuth from "../../../Hook/useAuth/useAuth";
 import Swal from "sweetalert2";
+import { useDispatch } from "react-redux";
+import { setAllBreakingNews } from "../../../features/allNews/allNewsSlice";
 
-const BreakingNews = ({ setAllNewsBreaking }) => {
+
+const BreakingNews = () => {
   const [breakingNews, setBreakingNews] = useState([]);
   const [visibleNewsCount, setVisibleNewsCount] = useState(7);
   const [isSpeaking, setIsSpeaking] = useState(false);
@@ -17,6 +20,7 @@ const BreakingNews = ({ setAllNewsBreaking }) => {
   const [backupData, setBackupData] = useState(null);
   const [bookmarkedArticles, setBookmarkedArticles] = useState([]);
   const { user } = useAuth();
+  const dispatch = useDispatch();
 
   // Fetch backup data
   useEffect(() => {
@@ -55,6 +59,7 @@ const BreakingNews = ({ setAllNewsBreaking }) => {
       );
       const responses = await Promise.all(promises);
       const combinedNews = responses.flatMap((response) => response.data.news);
+
       combinedNews.sort((a, b) => new Date(b.published) - new Date(a.published));
 
       if (combinedNews.length === 0) {
@@ -67,6 +72,7 @@ const BreakingNews = ({ setAllNewsBreaking }) => {
         setBreakingNews(combinedNews);
         setAllNewsBreaking(combinedNews);
       }
+
 
       const url = `https://api.currentsapi.services/v1/search`;
       const params = {
@@ -84,6 +90,11 @@ const BreakingNews = ({ setAllNewsBreaking }) => {
         setBreakingNews((prevNews) => [...prevNews, ...response.data.news.slice(0, 10)]);
         setAllNewsBreaking(response.data.news);
       }
+
+      // Update articles if news is found
+      setBreakingNews(response.data.news.slice(0, 10));
+      setLoading(false);
+
     } catch (error) {
       console.error("Error fetching news from API:", error);
 
