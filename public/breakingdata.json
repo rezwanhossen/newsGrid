@@ -1,0 +1,115 @@
+{
+    "news": [
+      {
+        "id": "fb62af27-2689-4590-9350-b9e41b6eb07e",
+        "title": "Musk gives $44 million more to back Trump",
+        "description": "WASHINGTON — Elon Musk gave about $44 million to his pro-Donald Trump spending group...",
+        "url": "https://www.voanews.com/a/musk-gives-44-million-more-to-back-trump/7839087.html",
+        "author": "Reuters",
+        "image": "None",
+        "language": "en",
+        "category": ["politics", "world"],
+        "published": "2024-10-25 15:17:03 +0000"
+      },
+      {
+        "id": "12ecbeb3-0d5f-4f99-a9ba-cd8cf96fc7aa",
+        "title": "A federal judge pauses Virginia’s voter removal program",
+        "description": "A judge ruled that Virginia violated a federal law by systematically purging registered voters...",
+        "url": "https://www.npr.org/2024/10/25/nx-s1-5163389/virginia-voter-purge",
+        "author": "Hansi Lo Wang",
+        "image": "https://npr.brightspotcdn.com/.../gettyimages-1244488388.jpg",
+        "language": "en",
+        "category": ["politics", "world"],
+        "published": "2024-10-25 15:02:48 +0000"
+      },
+      {
+        "id": "ffb7a5c9-385a-472d-8ef5-9d45e17081bb",
+        "title": "Gas prices are barreling toward a 3-year low",
+        "description": "Gas prices are heading below $3 a gallon in parts of the country before the presidential election...",
+        "url": "https://www.washingtonpost.com/business/2024/10/25/gas-prices-election-harris-trump/",
+        "author": "Abha Bhattarai",
+        "image": "None",
+        "language": "en",
+        "category": ["business"],
+        "published": "2024-10-25 15:00:58 +0000"
+      },
+      {
+        "id": "e043512c-94a9-4361-840c-c1ef2f7d34d7",
+        "title": "A medieval saga told of a man thrown in a well",
+        "description": "Researchers found the remains of the 'Well-man' from an 800-year-old Norse saga...",
+        "url": "https://www.washingtonpost.com/science/2024/10/25/man-found-well-iceland-saga/",
+        "author": "Carolyn Y. Johnson",
+        "image": "None",
+        "language": "en",
+        "category": ["world"],
+        "published": "2024-10-25 15:00:00 +0000"
+      },
+      {
+        "id": "6dc83279-4afe-40c8-a5f3-8149cb3858bd",
+        "title": "What does 2020 swing-state early voting tell us about 2024?",
+        "description": "A look at what early voting looked like in 2020 and how it related to the results.",
+        "url": "https://www.washingtonpost.com/politics/2024/10/25/early-voting-swing-states/",
+        "author": "Philip Bump, Lenny Bronner",
+        "image": "None",
+        "language": "en",
+        "category": ["politics"],
+        "published": "2024-10-25 14:57:00 +0000"
+      },
+      {
+        "id": "4487d93f-64a9-458d-acad-6bcd8a46dde2",
+        "title": "This simple test can show how you're aging",
+        "description": "Flamingo pose, anyone?",
+        "url": "https://www.zmescience.com/science/news-science/this-simple-test-can-show-how-youre-aging/",
+        "author": "Mihai Andrei",
+        "image": "https://cdn.zmescience.com/wp-content/uploads/2024/10/tree-pose-building.png",
+        "language": "en",
+        "category": ["science"],
+        "published": "2024-10-25 14:54:14 +0000"
+      },
+      {
+        "id": "3018e156-3ae0-43cc-a792-4c7a7f01323a",
+        "title": "Are Elon Musk and Vladimir Putin Talking?",
+        "description": "Is Elon Musk in regular contact with Vladimir Putin?",
+        "url": "https://www.nytimes.com/2024/10/25/business/dealbook/musk-putin-trump.html",
+        "author": "Andrew Ross Sorkin",
+        "image": "None",
+        "language": "en",
+        "category": ["general"],
+        "published": "2024-10-25 14:49:45 +0000"
+      },
+      {
+        "id": "7076c70a-5aff-4ff6-96f6-327bf341216f",
+        "title": "Cook Report shifts Lawler race in New York toward GOP",
+        "description": "The nonpartisan Cook Political Report shifted the race in New York's 17th Congressional District...",
+        "url": "https://thehill.com/homenews/house/4953119-mike-lawler-mondaire-jones-race-new-york/",
+        "author": "Juliann Ventura",
+        "image": "None",
+        "language": "en",
+        "category": ["general"],
+        "published": "2024-10-25 14:49:22 +0000"
+      },
+      {
+        "id": "b3013cb8-e22d-4483-b281-7684be248c75",
+        "title": "16 can't-miss early-season games to watch in 2024-25",
+        "description": "This early-season slate includes clashes of the titans, a classic Big 5 game...",
+        "url": "https://www.espn.com/mens-college-basketball/story/_/id/41952083/16-early-season-mens-college-basketball-games-watch-2024-25",
+        "author": "ESPN",
+        "image": "https://a.espncdn.com/combiner/i?img=%2Fphoto%2F2024%2F1023%2Fr1404593_1296x729_16-9.jpg",
+        "language": "en",
+        "category": ["sports"],
+        "published": "2024-10-25 14:45:08 +0000"
+      },
+      {
+        "id": "686ddd58-dadb-4aa2-93ff-a7d73bc1860c",
+        "title": "2025 coaching hot seat: Which team could set off the dominoes?",
+        "description": "Can this new coaching cycle compare to the chaos of 2023-24?",
+        "url": "https://www.espn.com/mens-college-basketball/insider/story/_/id/41966541/2025-mens-college-basketball-coaching-hot-seat-preview-preseason",
+        "author": "Jeff Borzello",
+        "image": "https://a3.espncdn.com/combiner/i?img=%2Fphoto%2F2023%2F0410%2Fr1157142_1296x729_16-9.jpg",
+        "language": "en",
+        "category": ["sports"],
+        "published": "2024-10-25 14:44:19 +0000"
+      }
+    ]
+  }
+  

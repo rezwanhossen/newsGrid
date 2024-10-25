@@ -17,13 +17,33 @@ const BreakingNews = () => {
   const [error, setError] = useState(null);
   const [currentUtterance, setCurrentUtterance] = useState(null);
   const [date, setDate] = useState("");
-  const [bookmarkedArticles, setBookmarkedArticles] = useState([]); // State for bookmarks
+  const [backupData, setBackupData] = useState(null);
+  const [bookmarkedArticles, setBookmarkedArticles] = useState([]);
   const { user } = useAuth();
   const dispatch = useDispatch();
+
+  // Fetch backup data
+  useEffect(() => {
+    const fetchBackupData = async () => {
+      try {
+        const response = await fetch('/breakingdata.json');
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        const data = await response.json();
+        setBackupData(data);
+      } catch (error) {
+        console.error("Error fetching backup data:", error);
+      }
+    };
+
+    fetchBackupData();
+  }, []);
 
   // Fetch real-time breaking news
   const fetchNews = async (selectedDate = "") => {
     setLoading(true);
+    setError(null); // Reset error before fetching
 
     try {
       const categories = ["politics", "sports", "technology"];
@@ -39,12 +59,20 @@ const BreakingNews = () => {
       );
       const responses = await Promise.all(promises);
       const combinedNews = responses.flatMap((response) => response.data.news);
-      combinedNews.sort(
-        (a, b) => new Date(b.published) - new Date(a.published)
-      );
-      setBreakingNews(combinedNews);
-      dispatch(setAllBreakingNews(combinedNews))
-      
+
+      combinedNews.sort((a, b) => new Date(b.published) - new Date(a.published));
+
+      if (combinedNews.length === 0) {
+        setError("No breaking news found.");
+        // Load backup data if combined news is empty
+        if (backupData && backupData.news) {
+          setBreakingNews(backupData.news);
+        }
+      } else {
+        setBreakingNews(combinedNews);
+        setAllNewsBreaking(combinedNews);
+      }
+
 
       const url = `https://api.currentsapi.services/v1/search`;
       const params = {
@@ -56,26 +84,31 @@ const BreakingNews = () => {
 
       const response = await axios.get(url, { params });
 
-      // Check if no news is found for the selected date
       if (response.data.news.length === 0) {
         setError("No breaking news found for this date.");
-        setLoading(false);
-        return;
+      } else {
+        setBreakingNews((prevNews) => [...prevNews, ...response.data.news.slice(0, 10)]);
+        setAllNewsBreaking(response.data.news);
       }
 
       // Update articles if news is found
       setBreakingNews(response.data.news.slice(0, 10));
       setLoading(false);
+
     } catch (error) {
-      setError("Failed to fetch breaking news. Please try again later.");
-      setLoading(false);
+      console.error("Error fetching news from API:", error);
+
+      if (backupData && backupData.news && !breakingNews.length) {
+        setBreakingNews(backupData.news);
+      }
+    } finally {
+      setLoading(false); // Ensure loading state is updated
     }
   };
 
   useEffect(() => {
     fetchNews();
   }, []);
-
   // Bookmark handling
   const handleBookmark = (article) => {
     if (!user) {
@@ -106,7 +139,6 @@ const BreakingNews = () => {
       email: user.email,
     };
 
-    // Save bookmark to database
     fetch("http://localhost:5000/bookmarks", {
       method: "POST",
       headers: {
@@ -160,7 +192,7 @@ const BreakingNews = () => {
         setIsPaused(false);
         setCurrentUtterance(null);
       };
-      setCurrentUtterance(utterance); // Store the current utterance
+      setCurrentUtterance(utterance);
       window.speechSynthesis.speak(utterance);
       setIsSpeaking(true);
     }
@@ -284,18 +316,18 @@ const BreakingNews = () => {
           {breakingNews.slice(1, visibleNewsCount).map((article, index) => (
             <div
               key={index}
-              className="flex flex-col sm:flex-row items-start sm:items-center mb-4 bg-white rounded-lg p-3"
+              className="flex flex-col sm:flex-row items-start sm:items-center mb-4 bg-white rounded-lg p-3 shadow-md"
             >
               <img
                 src={article.image}
                 alt={article.title}
-                className="w-full sm:w-32 h-20 sm:h-20 object-cover rounded-lg mb-2 sm:mr-4"
+                className="h-auto w-full sm:w-32 object-cover rounded-lg mb-2 sm:mr-4"
               />
-              <div className="flex-1">
-                <h4 className="text-md font-semibold leading-tight text-[#4A4A4A]">
+              <div className="flex-1 flex flex-col justify-between">
+                <h4 className="text-md font-bold leading-tight text-[#4A4A4A] mb-1">
                   {article.title}
                 </h4>
-                <p className="text-xs text-[#767676]">
+                <p className="text-xs text-[#767676] mb-2">
                   {article.source} -{" "}
                   {new Date(article.published).toLocaleDateString()}
                 </p>
@@ -303,7 +335,7 @@ const BreakingNews = () => {
                   href={article.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#FF6F61] hover:text-[#007E7E] hover:underline text-xs"
+                  className="text-[#FF6F61] hover:text-[#007E7E] hover:underline text-xs mb-2"
                 >
                   Read more
                 </a>
@@ -332,7 +364,7 @@ const BreakingNews = () => {
                 {isSpeaking && (
                   <button
                     onClick={handlePauseResume}
-                    className="mt-2 text-gray-600 hover:text-blue-500 flex items-start "
+                    className="mt-2 text-gray-600 hover:text-blue-500 flex items-start"
                   >
                     {isPaused ? (
                       <>
@@ -351,6 +383,7 @@ const BreakingNews = () => {
             </div>
           ))}
         </div>
+
 
         {/* Show More Button */}
         {visibleNewsCount < breakingNews.length && (
