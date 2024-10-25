@@ -32,7 +32,7 @@ import LocationBasedNews from "../Components/Pages/LocationBasedNews/LocationBas
 import AdminHome from "../Components/DashbordPage/AdminPage/AdminHome/AdminHome";
 import AllpementHistory from "../Components/DashbordPage/AdminPage/AllPementHistory/AllpementHistory";
 import UsersNews from "../Components/Pages/UsersNews/UsersNews";
-
+import ContactUs from "../../src/Components/Pages/Contact/ContactUs";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -91,9 +91,13 @@ const router = createBrowserRouter([
         element: <LocationBasedNews></LocationBasedNews>,
       },
       {
-        path : '/usersNews',
-        element : <UsersNews></UsersNews>
-      }
+        path: "/usersNews",
+        element: <UsersNews></UsersNews>,
+      },
+      {
+        path: "/contact",
+        element: <ContactUs />,
+      },
     ],
   },
 

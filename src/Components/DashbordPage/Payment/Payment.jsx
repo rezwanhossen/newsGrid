@@ -35,7 +35,7 @@ const Payment = () => {
         <p className="mt-2">
           For assistance,{" "}
           <a
-            href="/"
+            href="/contact"
             className="text-[#3BAFDA] underline hover:text-[#007E7E]"
           >
             contact us

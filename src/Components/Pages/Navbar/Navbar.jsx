@@ -1,9 +1,8 @@
-
-
 import { useEffect, useState } from "react";
 
 import { FiMenu, FiX } from "react-icons/fi";
-import logo from "../../../assets/logo-r.png";
+import logo from "/fotlogo.png";
+// import logo from "../../../../public/fotlogo.png";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import useAuth from "../../../Hook/useAuth/useAuth";
 import useAdmin from "../../../Hook/useAdmin";
@@ -15,33 +14,31 @@ import SpeechRecognition, {
 import { useDispatch, useSelector } from "react-redux";
 import { searchNews } from "../../../features/searchNews/searchNewsSlice";
 
-
 // import  from 'lodash';
 
 const Navbar = ({ allNews }) => {
-  
-
   const navigate = useNavigate();
   // const [searchNews, setNewsSearch] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [inputValue, setInputValue] = useState(""); 
+  const [inputValue, setInputValue] = useState("");
+  const [categoryActive, setCategoryActive] = useState();
 
   // redux
-  const inputSearchValue = useSelector((state) => state.newsSearch );
+  const inputSearchValue = useSelector((state) => state.newsSearch);
   const dispatch = useDispatch();
   // console.log("searchValue " , inputSearchValue);
 
-
-
+  useEffect(() => {
+    setCategoryActive("Home");
+  }, []);
 
   const handleSearch = (e) => {
-    
     e.preventDefault();
     const form = e.target;
     const searchValue = form.search.value;
 
     // setInputValue(searchValue);
-    dispatch(searchNews(searchValue))
+    dispatch(searchNews(searchValue));
     console.log(searchValue, allNews);
 
     const searchResults = allNews?.filter(
@@ -49,7 +46,7 @@ const Navbar = ({ allNews }) => {
         news?.title?.toLowerCase().includes(searchValue?.toLowerCase()) ||
         news?.description?.toLowerCase().includes(searchValue?.toLowerCase())
     );
-    console.log("searchResults" , searchResults);
+    console.log("searchResults", searchResults);
     if (searchResults) {
       // form.reset();
       navigate("/newsSearch", { state: { searchResults: searchResults } });
@@ -123,7 +120,7 @@ const Navbar = ({ allNews }) => {
       <div className="fixed top-0 left-0 z-40 w-full ">
         {/* <nav className=" shadow-md shadow-emerald-700 p-4"> */}
 
-        <div className="bg-[#E0E4E8] text-[#2F2F2F] ">
+        <div className="bg-[#004E5B] text-white ">
           <nav className=" shadow-md p-4    top-0 z-10">
             <div className="container mx-auto flex items-center justify-between">
               <div className="flex items-center space-x-4">
@@ -132,9 +129,9 @@ const Navbar = ({ allNews }) => {
                   className="text-black  focus:outline-none"
                 >
                   {isDashboardOpen ? (
-                    <FiX className="w-6 h-6" />
+                    <FiX className="w-6 h-6 text-white" />
                   ) : (
-                    <FiMenu className="w-6 h-6" />
+                    <FiMenu className="w-6 h-6 text-white" />
                   )}
                 </button>
               </div>
@@ -166,19 +163,19 @@ const Navbar = ({ allNews }) => {
                     <input
                       type="text"
                       name="search"
-                      className="grow bg-base-200"
+                      className="grow bg-base-200 text-black"
                       onChange={handleInputChange}
                       placeholder="Search"
                       value={inputValue}
                     />
                     {listening ? (
                       <MdKeyboardVoice
-                        className="text-2xl text-red-600"
+                        className="text-2xl text-red-600 "
                         onClick={SpeechRecognition.stopListening}
                       />
                     ) : (
                       <MdKeyboardVoice
-                        className="text-2xl"
+                        className="text-2xl text-black"
                         onClick={SpeechRecognition.startListening}
                       />
                     )}
@@ -227,7 +224,7 @@ const Navbar = ({ allNews }) => {
                       </div>
                       <ul
                         tabIndex={0}
-                        className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
+                        className="dropdown-content z-[1] menu p-2 shadow bg-[#004E5B] rounded-box w-52"
                       >
                         <li>
                           <a>{user?.displayName}</a>
@@ -243,7 +240,7 @@ const Navbar = ({ allNews }) => {
                           </li>
                         )}
 
-                        <li>
+                        <li className="hover:bg-white hover:text-black hover:rounded-lg">
                           <button onClick={logout}>Logout</button>
                         </li>
                       </ul>
@@ -252,14 +249,14 @@ const Navbar = ({ allNews }) => {
                 ) : (
                   <Link
                     to="/login"
-                    className="text-black border border-black px-4 py-2 rounded hover:bg-gray-100"
+                    className="text-white border border-white px-4 py-2 rounded hover:text-black hover:bg-gray-100"
                   >
                     Login
                   </Link>
                 )}
               </div>
               <div className="lg:hidden flex items-center justify-center gap-3">
-              <label className="swap swap-rotate">
+                <label className="swap swap-rotate">
                   {/* this hidden checkbox controls the state */}
                   <input
                     type="checkbox"
@@ -333,6 +330,7 @@ const Navbar = ({ allNews }) => {
           </nav>
 
           {/* Categories Navbar */}
+
           <div className="bg-white pb-2 pt-2 border-b-4 border-[#005689]">
             {/* large device*/}
             <ul className="hidden lg:flex flex-wrap  gap-2 sm:gap-4 items-center justify-center font-bold text-center">
@@ -354,12 +352,11 @@ const Navbar = ({ allNews }) => {
                 </li>
               ))}
             </ul>
-            
-            {/* small device*/}
-          <div className="flex justify-center  gap-3   lg:hidden items-center">
 
-            {/* large device */}
-          <div className="lg:flex items-center space-x-4 hidden">
+            {/* small device*/}
+            <div className="flex justify-center  gap-3   lg:hidden items-center">
+              {/* large device */}
+              <div className="lg:flex items-center space-x-4 hidden">
                 <label className="input input-bordered flex items-center gap-2">
                   {/* Search news */}
                   <svg
@@ -392,7 +389,7 @@ const Navbar = ({ allNews }) => {
                       />
                     ) : (
                       <MdKeyboardVoice
-                        className="text-2xl"
+                        className="text-2xl text-black"
                         onClick={SpeechRecognition.startListening}
                       />
                     )}
@@ -495,7 +492,7 @@ const Navbar = ({ allNews }) => {
                     <input
                       type="text"
                       name="search"
-                      className="grow max-w-[100px] bg-base-200"
+                      className="grow max-w-[150px] bg-base-200"
                       onChange={handleInputChange}
                       placeholder="Search"
                       value={inputValue}
@@ -507,7 +504,7 @@ const Navbar = ({ allNews }) => {
                       />
                     ) : (
                       <MdKeyboardVoice
-                        className="text-2xl"
+                        className="text-2xl text-black"
                         onClick={SpeechRecognition.startListening}
                       />
                     )}
@@ -516,33 +513,38 @@ const Navbar = ({ allNews }) => {
                     </button>
                   </form>
                 </label>
-
-                
               </div>
 
-          <div className="dropdown  dropdown-end">
-  <div tabIndex={0} role="button" className="btn m-1"><FiMenu className="w-6 h-6" /></div>
-  <ul tabIndex={0} className="dropdown-content heebo  w-[300px] menu bg-base-100 rounded z-[1]  p-2 shadow">
-  {categories.map((category) => (
-                <li
-                  key={category}
-                  className={`font-bold rounded-none  border-b-2 border-[#005689] w-full    text-[#232323] ${
-                    active === category ? "text-[#005689]" : ""
-                  } hover:cursor-pointer`}
+              <div className="dropdown  dropdown-end">
+                <div tabIndex={0} role="button" className="btn m-1">
+                  <FiMenu className="w-6 h-6" />
+                </div>
+                <ul
+                  tabIndex={0}
+                  className="dropdown-content heebo  w-[300px] menu bg-base-100 rounded z-[1]  p-2 shadow"
                 >
-                  <Link
-                    to={
-                      category === "Home" ? "/" : `/categoriesNews/${category}`
-                    }
-                    onClick={() => setActive(category)}
-                  >
-                    {category.toUpperCase()}
-                  </Link>
-                </li>
-              ))}
-  </ul>
-</div>
-          </div>
+                  {categories.map((category) => (
+                    <li
+                      key={category}
+                      className={`font-bold rounded-none  border-b-2 border-[#005689] w-full    text-[#232323] ${
+                        active === category ? "text-[#005689]" : ""
+                      } hover:cursor-pointer`}
+                    >
+                      <Link
+                        to={
+                          category === "Home"
+                            ? "/"
+                            : `/categoriesNews/${category}`
+                        }
+                        onClick={() => setActive(category)}
+                      >
+                        {category.toUpperCase()}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -597,6 +599,14 @@ const Navbar = ({ allNews }) => {
                 to={"/usersNews"}
               >
                 Users News
+              </NavLink>
+            </li>
+            <li className="flex justify-between items-center">
+              <NavLink
+                className="border border-1 w-full px-3 py-1"
+                to={"/contact"}
+              >
+                Contact Us
               </NavLink>
             </li>
           </ul>
