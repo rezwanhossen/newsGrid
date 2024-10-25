@@ -113,7 +113,7 @@ const LocationBasedNews = () => {
 
           </div>
 
-      {/* ----------------- */}
+      
 
       <div className="my-10 md:my-20 container mx-auto heebo">
         <div className="flex flex-col md:flex-row justify-center md:justify-between mx-3 md:mx-0 md:px-6 py-4 rounded bg-base-300  items-center  mb-10">
