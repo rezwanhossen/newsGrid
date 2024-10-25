@@ -22,33 +22,34 @@ import { IoMdTime } from "react-icons/io";
 
 
 
-const CategoriesNews = ({allNews}) => {
+const CategoriesNews = () => {
     //  console.log("allNews" , allNews);
 
-    const apiKey = import.meta.env.VITE_NAIMUL_API_KEY;
+    const {category} = useParams();
+    console.log("category" , category);
+    const dispatch = useDispatch();
+    // const apiKey = import.meta.env.VITE_NAIMUL_API_KEY;
      
 
     
      
-     const {category} = useParams();
-     const dispatch = useDispatch();
      
 
     const {data : newsData= [] , isLoading} = useQuery({
         queryKey : ['categoriesNews' , category] , 
         queryFn : async() => {
-            const response = await axios.get(`https://news-grid-server.vercel.app/allnews`);
+            const response = await axios.get('http://localhost:5000/allNews');
+            console.log(response?.data);
             
-            
-      const filterNews = response?.data?.articles.filter(
-      (news) => news.title && news.urlToImage)
-      console.log("newsttttt : " , news);
+            if(response?.data.length > 0){
 
-      const finalNews = filterNews?.filter(news => news?.category === category);
-      // console.log("finalNews" , finalNews)
-      dispatch(setCategoriesNews(finalNews))
+              const finalNews = response?.data?.filter(news => news?.category === category);
+        console.log("final" , finalNews)
+        dispatch(setCategoriesNews(finalNews))
+        return finalNews;
+            }
+       
 
-      return finalNews;
 
         }
     

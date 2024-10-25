@@ -4,11 +4,14 @@ import Card from "../../../../Shared/Card";
 import Slider from "../Slider/Slider";
 import { FaVolumeUp, FaPause, FaPlay } from 'react-icons/fa';
 
+
 const Banner = ({ newsData }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
   const [currentUtterance, setCurrentUtterance] = useState(null);
+
+  
 
   const itemsPerPage = 3;
 

@@ -4,8 +4,11 @@ import axios from "axios";
 import { FaVolumeUp, FaPause, FaPlay, FaBookmark } from "react-icons/fa";
 import useAuth from "../../../Hook/useAuth/useAuth";
 import Swal from "sweetalert2";
+import { useDispatch } from "react-redux";
+import { setAllBreakingNews } from "../../../features/allNews/allNewsSlice";
 
-const BreakingNews = ({ setAllNewsBreaking }) => {
+
+const BreakingNews = () => {
   const [breakingNews, setBreakingNews] = useState([]);
   const [visibleNewsCount, setVisibleNewsCount] = useState(7);
   const [isSpeaking, setIsSpeaking] = useState(false);
@@ -16,6 +19,7 @@ const BreakingNews = ({ setAllNewsBreaking }) => {
   const [date, setDate] = useState("");
   const [bookmarkedArticles, setBookmarkedArticles] = useState([]); // State for bookmarks
   const { user } = useAuth();
+  const dispatch = useDispatch();
 
   // Fetch real-time breaking news
   const fetchNews = async (selectedDate = "") => {
@@ -39,7 +43,8 @@ const BreakingNews = ({ setAllNewsBreaking }) => {
         (a, b) => new Date(b.published) - new Date(a.published)
       );
       setBreakingNews(combinedNews);
-      setAllNewsBreaking(combinedNews);
+      dispatch(setAllBreakingNews(combinedNews))
+      
 
       const url = `https://api.currentsapi.services/v1/search`;
       const params = {
@@ -60,7 +65,6 @@ const BreakingNews = ({ setAllNewsBreaking }) => {
 
       // Update articles if news is found
       setBreakingNews(response.data.news.slice(0, 10));
-      setAllNewsBreaking(response?.data?.news);
       setLoading(false);
     } catch (error) {
       setError("Failed to fetch breaking news. Please try again later.");

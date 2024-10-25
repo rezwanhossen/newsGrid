@@ -1,5 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
+import { useDispatch } from "react-redux";
+import { setNewsData } from "../features/allNews/allNewsSlice";
 
 
 
@@ -7,7 +9,8 @@ import axios from "axios";
 
 
 const useNews = () => {
-    
+    // redux 
+  const dispatch = useDispatch();
   
       
   
@@ -23,6 +26,7 @@ const useNews = () => {
             (news) => news.title && news.urlToImage
           );
           // console.log("newssss : " , news);
+          dispatch(setNewsData(news))
   
           return news;
       },
