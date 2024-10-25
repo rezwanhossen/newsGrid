@@ -34,24 +34,27 @@ const CategoriesNews = ({allNews}) => {
      const dispatch = useDispatch();
      
 
-    const {data : newsData=[] , isLoading} = useQuery({
+    const {data : newsData= [] , isLoading} = useQuery({
         queryKey : ['categoriesNews' , category] , 
         queryFn : async() => {
-            const response = await axios.get(`https://newsapi.org/v2/top-headlines?category=${category}&language=en&apiKey=${apiKey}`);
+            const response = await axios.get(`https://news-grid-server.vercel.app/allnews`);
             
             
-      const news = response?.data?.articles.filter(
+      const filterNews = response?.data?.articles.filter(
       (news) => news.title && news.urlToImage)
       console.log("newsttttt : " , news);
-      dispatch(setCategoriesNews(news))
 
-      return news;
+      const finalNews = filterNews?.filter(news => news?.category === category);
+      // console.log("finalNews" , finalNews)
+      dispatch(setCategoriesNews(finalNews))
+
+      return finalNews;
 
         }
     
     })
 
-    console.log("newsDaata : " , newsData);
+    // console.log("newsDaata : " , newsData);
 
     const [categoryNews , setCategoryNews] = useState([]);
     useEffect( () => {

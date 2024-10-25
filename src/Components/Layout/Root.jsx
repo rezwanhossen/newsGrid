@@ -9,11 +9,12 @@ const Root = () => {
   const [allNews , setAllNews] = useState([]);
   
   const [allNewsLocalStorage , setAllNewsLocalStorage] = useState([]);
-  // console.log("allNewsLocalStorage" , allNewsLocalStorage);
+
 
   // redux
   const locationBasedNews = useSelector((state) => state?.allNews?.locationBasedNews);
   const categoriesNews = useSelector((state) => state?.allNews?.categoriesNews);
+  console.log("allNewsLocalStorage" , allNewsLocalStorage  , locationBasedNews , categoriesNews);
   
 
   
