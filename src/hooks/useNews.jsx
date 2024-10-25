@@ -17,9 +17,9 @@ const useNews = () => {
         
   
           
-            const response = await axios.get(`http://localhost:5000/all-news`);
-            // console.log("response : " , response.data);
-          const news = response?.data?.data?.articles.filter(
+            const response = await axios.get(`https://newsapi.org/v2/everything?q=bitcoin&apiKey=${import.meta.env.VITE_NAIMUL_API_KEY }`);
+            console.log("response : " , response.data);
+          const news = response?.data?.articles.filter(
             (news) => news.title && news.urlToImage
           );
           // console.log("newssss : " , news);

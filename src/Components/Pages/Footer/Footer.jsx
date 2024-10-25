@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import footlogo from "../../../assets/fotlogo.png";
 const Footer = () => {
   return (
@@ -32,12 +33,9 @@ const Footer = () => {
                 "Health",
               ].map((link, index) => (
                 <li className="mb-2" key={index}>
-                  <a
-                    href="#"
-                    className="hover:text-[#FF9A8B] transition duration-300"
-                  >
+                  <Link to={`/categoriesNews/${link.toLowerCase()}`}>
                     {link}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -64,7 +62,7 @@ const Footer = () => {
               Stay updated with the latest news and articles. Subscribe to our
               newsletter.
             </p>
-            <form>
+            {/* <form>
               <input
                 type="email"
                 placeholder="Your email"
@@ -73,7 +71,7 @@ const Footer = () => {
               <button className="w-full bg-red-500 hover:bg-red-600 transition duration-300 text-white font-semibold py-2 rounded">
                 Subscribe
               </button>
-            </form>
+            </form> */}
           </div>
         </div>
 
