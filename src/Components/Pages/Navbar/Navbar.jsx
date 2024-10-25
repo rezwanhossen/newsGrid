@@ -94,7 +94,7 @@ const Navbar = ({ allNews }) => {
 
   const handleToggle = (e) => {
     if (e.target.checked) {
-      setTheme("night");
+      setTheme("black");
     } else {
       setTheme("light");
     }

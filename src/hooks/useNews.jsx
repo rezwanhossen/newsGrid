@@ -27,7 +27,7 @@ const useNews = () => {
           return news;
       },
 });
-
+  console.log(" newsData : " , newsData)
     return [newsData , isLoading]
   
 };

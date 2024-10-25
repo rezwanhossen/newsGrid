@@ -34,7 +34,7 @@ const CategoriesNews = ({allNews}) => {
      const dispatch = useDispatch();
      
 
-    const {data : newsData , isLoading} = useQuery({
+    const {data : newsData=[] , isLoading} = useQuery({
         queryKey : ['categoriesNews' , category] , 
         queryFn : async() => {
             const response = await axios.get(`https://newsapi.org/v2/top-headlines?category=${category}&language=en&apiKey=${apiKey}`);
