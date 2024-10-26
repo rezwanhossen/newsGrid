@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */ 
+/* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { FaBookmark, FaVolumeUp, FaPause, FaPlay } from "react-icons/fa";
@@ -25,7 +25,7 @@ const TrendingNews = () => {
   const [bookmarkedArticles, setBookmarkedArticles] = useState([]);
   const [date, setDate] = useState("");
 
-  const dispatch  = useDispatch();
+  const dispatch = useDispatch();
   const { user } = useAuth();
 
   const fetchNews = async (selectedDate = "") => {
@@ -51,12 +51,12 @@ const TrendingNews = () => {
 
       // Update articles if news is found
       setArticles(response.data.news.slice(0, 10));
-      console.log("trending news : " , response?.data?.news)
-      dispatch(setAllNewsTrending(response?.data?.news))
+      console.log("trending news : ", response?.data?.news);
+      dispatch(setAllNewsTrending(response?.data?.news));
 
       setLoading(false);
     } catch (error) {
-      console.error("API Fetch Error:", error); 
+      console.error("API Fetch Error:", error);
 
       // Fetch backup data from JSON file
       try {
@@ -64,7 +64,7 @@ const TrendingNews = () => {
         setArticles(backupResponse.data.news.slice(0, 10)); // Adjust slice as needed
         setLoading(false);
       } catch (backupError) {
-        console.error("Backup Fetch Error:", backupError); 
+        console.error("Backup Fetch Error:", backupError);
         setError("Failed to load backup data. Please try again later.");
         setLoading(false);
       }

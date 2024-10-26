@@ -285,7 +285,7 @@ const Navbar = () => {
                         </li>
                         {user && isAdmin && (
                           <li>
-                            <Link to="/dashbord/adminHome">Dashboard</Link>
+                            <Link to="/dashbord/users">Dashboard</Link>
                           </li>
                         )}
                         {user && !isAdmin && (
