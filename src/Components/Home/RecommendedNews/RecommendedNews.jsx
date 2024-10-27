@@ -1,9 +1,10 @@
-// import { useEffect, useState } from 'react';
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { FaVolumeUp, FaPause, FaPlay } from "react-icons/fa";
+import { useDispatch } from "react-redux";
+import { setAllRecommendedNews } from "../../../features/allNews/allNewsSlice";
 
-const RecommendedNews = ({setAllNewsRecommended}) => {
+const RecommendedNews = () => {
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -12,8 +13,7 @@ const RecommendedNews = ({setAllNewsRecommended}) => {
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
   const [currentUtterance, setCurrentUtterance] = useState(null);
-  //pub_5554319d28e13bc8be1aab4736ea6ca4bbb0c
-  const apiKey = "pub_55870f30242195533c47f6655ed1ec3bca846";
+  const dispatch = useDispatch();
 
   // Fetch recommended news from NewsData.io API
   const fetchRecommendedNews = async () => {
@@ -21,19 +21,30 @@ const RecommendedNews = ({setAllNewsRecommended}) => {
     try {
       const response = await axios.get("https://newsdata.io/api/1/news", {
         params: {
-          apikey: apiKey,
+          apikey: import.meta.env.VITE_recommended_apiKey,
           country: "us",
           category: "entertainment",
           language: "en",
         },
       });
       setArticles(response.data.results.slice(0, 10));
-      setAllNewsRecommended(response?.data?.results);
+      
+      dispatch(setAllRecommendedNews(response?.data?.results))
       setLoading(false);
     } catch (error) {
-      setError("Failed to fetch recommended news. Please try again later.");
+      console.error(error);
+      loadBackupData();
+    }
+  };
+
+  // Load backup data from a JSON file
+  const loadBackupData = async () => {
+    try {
+      const response = await axios.get("/recommenddata.json"); 
+      setArticles(response.data.results.slice(0, 10)); 
       setLoading(false);
-      console.log(error);
+    } catch (error) {
+      setLoading(false);
     }
   };
 

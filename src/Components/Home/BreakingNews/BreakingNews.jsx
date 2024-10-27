@@ -5,7 +5,8 @@ import { FaVolumeUp, FaPause, FaPlay, FaBookmark } from "react-icons/fa";
 import useAuth from "../../../Hook/useAuth/useAuth";
 import Swal from "sweetalert2";
 
-const BreakingNews = ({ setAllNewsBreaking }) => {
+const BreakingNews = () => {
+  const [allNewsBreaking, setAllNewsBreaking] = useState([]);
   const [breakingNews, setBreakingNews] = useState([]);
   const [visibleNewsCount, setVisibleNewsCount] = useState(7);
   const [isSpeaking, setIsSpeaking] = useState(false);
@@ -16,57 +17,87 @@ const BreakingNews = ({ setAllNewsBreaking }) => {
   const [date, setDate] = useState("");
   const [bookmarkedArticles, setBookmarkedArticles] = useState([]); // State for bookmarks
   const { user } = useAuth();
-  const apiKey = "uX-Tbv7wo0kWPez-lDxwvpryFy8240yUQek_C5a_qIYVl6kb"; // Currents API Key
 
   // Fetch real-time breaking news
   const fetchNews = async (selectedDate = "") => {
     setLoading(true);
 
     try {
+      console.log("Fetching news data...");
 
-      const categories = ["politics", "sports", "technology"];
-      const promises = categories.map((category) =>
-        axios.get(`https://api.currentsapi.services/v1/latest-news`, {
+      if (!selectedDate) {
+        // Categories for general news
+        const categories = ["politics", "sports", "technology"];
+        const promises = categories.map((category) =>
+          axios.get(`https://api.currentsapi.services/v1/latest-news`, {
+            params: {
+              apiKey: import.meta.env.VITE_Breaking_apiKey,
+              category: category,
+              language: "en",
+              page_size: 5,
+            },
+          })
+        );
+
+        const responses = await Promise.all(promises);
+        const combinedNews = responses.flatMap((response) => {
+          console.log("API response for category:", response.data);
+          return response.data.news || [];
+        });
+
+        if (combinedNews.length > 0) {
+          combinedNews.sort((a, b) => new Date(b.published) - new Date(a.published));
+          setBreakingNews(combinedNews);
+          setAllNewsBreaking(combinedNews);
+        } else {
+          setError("No news data found for the selected categories.");
+          setBreakingNews([]);
+        }
+      } else {
+        // Date-specific news fetch
+        const response = await axios.get(`https://api.currentsapi.services/v1/search`, {
           params: {
-            apiKey: apiKey,
-            category: category,
+            apiKey: import.meta.env.VITE_Breaking_apiKey,
             language: "en",
-            page_size: 5,
+            start_date: selectedDate,
+            end_date: selectedDate,
           },
-        })
-      );
-      const responses = await Promise.all(promises);
-      const combinedNews = responses.flatMap((response) => response.data.news);
-      combinedNews.sort(
-        (a, b) => new Date(b.published) - new Date(a.published)
-      );
-      setBreakingNews(combinedNews);
-      setAllNewsBreaking(combinedNews);
+        });
 
-      const url = `https://api.currentsapi.services/v1/search`;
-      const params = {
-        apiKey: apiKey,
-        language: "en",
-        start_date: selectedDate,
-        end_date: selectedDate,
-      };
+        console.log("Date-specific API response:", response.data);
+        const dateSpecificNews = response?.data?.news || [];
 
-      const response = await axios.get(url, { params });
-
-      // Check if no news is found for the selected date
-      if (response.data.news.length === 0) {
-        setError("No breaking news found for this date.");
-        setLoading(false);
-        return;
+        if (dateSpecificNews.length > 0) {
+          setBreakingNews(dateSpecificNews.slice(0, 10));
+          setAllNewsBreaking(dateSpecificNews);
+        } else {
+          setError("No news found for the selected date.");
+          setBreakingNews([]);
+        }
       }
-
-      // Update articles if news is found
-      setBreakingNews(response.data.news.slice(0, 10));
-      setAllNewsBreaking(response?.data?.news);
-      setLoading(false);
-
     } catch (error) {
-      setError("Failed to fetch breaking news. Please try again later.");
+      console.error("Error fetching news:", error);
+      loadBackupData();
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  // Load backup data from JSON file if API fails
+  const loadBackupData = async () => {
+    try {
+      const response = await axios.get("/breakingdata.json");
+
+      // Set the published date of each item to today's date
+      const updatedNews = response.data.news.slice(0, 10).map((newsItem) => ({
+        ...newsItem,
+        published: new Date().toISOString(), // Set to current date in ISO format
+      }));
+
+      setBreakingNews(updatedNews);
+      setLoading(false);
+    } catch (error) {
+      setError("Failed to load backup data as well. Please try again later.");
       setLoading(false);
     }
   };
@@ -232,7 +263,10 @@ const BreakingNews = ({ setAllNewsBreaking }) => {
             </a>
 
             {/* Bookmark Button */}
-            <button onClick={() => handleBookmark(breakingNews[0])}>
+            <button
+              className="flex items-center gap-2"
+              onClick={() => handleBookmark(breakingNews[0])}
+            >
               <FaBookmark /> Bookmark
             </button>
 

@@ -1,35 +1,20 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
-
-
-
-
-
+// `https://newsapi.org/v2/everything?q=bitcoin&apiKey=${
+//           import.meta.env.VITE_NAIMUL_API_KEY
+//         }`
 
 const useNews = () => {
-    
-  
-      
-  
-    const { data: newsData = [], isLoading } = useQuery({
-      queryKey: ["news"],
-      queryFn: async () => {
-        
-  
-          
-            const response = await axios.get(`https://newsapi.org/v2/everything?q=bitcoin&apiKey=${import.meta.env.VITE_NAIMUL_API_KEY || '950d4efc55c24a31bf9a060eaf29f5fb'}`);
-            console.log("response : " , response.data);
-          const news = response?.data?.articles.filter(
-            (news) => news.title && news.urlToImage
-          );
-          // console.log("newssss : " , news);
-  
-          return news;
-      },
-});
+  const { data: newsData = [], isLoading } = useQuery({
+    queryKey: ["allnews"],
+    queryFn: async () => {
+      const { data } = await axios.get("http://localhost:5000/allnews");
+      return data;
+    },
+  });
+  console.log(newsData);
 
-    return [newsData , isLoading]
-  
+  return [newsData, isLoading];
 };
 
 export default useNews;

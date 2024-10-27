@@ -5,13 +5,39 @@ import useAxiosPublic from "../../../hooks/useAxiosPublic";
 import axios from "axios";
 import { AuthContext } from "../../Fairbase/AuthProvider";
 import Swal from "sweetalert2";
-// import Swal from 'sweetalert2/dist/sweetalert2.js'
 import "sweetalert2/src/sweetalert2.scss";
+import { useQuery } from "@tanstack/react-query";
+import useAxiosCommon from "../../../Hook/useAxiosCommon";
 
 const AddNews = () => {
   const [selectedDate, setSelectedDate] = useState(new Date());
+  const [description, setDescription] = useState("");
+  const [isSubmitDisabled, setIsSubmitDisabled] = useState(false); // Track submit button state
   const axiosPublic = useAxiosPublic();
   const { user } = useContext(AuthContext);
+  const axiosCommon = useAxiosCommon();
+  const { data: payments = [], isLoading } = useQuery({
+    queryKey: ["payments"],
+    queryFn: async () => {
+      const { data } = await axiosCommon.get("/payment");
+      return data;
+    },
+  });
+  const matchingPayment = payments.find((pay) => pay?.email === user?.email);
+
+  // Handle description change and word count validation
+  const handleDescriptionChange = (e) => {
+    const text = e.target.value;
+    const wordCount = text.trim().split(/\s+/).length;
+
+    setDescription(text);
+
+    if (wordCount > 300) {
+      setIsSubmitDisabled(true); // Disable submit if word count exceeds 300
+    } else {
+      setIsSubmitDisabled(false); // Enable submit if within limit
+    }
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -27,16 +53,6 @@ const AddNews = () => {
     const urlToImage = form.urlToImage.value;
     const category = form.category.value;
 
-    console.log(
-      author,
-      content,
-      url,
-      title,
-      publishedAt,
-      description,
-      urlToImage
-    );
-
     const addNews = {
       userName,
       email,
@@ -51,13 +67,9 @@ const AddNews = () => {
       category,
     };
 
-    console.log(addNews);
-
-    const res = axios.post(`${axiosPublic}/addNews`, addNews);
     axiosPublic
       .post("/addNews", addNews)
       .then((res) => {
-        console.log(res.data);
         if (res.data.insertedId) {
           Swal.fire({
             position: "top-end",
@@ -72,6 +84,7 @@ const AddNews = () => {
         console.error(error);
       });
   };
+
   return (
     <div className="my-5">
       <div className="text-center heebo">
@@ -176,6 +189,7 @@ const AddNews = () => {
                   />
                 </div>
               </div>
+
               <div className="form-control w-full bg-white rounded-lg py-5 px-4">
                 <label className="label">
                   <span className="text-base font-semibold text-[#005689]">
@@ -183,7 +197,6 @@ const AddNews = () => {
                     <span className="text-lg text-red-600"> *</span>
                   </span>
                 </label>
-                {/* <input type="text" placeholder="category news"name="category" className="border-b-2  border-[#005689] focus:border-b-2 focus:border-[#7baac5] outline-none"required /> */}
                 <select
                   className="border-b-2  border-[#005689] focus:border-b-2 focus:border-[#7baac5] outline-none"
                   name="category"
@@ -199,22 +212,39 @@ const AddNews = () => {
                   <option value="politics">Politics</option>
                 </select>
               </div>
+
               <div className="form-control w-full bg-white rounded-lg py-5 px-4">
                 <label className="label">
                   <span className="text-base font-semibold text-[#005689]">
                     Description <span className="text-lg text-red-600"> *</span>
                   </span>
                 </label>
-                <textarea
-                  name="description"
-                  id=""
-                  className="border-b-2  border-[#005689] focus:border-b-2 focus:border-[#7baac5] outline-none"
-                  placeholder="description ( 250-300 ) words"
-                ></textarea>
+                {matchingPayment ? (
+                  <textarea
+                    name="description"
+                    id=""
+                    className="border-b-2  border-[#005689] focus:border-b-2 focus:border-[#7baac5] outline-none"
+                    placeholder="description words"
+                  ></textarea>
+                ) : (
+                  <textarea
+                    name="description"
+                    id=""
+                    className="border-b-2  border-[#005689] focus:border-b-2 focus:border-[#7baac5] outline-none"
+                    placeholder="description (max 300 words)"
+                    value={description}
+                    onChange={handleDescriptionChange} // Handle input change
+                    required
+                  ></textarea>
+                )}
               </div>
 
-              <div className="form-control mt-6">
-                <button className="btn bg-[#005689] text-white hover:bg-[#043d5e]">
+              <div className="form-control mt-6 bg-white rounded-lg py-5 px-4">
+                <button
+                  className={`bg-[#006589] hover:bg-[#1c3eaf] w-full py-3 text-white rounded-md cursor-pointer`}
+                  type="submit"
+                  disabled={isSubmitDisabled} // Disable button based on word count
+                >
                   Submit
                 </button>
               </div>

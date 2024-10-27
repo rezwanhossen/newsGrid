@@ -34,7 +34,7 @@ const Login = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       {/* Main container */}
-      <div className="w-full max-w-4xl flex bg-white rounded-lg shadow-lg overflow-hidden">
+      <div className="w-full max-w-4xl flex  bg-white rounded-lg shadow-lg overflow-hidden">
         {/* Left side - Form */}
         <div className="w-1/2 p-8 bg-white">
           <h2 className="text-3xl font-bold text-gray-800 mb-6">Login</h2>
@@ -49,8 +49,9 @@ const Login = () => {
               </label>
               <input
                 type="email"
-                className={`w-full bg-gray-100 border py-3 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${errors.email ? "border-red-500" : "border-gray-300"
-                  }`}
+                className={`w-full bg-gray-100 border py-3 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+                  errors.email ? "border-red-500" : "border-gray-300"
+                }`}
                 placeholder="Enter your username"
                 {...register("email", { required: "Email is required" })}
               />
@@ -69,8 +70,9 @@ const Login = () => {
               </label>
               <input
                 type={showPassword ? "text" : "password"}
-                className={`w-full bg-gray-100 border py-3 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${errors.password ? "border-red-500" : "border-gray-300"
-                  }`}
+                className={`w-full bg-gray-100 border py-3 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+                  errors.password ? "border-red-500" : "border-gray-300"
+                }`}
                 placeholder="Enter your password"
                 {...register("password", { required: "Password is required" })}
               />
@@ -118,10 +120,13 @@ const Login = () => {
 
         {/* Right side - Welcome message */}
         <div className="w-1/2 bg-gray-600 text-white flex flex-col justify-center items-center p-10">
-          <h2 className="text-4xl font-bold mb-5">Welcome to <span className="font-bold ">News Grid!</span></h2>
+          <h2 className="text-4xl font-bold mb-5">
+            Welcome to <span className="font-bold ">News Grid!</span>
+          </h2>
           <p className="text-lg text-center  text-white">
-            Stay updated with the latest headlines and trending stories from around the globe.
-            Dive into a curated feed of top news, tailored just for you.
+            Stay updated with the latest headlines and trending stories from
+            around the globe. Dive into a curated feed of top news, tailored
+            just for you.
           </p>
         </div>
       </div>

@@ -12,9 +12,10 @@ import {
 } from "react-share";
 import Swal from "sweetalert2";
 import useAuth from "../../../Hook/useAuth/useAuth";
+import { useDispatch } from "react-redux";
+import { setAllNewsTrending } from "../../../features/allNews/allNewsSlice";
 
-
-const TrendingNews = ({ setAllNewsTrending }) => {
+const TrendingNews = () => {
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -23,18 +24,17 @@ const TrendingNews = ({ setAllNewsTrending }) => {
   const [isPaused, setIsPaused] = useState(false);
   const [bookmarkedArticles, setBookmarkedArticles] = useState([]);
   const [date, setDate] = useState("");
-  const apiKey = "uX-Tbv7wo0kWPez-lDxwvpryFy8240yUQek_C5a_qIYVl6kb";
 
+  const dispatch = useDispatch();
   const { user } = useAuth();
 
   const fetchNews = async (selectedDate = "") => {
     setLoading(true);
 
-
     try {
       const url = `https://api.currentsapi.services/v1/search`;
       const params = {
-        apiKey: apiKey,
+        apiKey: import.meta.env.VITE_Breaking_apiKey,
         language: "en",
         start_date: selectedDate,
         end_date: selectedDate,
@@ -47,16 +47,27 @@ const TrendingNews = ({ setAllNewsTrending }) => {
         setError("No news found for this date.");
         setLoading(false);
         return;
-       
       }
 
       // Update articles if news is found
       setArticles(response.data.news.slice(0, 10));
-      setAllNewsTrending(response?.data?.news);
+      console.log("trending news : ", response?.data?.news);
+      dispatch(setAllNewsTrending(response?.data?.news));
+
       setLoading(false);
     } catch (error) {
-      setError("Failed to fetch news. Please try again later.");
-      setLoading(false);
+      console.error("API Fetch Error:", error);
+
+      // Fetch backup data from JSON file
+      try {
+        const backupResponse = await axios.get("/trendingdata.json");
+        setArticles(backupResponse.data.news.slice(0, 10)); // Adjust slice as needed
+        setLoading(false);
+      } catch (backupError) {
+        console.error("Backup Fetch Error:", backupError);
+        setError("Failed to load backup data. Please try again later.");
+        setLoading(false);
+      }
     }
   };
 
@@ -109,7 +120,7 @@ const TrendingNews = ({ setAllNewsTrending }) => {
     }
 
     const isAlreadyBookmarked = bookmarkedArticles.some(
-      (bookmarkedArticle) => bookmarkedArticle.url == article.url
+      (bookmarkedArticle) => bookmarkedArticle.url === article.url
     );
 
     if (isAlreadyBookmarked) {
@@ -125,7 +136,7 @@ const TrendingNews = ({ setAllNewsTrending }) => {
       image: article.image,
       title: article.title,
       url: article.url,
-      email: user.email, 
+      email: user.email,
     };
 
     // Save bookmark to database
@@ -139,7 +150,7 @@ const TrendingNews = ({ setAllNewsTrending }) => {
       .then((res) => res.json())
       .then((data) => {
         if (data.insertedId) {
-          setBookmarkedArticles((prev) => [...prev, newBookmark]); 
+          setBookmarkedArticles((prev) => [...prev, newBookmark]);
           Swal.fire({
             title: "Success!",
             text: "Article successfully added to bookmarks.",
@@ -260,37 +271,30 @@ const TrendingNews = ({ setAllNewsTrending }) => {
                   <button
                     onClick={handlePause}
                     className="ml-4 flex items-center text-gray-600 hover:text-blue-500"
-                    aria-label="Pause/Resume"
+                    aria-label="Pause/Resume Audio"
                   >
                     {isPaused ? (
-                      <>
-                        <FaPlay size={24} className="mr-2" />
-                        Resume
-                      </>
+                      <FaPlay size={24} className="mr-2" />
                     ) : (
-                      <>
-                        <FaPause size={24} className="mr-2" />
-                        Pause
-                      </>
+                      <FaPause size={24} className="mr-2" />
                     )}
+                    {isPaused ? "Resume" : "Pause"}
                   </button>
                 )}
               </div>
             </div>
           </div>
         ))}
-      </div>
 
-      {!showAll && articles.length > 2 && (
-        <div className="mt-6 text-center">
+        {!showAll && articles.length > 2 && (
           <button
             onClick={handleShowMore}
-            className="px-4 py-2 bg-[#00A6A6] text-white rounded-md hover:bg-[#007E7E] transition"
+            className="mt-4 w-full px-4 py-2 bg-[#00A6A6] text-white rounded-md hover:bg-[#007E7E] transition"
           >
             Show More
           </button>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 };

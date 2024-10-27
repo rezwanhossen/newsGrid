@@ -8,16 +8,20 @@ import Loading from "../../Loading/Loading";
 import { useDispatch } from "react-redux";
 import { setLocationBasedNews } from "../../../features/allNews/allNewsSlice";
 
+
 const LocationBasedNews = () => {
   const [location, setLocation] = useState({ latitude: null, longitude: null });
   const [city, setCity] = useState("");
   const [country, setCountry] = useState("");
   const [error, setError] = useState("");
+
   const [locationBasedNews, setLocationBasednews] = useState([]);
   const [loading , setLoading] = useState(true);
 
   // redux
   const dispatch = useDispatch();
+
+
 
 
 
@@ -52,14 +56,16 @@ const LocationBasedNews = () => {
 
               axios
                 .get(
-                  `https://newsapi.org/v2/everything?q=${response?.data?.address?.city}&apiKey=${import.meta.env.VITE_NAIMUL_API_KEY || '950d4efc55c24a31bf9a060eaf29f5fb'}`
+                  `https://newsapi.org/v2/everything?q=${response?.data?.address?.city}&apiKey=${import.meta.env.VITE_NAIMUL_API_KEY}`
                 )
                 .then((res) => {
                   // console.log(res?.data)-8/
 
+
                   setLocationBasednews(res?.data?.articles);
                   dispatch(setLocationBasedNews(res?.data?.articles))
                   setLoading(false);
+
                 });
             })
             .catch((error) => {
@@ -81,15 +87,20 @@ const LocationBasedNews = () => {
     return <Loading></Loading>
   }
 
+
+  if(loading){
+    return <Loading></Loading>
+  }
+
   return (
     <div>
-     
+
 
 
           <div>
           {
     location?.latitude && location?.longitude &&
-      <MapContainer center={[location?.latitude, location?.longitude]} zoom={13} style={{ height: "500px", width: "100%" }} className="mt-[137px] z-10">
+      <MapContainer center={[location?.latitude, location?.longitude]} zoom={13}  className="mt-[171px] lg:mt-[136px] z-10 w-full h-[350px] lg:h-[500px]">
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -102,11 +113,11 @@ const LocationBasedNews = () => {
 
           </div>
 
-      {/* ----------------- */}
+      
 
-      <div className="my-10 md:my-20 container mx-auto heebo">
+      <div className="my-10 md:my-20 container mx-auto heebo text-black">
         <div className="flex flex-col md:flex-row justify-center md:justify-between mx-3 md:mx-0 md:px-6 py-4 rounded bg-base-300  items-center  mb-10">
-          <h1 className="text-xl md:text-2xl    font-bold heebo text-[#4A4A4A] ">
+          <h1 className="text-xl md:text-2xl    font-bold heebo  ">
             Location Based News
           </h1>
 
@@ -146,7 +157,7 @@ const LocationBasedNews = () => {
               </div>
             </div>
 
-            <h1 className="text-base md:text-xl text-[#4A4A4A]    font-bold heebo ">
+            <h1 className="text-base md:text-xl     font-bold heebo ">
               My City : {city} , {country}{" "}
             </h1>
           </div>
@@ -175,7 +186,7 @@ const LocationBasedNews = () => {
                     </div>
 
                     <div className="space-y-3 p-5 w-full md:w-[70%]   heebo ">
-                      <h3 className="text-xl text-[#4A4A4A] font-medium">
+                      <h3 className="text-xl  font-medium">
                         {news?.title.slice(0, 100)}...
                       </h3>
                       <p className="text-lg font-bold">
@@ -184,7 +195,7 @@ const LocationBasedNews = () => {
                           {news?.publishedAt.slice(0, 10)}
                         </span>
                       </p>
-                      <p className="text-lg text-[#4A4A4A]">
+                      <p className="text-lg ">
                         {news?.description.slice(0, 200)}
                       </p>
                       <ReadMoreLink news={news}></ReadMoreLink>
@@ -208,7 +219,7 @@ const LocationBasedNews = () => {
                     </div>
 
                     <div className="space-y-3 p-5 lg:w-[65%]   heebo ">
-                      <h3 className="text-lg md:text-xl text-[#4A4A4A] font-medium">
+                      <h3 className="text-lg md:text-xl  font-medium">
                         {news?.title.slice(0, 30)}...
                       </h3>
                       <p className="text-lg font-bold">
@@ -217,7 +228,7 @@ const LocationBasedNews = () => {
                           {news?.publishedAt.slice(0, 10)}
                         </span>
                       </p>
-                      <p className="text-lg hidden md:block text-[#4A4A4A]">
+                      <p className="text-lg hidden md:block ">
                         {news?.description.slice(0, 60)}
                       </p>
                       <ReadMoreLink news={news}></ReadMoreLink>
@@ -241,7 +252,7 @@ const LocationBasedNews = () => {
                     </div>
 
                     <div className=" p-5 space-y-2   heebo ">
-                      <h3 className="text-xl text-[#4A4A4A] font-medium">
+                      <h3 className="text-xl  font-medium">
                         {news?.title.slice(0, 45)}...
                       </h3>
                       <p className="text-lg font-bold">
@@ -250,7 +261,7 @@ const LocationBasedNews = () => {
                           {news?.publishedAt.slice(0, 10)}
                         </span>
                       </p>
-                      <p className="text -lg text-[#4A4A4A]">
+                      <p className="text -lg ">
                         {news?.description?.slice(0, 100)}
                       </p>
                       <ReadMoreLink news={news}></ReadMoreLink>

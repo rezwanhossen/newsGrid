@@ -8,7 +8,7 @@ const PersonalizedNews = () => {
   const [objectDataForStoreInMongodb, setObjDataForStoreInMongodb] =
     useState(null);
   console.log("alhamdulillah category is", selectedCategory);
-// alhamdulillah
+  // alhamdulillah
   const { user } = useAuth();
   const userEmail = user.email;
 
@@ -64,9 +64,6 @@ const PersonalizedNews = () => {
       setObjDataForStoreInMongodb(obj);
     }
   }, [selectedCategory, userEmail]);
-
-
-  
 
   useEffect(() => {
     if (objectDataForStoreInMongodb !== null) {
