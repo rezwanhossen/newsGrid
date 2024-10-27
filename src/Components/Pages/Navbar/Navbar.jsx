@@ -658,6 +658,14 @@ const Navbar = () => {
             <li className="flex justify-between items-center">
               <NavLink
                 className="border border-1 w-full px-3 py-1"
+                to={"/weatherNews"}
+              >
+                Weather News
+              </NavLink>
+            </li>
+            <li className="flex justify-between items-center">
+              <NavLink
+                className="border border-1 w-full px-3 py-1"
                 to={"/contact"}
               >
                 Contact Us

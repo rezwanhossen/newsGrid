@@ -41,7 +41,6 @@ const BreakingNews = () => {
 
         const responses = await Promise.all(promises);
         const combinedNews = responses.flatMap((response) => {
-          console.log("API response for category:", response.data);
           return response.data.news || [];
         });
 
