@@ -53,8 +53,7 @@ const TrendingNews = () => {
       setArticles(response.data.news.slice(0, 10));
 
       // console.log("trending news : " , response?.data?.news)
-      dispatch(setAllNewsTrending(response?.data?.news))
-
+      dispatch(setAllNewsTrending(response?.data?.news));
 
       setLoading(false);
     } catch (error) {
@@ -142,7 +141,7 @@ const TrendingNews = () => {
     };
 
     // Save bookmark to database
-    fetch("http://localhost:5000/bookmarks", {
+    fetch("https://news-grid-server.vercel.app/bookmarks", {
       method: "POST",
       headers: {
         "content-type": "application/json",
