@@ -55,15 +55,13 @@ const LocationBasedNews = () => {
               setCountry(response?.data?.address?.country);
 
               axios
-                .get(
-                  `https://newsapi.org/v2/everything?q=${response?.data?.address?.city}&apiKey=${import.meta.env.VITE_NAIMUL_API_KEY}`
-                )
+                .get('/categories.json')
                 .then((res) => {
-                  // console.log(res?.data)-8/
+                  // console.log(res?.data)
 
-
-                  setLocationBasednews(res?.data?.articles);
-                  dispatch(setLocationBasedNews(res?.data?.articles))
+                  
+                  setLocationBasednews(res?.data.slice(40 , 56));
+                  dispatch(setLocationBasedNews(res?.data?.slice(40 , 56)))
                   setLoading(false);
 
                 });
@@ -88,9 +86,7 @@ const LocationBasedNews = () => {
   }
 
 
-  if(loading){
-    return <Loading></Loading>
-  }
+  
 
   return (
     <div>
@@ -100,7 +96,7 @@ const LocationBasedNews = () => {
           <div>
           {
     location?.latitude && location?.longitude &&
-      <MapContainer center={[location?.latitude, location?.longitude]} zoom={13}  className="mt-[171px] lg:mt-[136px] z-10 w-full h-[350px] lg:h-[500px]">
+      <MapContainer center={[location?.latitude, location?.longitude]} zoom={13}  className="mt-[164px] lg:mt-[136px] z-10 w-full h-[350px] lg:h-[500px]">
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

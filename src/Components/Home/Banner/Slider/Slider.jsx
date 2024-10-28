@@ -3,6 +3,7 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const Slider = ({ newsData = [] }) => {
+  console.log(newsData?.slice(0 , 4));
   // Handle case where no news data is provided or empty
   if (!newsData || newsData.length === 0) {
     return <p>No news available at the moment.</p>;
@@ -21,9 +22,9 @@ const Slider = ({ newsData = [] }) => {
         {newsData.slice(0, 4).map((news, index) => (
           <div key={index} className="relative h-[450px] lg:rounded-lg">
             {/* Image display with fallback */}
-            {news?.urlToImage ? (
+            {news?.image ? (
               <img
-                src={news.urlToImage}
+                src={news?.image !== 'None' ? news?.image  : 'https://img.etimg.com/thumb/height-450,width-600,imgsize-28230,msid-112274525/bangladesh-highlights-news-updates-former-bangladeshi-pm-sheikh-hasina-resigns-as-widening-unrest-sees-protesters-storm-her-official-residence.jpg'}
                 className="h-full w-full object-cover lg:rounded-lg"
                 alt={news.title || "News image"}
               />

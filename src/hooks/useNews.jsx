@@ -20,18 +20,21 @@ const useNews = () => {
         
   
           
-            const response = await axios.get(`https://newsapi.org/v2/everything?q=bitcoin&apiKey=${import.meta.env.VITE_NAIMUL_API_KEY }`);
+            const response = await axios.get(`https://api.currentsapi.services/v1/latest-news` , {
+              params : {
+                apiKey : import.meta.env.VITE_NAIMUL_API_KEY,
+                page_size : 30
+              }
+            });
             // console.log("response : " , response.data);
-          const news = response?.data?.articles.filter(
-            (news) => news.title && news.urlToImage
-          );
+          const news = response?.data?.news.filter((news) => news.title && news?.image);
           // console.log("newssss : " , news);
           dispatch(setNewsData(news))
   
           return news;
       },
 });
-  // console.log(" newsData : " , newsData)
+  console.log(" newsData : " , newsData)
     return [newsData , isLoading]
   
 };
