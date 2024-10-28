@@ -16,7 +16,6 @@ const FeaturedSection = () => {
   const [newsData, setNewsData] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [categories, setCategories] = useState([]);
-  
 
   // Fetch news data
   useEffect(() => {
@@ -60,7 +59,6 @@ const FeaturedSection = () => {
         }
       });
   };
-
 
   const displayedNews = selectedCategory
     ? newsData.filter((item) => item.category === selectedCategory)
@@ -172,4 +170,3 @@ const FeaturedSection = () => {
 };
 
 export default FeaturedSection;
-

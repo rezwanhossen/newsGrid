@@ -23,7 +23,6 @@ const AuthProvider = ({ children }) => {
 
   const [user, setUser] = useState(null);
   const [loding, setLoding] = useState(true);
- 
 
   //user create
   const createuser = (email, password) => {
@@ -66,33 +65,6 @@ const AuthProvider = ({ children }) => {
     return data;
   };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   useEffect(() => {
     const unsubscrib = onAuthStateChanged(auth, (curentuser) => {
       setUser(curentuser);
@@ -123,7 +95,7 @@ const AuthProvider = ({ children }) => {
     updateprofile,
     login,
     googlelogin,
-    logout
+    logout,
   };
   return (
     <AuthContext.Provider value={authinfo}>{children}</AuthContext.Provider>

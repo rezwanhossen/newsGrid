@@ -27,8 +27,10 @@ const CategoriesNews = () => {
   const { data: newsData = [], isLoading } = useQuery({
     queryKey: ["categoriesNews", category],
     queryFn: async () => {
+
       const response = await axios.get("https://news-grid-server.vercel.app/allnews");
-      console.log(response?.data);
+
+     
 
       if (response?.data.length > 0) {
         const finalNews = response?.data?.filter(
@@ -46,7 +48,9 @@ const CategoriesNews = () => {
   const [categoryNews, setCategoryNews] = useState([]);
   useEffect(() => {
     axios
+
       .get(`https://news-grid-server.vercel.app/myNews/category?category=${category}`)
+
       .then((res) => {
         // console.log("res : " , res.data)
         setCategoryNews(res.data);

@@ -20,7 +20,7 @@ const useNews = () => {
         
   
           
-            const response = await axios.get(`https://api.currentsapi.services/v1/latest-news` , {
+            const response = await axios.get(https://api.currentsapi.services/v1/latest-news , {
               params : {
                 apiKey : import.meta.env.VITE_NAIMUL_API_KEY,
                 page_size : 30

@@ -1,34 +1,2430 @@
 [
-    {
-      "img": "https://www.unicef.org/sites/default/files/styles/hero_desktop/public/20240830_Bangladesh_1.webp?itok=jY1OqxoJ",
-      "title": "Flooding in Eastern Bangladesh Affects Millions",
-      "short_des": "Severe flooding has displaced over 500,000 people in the eastern region.",
-      "long_des": "Over 5.8 million people have been impacted by flooding in eastern Bangladesh, especially in Noakhali and Feni. More than 500,000 people have been displaced and are seeking refuge in overcrowded evacuation centers. Women and girls are facing additional challenges with limited access to sanitation and increased risk of gender-based violence.",
-      "date": "2024-09-16",
-      "time": "10:00 AM"
+  {
+    "source": {
+      "id": "wired",
+      "name": "Wired"
     },
-    {
-      "img": "https://ecdn.dhakatribune.net/contents/cache/images/900x0x1/uploads/dten/2023/04/17/bgb-market---dt.jpeg",
-      "title": "Fire Breaks Out in Uttara Kitchen Market",
-      "short_des": "A fire severely damages shops in Uttara kitchen market, Dhaka.",
-      "long_des": "A significant fire broke out in Uttara's kitchen market, damaging multiple shops. The fire was eventually brought under control, and authorities are investigating the cause. No casualties have been reported yet.",
-      "date": "2024-09-17",
-      "time": "8:30 AM"
+    "author": "Joel Khalili",
+    "title": "Unmasking Bitcoin Creator Satoshi Nakamoto—Again",
+    "description": "A new HBO documentary takes a swing at uncovering the real identity of Satoshi Nakamoto, inventor of Bitcoin. But without incontrovertible proof, the myth lives on.",
+    "url": "https://www.wired.com/story/unmasking-bitcoin-creator-satoshi-nakamoto-again/",
+    "urlToImage": "https://media.wired.com/photos/6703eb3979f13fda7f04485b/191:100/w_1280,c_limit/Satoshi-Nakamoto-biz-1341874258.jpg",
+    "publishedAt": "2024-10-09T01:00:00Z",
+    "content": "Peter Todd is standing on the upper floor of a dilapidated industrial building somewhere in Czechia, chuckling under his breath. He has just been accused on camera of being Satoshi Nakamoto, the Bitc… [+3043 chars]",
+    "category": "technology"
+  },
+  {
+    "source": {
+      "id": "wired",
+      "name": "Wired"
     },
-    {
-      "img": "https://www.thedailystar.net/sites/default/files/styles/very_big_201/public/images/2022/01/22/sust-student.jpg",
-      "title": "College Student Drowns in SUST Campus Pond",
-      "short_des": "A college student drowns in a pond at Shahjalal University.",
-      "long_des": "A tragic incident occurred at Shahjalal University of Science and Technology (SUST) where a college student drowned in a campus pond. Authorities are investigating the situation, and the incident has raised concerns about campus safety.",
-      "date": "2024-09-16",
-      "time": "5:00 PM"
+    "author": "Joel Khalili",
+    "title": "Peter Todd Was ‘Unmasked’ As Bitcoin Creator Satoshi Nakamoto. Now He’s In Hiding",
+    "description": "Peter Todd has gone underground after an HBO documentary named him as the creator of Bitcoin, Satoshi Nakamoto, whose real identity has long remained a mystery.",
+    "url": "https://www.wired.com/story/peter-todd-was-unmasked-as-bitcoin-creator-satoshi-nakamoto-now-hes-in-hiding/",
+    "urlToImage": "https://media.wired.com/photos/6716870e6874cb5feda0798e/191:100/w_1280,c_limit/102124-bitcoin-satoshi-an.jpg",
+    "publishedAt": "2024-10-22T11:33:59Z",
+    "content": "In the week before the documentary was released, online betting markets had Len Sassaman, a cryptographer who moved in similar online circles to Satoshi, as the most likely candidate to be revealed a… [+2075 chars]",
+    "category": "technology"
+  },
+  {
+    "source": {
+      "id": "wired",
+      "name": "Wired"
     },
-    {
-      "img": "https://ecdn.dhakatribune.net/contents/cache/images/400x225x1/uploads/media/2023/09/29/Bangladesh-bank-d4438d886ff89cdffac40c985a1f21e4.jpg?jadewits_media_id=5495",
-      "title": "Bangladesh Bank Restricts Media Amid Merger Tension",
-      "short_des": "Tension arises in the banking sector regarding a potential bank merger.",
-      "long_des": "Amid growing tension surrounding the potential merger of several banks, Bangladesh Bank has restricted media access. Only eight local banks are in good financial standing, adding pressure to the ongoing situation.",
-      "date": "2024-09-17",
-      "time": "9:00 AM"
-    }
-  ]
+    "author": "Joel Khalili",
+    "title": "In the Kentucky Mountains, a Bitcoin Mining Dream Becomes the Stuff of Nightmares",
+    "description": "When bitcoin was on a hot streak, owners of small industrial facilities in Kentucky struck up crypto mining partnerships with Chinese companies. Then things fell apart.",
+    "url": "https://www.wired.com/story/in-the-kentucky-mountains-a-bitcoin-mining-dream-becomes-the-stuff-of-nightmares/",
+    "urlToImage": "https://media.wired.com/photos/670981994729e98a3f0fd49d/191:100/w_1280,c_limit/Kentucky-Farmers-Crypto-Mining-Duped-Business.jpg",
+    "publishedAt": "2024-10-21T11:00:00Z",
+    "content": "In both cases, Biofuel claims, the firms shipped equipment from China to its hosting facility in Eastern Kentucky, then walked away with the bitcoin produced, leaving behind hundreds of thousands of … [+2717 chars]",
+    "category": "business"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "[Removed]"
+    },
+    "author": null,
+    "title": "[Removed]",
+    "description": "[Removed]",
+    "url": "https://removed.com",
+    "urlToImage": null,
+    "publishedAt": "2024-10-17T19:35:08Z",
+    "content": "[Removed]",
+    "category": "general"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Gizmodo.com"
+    },
+    "author": "Matthew Gault",
+    "title": "Controversial HBO Documentary Concludes Peter Todd Invented Bitcoin",
+    "description": "The cryptocurrency community is not amused.",
+    "url": "https://gizmodo.com/controversial-hbo-documentary-concludes-peter-todd-invented-bitcoin-2000509751",
+    "urlToImage": "https://gizmodo.com/app/uploads/2024/10/PeterToddHBO.jpg",
+    "publishedAt": "2024-10-09T14:05:37Z",
+    "content": "Last night, HBO aired a documentary about Bitcoin that claimed to reveal the identity of the cryptocurrencys anonymous creator Satoshi Nakamoto. In Money Electric, journalist Cullen Hoback chased the… [+3152 chars]",
+    "category": "technology"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Gizmodo.com"
+    },
+    "author": "Todd Feathers",
+    "title": "FBI Arrests Man Who Searched ‘How Can I Know for Sure If I Am Being Investigated by the FBI’",
+    "description": "Eric Counsel Jr. is accused of helping to hack the U.S. Securities and Exchange Commission's X account in order to post false information about Bitcoin.",
+    "url": "https://gizmodo.com/fbi-arrests-man-who-searched-how-can-i-know-for-sure-if-i-am-being-investigated-by-the-fbi-2000513216",
+    "urlToImage": "https://gizmodo.com/app/uploads/2024/10/sec-bitcoin-hack-arrest.jpg",
+    "publishedAt": "2024-10-17T21:10:49Z",
+    "content": "The FBI has arrested an Alabama man who allegedly hacked the U.S. Securities and Exchange Commission’s X (formerly Twitter) account in order to post erroneous information about Bitcoin that briefly d… [+2369 chars]",
+    "category": "politics"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Gizmodo.com"
+    },
+    "author": "Lucas Ropek",
+    "title": "New HBO Doc Promises to Unmask the Mysterious Inventor of Bitcoin",
+    "description": "Who invented crypto? A filmmaker believes he's cracked the case.",
+    "url": "https://gizmodo.com/new-hbo-doc-promises-to-unmask-the-mysterious-inventor-of-bitcoin-2000507216",
+    "urlToImage": "https://gizmodo.com/app/uploads/2024/10/A-Statue-of-the-Mysterious-Bitcoin-Inventor-Satoshi-Nakamoto-in-Budapest-Park.jpg",
+    "publishedAt": "2024-10-04T13:35:42Z",
+    "content": "The world has long wondered who created Bitcoin. Ever since a white paper bearing his name was published on the web in 2008, the digital asset’s conception has widely been attributed to a pseudonymou… [+2431 chars]",
+    "category": "technology"
+  },
+
+  {
+    "source": {
+      "id": null,
+      "name": "Gizmodo.com"
+    },
+    "author": "Lucas Ropek",
+    "title": "Guy Who Threw Away $500 Million Bitcoin Hard Drive Sues Local Government to Search Dump",
+    "description": "What do you do when you've thrown half a billion dollars worth of crypto in the trash?",
+    "url": "https://gizmodo.com/guy-who-threw-away-500-million-bitcoin-hard-drive-sues-local-government-to-search-dump-2000512846",
+    "urlToImage": "https://gizmodo.com/app/uploads/2024/10/A-landfill-in-Newport-Wales.jpg",
+    "publishedAt": "2024-10-17T12:35:08Z",
+    "content": "For the past decade, a Welsh man has been begging his city government for permission to peruse the contents of the local dump. 39-year-old Newport resident James Howells has been desperately asking t… [+3029 chars]",
+    "category": "business"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Gizmodo.com"
+    },
+    "author": "Matthew Gault",
+    "title": "Peter Todd Is in Hiding After a Documentary Named Him as Bitcoin’s Creator",
+    "description": "To hear the software developer tell it, being outed as Satoshi has radically changed his life.",
+    "url": "https://gizmodo.com/peter-todd-is-in-hiding-after-a-documentary-named-him-as-bitcoins-creator-2000514993",
+    "urlToImage": "https://gizmodo.com/app/uploads/2024/10/PeterToddHBO.jpg",
+    "publishedAt": "2024-10-22T15:45:38Z",
+    "content": "According to Peter Todd, an HBO documentary has turned his life into a nightmare. Money Electricaired on the network earlier this month and named Todd as Satoshi, the anonymous creator of Bitcoin. To… [+2885 chars]",
+    "category": "entertainment"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "CNET"
+    },
+    "author": "Samantha Kelly",
+    "title": "PayPal to Allow Businesses Buy and Sell Crypto",
+    "description": "The change will bring bitcoin and other virtual coins to \"millions\" of merchants across the US.",
+    "url": "https://www.cnet.com/personal-finance/crypto/paypal-to-allow-businesses-buy-and-sell-crypto/",
+    "urlToImage": "https://www.cnet.com/a/img/resize/2b2ba45973ffae7baacd4449b399bd35435e4fa0/hub/2022/04/22/d7acb748-e7bd-4553-ae44-2f893ccb87ba/paypal-logo-2022-659.jpg?auto=webp&fit=crop&height=675&width=1200",
+    "publishedAt": "2024-09-26T15:12:00Z",
+    "content": "It's about to get easier for US merchants to use cryptocurrency for payments. PayPal is launching a new service to allow the businesses that use its platform to buy, hold and sell crypto. \r\nAlthough … [+1029 chars]",
+    "category": "business"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Slashdot.org"
+    },
+    "author": "msmash",
+    "title": "Government of Bhutan Holds Over $825 Million, or Nearly a Third of Its GDP, in Bitcoin, Arkham Data Shows",
+    "description": "The government of Bhutan is currently holding over $828 million in bitcoin, according to onchain data by Arkham Intelligence. From a report: \"Unlike most governments, Bhutan's BTC does not come from law enforcement asset seizures, but from bitcoin mining oper…",
+    "url": "https://slashdot.org/story/24/09/23/1940238/government-of-bhutan-holds-over-825-million-or-nearly-a-third-of-its-gdp-in-bitcoin-arkham-data-shows",
+    "urlToImage": "https://a.fsdn.com/sd/topics/bitcoin_64.png",
+    "publishedAt": "2024-09-23T20:05:00Z",
+    "content": "The government of Bhutan is currently holding over $828 million in bitcoin, according to onchain data by Arkham Intelligence. From a report: \"Unlike most governments, Bhutan's BTC does not come from … [+1208 chars]",
+    "category": "business"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Gizmodo.com"
+    },
+    "author": "Lucas Ropek",
+    "title": "Infamous Tech Bro Starts School That Teaches How to Crowdfund Your Own Country",
+    "description": "A well-funded free market doctrine is getting its own mysterious educational platform.",
+    "url": "https://gizmodo.com/infamous-tech-bro-starts-school-that-teaches-how-to-crowdfund-your-own-country-2000502383",
+    "urlToImage": "https://gizmodo.com/app/uploads/2024/09/Balaji-Srinivasan-during-the-Fintech-Festival-in-Singapore.jpg",
+    "publishedAt": "2024-09-24T13:35:22Z",
+    "content": "Balaji Srinivasan, the former chief technology officer of Coinbase, is a weird guy. He’s talked about living forever. He helped finance a pro-steroids athletic competition. And he once threw away a m… [+3090 chars]",
+    "category": "technology"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Slashdot.org"
+    },
+    "author": "BeauHD",
+    "title": "Mystery Creator of Bitcoin Identified, New HBO Documentary Claims",
+    "description": "A new HBO documentary directed by Emmy-nominated filmmaker Cullen Hoback claims to have revealed the true identity of the pseudonymous creator of Bitcoin, Satoshi Nakamoto. As Politico notes, Hoback \"drew critical acclaim for his series 'Q: Into the Storm' th…",
+    "url": "https://slashdot.org/story/24/10/03/2330200/mystery-creator-of-bitcoin-identified-new-hbo-documentary-claims",
+    "urlToImage": "https://a.fsdn.com/sd/topics/bitcoin_64.png",
+    "publishedAt": "2024-10-04T00:02:00Z",
+    "content": "[T]he exposure of Satoshi as its alleged creator threatens to raise some huge questions, not least his potential complicity in crimes that have featured Bitcoin use. It could also establish him as on… [+986 chars]",
+    "category": "entertainment"
+  },
+  {
+    "source": {
+      "id": "business-insider",
+      "name": "Business Insider"
+    },
+    "author": "abharade@insider.com (Aditi Bharade,Kwan Wei Kevin Tan)",
+    "title": "Trump flip-flopped on crypto, but his PAC has raked in millions of dollars of crypto donations since June",
+    "description": "The former president has positioned himself as the pro-crypto candidate this election cycle. But he hasn't always had nice things to say about crypto.",
+    "url": "https://www.businessinsider.com/trump-pac-raised-millions-crypto-donations-since-june-2024-10",
+    "urlToImage": "https://i.insider.com/670f5459a70318649282ad0f?width=1200&format=jpeg",
+    "publishedAt": "2024-10-16T09:44:31Z",
+    "content": "A political action committee called Trump 47 has raised $7.5 million in cryptocurrency donations for former President Donald Trump's White House bid.\r\nAccording to Federal Election Commission filings… [+3227 chars]",
+    "category": "politics"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Slashdot.org"
+    },
+    "author": "msmash",
+    "title": "Hacker Arrested For the Fake SEC Tweet That Caused a Bitcoin Price Spike",
+    "description": "The FBI has arrested an Alabama man who is accused of hacking the Securities and Exchange Commission's X account in January. From a report: The indictment alleges that 25-year-old Eric Council Jr. worked with co-conspirators to take control of the account and…",
+    "url": "https://news.slashdot.org/story/24/10/17/2044230/hacker-arrested-for-the-fake-sec-tweet-that-caused-a-bitcoin-price-spike",
+    "urlToImage": "https://a.fsdn.com/sd/topics/news_64.png",
+    "publishedAt": "2024-10-17T22:10:00Z",
+    "content": "The indictment alleges that 25-year-old Eric Council Jr. worked with co-conspirators to take control of the account and post a fake message from SEC Chair Gary Gensler about Bitcoin ETFs that caused … [+534 chars]",
+    "category": "technology"
+  },
+
+  {
+    "source": {
+      "id": null,
+      "name": "Hipertextual"
+    },
+    "author": "Quelian Sanz",
+    "title": "HBO revela el mayor misterio sobre Bitcoin, ¿quién es realmente Satoshi Nakamoto?",
+    "description": "Bitcoin es la criptomoneda más popular del planeta, y también una de las más transparentes para el usuario. Se sabe casi todo sobre ella, sus transacciones son públicas, se conoce cuántas hay en circulación y muchísimos detalles sobre su dinámica. Pero a día …",
+    "url": "http://hipertextual.com/2024/10/hbo-revela-el-mayor-misterio-sobre-bitcoin-quien-es-realmente-satoshi-nakamoto",
+    "urlToImage": "https://imgs.hipertextual.com/wp-content/uploads/2024/10/bitcoin-creador-scaled.jpg",
+    "publishedAt": "2024-10-09T12:09:45Z",
+    "content": "Bitcoin es la criptomoneda más popular del planeta, y también una de las más transparentes para el usuario. Se sabe casi todo sobre ella, sus transacciones son públicas, se conoce cuántas hay en circ… [+2064 chars]",
+    "category": "technology"
+  },
+  {
+    "source": {
+      "id": "wired",
+      "name": "Wired"
+    },
+    "author": "Alistair Charlton",
+    "title": "Trump's $100,000 Watches Are the Most Tragic Celebrity Watch Yet",
+    "description": "Former president Donald Trump wants you to buy gaudy, overpriced timepieces “made for those who combine boldness and elegance.” He got one part right.",
+    "url": "https://www.wired.com/story/trumps-dollar100000-watches-are-the-most-tragic-celebrity-watch-yet/",
+    "urlToImage": "https://media.wired.com/photos/66f6c5b5c143415d72625aca/191:100/w_1280,c_limit/trump-watches-pol.jpg",
+    "publishedAt": "2024-09-27T17:48:08Z",
+    "content": "Celebrities partnering with watch brands is nothing new. Sometimes a bona fide watch enthusiast like John Mayer partners with Audemars Piguet, or Ed Sheeran (owner of a unique Patek Philippe, no less… [+2694 chars]",
+    "category": "entertainment"
+  },
+  {
+    "source": {
+      "id": "wired",
+      "name": "Wired"
+    },
+    "author": "Lily Hay Newman, Andrew Couts",
+    "title": "Google Chrome’s uBlock Origin Purge Has Begun",
+    "description": "Plus: The alleged SEC X account hacker gets charged, Kroger wriggles out of a face recognition scandal, and Microsoft deals with missing customer security logs.",
+    "url": "https://www.wired.com/story/google-chrome-ublock-origin-extension/",
+    "urlToImage": "https://media.wired.com/photos/6712a9ad28a5e591865a1b60/191:100/w_1280,c_limit/GettyImages-2151457378.jpg",
+    "publishedAt": "2024-10-19T10:30:00Z",
+    "content": "And thats not all. Each week, we round up the security and privacy news we didnt cover in depth ourselves. Click the headlines to read the full stories. And stay safe out there.\r\nIf you use uBlock Or… [+3760 chars]",
+    "category": "technology"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Gizmodo.com"
+    },
+    "author": "Joe Tilleli",
+    "title": "Wall Street in Your Pocket: The Tykr Stock Screener App Will Teach You to Earn Back the Money You Spent on Its Lifetime Plan",
+    "description": "Save 83% and an additional $30 when you sign up for the Tykr Stock Screener premium plan lifetime subscription with this code.",
+    "url": "https://gizmodo.com/wall-street-in-your-pocket-the-tykr-stock-screener-app-will-teach-you-to-earn-back-the-money-you-spent-on-its-lifetime-plan-2000505735",
+    "urlToImage": "https://gizmodo.com/app/uploads/2024/10/Tykr.jpg",
+    "publishedAt": "2024-10-01T18:18:47Z",
+    "content": "Just starting out with stock trading can be an overwhelming experience. Knowing what stocks are good and bad and knowing when to buy or sell doesn’t come naturally. You can work with a financial advi… [+2251 chars]",
+    "category": "business"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Bitcoindevs.xyz"
+    },
+    "author": "BDP",
+    "title": "Decoding Bitcoin: An interactive, exercise-heavy approach to learning Bitcoin",
+    "description": "Simplifying bitcoin tech to help you learn as efficiently as possible",
+    "url": "https://bitcoindevs.xyz/decoding/decoding/1-welcome",
+    "urlToImage": "https://bitcoindevs.xyz/images/pages-thumbnails/topics.png",
+    "publishedAt": "2024-10-07T17:46:16Z",
+    "content": "Welcome to Decoding Bitcoin, your go-to resource for understanding bitcoin, Privacy, and Decentralization. We're here to break down complex bitcoin concepts and provide straightforward explanations t… [+708 chars]",
+    "category": "technology"
+  },
+  {
+    "source": {
+      "id": "time",
+      "name": "Time"
+    },
+    "author": "Andrew R. Chow",
+    "title": "Documentarian Says He’s Solved the Mystery of Bitcoin’s Creator. Insiders Are Extremely Skeptical.",
+    "description": "Cullen Hoback's new documentary argues Bitcoin's Satoshi Nakamoto has been hiding in plain sight all along.",
+    "url": "https://time.com/7064841/satoshi-nakamoto-hbo-money-electric/",
+    "urlToImage": "https://api.time.com/wp-content/uploads/2024/10/peter-todd.jpeg?quality=85&w=1200&h=628&crop=1",
+    "publishedAt": "2024-10-09T01:01:00Z",
+    "content": "This article contains spoilers for Money Electric: The Bitcoin Mystery.\r\nWho is Bitcoins founder, Satoshi Nakamoto? The question has perplexed and excited cryptocurrency fans ever since Bitcoin was c… [+12372 chars]",
+    "category": "technology"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Xataka.com"
+    },
+    "author": "Rubén Andrés",
+    "title": "Bitcoin ha batido récords en 2024 y ha disparado las fortunas: hay un 95% más de criptomillonarios",
+    "description": "2024 ha sido un año especialmente delicado para los inversores en criptomonedas, marcado por distintos eventos importantes que han condicionado la cotización de los distintos tokens y han puesto punto final a la travesía por el desierto que el bitcoin experim…",
+    "url": "https://www.xataka.com/criptomonedas/bitcoin-ha-batido-records-2024-ha-disparado-fortunas-hay-95-criptomillonarios",
+    "urlToImage": "https://i.blogs.es/04273b/erling-loken-andersen-7fiieouobtu-unsplash/840_560.jpeg",
+    "publishedAt": "2024-10-19T09:01:19Z",
+    "content": "2024 ha sido un año especialmente delicado para los inversores en criptomonedas, marcado por distintos eventos importantes que han condicionado la cotización de los distintos tokens y han puesto punt… [+3676 chars]",
+    "category": "business"
+  },
+  {
+    "source": {
+      "id": "business-insider",
+      "name": "Business Insider"
+    },
+    "author": "fdemott@insider.com (Filip De Mott)",
+    "title": "Legendary investor Paul Tudor Jones says he's buying gold and bitcoin pre-election because inflation will rise under both Trump and Harris",
+    "description": "\"The playbook to get out of this is that you inflate your way out,\" Jones said about America's ballooning national debt.",
+    "url": "https://markets.businessinsider.com/news/commodities/paul-tudor-jones-gold-crypto-bitcoin-election-inflation-debt-crisis-2024-10",
+    "urlToImage": "https://i.insider.com/6717cb66a0a0cc14f222fe8a?width=1200&format=jpeg",
+    "publishedAt": "2024-10-22T18:13:29Z",
+    "content": "Paul Tudor Jones is holding gold, bitcoin, and commodities to hedge against inflation, as neither presidential candidate has a plan suitable for tackling US debt, the legendary investor said.\r\nThe bi… [+2252 chars]",
+    "category": "business"
+  },
+
+  {
+    "source": {
+      "id": null,
+      "name": "Xataka.com"
+    },
+    "author": "Javier Pastor",
+    "title": "La identidad del creador de bitcoin siempre ha sido un misterio. HBO promete revelarla muy pronto",
+    "description": "En 2008 alguien que usaba como pseudónimo Satoshi Nakamoto reveló al mundo su creación: el bitcoin...",
+    "url": "https://www.xataka.com/criptomonedas/identidad-creador-bitcoin-siempre-ha-sido-misterio-hbo-promete-revelarla-muy-pronto",
+    "urlToImage": "https://i.blogs.es/8cf13f/btc/840_560.jpeg",
+    "publishedAt": "2024-10-04T16:30:51Z",
+    "content": "En 2008 alguien que usaba como pseudónimo Satoshi Nakamoto reveló al mundo su creación...",
+    "category": "technology"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Xataka.com"
+    },
+    "author": "Enrique Pérez",
+    "title": "El candidato a Satoshi Nakamoto más querido por la comunidad Bitcoin...",
+    "description": "En julio de 2011, Leonard Harris \"Len\" Sassaman decidió quitarse la vida...",
+    "url": "https://www.xataka.com/criptomonedas/candidato-a-satoshi-nakamoto-querido-comunidad-bitcoin-cypherpunk-que-fue-inmortalizado-blockchain",
+    "urlToImage": "https://i.blogs.es/d0f570/len_sassaman_ascii/840_560.jpeg",
+    "publishedAt": "2024-10-13T17:01:49Z",
+    "content": "En julio de 2011, Leonard Harris \"Len\" Sassaman decidió quitarse la vida...",
+    "category": "technology"
+  },
+  {
+    "source": {
+      "id": "business-insider",
+      "name": "Business Insider"
+    },
+    "author": "fdemott@insider.com (Filip De Mott)",
+    "title": "Stock market today: Indexes slide and yields rise as rate-cut outlook dims",
+    "description": "US stocks added to Monday's losses as investors pared back rate cut expectations...",
+    "url": "https://markets.businessinsider.com/news/stocks/stock-market-today-bond-yields-rise-fed-interest-rate-cuts-2024-10",
+    "urlToImage": "https://i.insider.com/6717aa5d01ea6d83dee31691?width=1024&format=jpeg",
+    "publishedAt": "2024-10-22T13:53:27Z",
+    "content": "US stocks headed for their second losing session in a row...",
+    "category": "business"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Xataka.com"
+    },
+    "author": "Javier Pastor",
+    "title": "En HBO creen que Peter Todd es el creador de bitcoin...",
+    "description": "Ya sabemos cuál es la identidad real de Satoshi Nakamoto, el creador de bitcoin...",
+    "url": "https://www.xataka.com/criptomonedas/hbo-creen-que-peter-todd-creador-bitcoin-su-respuesta-supuesto-que-no-soy-satoshi",
+    "urlToImage": "https://i.blogs.es/955483/todd-11/840_560.jpeg",
+    "publishedAt": "2024-10-09T06:40:54Z",
+    "content": "Ya sabemos cuál es la identidad real de Satoshi Nakamoto, el creador de bitcoin...",
+    "category": "technology"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Xataka.com"
+    },
+    "author": "Javier Marquez",
+    "title": "Alguien ha montado una enorme mina de Bitcoin en un pueblo de Texas...",
+    "description": "La fiebre del bitcoin parece haber pedido fuerza por estos días...",
+    "url": "https://www.xataka.com/criptomonedas/alguien-ha-montado-enorme-mina-bitcoin-pueblo-texas-vecinos-dicen-que-ruido-les-esta-arruinando-vida",
+    "urlToImage": "https://i.blogs.es/4fcb29/1mina-de-bitcoin-portada/840_560.jpeg",
+    "publishedAt": "2024-10-09T06:31:13Z",
+    "content": "La fiebre del bitcoin parece haber pedido fuerza por estos días...",
+    "category": "technology"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Emailbtc.net"
+    },
+    "author": null,
+    "title": "EmailBTC – A new way to send and receive Bitcoin using only email addresses",
+    "description": "No seed phrases. No KYC. No recipient EmailBTC account needed...",
+    "url": "https://emailbtc.net",
+    "urlToImage": "https://emailbtc.net/og-image.jpg",
+    "publishedAt": "2024-10-18T10:54:50Z",
+    "content": "Ready for truly simple, secure Bitcoin transactions?...",
+    "category": "technology"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Theregister.com"
+    },
+    "author": "Brandon Vigliarolo",
+    "title": "Bitcoin creator suspect says he is not Bitcoin creator suspect",
+    "description": "'If I was Satoshi I would have destroyed my ability to prove I'm Satoshi'...",
+    "url": "https://www.theregister.com/2024/10/09/satoshi_nakamoto_suspect_hbo_bitcoin/",
+    "urlToImage": "https://regmedia.co.uk/2016/06/06/bitcoinsstack.jpg",
+    "publishedAt": "2024-10-09T17:00:08Z",
+    "content": "The man identified as Bitcoin creator Satoshi Nakamoto in a new HBO documentary...",
+    "category": "technology"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Blockhead.co"
+    },
+    "author": "Perion Lim",
+    "title": "New HBO Documentary Claims Bitcoin Creator Satoshi Nakamoto Is Len Sassaman",
+    "description": "HBO's upcoming documentary, 'Money Electric: The Bitcoin Mystery', claims the real Satoshi Nakamoto is Len Sassaman...",
+    "url": "https://www.blockhead.co/2024/10/05/new-bitcoin-documentary-to-sheds-more-light-on-satoshi-nakamotos-identity/",
+    "urlToImage": "https://www.blockhead.co/content/images/size/w1200/2024/10/Lens-Sassaman.jpg",
+    "publishedAt": "2024-10-05T12:13:02Z",
+    "content": "A new HBO documentary titled Money Electric: The Bitcoin Mystery...",
+    "category": "technology"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "heise online"
+    },
+    "author": "Alexander Spier",
+    "title": "heise+ | Heizlüfter mit Bitcoin-Miner: Ofen Pro von 21energy im Test​",
+    "description": "Die Wohnung gemütlich heizen und damit Geld verdienen? Der Ofen Pro von 21energy schürft Bitcoins und gibt dabei Wärme ab...",
+    "url": "https://www.heise.de/tests/Heizluefter-mit-Bitcoin-Miner-Ofen-Pro-von-21energy-im-Test-9968169.html?wt_mc=rss.red.ho.ho.atom.beitrag_plus.beitrag_plus",
+    "urlToImage": "https://heise.cloudimg.io/bound/1200x1200/q85.png-lossy-85.webp-lossy-85.foil1/_www-heise-de_/imgs/18/4/6/8/3/2/6/2/PXL_20241008_110936111-EDIT-3abd22e5fe6d777d.jpg",
+    "publishedAt": "2024-10-09T05:30:00Z",
+    "content": "Das Heizen der Wohnung im Winter kostet viel Energie...",
+    "category": "technology"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Gizmodo.com"
+    },
+    "author": "Matt Novak",
+    "title": "Truth Social Users Are Losing Ridiculous Sums of Money to Scams",
+    "description": "Read the complaints submitted to the FTC by users of Donald Trump's social media platform...",
+    "url": "https://gizmodo.com/truth-social-users-are-losing-ridiculous-sums-of-money-to-scams-2000506604",
+    "urlToImage": "https://gizmodo.com/app/uploads/2024/10/donald-trump-october-3-2024.jpg",
+    "publishedAt": "2024-10-05T13:00:34Z",
+    "content": "Donald Trump launched Truth Social in 2022 as a social media platform...",
+    "category": "politics"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Xataka.com"
+    },
+    "author": "Javier Pastor",
+    "title": "Un documental afirmó que Peter Todd es Satoshi Nakamoto, el creador de bitcoin. Ahora Todd ha desaparecido",
+    "description": "La identidad real de Satoshi Nakamoto, creador de bitcoin, siempre ha sido un misterio. Un reciente documental de HBO reunió diversas informaciones y pruebas y sus creadores aseguraban haber encontrado la solución.",
+    "url": "https://www.xataka.com/criptomonedas/documental-afirmo-que-peter-todd-satoshi-nakamoto-creador-bitcoin-ahora-todd-ha-desaparecido",
+    "urlToImage": "https://i.blogs.es/3b3dda/peter-todd/840_560.jpeg",
+    "publishedAt": "2024-10-23T15:31:43Z",
+    "category": "technology",
+    "content": "La identidad real de Satoshi Nakamoto..."
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "heise online"
+    },
+    "author": "Frank Schräer",
+    "title": "Erste Verhaftung nach Bitcoin-Kursmanipulation durch gefälschten SEC-Tweet",
+    "description": "Ein Mann aus Alabama hätte bei der Übernahme des X-Accounts der SEC geholfen.",
+    "url": "https://www.heise.de/news/Erste-Verhaftung-nach-Bitcoin-Kursmanipulation-durch-gefaelschten-SEC-Tweet-9985460.html",
+    "urlToImage": "https://heise.cloudimg.io/bound/1200x1200/q85.png-lossy-85.webp-lossy-85.foil1/_www-heise-de_/imgs/18/4/6/9/1/4/6/2/shutterstock_1916262404-b7c59be85e1ebe55.jpg",
+    "publishedAt": "2024-10-18T02:31:00Z",
+    "category": "business",
+    "content": "Inhaltsverzeichnis: Der gefälschte Tweet vom..."
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Genbeta.com"
+    },
+    "author": "Bárbara Bécares",
+    "title": "HBO afirmó que este desarrollador es el creador de bitcoin. Ha desaparecido.",
+    "description": "Hace unos días compartíamos nuevas pistas sobre quién puede ser el creador de bitcoin, conocido por su pseudónimo Satoshi Nakamoto.",
+    "url": "https://www.genbeta.com/actualidad/hbo-afirmo-que-este-desarrollador-creador-bitcoin-ello-multimillonario-ha-desaparecido-no-paran-pedirle-dinero",
+    "urlToImage": "https://i.blogs.es/c3a4d8/1200_800-3/840_560.jpeg",
+    "publishedAt": "2024-10-23T12:27:10Z",
+    "category": "technology",
+    "content": "Hace unos días compartíamos nuevas pistas sobre..."
+  },
+  {
+    "source": {
+      "id": "business-insider",
+      "name": "Business Insider"
+    },
+    "author": "Dan DeFrancesco",
+    "title": "An incoming 'M&A supercycle' wouldn't just be a win for dealmakers",
+    "description": "Goldman Sachs' earnings hint at the revival of the M&A market, which could help companies big and small.",
+    "url": "https://www.businessinsider.com/goldman-sachs-earnings-dealmaking-benefit-economy-2024-10",
+    "urlToImage": "https://i.insider.com/670fa446a70318649282b2f4?width=1000&format=jpeg",
+    "publishedAt": "2024-10-16T11:33:31Z",
+    "category": "business",
+    "content": "Goldman Sachs' earnings hint at the revival..."
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "CNET"
+    },
+    "author": "Samantha Kelly",
+    "title": "PayPal Will Allow Businesses to Buy and Sell Crypto",
+    "description": "PayPal will bring bitcoin and other virtual coins to \"millions\" of merchants across the US.",
+    "url": "https://www.cnet.com/personal-finance/crypto/paypal-will-allow-businesses-to-buy-and-sell-crypto/",
+    "urlToImage": "https://www.cnet.com/a/img/resize/2b2ba45973ffae7baacd4449b399bd35435e4fa0/hub/2022/04/22/d7acb748-e7bd-4553-ae44-2f893ccb87ba/paypal-logo-2022-659.jpg?auto=webp&fit=crop&height=675&width=1200",
+    "publishedAt": "2024-09-28T22:00:04Z",
+    "category": "business",
+    "content": "PayPal is launching a new service to allow businesses to buy..."
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "heise online"
+    },
+    "author": "Frank Schräer",
+    "title": "Freitag: Festnahme nach falschem Bitcoin-Tweet, Googles Eile wegen Play-Auflagen",
+    "description": "Kursmanipulation nach SIM-Swapping + Google gegen Wettbewerbsauflagen + Amazon fördert Atomkraft + Verordnung gegen Cookie-Banner-Flut + KI für Arbeitsagentur",
+    "url": "https://www.heise.de/news/Freitag-Festnahme-nach-falschem-Bitcoin-Tweet-Googles-Eile-wegen-Play-Auflagen-9985488.html",
+    "urlToImage": "https://heise.cloudimg.io/bound/1200x1200/q85.png-lossy-85.webp-lossy-85.foil1/_www-heise-de_/imgs/18/4/6/9/1/4/7/6/friday-c6a39647e6904344.webp",
+    "publishedAt": "2024-10-18T04:15:00Z",
+    "content": "Ein Mann aus Alabama hätte bei der Übernahme des X-Accounts der US-Börsenaufsicht geholfen, sagen das FBI und das US-Justizministerium. Er habe die Zugangsdaten besorgt und seine Kumpanen setzten ein… [+4353 chars]",
+    "category": "technology"
+  },
+  {
+    "source": {
+      "id": "business-insider",
+      "name": "Business Insider"
+    },
+    "author": "jsor@businessinsider.com (Jennifer Sor)",
+    "title": "Stock market today: US stocks close at all-time highs ahead of key inflation update",
+    "description": "The Dow and the S&P 500 closed at a record high. Markets are waiting for September inflation data, a key data point ahead of the Fed's next move.",
+    "url": "https://markets.businessinsider.com/news/stocks/stock-market-today-fed-rate-cuts-outlook-fomc-minutes-inflation-2024-10",
+    "urlToImage": "https://i.insider.com/6706e1f7a70318649280a65f?width=800&format=jpeg",
+    "publishedAt": "2024-10-09T20:13:30Z",
+    "content": "US stocks jumped on Wednesday as traders looked ahead to coming inflation data and took in the minutes of the Federal Reserve's last meeting. \r\nAll three benchmark indexes surged to end the day highe… [+3041 chars]",
+    "category": "business"
+  },
+  {
+    "source": {
+      "id": "business-insider",
+      "name": "Business Insider"
+    },
+    "author": "kcloonan@insider.com (Kelly Cloonan)",
+    "title": "Stock market today: Indexes close lower after CPI shows sticky inflation in September",
+    "description": "Indexes slipped Thursday as investors took in higher-than-expected inflation. The latest data has sparked talk of a \"no landing\" for the US economy.",
+    "url": "https://markets.businessinsider.com/news/stocks/stock-market-inflation-cpi-data-jobless-claims-labor-market-landing-2024-10",
+    "urlToImage": "https://i.insider.com/670831903f2165d716e00609?width=1200&format=jpeg",
+    "publishedAt": "2024-10-10T20:06:52Z",
+    "content": "Stocks fell on Thursday from records reached in the previous session, as traders took in a sticky inflation reading for September. \r\nAll three benchmark indexes fell, with the Dow Jones Industrial Av… [+2472 chars]",
+    "category": "business"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Xataka.com"
+    },
+    "author": "Javier Marquez",
+    "title": "El británico que perdió millones en bitcoins al tirar su disco duro no se da por vencido: ahora ha demandado al ayuntamiento",
+    "description": "James Howells, un ingeniero informático que vive en la ciudad de Newport, Gales, lleva años asegurando que en 2013 tiró a la basura un disco duro con alrededor de 8.000 bitcoins, los cuales había conseguido minar en su casa poco después de que la criptomoneda…",
+    "url": "https://www.xataka.com/criptomonedas/britanico-que-perdio-millones-bitcoins-al-tirar-su-disco-duro-no-se-da-vencido-ahora-ha-demandado-al-ayuntamiento",
+    "urlToImage": "https://i.blogs.es/29b07c/vertedero-bitcoin-portada/840_560.jpeg",
+    "publishedAt": "2024-10-15T22:33:00Z",
+    "content": "James Howells, un ingeniero informático que vive en la ciudad de Newport, Gales, lleva años asegurando que en 2013 tiró a la basura un disco duro con alrededor de 8.000 bitcoins, los cuales había con… [+3141 chars]",
+    "category": "technology"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Hackaday"
+    },
+    "author": "Dan Maloney",
+    "title": "Hackaday Links: September 29, 2024",
+    "description": "There was movement in the “AM Radio in Every Vehicle Act” last week, with the bill advancing out of the US House of Representatives Energy and Commerce Committee and heading to a full f…",
+    "url": "https://hackaday.com/2024/09/29/hackaday-links-september-29-2024/",
+    "urlToImage": "https://hackaday.com/wp-content/uploads/2014/11/had-links-banner.jpg",
+    "publishedAt": "2024-09-29T23:00:28Z",
+    "content": "There was movement in the “AM Radio in Every Vehicle Act” last week, with the bill advancing out of the US House of Representatives Energy and Commerce Committee and heading to a full floor vote. For… [+4562 chars]",
+    "category": "technology"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Presse-citron"
+    },
+    "author": "Robin Sabbadini",
+    "title": "Le Bitcoin est de retour à un niveau stratosphérique",
+    "description": "Le roi des cryptomonnaies flirte à nouveau avec les sommets, porté par l’afflux massif de capitaux dans les ETF et l’optimisme réglementaire aux États-Unis.",
+    "url": "https://www.presse-citron.net/le-bitcoin-est-de-retour-a-un-niveau-stratospherique/",
+    "urlToImage": "https://www.presse-citron.net/app/uploads/2024/03/Bitcoin-ETF.jpg",
+    "publishedAt": "2024-10-21T04:38:31Z",
+    "content": "Le Bitcoin reprend des couleurs et senvole vers de nouveaux sommets. La cryptomonnaie phare a frôlé les 70 000 dollars ce lundi, ravivant les souvenirs de son record historique atteint en mars dernie… [+3396 chars]",
+    "category": "technology"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Presse-citron"
+    },
+    "author": "Tristan Carballeda",
+    "title": "Le Bitcoin pourrait bientôt monter à 200 000 dollars selon cet expert",
+    "description": "Le Bitcoin a-t-il une limite, ces analyses ne semblent pas le penser et le voient déjà à 200 000 dollars.",
+    "url": "https://www.presse-citron.net/le-bitcoin-pourrait-bientot-monter-a-200-000-dollars-selon-cet-expert/",
+    "urlToImage": "https://www.presse-citron.net/app/uploads/2024/03/Bitcoin-ETF.jpg",
+    "publishedAt": "2024-10-23T08:32:59Z",
+    "content": "Sminston With nest pas nimporte qui dans le monde des cryptomonnaies. Il est « un des plus grands experts en ce qui concerne le Bitcoin. Le cours de cette devise numérique ne fait que fluctuer ces de… [+2544 chars]",
+    "category": "technology"
+  },
+
+  {
+    "source": {
+      "id": null,
+      "name": "genbeta.com"
+    },
+    "author": "José Alberto Lizana",
+    "title": "Olvidó la contraseña de su USB donde almacenaba 400 millones de euros en Bitcoin. Y un hacker lo consiguió descifrar",
+    "description": "A casi todos en alguna ocasión se nos ha olvidado la contraseña para acceder a nuestro correo electrónico, la nube o a una red social. Pero esto no tenía mayor importancia, pues simplemente se podía recuperar de los servidores y tampoco se iba a perder algo r…",
+    "url": "https://www.genbeta.com/actualidad/olvido-contrasena-su-usb-donde-almacenaba-400-millones-euros-bitcoin-hacker-consiguio-descifrar",
+    "urlToImage": "https://i.blogs.es/beb99e/bitcoin/840_560.jpeg",
+    "publishedAt": "2024-10-12T12:01:41Z",
+    "content": "A casi todos en alguna ocasión se nos ha olvidado la contraseña para acceder a nuestro correo electrónico, la nube o a una red social. Pero esto no tenía mayor importancia, pues simplemente se podía … [+2573 chars]",
+    "category": "business"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "theregister.com"
+    },
+    "author": "Connor Jones",
+    "title": "Alleged Bitcoin crook faces 5 years after SEC's X account pwned",
+    "description": "SIM swappers strike again, warping cryptocurrency prices\nAn Alabama man faces five years in prison for allegedly attempting to manipulate the price of Bitcoin by pwning the US Securities and Exchange Commission's X account earlier this year.…",
+    "url": "https://www.theregister.com/2024/10/18/sec_bitcoin_arrest/",
+    "urlToImage": "https://regmedia.co.uk/2024/03/04/bitcoin_shutterstock.jpg",
+    "publishedAt": "2024-10-18T12:30:09Z",
+    "content": "An Alabama man faces five years in prison for allegedly attempting to manipulate the price of Bitcoin by pwning the US Securities and Exchange Commission's X account earlier this year.\r\nThe feds arre… [+3651 chars]",
+    "category": "technology"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "tagesschau.de"
+    },
+    "author": "Angela Göpfert",
+    "title": "FTX-Rückzahlungen und Trump: Neue Bitcoin-Rally voraus?",
+    "description": "Die Krypto-Börse FTX will 16 Milliarden Dollar an ihre Kunden zurückzahlen - Geld, das wieder in Bitcoin & Co. fließen könnte. Unterdessen versucht Trump, sich als \"Bitcoin-Präsident\" zu profilieren. Von Angela Göpfert.",
+    "url": "https://www.tagesschau.de/wirtschaft/finanzen/bitcoin-trump-ftx-krypto-boerse-100.html",
+    "urlToImage": "https://images.tagesschau.de/image/a0002f3a-4e31-450f-82a5-47f5f28e29cf/AAABkmq0_XM/AAABkZLhkrw/16x9-1280/ftx-110.jpg",
+    "publishedAt": "2024-10-08T11:33:15Z",
+    "content": "Stand: 08.10.2024 13:33 Uhr\r\nDie Krypto-Börse FTX will 16 Milliarden Dollar an ihre Kunden zurückzahlen - Geld, das wieder in Bitcoin &amp; Co. fließen könnte. Unterdessen versucht Trump, sich als \"B… [+5221 chars]",
+    "category": "politics"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "quartz india"
+    },
+    "author": "Vinamrata Chaturvedi",
+    "title": "Who really created Bitcoin? A new HBO documentary claims it has the answer",
+    "description": "“Money Electric: The Bitcoin Mystery,” a new documentary from HBO (WBD) debuting Tuesday, promises to unmask one of the richest and most mysterious figures on the planet: the creator of Bitcoin. Read more...",
+    "url": "https://qz.com/hbo-documentary-bitcoin-creator-satoshi-nakamoto-1851666819",
+    "urlToImage": "https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/24a7fc9a9e3fa9eac8b8381fae5cb121.jpg",
+    "publishedAt": "2024-10-07T16:40:00Z",
+    "content": "In This Story\r\n Money Electric: The Bitcoin Mystery, a new documentary from HBO (WBD) debuting Tuesday, promises to unmask one of the richest and most mysterious figures on the planet: the creator of… [+2396 chars]",
+    "category": "entertainment"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "quartz india"
+    },
+    "author": "Vinamrata Chaturvedi",
+    "title": "Bitcoin surges as investor interest in ETFs grows, eyeing $70k milestone",
+    "description": "Bitcoin is on an upward trajectory. Its price is hovering around $68,000, reflecting a 9.5% increase over the past week and a 2.8% rise in just one day. The surge in the leading cryptocurrency is being driven by a wave of investor interest in U.S. spot bitcoi…",
+    "url": "https://qz.com/spot-bitcoin-etfs-see-over-555-million-in-inflows-in-a-1851673718",
+    "urlToImage": "https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/413cc655995e31ed2425c65181b698fb.jpg",
+    "publishedAt": "2024-10-16T14:16:54Z",
+    "content": "In This Story\r\nBitcoin is on an upward trajectory. Its price is hovering around $68,000, reflecting a 9.5% increase over the past week and a 2.8% rise in just one day. The surge in the leading crypto… [+1471 chars]",
+    "category": "business"
+  },
+
+  {
+    "source": {
+      "id": null,
+      "name": "Genbeta.com"
+    },
+    "author": "Miguel Jorge",
+    "title": "\"Hola, somos de Google”: así empezó el mayor robo de bitcoins a una persona en EEUU. La fiesta posterior los ha delatado",
+    "description": "Robos y estafas con criptomonedas por medio hay prácticamente cada mes. Aquí hemos contado algunos de los casos más impactantes, como el del líder de una de las grandes criptoestafas de la historia que desapareció tras robar miles de millones, o el predicador…",
+    "url": "https://www.genbeta.com/actualidad/hola-somos-google-asi-empezo-mayor-robo-bitcoins-a-persona-eeuu-fiesta-posterior-ha-delatado",
+    "urlToImage": "https://i.blogs.es/77e6e1/dalla.e-2024-10-23-14.21.58---a-scene-in-the-style-of-the-simpsons-showing-two-criminals-pretending-to-be-google-technical-support-staff-to-steal-a-person-s-bitcoin-wallet-access-i/840_560.jpeg",
+    "publishedAt": "2024-10-23T15:00:00Z",
+    "content": "Robos y estafas con criptomonedas por medio hay prácticamente cada mes. Aquí hemos contadoalgunosde los casosmás impactantes, como el del líder de una de las grandes criptoestafas de la historia que … [+4675 chars]",
+    "category": "technology"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Quartz India"
+    },
+    "author": "Vinamrata Chaturvedi",
+    "title": "The SEC greenlit Bitcoin ETF options trading. Here come the big fish",
+    "description": "The Securities and Exchange Commission (SEC) has granted approval for the NYSE American LLC and CBOE to list options on spot Bitcoin exchange-traded funds (ETFs), marking a significant development in cryptocurrency history. This approval paves the way for ins…",
+    "url": "https://qz.com/spot-bitcoin-etfs-options-trading-sec-nyse-cboe-1851677472",
+    "urlToImage": "https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/b321604739732aad677026eb9af310b9.jpg",
+    "publishedAt": "2024-10-21T16:02:00Z",
+    "content": "In This Story\r\nThe Securities and Exchange Commission (SEC) has granted approval for the NYSE American LLC and CBOE to list options on spot Bitcoin exchange-traded funds (ETFs), marking a significant… [+3047 chars]",
+    "category": "business"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Theregister.com"
+    },
+    "author": "Jessica Lyons",
+    "title": "Feds reach for sliver of crypto-cash nicked by North Korea's notorious Lazarus Group",
+    "description": "A couple million will do for a start … but Kim's crews are suspected of stealing much more\nThe US government is attempting to claw back more than $2.67 million stolen by North Korea's Lazarus Group, filing two lawsuits to force the forfeiture of millions in T…",
+    "url": "https://www.theregister.com/2024/10/08/us_lazarus_group_crypto_seizure/",
+    "urlToImage": "https://regmedia.co.uk/2023/10/03/korea_shutterstock.jpg",
+    "publishedAt": "2024-10-08T00:27:08Z",
+    "content": "The US government is attempting to claw back more than $2.67 million stolen by North Korea's Lazarus Group, filing two lawsuits to force the forfeiture of millions in Tether and Bitcoin.\r\nThe first l… [+2713 chars]",
+    "category": "general"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Quartz India"
+    },
+    "author": "Vinamrata Chaturvedi",
+    "title": "Satoshi Nakamoto unmasked: Will HBO reveal the identity of the creator of bitcoin?",
+    "description": "HBO’s (WBD) latest documentary, “Money Electric: The Bitcoin Mystery,” premiering Tuesday, promises to delve into one of the greatest enigmas of the digital age: the identity of bitcoin’s elusive creator, believed to be among the richest and most enigmatic in…",
+    "url": "https://qz.com/bitcoin-creator-satoshi-nakamoto-hbo-documentary-1851667608",
+    "urlToImage": "https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/6a363a034e712602ee791f42e5a75cbb.jpg",
+    "publishedAt": "2024-10-08T14:14:00Z",
+    "content": "In This Story\r\nHBOs (WBD) latest documentary, Money Electric: The Bitcoin Mystery, premiering Tuesday, promises to delve into one of the greatest enigmas of the digital age: the identity of bitcoins … [+1766 chars]",
+    "category": "entertainment"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Genbeta.com"
+    },
+    "author": "Miguel Jorge",
+    "title": "Gales recibe la demanda más insólita de su historia: 495 millones de libras por un disco duro perdido con las claves de 8.000 bitcoin",
+    "description": "La historia es conocida, pero el giro que acaban de dar los acontecimientos merece una actualización. James Howells es un galés que, en circunstancias normales, debería estar disfrutando de una cuenta corriente sin fin viviendo una vida solo apta para el 1% d…",
+    "url": "https://www.genbeta.com/actualidad/gales-recibe-demanda-insolita-su-historia-495-millones-libras-disco-duro-perdido-claves-8-000-bitcoin",
+    "urlToImage": "https://i.blogs.es/782d62/pexels-photo-3174349/840_560.jpeg",
+    "publishedAt": "2024-10-15T11:00:49Z",
+    "content": "La historia es conocida, pero el giro que acaban de dar los acontecimientos merece una actualización. James Howells es un galés que, en circunstancias normales, debería estar disfrutando de una cuent… [+4248 chars]",
+    "category": "technology"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Quartz India"
+    },
+    "author": "Vinamrata Chaturvedi",
+    "title": "HBO documentary claims Bitcoin developer Peter Todd is Satoshi Nakamoto – now comes the denial",
+    "description": "The HBO documentary suggests Todd, a former Bitcoin developer, is the cryptocurrency's mysterious creator. But it fails to provide solid evidence",
+    "url": "https://qz.com/hbo-documentary-claims-peter-todd-bitcoin-creator-satos-1851668667",
+    "urlToImage": "https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/4046de6574a7a5aa7932ebeccd7008b5.png",
+    "publishedAt": "2024-10-09T14:18:00Z",
+    "content": "In This Story\r\nWho created Bitcoin? Is it finally known? Perhaps not. \r\nMoney Electric: The Bitcoin Mystery, a new HBO (WBD) documentary that premiered on Tuesday, claims that former Bitcoin develope… [+3260 chars]",
+    "category": "entertainment"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Quartz India"
+    },
+    "author": "Rocio Fabbro",
+    "title": "The FBI arrested the man it says hacked the SEC's Twitter and sent bitcoin soaring",
+    "description": "The FBI arrested the man it believes hacked and posted from the Securities and Exchange Commission’s X (formerly Twitter) account in January and sent the price of bitcoin soaring.Read more...",
+    "url": "https://qz.com/bitcoin-fbi-arrest-sec-twitter-x-hack-sim-swap-1851675349",
+    "urlToImage": "https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/b5f025fed3915aae98b09e3db08f4bd2.jpg",
+    "publishedAt": "2024-10-17T17:42:00Z",
+    "content": "The FBI arrested the man it believes hacked and posted from the Securities and Exchange Commissions X (formerly Twitter) account in January and sent the price of bitcoin soaring.\r\nEric Council Jr., a… [+2394 chars]",
+    "category": "technology"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "First Showing"
+    },
+    "author": "Alex Billington",
+    "title": "Official Trailer for 'Money Electric: The Bitcoin Mystery' Documentary",
+    "description": "\"If you dig deep enough, the inconsistencies will emerge.\" HBO has revealed the trailer for a documentary film titled Money Electric: The Bitcoin Mystery, another investigative look at Bitcoin and the world of cryptocurrency. This would play well as a double …",
+    "url": "https://www.firstshowing.net/2024/official-trailer-for-money-electric-the-bitcoin-mystery-documentary/",
+    "urlToImage": "https://media2.firstshowing.net/firstshowing/img16/MoneyElectricDocPostermainTW1.jpg",
+    "publishedAt": "2024-10-04T13:28:09Z",
+    "category": "technology",
+    "content": "by Alex BillingtonOctober 4, 2024Source:YouTube\r\n\"If you dig deep enough, the inconsistencies will emerge.\" HBO has revealed the trailer for a documentary film titled Money Electric: The Bitcoin Myst… [+2727 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Variety"
+    },
+    "author": "Cynthia Littleton",
+    "title": "Who Invented Bitcoin? HBO Documentary ‘Money Electric’ Tries to Solve an Enduring Crypto Mystery",
+    "description": "Who invented Bitcoin? That question has become a capitivating mystery for the digital age along the lines of whatever happened to D.B. Cooper or who was Deep Throat in the Watergate scandal. Documentarian Cullen Hoback thinks he has the answer. His new HBO do…",
+    "url": "https://variety.com/2024/tv/news/bitcoin-hbo-doc-money-electric-satoshi-nakamoto-1236183061/",
+    "urlToImage": "https://variety.com/wp-content/uploads/2024/10/peter-todd-e1729349646204.jpeg?w=1000&h=561&crop=1",
+    "publishedAt": "2024-10-19T16:37:08Z",
+    "category": "technology",
+    "content": "Who invented Bitcoin? That question has become a capitivating mystery for the digital age along the lines of whatever happened to D.B. Cooper or who was Deep Throat in the Watergate scandal.\r\nDocumen… [+5328 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "BBC News"
+    },
+    "author": null,
+    "title": "Alleged Bitcoin hacker Googled 'signs the FBI is after you'",
+    "description": "A man from Georgia is alleged to be part of a group which hacked the US regulator's X account.",
+    "url": "https://www.bbc.com/news/articles/c20pvkg35xyo",
+    "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/cf48/live/dd8f0280-8d28-11ef-bee0-39b1bce7fdf1.jpg",
+    "publishedAt": "2024-10-18T10:08:10Z",
+    "category": "technology",
+    "content": "\"What are some signs the FBI is after you\" is one of the alleged hacker's searches, according to court documents\r\nA man arrested in connection with a hack of the US markets regulator's X account sear… [+2466 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Quartz India"
+    },
+    "author": "Vinamrata Chaturvedi",
+    "title": "Bitcoin drops to $60,000 as escalating Middle East tensions rattle the crypto market",
+    "description": "Bitcoin fell to $60,000 on Tuesday evening as tensions in the Middle East worsened due to Iran’s attack on Israel. The leading cryptocurrency dropped nearly 5%, trading at $60,834. Read more...",
+    "url": "https://qz.com/bitcoin-60-000-tension-middle-east-1851662604",
+    "urlToImage": "https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/d06df12221b342e0f27052697a5a6a2a.jpg",
+    "publishedAt": "2024-10-01T21:37:00Z",
+    "category": "technology",
+    "content": "Bitcoin fell to $60,000 on Tuesday evening as tensions in the Middle East worsened due to Irans attack on Israel. The leading cryptocurrency dropped nearly 5%, trading at $60,834. \r\nEther, the second… [+1260 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Quartz India"
+    },
+    "author": "Vinamrata Chaturvedi",
+    "title": "Crypto is getting hammered today, with Bitcoin dropping to $65,000",
+    "description": "The cryptocurrency market is experiencing a downturn, closely mirroring the decline in the stock market. On Wednesday, Bitcoin saw a significant drop of over 2.5% in the past 24 hours, with its price hovering around $65,000. This decline has dashed hopes of b…",
+    "url": "https://qz.com/crypto-market-down-bitcoin-65-000-1851679497",
+    "urlToImage": "https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/b5e1795ecf299ac0ef7257fd52c37002.jpg",
+    "publishedAt": "2024-10-23T17:01:58Z",
+    "category": "technology",
+    "content": "In This Story\r\nThe cryptocurrency market is experiencing a downturn, closely mirroring the decline in the stock market. On Wednesday, Bitcoin saw a significant drop of over 2.5% in the past 24 hours,… [+1793 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Quartz India"
+    },
+    "author": "Vinamrata Chaturvedi",
+    "title": "5 crypto criminals serving the longest prison sentences",
+    "description": "The Social Capital Markets, a global initiative focused on fostering a just and sustainable economy, has recently published a revealing report on crypto crimes. The findings indicate a staggering 267% increase in global crypto-related convictions over the pas…",
+    "url": "https://qz.com/sam-bankman-fried-cryptocurrency-crime-prison-sentences-1851665731",
+    "urlToImage": "https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/59a22590499594fb6b4aee53e2392478.jpg",
+    "publishedAt": "2024-10-14T09:00:00Z",
+    "category": "entertainment",
+    "content": "Ross Ulbricht was born in 1984 in Austin, Texas, and founded the Silk Road in 2013, a notorious dark web marketplace that facilitated illegal activities such as drug trafficking through Bitcoin trans… [+719 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Tech Xplore"
+    },
+    "author": "Bob Yirka",
+    "title": "Integer addition algorithm could reduce energy needs of AI by 95%",
+    "description": "A team of engineers at AI inference technology company BitEnergy AI reports a method to reduce the energy needs of AI applications by 95%. The group has published a paper describing their new technique on the arXiv preprint server.",
+    "url": "https://techxplore.com/news/2024-10-integer-addition-algorithm-energy-ai.html",
+    "urlToImage": "https://scx2.b-cdn.net/gfx/news/hires/2024/image-of-computer-scre.jpg",
+    "publishedAt": "2024-10-13T16:27:12Z",
+    "category": "entertainment",
+    "content": "A team of engineers at AI inference technology company BitEnergy AI reports a method to reduce the energy needs of AI applications by 95%. The group has published a paper describing their new techniq… [+2457 chars]"
+  },
+  {
+    "source": {
+      "id": "techcrunch",
+      "name": "TechCrunch"
+    },
+    "author": "Kyle Wiggers",
+    "title": "Crypto scammers hack OpenAI's press account on X",
+    "description": "OpenAI's official newsroom account on X was compromised by cryptocurrency scammers.",
+    "url": "https://techcrunch.com/2024/09/23/crypto-scammers-hack-openais-press-account-on-x/",
+    "urlToImage": "https://techcrunch.com/wp-content/uploads/2024/05/openAI-spiral-color-v2.jpg?resize=1200,675",
+    "publishedAt": "2024-09-23T22:49:57Z",
+    "category": "entertainment",
+    "content": "OpenAI’s official press account on X was compromised by cryptocurrency scammers. Or, at least that’s what appears to have happened. \r\nLate Monday afternoon, OpenAI Newsroom, an account OpenAI recentl… [+2175 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Xataka.com"
+    },
+    "author": "Rubén Andrés",
+    "title": "Elon Musk respondió \"Sí, DOGE\" en un mitin junto a Trump. No importó que no se refiriera a Dogecoin, su precio se disparó un 15%",
+    "description": "En las últimas semanas, Elon Musk ha pasado de mantener una posición de respaldo económico a la candidatura presidencial de Donald Trump, a un papel protagonista, subiéndose a los escenarios de los mítines que el candidato está haciendo durante su gira electo…",
+    "url": "https://www.xataka.com/criptomonedas/elon-musk-respondio-doge-mitin-a-trump-no-importo-que-no-se-refiriera-a-dogecoin-su-precio-se-disparo-15",
+    "urlToImage": "https://i.blogs.es/97229e/memecoin/840_560.jpeg",
+    "publishedAt": "2024-10-22T13:45:39Z",
+    "category": "entertainment",
+    "content": "En las últimas semanas, Elon Musk ha pasado de mantener una posición de respaldo económico a la candidatura presidencial de Donald Trump, a un papel protagonista, subiéndose a los escenarios de los m… [+3379 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "BBC News"
+    },
+    "author": null,
+    "title": "I am not Bitcoin inventor, says man named in HBO film",
+    "description": "The real identity of the person, known only as Satoshi Nakamoto, has captivated the internet for years.",
+    "url": "https://www.bbc.com/news/articles/c62m73my0dno",
+    "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/19a2/live/b3158730-8621-11ef-9329-f30486eb2a33.jpg",
+    "publishedAt": "2024-10-09T09:45:42Z",
+    "category": "entertainment",
+    "content": "A new documentary claims to have solved the greatest mystery in cryptocurrency: the true identity of the inventor of Bitcoin.\r\nThe question has captivated the internet since the digital currency was … [+3494 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Quartz India"
+    },
+    "author": "Vinamrata Chaturvedi",
+    "title": "The man named as Bitcoin's creator in an HBO documentary has gone into hiding",
+    "description": "Remember the buzz surrounding the HBO (WBD) documentary that claimed to have uncovered the true identity of Bitcoin’s mysterious creator, Satoshi Nakamoto? It appears that the person identified as Satoshi has now gone underground, reportedly driven into hidin…",
+    "url": "https://qz.com/peter-todd-the-hbo-documentary-called-bitcoin-creator-s-1851679244",
+    "urlToImage": "https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/087757437c2db235960901753a249c8c.png",
+    "publishedAt": "2024-10-23T16:04:00Z",
+    "category": "entertainment",
+    "content": "In This Story\r\nRemember the buzz surrounding the HBO (WBD-1.86%\r\n) documentary that claimed to have uncovered the true identity of Bitcoins mysterious creator, Satoshi Nakamoto? It appears that the p… [+3137 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Quartz India"
+    },
+    "author": "Vinamrata Chaturvedi",
+    "title": "Dogecoin, ApeCoin, Solana, and more: Cryptocurrencies to watch this week",
+    "description": "The crypto market is currently bullish, with growing anticipation around when bitcoin will surpass the $70,000 mark. And coming tech earnings reports could further boost the overall market sentiment.Read more...",
+    "url": "https://qz.com/dogecoin-apecoin-solana-cryptocurrencies-to-watch-thi-1851677299",
+    "urlToImage": "https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/21216b4e9d998690a33858235e380fae.jpg",
+    "publishedAt": "2024-10-21T14:48:00Z",
+    "category": "entertainment",
+    "content": "ApeCoin is the native token designed to govern and enhance the APE ecosystem, which originated from the success of the Bored Ape Yacht Club (BAYC). BAYC is one of the most prominent and influential N… [+344 chars]"
+  },
+  {
+    "source": {
+      "id": "business-insider",
+      "name": "Business Insider"
+    },
+    "author": "Dan DeFrancesco",
+    "title": "Taylor Swift is flexing her economic muscles again with the return of her tour and a new book",
+    "description": "Taylor Swift's upcoming self-published challenges business norm. But her tour's return raises concerns about mega-events' impact on economic recovery.",
+    "url": "https://www.businessinsider.com/taylor-swift-self-publishing-eras-tour-book-disrupting-industry-again-2024-10",
+    "urlToImage": "https://i.insider.com/67123d4ea0a0cc14f221eeb9?width=1200&format=jpeg",
+    "publishedAt": "2024-10-18T13:04:14Z",
+    "category": "entertainment",
+    "content": "Taylor Swift performing on stage at Wembley Stadium for the London leg of \"The Eras Tour.\"Kate Green/Getty Images\r\n<ul><li>This post originally appeared in the Insider Today newsletter.how</li><li>Yo… [+7453 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Deadline"
+    },
+    "author": "Matthew Carey",
+    "title": "HBO’s ‘Money Electric: The Bitcoin Mystery’ Sets Out To Unmask Secretive Creator Of World’s Most Valuable Crypto Currency",
+    "description": "Like a Bansky of the crypto world, little is known about Satoshi Nakamoto, the reputed creator of the digital currency Bitcoin. What’s his real name? What’s he worth? Who is he, really? Director Cullen Hoback attempts to get to the bottom of Nakamoto’s identi…",
+    "url": "http://deadline.com/2024/10/money-electric-the-bitcoin-mystery-hbo-documentary-trailer-1236107405/",
+    "urlToImage": "https://deadline.com/wp-content/uploads/2024/10/Money-Electric-The-Bitcoin-Mystery-graphic.png?w=1024",
+    "publishedAt": "2024-10-04T15:00:00Z",
+    "category": "entertainment",
+    "content": "Like a Bansky of the crypto world, little is known about Satoshi Nakamoto, the reputed creator of the digital currency Bitcoin. What’s his real name? What’s he worth? Who is he, really?\r\nDirector Cul… [+2429 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Socialmediaexplorer.com"
+    },
+    "author": "Doug Brown",
+    "title": "How Bitcoin Is Empowering Social Media Creators and Changing the Game in 2024",
+    "description": "Hey, social media explorers! Today, we’re diving into one of the hottest and most exciting...\nThe post How Bitcoin Is Empowering Social Media Creators and Changing the Game in 2024 appeared first on Social Media Explorer.",
+    "url": "https://socialmediaexplorer.com/social-media-marketing/how-bitcoin-is-empowering-social-media-creators-and-changing-the-game-in-2024/",
+    "urlToImage": "https://socialmediaexplorer.com/wp-content/uploads/2024/10/01plavakafa.jpg",
+    "publishedAt": "2024-10-10T21:17:14Z",
+    "category": "entertainment",
+    "content": "Hey, social media explorers! Today, we’re diving into one of the hottest and most exciting topics for creators in 2024how Bitcoin and crypto wallets are empowering social media creators to take their… [+7357 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Biztoc.com"
+    },
+    "author": "news.google.com",
+    "title": "Bitcoin Protocol sees TVL growth as staking restrictions lift",
+    "description": "Bitcoin Protocol sees TVL growth as staking restrictions lift AMBCrypto News\nBitcoin Protocol Babylon Pulls in $1.5B of Staking Deposits as Cap Lifted CoinDesk\nBitcoin Staking Protocol Babylon Attracts About 24,000 BTC in Deposits – News Bytes Bitcoin News Bi…",
+    "url": "https://biztoc.com/x/57fc41fad14b06c2",
+    "urlToImage": "https://biztoc.com/cdn/803/og.png",
+    "publishedAt": "2024-10-10T14:31:34Z",
+    "category": "entertainment",
+    "content": "Bitcoin Protocol sees TVL growth as staking restrictions lift AMBCrypto NewsBitcoin Protocol Babylon Pulls in $1.5B of Staking Deposits as Cap Lifted CoinDeskBitcoin Staking Protocol Babylon Attracts… [+117 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Forbes"
+    },
+    "author": "Trefis Team, Contributor, \n Trefis Team, Contributor\n https://www.forbes.com/sites/greatspeculations/people/trefis/",
+    "title": "Will Bitcoin Reach $100K?",
+    "description": "The buzz around cryptocurrencies is back with Bitcoin prices getting a boost this year and investors and the media renewing their interest.",
+    "url": "https://www.forbes.com/sites/greatspeculations/2024/10/17/will-bitcoin-reach-100k/",
+    "urlToImage": "https://imageio.forbes.com/specials-images/imageserve/6710a88c0dbf228b4a13c8e1/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds",
+    "publishedAt": "2024-10-17T12:00:20Z",
+    "category": "entertainment",
+    "content": "UNITED KINGDOM - 2024/10/08: In this photo illustration, the Bitcoin logo seen displayed on a ... [+] smartphone with stock market graphs in the background. (Photo Illustration by Dominika Zarzycka/S… [+5329 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "20 Minutes"
+    },
+    "author": "L.B. (20 Minutes)",
+    "title": "HBO pense avoir identifié Satoshi Nakamoto, l’inventeur de Bitcoin",
+    "description": "Coup de pub géant ou vraie révélation ? On en saura davantage le 8 octobre",
+    "url": "https://www.20minutes.fr/high-tech/20-mint/4113886-20241005-hbo-pense-avoir-identifie-satoshi-nakamoto-inventeur-bitcoin",
+    "urlToImage": "https://img.20mn.fr/S2DdQ1QwTpOhHKwxIAxkUik/1444x920_in-this-photo-illustration-a-bitcoin-logo-is-displayed-on-a-smartphone-with-stock-market-percentages-in-the-background-omar-marques-sopa-images-sopaimages-1738132-credit-sopa-images-sipa-2307191754",
+    "publishedAt": "2024-10-05T10:36:56Z",
+    "category": "general",
+    "content": "Cest la Chouette dor sous stéroïde. Si le mystère entourant la réelle identité du créateur de Bitcoin, Satoshi Nakamoto, ne dure que depuis 2008 et non 31 ans comme pour lartefact déterré jeudi, il c… [+1739 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Forbes"
+    },
+    "author": "Susie Violet Ward, Contributor, \n Susie Violet Ward, Contributor\n https://www.forbes.com/sites/susievioletward/",
+    "title": "Experts Challenge ECB’s Claims On Bitcoin And Wealth Inequality",
+    "description": "Experts refute the ECB’s claims on bitcoin, citing flaws and biases in its analysis. They argue bitcoin promotes financial freedom and inclusion, disputing the position.",
+    "url": "https://www.forbes.com/sites/digital-assets/2024/10/22/experts-challenge-ecbs-claims-on-bitcoin-and-wealth-inequality/",
+    "urlToImage": "https://imageio.forbes.com/specials-images/imageserve/6717c64f6aa970e273525e34/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds",
+    "publishedAt": "2024-10-22T20:08:58Z",
+    "category": "general",
+    "content": "FRANKFURT, GERMANY - JUNE 13: A huge euro logo is seen in front of the headquarters of the European ... [+] Central Bank (ECB) on June 13, 2005 in Frankfurt, Germany. The German economy was suffering… [+7541 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Forbes"
+    },
+    "author": "Dave Birnbaum, Contributor, \n Dave Birnbaum, Contributor\n https://www.forbes.com/sites/davidbirnbaum/",
+    "title": "Grayscale’s Bitcoin Mini Trust: Here’s What You Need To Know",
+    "description": "Want to learn more about Grayscale’s Bitcoin Mini Trust? See our summary of what this mini trust is and how it differs from other Bitcoin investment vehicles.",
+    "url": "https://www.forbes.com/sites/digital-assets/article/grayscale-bitcoin-mini-trust-what-you-need-to-know/",
+    "urlToImage": "https://imageio.forbes.com/specials-images/imageserve/670f16f41498cec2ba74cf0c/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds",
+    "publishedAt": "2024-10-20T19:00:00Z",
+    "category": "general",
+    "content": "Grayscale signage on the floor of the New York Stock Exchange.\r\n© 2024 Bloomberg Finance LP\r\nWith the rise in bitcoins popularity, Grayscale has introduced a new way for smaller investors to gain exp… [+9841 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Forbes"
+    },
+    "author": "Dave Birnbaum, Contributor, \n Dave Birnbaum, Contributor\n https://www.forbes.com/sites/davidbirnbaum/",
+    "title": "How Will Bitcoin ETF Options Impact Bitcoin’s Price?",
+    "description": "The SEC's approval of bitcoin ETF options will forever change the bitcoin market, making it more practical for use by institutional investors.",
+    "url": "https://www.forbes.com/sites/davidbirnbaum/2024/10/20/how-will-bitcoin-etf-options-impact-bitcoins-price/",
+    "urlToImage": "https://imageio.forbes.com/specials-images/imageserve/6715558311ff768bede9e039/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds",
+    "publishedAt": "2024-10-20T19:21:00Z",
+    "category": "general",
+    "content": "Samara Cohen, Chief Investment Officer of ETF and Index Investments at Blackrock, walks in Times ... [+] Square after ringing the opening bell as Bitcoin Spot ETF's are launched on the Nasdaq Exchang… [+6778 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Biztoc.com"
+    },
+    "author": "go.theregister.com",
+    "title": "Bitcoin creator suspect says he is not Bitcoin creator suspect",
+    "description": "'If I was Satoshi I would have destroyed my ability to prove I'm Satoshi'\nThe man identified as Bitcoin creator Satoshi Nakamoto in a new HBO documentary has something to say: Wrong again, world.…",
+    "url": "https://biztoc.com/x/a19a9dfaca0404e1",
+    "urlToImage": "https://biztoc.com/cdn/803/og.png",
+    "publishedAt": "2024-10-09T17:12:43Z",
+    "category": "general",
+    "content": "'If I was Satoshi I would have destroyed my ability to prove I'm Satoshi'The man identified as Bitcoin creator Satoshi Nakamoto in a new HBO documentary has something to say: Wrong again, world.\r\nThi… [+50 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Olhardigital.com.br"
+    },
+    "author": "Pedro Spadoni",
+    "title": "Documentário da HBO promete revelar identidade do criador do Bitcoin",
+    "description": "\"Money Electric: The Bitcoin Mystery\" promete revelar a identidade de Satoshi Nakamoto, pseudônimo da (suposta) pessoa que criou o Bitcoin\nO post Documentário da HBO promete revelar identidade do criador do Bitcoin apareceu primeiro em Olhar Digital.",
+    "url": "https://olhardigital.com.br/2024/10/07/pro/documentario-da-hbo-promete-revelar-identidade-do-criador-do-bitcoin/",
+    "urlToImage": "https://olhardigital.com.br/wp-content/uploads/2024/06/Destaque-Satoshi-Nakamoto-criador-do-bitcoin-scaled.jpg",
+    "publishedAt": "2024-10-07T15:03:12Z",
+    "category": "general",
+    "content": "Um novo documentário da HBO promete revelar a verdadeira identidade de Satoshi Nakamoto, pseudônimo usado pela suposta pessoa que criou o Bitcoin. Money Electric: The Bitcoin Mystery vai ao ar nesta … [+2120 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Biztoc.com"
+    },
+    "author": "news.google.com",
+    "title": "SEC Greenlights Bitcoin Options ETFs for New York Stock Exchange and CBOE",
+    "description": "SEC Greenlights Bitcoin Options ETFs for New York Stock Exchange and CBOE The Daily Hodl\nUS SEC gives green light for options listing for spot bitcoin ETFs to NYSE Reuters\nHow Will Bitcoin ETF Options Impact Bitcoin’s Price? Forbes\nNYSE, Cboe Win SEC Approval…",
+    "url": "https://biztoc.com/x/c7fd03ac507d41bc",
+    "urlToImage": "https://biztoc.com/cdn/805/og.png",
+    "publishedAt": "2024-10-21T10:19:00Z",
+    "category": "general",
+    "content": "SEC Greenlights Bitcoin Options ETFs for New York Stock Exchange and CBOE The Daily HodlUS SEC gives green light for options listing for spot bitcoin ETFs to NYSE ReutersHow Will Bitcoin ETF Options … [+148 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Biztoc.com"
+    },
+    "author": "news.google.com",
+    "title": "Hacker arrested for the fake SEC tweet that caused a Bitcoin price spike",
+    "description": "Hacker arrested for the fake SEC tweet that caused a Bitcoin price spike The Verge\nFBI arrests Alabama man for SEC X hack that spiked price of bitcoin CNBC\nAlabama man allegedly hacked SEC’s X account, causing bitcoin value to soar with fake post AL.com\nArres…",
+    "url": "https://biztoc.com/x/9ceff82e873d19fa",
+    "urlToImage": "https://biztoc.com/cdn/805/og.png",
+    "publishedAt": "2024-10-17T18:36:03Z",
+    "category": "general",
+    "content": "Hacker arrested for the fake SEC tweet that caused a Bitcoin price spike The VergeFBI arrests Alabama man for SEC X hack that spiked price of bitcoin CNBCAlabama man allegedly hacked SECs X account, … [+152 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Biztoc.com"
+    },
+    "author": "news.google.com",
+    "title": "Japan’s Metaplanet makes $7M Bitcoin buy, bringing holdings to $40.5M",
+    "description": "Japan’s Metaplanet makes $7M Bitcoin buy, bringing holdings to $40.5M Cointelegraph\nJapan's Metaplanet Buys Another $6.7M Worth of Bitcoin CoinDesk\nMetaplanet buys average of 34 BTC per day in October Bitcoin buying spree CryptoSlate\nMetaplanet Inc. Expands B…",
+    "url": "https://biztoc.com/x/882263abfc28d830",
+    "urlToImage": "https://biztoc.com/cdn/803/og.png",
+    "publishedAt": "2024-10-07T11:48:45Z",
+    "category": "general",
+    "content": "Japans Metaplanet makes $7M Bitcoin buy, bringing holdings to $40.5M CointelegraphJapan's Metaplanet Buys Another $6.7M Worth of Bitcoin CoinDeskMetaplanet buys average of 34 BTC per day in October B… [+136 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Quartz India"
+    },
+    "author": "Quartz Bot",
+    "title": "Super Micro Computer's big stock split, Costco rises, and Bitcoin falls: Markets news roundup",
+    "description": "Super Micro Computer (SMCI) is set to undergo a stock split after the market closes on Monday, aligning itself with other prominent AI-driven companies like Nvidia and Broadcom, which also executed stock splits earlier this year. Following the split, the stoc…",
+    "url": "https://qz.com/super-micro-computer-stock-split-costco-bitcoin-price-1851665581",
+    "urlToImage": "https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/e2cd5bdbdb1ec4a967cd35b4289c431c.jpg",
+    "publishedAt": "2024-10-05T13:00:00Z",
+    "category": "business",
+    "content": "If youre thinking about buying a condo in Miami, you might want to hold off.\r\nAccording to a new report from UBS, Miami has the highest bubble risk among all the cities it surveyed globally. \r\nUBS (U… [+241 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Quartz India"
+    },
+    "author": "Vinamrata Chaturvedi",
+    "title": "Bitcoin and Ether ETFs helped take crypto mainstream. Are Solana and XRP next?",
+    "description": "The Securities and Exchange Commission (SEC) approved bitcoin spot exchange-traded funds (ETFs) at the start of this year, capturing the attention of investors. The influx of capital into these funds fueled a rapid rise in bitcoin’s value, which soon reached …",
+    "url": "https://qz.com/bitcoin-ether-etf-solana-xrp-sec-1851664387",
+    "urlToImage": "https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/ddc65c7151ed150ed2b35f2b6c9c566b.jpg",
+    "publishedAt": "2024-10-07T09:00:00Z",
+    "category": "business",
+    "content": "The Securities and Exchange Commission (SEC) approved bitcoin spot exchange-traded funds (ETFs) at the start of this year, capturing the attention of investors. The influx of capital into these funds… [+3927 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Habr.com"
+    },
+    "author": "pnaydanovgoo (MetaLamp)",
+    "title": "Полный разбор Polymarket: от интерфейса до смарт-контрактов",
+    "description": "Написал для вас подробный технический разбор Polymarket — децентрализованного рынка предсказаний на блокчейне. В статье мы рассмотрим ключевые компоненты протокола: интерфейс, смарт-контракты, оракул, токенизация исходов и механизмы управления ордерами. Матер…",
+    "url": "https://habr.com/ru/companies/metalamp/articles/851892/#post-content-body",
+    "urlToImage": "https://habrastorage.org/getpro/habr/upload_files/4e0/56c/6b4/4e056c6b4f3705ab5dbc2c062a0d1095.png",
+    "publishedAt": "2024-10-22T14:06:17Z",
+    "category": "business",
+    "content": "Polymarket  . : , , .\r\n . , .\r\nProxy wallets\r\n Polymarket, . :\r\n<ul><li> EOA-. Metamask, Coinbase WalletConnect.\r\n</li><li>  Magic Link\r\n. , .\r\n</li></ul> - 1/1, , .\r\n Polymarket , , .\r\n. , .  condit… [+3647 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Quartz India"
+    },
+    "author": "Vinamrata Chaturvedi",
+    "title": "The crypto industry is heavily favoring Republicans in its 2024 election spending",
+    "description": "The crypto industry is channeling more of its advertising budget towards supporting Republican candidates over Democrats, according to a recent report by Axios.Read more...",
+    "url": "https://qz.com/crypto-companies-spends-more-on-ads-for-republicans-tha-1851678302",
+    "urlToImage": "https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/16b475f3eccee91abdec2386b61d6ea6.jpg",
+    "publishedAt": "2024-10-22T16:15:00Z",
+    "category": "business",
+    "content": "In This Story\r\nThe crypto industry is channeling more of its advertising budget towards supporting Republican candidates over Democrats, according to a recent report by Axios. \r\nData from AdImpact re… [+2365 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Forbes"
+    },
+    "author": "Clem Chambers, Senior Contributor, \n Clem Chambers, Senior Contributor\n https://www.forbes.com/sites/investor/people/clem/",
+    "title": "Boomer Gold Is Now Bitcoin",
+    "description": "While the probability of the next leg up seems distant, if something wicked this way comes, up will go crypto, if not down it will go into the new cycle’s crypto winter.",
+    "url": "https://www.forbes.com/sites/digital-assets/2024/09/26/boomer-gold-is-now-bitcoin/",
+    "urlToImage": "https://imageio.forbes.com/specials-images/imageserve/66f525a2dba0ed8142f26e82/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds",
+    "publishedAt": "2024-09-26T14:45:17Z",
+    "category": "business",
+    "content": "Bitcoin may be taking the place of gold. \r\ngetty\r\nYou cant be right all the time. I decided to play this crypto cycle with ether not bitcoin on the premise that Eth is spicier than BTCBitcoin\r\n and w… [+4328 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Forbes"
+    },
+    "author": "Trefis Team, Contributor, \n Trefis Team, Contributor\n https://www.forbes.com/sites/greatspeculations/people/trefis/",
+    "title": "Making Crypto Bitcoin Less Cryptic",
+    "description": "The buzz around cryptocurrencies is back with Bitcoin prices getting a boost this year and investors and the media renewing their interest.",
+    "url": "https://www.forbes.com/sites/greatspeculations/2024/10/07/making-crypto-bitcoin-less-cryptic/",
+    "urlToImage": "https://imageio.forbes.com/specials-images/imageserve/67037982bf0b4325f5dc13e7/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds",
+    "publishedAt": "2024-10-07T12:00:29Z",
+    "category": "business",
+    "content": "Bitcoin symbol is seen on Bitcoin ATM kiosk in the city center of Krakow, Poland on July 26th, 2024. ... [+] (Photo by Beata Zawrzel/NurPhoto via Getty Images)\r\nNurPhoto via Getty Images\r\nThe buzz ar… [+4962 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "BBC News"
+    },
+    "author": null,
+    "title": "Meet Pesto: the fat baby penguin and viral superstar",
+    "description": "The obscenely fluffy nine-month-old chick weighs more than both of his foster parents combined.",
+    "url": "https://www.bbc.com/news/articles/cp3w4nld5e3o",
+    "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/c3e3/live/9687f9c0-7a2f-11ef-8c1a-df523ba43a9a.jpg",
+    "publishedAt": "2024-09-24T04:50:47Z",
+    "category": "business",
+    "content": "Among the sea of glossy black and white penguins which call a popular Australian aquarium home, one baby bird stands out like a sore thumb.\r\nChocolatey brown, obscenely fluffy, and towering a head ab… [+3529 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Forbes"
+    },
+    "author": "Billy Bambrough, Senior Contributor, \n Billy Bambrough, Senior Contributor\n https://www.forbes.com/sites/billybambrough/",
+    "title": "Who Is Peter Todd, The Man Named By HBO As Bitcoin’s Mystery Creator Satoshi Nakamoto?",
+    "description": "HBO documentary film maker Cullen Hoback has named Peter Todd, a bitcoin core developer who has been involved with bitcoin since 2010, as who he believes to be the real-world identity of Satoshi Nakamoto...",
+    "url": "https://www.forbes.com/sites/digital-assets/2024/10/08/who-is-peter-todd-the-man-named-by-hbo-as-bitcoins-mystery-creator-satoshi-nakamoto/",
+    "urlToImage": "https://imageio.forbes.com/specials-images/imageserve/6705678306c5e6029232be09/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds",
+    "publishedAt": "2024-10-08T22:00:13Z",
+    "category": "politics",
+    "content": "Satoshi Nakamotothe mysterious, anonymous creator of bitcoinhas successfully kept their real identity hidden since they published bitcoin's white paper in 2008.\r\nUnlock over $3,000 in perks including… [+4603 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Forbes"
+    },
+    "author": "Billy Bambrough, Senior Contributor, \n Billy Bambrough, Senior Contributor\n https://www.forbes.com/sites/billybambrough/",
+    "title": "Michael Saylor Reveals Shock $100 Trillion MicroStrategy ‘Endgame’ As The Bitcoin Price Suddenly Soars",
+    "description": "Michael Saylor, founder and executive chairman of MicroStrategy, has revealed the company’s endgame is to become a bitcoin investment bank—and to buy up to $150 billion of bitcoin...",
+    "url": "https://www.forbes.com/sites/digital-assets/2024/10/11/michael-saylor-reveals-shock-100-trillion-microstrategy-endgame-as-the-bitcoin-price-suddenly-soars/",
+    "urlToImage": "https://imageio.forbes.com/specials-images/imageserve/64f973d47e2a9b3ad373b636/0x0.jpg?format=jpg&crop=2015,1288,x825,y128,safe&height=900&width=1600&fit=bounds",
+    "publishedAt": "2024-10-11T19:12:22Z",
+    "category": "politics",
+    "content": "BitcoinBitcoin\r\n has swung wildly this week as analysts warn \"something's got to give.\"\r\nUnlock over $3,000 in perks including unparalleled access to a community of top Web3 entrepreneurs, creators, … [+4205 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "New York Post"
+    },
+    "author": "Tracy Swartz",
+    "title": "Ozempic may significantly lower the risk of Alzheimer’s disease — here’s how - New York Post ",
+    "description": "Nearly 7 million Americans 65 and older are living with Alzheimer’s disease, which gradually destroys memory and thinking skills and the ability to perform daily tasks.",
+    "url": "https://nypost.com/2024/10/24/lifestyle/ozempic-may-lower-the-risk-of-alzheimers-disease-new-study/",
+    "urlToImage": "https://nypost.com/wp-content/uploads/sites/2/2024/10/92232000.jpg?quality=75&strip=all&w=1024",
+    "publishedAt": "2024-10-24T11:00:00Z",
+    "category": "health",
+    "content": "Type 2 diabetics may have a shot at significantly lowering their risk of Alzheimer’s disease if they take Ozempic instead of other diabetes medications, a new study finds.\r\nSemaglutide  the active in… [+3414 chars]"
+  },
+  {
+    "source": {
+      "id": "usa-today",
+      "name": "USA Today"
+    },
+    "author": "Ken Alltucker",
+    "title": "Diabetes patients worry about insulin shortages as Ozempic use skyrockets - USA TODAY",
+    "description": "The insulin is facing supply shortages as diabetes patients increasingly turn to GLP-1 weight loss drugs such as Ozempic and Mounjaro.",
+    "url": "https://www.usatoday.com/story/news/health/2024/10/24/insulin-shortage-2024-diabetes-patients/75554041007/",
+    "urlToImage": "https://www.usatoday.com/gcdn/authoring/authoring-images/2024/10/23/USAT/75808255007-img-1982.jpg?crop=1223,688,x0,y0&width=1223&height=688&format=pjpg&auto=webp",
+    "publishedAt": "2024-10-24T09:07:03Z",
+    "category": "health",
+    "content": "Janel Wright had just days left in her insulin supply in early January when a pharmacist told her there was none of the drug left to fill her prescription.\r\nHer neighborhood Fred Meyer pharmacy in An… [+12278 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "ScienceAlert"
+    },
+    "author": "David Nield",
+    "title": "Boosting Exercise Intensity Reduces Mortality Risk, Study Suggests - ScienceAlert",
+    "description": "If you want to live longer, you might want to push yourself just a little harder during your next gym visit: a new study reveals that putting extra strain on your body when you exercise matters more than squeezing in another session.",
+    "url": "https://www.sciencealert.com/boosting-exercise-intensity-reduces-mortality-risk-study-suggests",
+    "urlToImage": "https://www.sciencealert.com/images/2024/10/intense_activity_push_up.jpg",
+    "publishedAt": "2024-10-24T01:47:21Z",
+    "category": "health",
+    "content": "If you want to live longer, you might want to push yourself just a little harder during your next gym visit: a new study reveals that putting extra strain on your body when you exercise matters more … [+2462 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Cdc.gov"
+    },
+    "author": "CDC",
+    "title": "CDC Recommends Second Dose of 2024-2025 COVID-19 Vaccine for People 65 Years and Older and for People Who are Moderately or Severely Immunocompromised - CDC",
+    "description": "Today, CDC Director Mandy Cohen endorsed the CDC Advisory Committee on Immunization Practices’ (AC",
+    "url": "https://www.cdc.gov/media/releases/2024/s1023-covid-19-vaccine.html",
+    "urlToImage": "https://www.cdc.gov/media/images/homepage/covid-19-500x300px.jpg?_=85115",
+    "publishedAt": "2024-10-24T00:15:32Z",
+    "category": "health",
+    "content": "October 23, 2024 - Today, CDC Director Mandy Cohen endorsed the CDC Advisory Committee on Immunization Practices' (ACIP) recommendation for people 65 years and older and those who are moderately or s… [+2056 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "BBC News"
+    },
+    "author": null,
+    "title": "Polar bears face higher risk of disease in a warming Arctic - BBC.com",
+    "description": "Climate change and sea ice loss leaves polar bears exposed to more diseases, research suggests.",
+    "url": "https://www.bbc.com/news/articles/c1e7pl3evd0o",
+    "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/787f/live/89155350-911d-11ef-88b8-8b00cbc9d4aa.jpg",
+    "publishedAt": "2024-10-23T23:44:45Z",
+    "category": "health",
+    "content": "As the Arctic warms, polar bears face a growing risk of contracting viruses, bacteria and parasites that they were less likely to encounter just 30 years ago, research has revealed.\r\nIn a study that … [+2570 chars]"
+  },
+  {
+    "source": {
+      "id": "reuters",
+      "name": "Reuters"
+    },
+    "author": "Leah Douglas, Tom Polansek",
+    "title": "Exclusive: State and industry input led US farm agency to relax bird flu testing order for cows - Reuters",
+    "description": "The U.S. Department of Agriculture weakened an emergency order last spring designed to prevent the spread of bird flu among the nation's dairy cattle after pushback from state and industry officials, according to state and federal records seen by Reuters.",
+    "url": "https://www.reuters.com/business/healthcare-pharmaceuticals/state-industry-input-led-us-farm-agency-relax-bird-flu-testing-order-cows-2024-10-23/",
+    "urlToImage": "https://www.reuters.com/resizer/v2/FUSG5SAKQJL2XNQEGSHTDCNAM4.jpg?auth=de1be24f246b9774310ec956d6763d0eedc929369b405fde9015ec061dfadfac&height=1005&width=1920&quality=80&smart=true",
+    "publishedAt": "2024-10-23T23:30:31Z",
+    "category": "health",
+    "content": null
+  },
+  {
+    "source": {
+      "id": "fox-news",
+      "name": "Fox News"
+    },
+    "author": "Andrea Margolis",
+    "title": "Washington state officials identify four new cases of bird flu, as H5N1 outbreak spreads - Fox News",
+    "description": "Four agricultural workers in Washington state were recently diagnosed with avian influenza A (H5N1). The cases mark the first human infections of the disease under investigation in the state.",
+    "url": "https://www.foxnews.com/health/washington-state-officials-identify-four-new-cases-bird-flu-h5n1-outbreak-spreads",
+    "urlToImage": "https://static.foxnews.com/foxnews.com/content/uploads/2024/10/gettyimages-512423538.jpg",
+    "publishedAt": "2024-10-23T23:29:00Z",
+    "category": "health",
+    "content": "Four people in Washington state are suffering from bird flu, prompting fears about the illness spreading to other agricultural workers in the U.S.\r\nAlso known as avian influenza A (H5N1), the disease… [+2499 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "BBC News"
+    },
+    "author": "Veronique Greenwood",
+    "title": "The truth about the odd-tasting oils we were told were healthy - BBC.com",
+    "description": "When many people struggled to eat a healthy diet, some odd-tasting oils were touted as a fix-all. It turns out one of them did indeed pack a vitamin punch.",
+    "url": "https://www.bbc.com/future/article/20241023-the-truth-about-the-odd-tasting-oils-we-were-told-were-healthy",
+    "urlToImage": "https://ychef.files.bbci.co.uk/624x351/p0jzl9qr.jpg",
+    "publishedAt": "2024-10-23T22:05:51Z",
+    "category": "health",
+    "content": "When many people struggled to eat a healthy diet, odd-tasting oils were touted as a fix-all. It turns out one of them did indeed pack a vitamin punch.\r\nThese days, the words \"cod liver oil\" are vague… [+5356 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "The Conversation Africa"
+    },
+    "author": "Luis M. García Marín, Miguel E. Rentería",
+    "title": "How do genes shape the structures in our brains? We studied 70,000 people and found new links to ADHD and Parkinson’s - The Conversation",
+    "description": "The world’s largest genetic study on the size of specific brain parts has revealed hundreds of clues about how some health conditions develop.",
+    "url": "https://theconversation.com/how-do-genes-shape-the-structures-in-our-brains-we-studied-70-000-people-and-found-new-links-to-adhd-and-parkinsons-231824",
+    "urlToImage": "https://images.theconversation.com/files/602444/original/file-20240624-17-97sp2v.jpg?ixlib=rb-4.1.0&rect=38%2C0%2C4272%2C2136&q=45&auto=format&w=1356&h=668&fit=crop",
+    "publishedAt": "2024-10-23T22:04:38Z",
+    "category": "health",
+    "content": "The human brain is a marvel of complexity. It contains specialised and interconnected structures controlling our thoughts, personality and behaviour.\r\nThe size and shape of our brains also play a cru… [+4504 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "WYFF4 Greenville"
+    },
+    "author": "Zach Rainey",
+    "title": "Officials confirm first flu death of the season in South Carolina - WYFF4 Greenville",
+    "description": "The South Carolina Department of Public Health announced the first flu-related death of the season.",
+    "url": "https://www.wyff4.com/article/first-flu-death-2024-season-cdc-dhec-dph-south-carolina/62697231",
+    "urlToImage": "https://kubrick.htvapps.com/htv-prod-media.s3.amazonaws.com/images/flu-in-south-carolina-1665783499.jpg?crop=1.00xw:1.00xh;0,0&resize=1200:*",
+    "publishedAt": "2024-10-23T20:41:00Z",
+    "category": "health",
+    "content": "COLUMBIA, S.C. —The South Carolina Department of Public Health announced Wednesday that the state has suffered its first influenza-associated death of the season. \r\n\"Sadly, a person from the Midlands… [+3334 chars]"
+  },
+  {
+    "source": {
+      "id": "usa-today",
+      "name": "USA Today"
+    },
+    "author": "Adrianna Rodriguez",
+    "title": "CDC panel lowers age for key vaccine. What older adults should know. - USA TODAY",
+    "description": "A panel for the Centers for Disease Control and Prevention voted to lower the recommended age for older adults to get their pneumococcal vaccine.",
+    "url": "https://www.usatoday.com/story/news/health/2024/10/23/cdc-vaccine-guidance-changes/75806256007/",
+    "urlToImage": "https://www.usatoday.com/gcdn/authoring/authoring-images/2024/10/23/USAT/75806775007-getty-images-1189314773.jpg?crop=2120,1193,x0,y110&width=2120&height=1193&format=pjpg&auto=webp",
+    "publishedAt": "2024-10-23T20:31:55Z",
+    "category": "health",
+    "content": "It started with a cough that wouldnt go away.\r\nBefore she knew it, Karyne Jones was hospitalized with pneumonia in January 2018. Even after the bacteria cleared her body, it took her three months to … [+5653 chars]"
+  },
+  {
+    "source": {
+      "id": "fortune",
+      "name": "Fortune"
+    },
+    "author": "Beth Greenfield",
+    "title": "Will you have a stroke? These 17 factors—10 just for women—can be predictors, say new prevention guidelines - Fortune",
+    "description": "These 17 predictors—10 just for women—could offer a clue to chances of having a stroke.",
+    "url": "https://fortune.com/well/article/stroke-risk-factors-prevention/",
+    "urlToImage": "https://fortune.com/img-assets/wp-content/uploads/2024/10/GettyImages-1306982290-e1729710750121.jpg?resize=1200,600",
+    "publishedAt": "2024-10-23T20:31:00Z",
+    "category": "health",
+    "content": "Stroke rates are rising, with over half a million Americans having a first stroke every year. But up to 80% of strokes may be preventable, which is why its so important to understand and mitigate you… [+3457 chars]"
+  },
+  {
+    "source": {
+      "id": "newsweek",
+      "name": "Newsweek"
+    },
+    "author": "Pandora Dewan",
+    "title": "Poor Sleep May Add Three Extra Years to Your Brain's Age - Newsweek",
+    "description": "The findings emphasize the need to address sleep issues early in life.",
+    "url": "https://www.newsweek.com/poor-sleep-brain-aging-cognitive-decline-1973795",
+    "urlToImage": "https://d.newsweek.com/en/full/2502600/bad-sleep.jpg",
+    "publishedAt": "2024-10-23T20:00:02Z",
+    "category": "health",
+    "content": "Poor sleep in your 40s could make your brain age faster, new research suggests. The findings add to a growing body of evidence that sleep quality is closely linked to cognitive health, emphasizing th… [+3475 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Umn.edu"
+    },
+    "author": null,
+    "title": "Can COVID vaccines induce mucosal immunity? Two studies offer conflicting findings - University of Minnesota Twin Cities",
+    "description": null,
+    "url": "https://www.cidrap.umn.edu/covid-19/can-covid-vaccines-induce-mucosal-immunity-two-studies-offer-conflicting-findings",
+    "urlToImage": "https://www.cidrap.umn.edu/sites/default/files/styles/layout_large/public/article/nasal_swab_pcr_test.jpg?itok=G7MUHzt1",
+    "publishedAt": "2024-10-23T19:34:46Z",
+    "category": "health",
+    "content": null
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Futurism"
+    },
+    "author": "Noor Al-Sibai",
+    "title": "The Diet Industry Is Reportedly in Total Meltdown Over GLP-1 Weight Loss Drugs - Futurism",
+    "description": "With weight loss injectables like Ozempic and Mounjaro taking the world by storm, the diet industry is seemingly being left in the dust.",
+    "url": "https://futurism.com/neoscope/diet-industry-ozempic-meltdown",
+    "urlToImage": "https://wordpress-assets.futurism.com/2024/10/diet-industry-ozempic-meltdown.jpg",
+    "publishedAt": "2024-10-23T19:03:00Z",
+    "category": "health",
+    "content": "With weight loss injectables like Ozempic and Mounjaro taking the world by storm, the diet industry is being left in the dust.\r\nIn interviews with the Daily Mail, weight loss experts say that this ne… [+3331 chars]"
+  },
+  {
+    "source": {
+      "id": "fox-news",
+      "name": "Fox News"
+    },
+    "author": "Melissa Rudy",
+    "title": "Vaccines for flu and COVID: Should you get both at the same time? - Fox News",
+    "description": "With September and October widely considered the best times to get vaccinated for flu and COVID-19, some may wonder whether it’s OK to get both shots at the same time. Doctors shared insights.",
+    "url": "https://www.foxnews.com/health/vaccines-flu-covid-should-you-get-both-same-time",
+    "urlToImage": "https://static.foxnews.com/foxnews.com/content/uploads/2024/10/covid-flu-vaccines.jpg",
+    "publishedAt": "2024-10-23T18:52:00Z",
+    "category": "health",
+    "content": "Everyone 6 months and older is advised to get the updated 2024-2025 COVID-19 vaccines and the updated 2024-2025 flu vaccines, according to the latest guidance from the U.S. Centers for Disease Contro… [+2973 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "KSBW The Central Coast"
+    },
+    "author": "Ricardo Tovar",
+    "title": "Watsonville animal shelter temporarily closes due to \"contagious disease\" risk for pets - KSBW Monterey",
+    "description": "The Santa Cruz County Animal Shelter says they are temporarily closed due to \"health concerns\" from a few of their animals that have the potential to spread.",
+    "url": "https://www.ksbw.com/article/watsonville-animal-shelter-temporarily-closed-california/62695863",
+    "urlToImage": "https://kubrick.htvapps.com/vidthumb/9972c5c2-5093-4745-983f-9896ed7cd224/08d0090a-f970-4311-9c33-cda98d93a689.jpeg?crop=0.966xw:1.00xh;0.0176xw,0&resize=1200:*",
+    "publishedAt": "2024-10-23T18:33:00Z",
+    "category": "health",
+    "content": "WATSONVILLE, Calif. —The Santa Cruz County Animal Shelter says they are temporarily closing their Watsonville location due to \"health concerns\" from a few of their animals that have the potential to … [+2633 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "KSL.com"
+    },
+    "author": "Collin Leonard, KSL.com",
+    "title": "Mandatory bird flu testing for Cache County dairy cows announced - KSL.com",
+    "description": "After an outbreak of bird flu in Cache County, weekly testing will now be required for all dairies in the county, in an attempt to curb the spread of the infectious disease.",
+    "url": "https://www.ksl.com/article/51161048/mandatory-bird-flu-testing-for-cache-county-dairy-cows-announced",
+    "urlToImage": "https://img.ksl.com/slc/3019/301972/30197256.jpeg?filter=kslv2/responsive_story_lg",
+    "publishedAt": "2024-10-23T18:14:07Z",
+    "category": "health",
+    "content": "LOGAN All Cache County dairy facilities will begin collecting mandatory weekly samples to be tested for bird flu, according to a press release sent Wednesday, in an effort to curb the spread of the h… [+2506 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Neurosciencenews.com"
+    },
+    "author": "Neuroscience News",
+    "title": "Penicillin Use Linked to Lower Parkinson's Risk - Neuroscience News",
+    "description": "A new study found that people who took multiple courses of penicillin antibiotics had a 15% lower risk of developing Parkinson's disease.",
+    "url": "https://neurosciencenews.com/penicillin-parkinsons-27924/",
+    "urlToImage": "https://neurosciencenews.com/files/2024/10/parkinsons-penicillin-neuroscience.jpg",
+    "publishedAt": "2024-10-23T18:11:08Z",
+    "category": "health",
+    "content": "Summary: A new study found that people who took multiple courses of penicillin antibiotics had a 15% lower risk of developing Parkinson’s disease. Researchers analyzed medical records of over 93,000 … [+6313 chars]"
+  },
+  {
+    "source": {
+      "id": "cnn",
+      "name": "CNN"
+    },
+    "author": "Jackie Wattles",
+    "title": "A SpaceX capsule is coming back to Earth. Here’s why Boeing Starliner’s astronauts aren’t on it - CNN",
+    "description": "NASA’s Suni Williams and Butch Wilmore will wait until 2025 to return to Earth on their newly assigned spacecraft, SpaceX’s Crew-9. Here’s what they’re doing in space.",
+    "url": "https://www.cnn.com/2024/10/24/science/boeing-astronauts-spacex-crew-8-splashdown/index.html",
+    "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/spacex-dragon-endeavour.jpg?c=16x9&q=w_800,c_fill",
+    "publishedAt": "2024-10-24T10:00:00Z",
+    "category": "science",
+    "content": "The two test pilots for the inaugural crewed flight of Boeings Starliner spacecraft NASAs Suni Williams and Butch Wilmore left Earth for the International Space Station under the impression their tri… [+7439 chars]"
+  },
+  {
+    "source": {
+      "id": "usa-today",
+      "name": "USA Today"
+    },
+    "author": "Max Hauptman",
+    "title": "Video shows bright fireball seen in the skies over Lake Erie - USA TODAY",
+    "description": "A bright fireball from a meteor was spotted in the skies over large parts of the eastern U.S. Monday evening.",
+    "url": "https://www.usatoday.com/story/news/nation/2024/10/22/meteor-fireball-video-lake-erie/75795186007/",
+    "urlToImage": "https://www.usatoday.com/gcdn/authoring/authoring-images/2024/10/22/USAT/75796854007-trnd-meteor-across-oh-pa-thumb.jpg?crop=1919,1079,x0,y0&width=1919&height=1079&format=pjpg&auto=webp",
+    "publishedAt": "2024-10-24T09:35:33Z",
+    "category": "science",
+    "content": "A large fireball lit up the skies over large portions the U.S. and Canada Monday evening.\r\nThe American Meteor Society reported 436 sightings of the fireball, which was seen from northern Michigan to… [+1000 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "The Philadelphia Inquirer"
+    },
+    "author": "Alison McCook",
+    "title": "Penn State bans scientist from doing research after investigation found ‘unreliable data’ - The Philadelphia Inquirer",
+    "description": "So far, four of Deb Kelly's papers have been retracted from the scientific literature.",
+    "url": "https://www.inquirer.com/health/penn-state-deb-kelly-research-ban-20241024.html",
+    "urlToImage": "https://www.inquirer.com/resizer/TPWb2lHeg8KzTEP2bfZasYGuqF8=/760x507/smart/filters:format(webp)/cloudfront-us-east-1.images.arcpublishing.com/pmn/FISAETIBSVFA5BDFXRHHZNKSPU.jpg",
+    "publishedAt": "2024-10-24T09:00:02Z",
+    "category": "science",
+    "content": "Penn State has taken the unusual step ofrevealing it has indefinitely prohibited a biomedical engineer from conducting research, after a review of her scientific papers found several contained unreli… [+5676 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Florida Today"
+    },
+    "author": "Brooke Edwards",
+    "title": "Scrub recap: SpaceX launch from Cape Canaveral to tie record - Florida Today",
+    "description": "SpaceX will launch a Starlink mission this evening. Will today be the day we see the Space Coast tie last year's launch rate?",
+    "url": "https://www.floridatoday.com/story/tech/science/space/spacex/2024/10/22/spacex-launch-rocket-launch-from-cape-canaveral-today-falcon-9-starlink-fairing-booster-meet-record/75782012007/",
+    "urlToImage": "https://www.floridatoday.com/gcdn/authoring/authoring-images/2024/10/19/PBRE/75742368007-starlink-819-mission-39.JPG?crop=4469,2515,x0,y480&width=3200&height=1801&format=pjpg&auto=webp",
+    "publishedAt": "2024-10-24T08:19:59Z",
+    "category": "science",
+    "content": "Cape Canaveral will have to wait another day.\r\nSpaceX will try again on Wednesday to launch a Falcon 9 rocket one which will tie the record number of launches on the Space Coast set last year. While … [+3462 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "ScienceAlert"
+    },
+    "author": "Michelle Starr",
+    "title": "Most Powerful Gamma Rays Ever Seen in Galaxy's Center Detected by Scientists - ScienceAlert",
+    "description": "Although our galaxy's supermassive black hole is relatively placid, the center of the Milky Way wherein it resides is not a placid place.",
+    "url": "https://www.sciencealert.com/most-powerful-gamma-rays-ever-seen-in-galaxys-center-detected-by-scientists",
+    "urlToImage": "https://www.sciencealert.com/images/2023/11/galactic-center-infrared-radio.jpg",
+    "publishedAt": "2024-10-24T03:12:12Z",
+    "category": "science",
+    "content": "Although our galaxy's supermassive black hole is relatively placid, the center of the Milky Way wherein it resides is not a placid place. Its extreme location is rife with what can best be described … [+4321 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "YouTube"
+    },
+    "author": null,
+    "title": "LIFE ON MARS: Fact vs. Science Fiction | The Universe *MARATHON* - HISTORY",
+    "description": "Enjoy the videos and music you love, upload original content, and share it all with friends, family, and the world on YouTube.",
+    "url": "https://www.youtube.com/",
+    "urlToImage": "https://www.youtube.com/img/desktop/yt_1200.png",
+    "publishedAt": "2024-10-24T00:25:57Z",
+    "category": "science",
+    "content": null
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "SpaceNews"
+    },
+    "author": "",
+    "title": "Boeing losses on Starliner increase by $250 million - SpaceNews",
+    "description": "Boeing is taking another charge against earnings of $250 million on its CST-100 Starliner commercial crew program as the company’s new leader vowed it will not walk away from troubled programs like…",
+    "url": "https://spacenews.com/boeing-losses-on-starliner-increase-by-250-million/",
+    "urlToImage": "https://i0.wp.com/spacenews.com/wp-content/uploads/2024/06/starliner-cft-approach.jpg?resize=1200%2C1200&ssl=1",
+    "publishedAt": "2024-10-24T00:19:44Z",
+    "category": "science",
+    "content": "WASHINGTON Boeing is taking another charge against earnings of $250 million on its CST-100 Starliner commercial crew program as the companys new leader vowed it will not walk away from troubled progr… [+3070 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "FOX 31 Denver"
+    },
+    "author": "Brooke Williams",
+    "title": "Paleontologists unearth 70-million-year-old ‘swamp dweller’ fossil in Colorado - FOX 31 Denver",
+    "description": "Paleontologists have discovered a new mammal that lived with the dinosaurs in Colorado millions of years ago after unearthing a fossil in the northwest corner of the state.",
+    "url": "https://kdvr.com/news/local/paleontologists-unearth-70-million-year-old-swamp-dweller-fossil-in-colorado/",
+    "urlToImage": "https://kdvr.com/wp-content/uploads/sites/11/2024/10/Paleontologists-dig-for-fossils-in-NW-colorado.jpg?w=1280",
+    "publishedAt": "2024-10-24T00:16:18Z",
+    "category": "science",
+    "content": "DENVER (KDVR) — Paleontologists unearthed a fossil in the northwest corner of Colorado and discovered a new mammal that lived when dinosaurs roamed the state millions of years ago.\r\nThe team of resea… [+1851 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "San Francisco Chronicle"
+    },
+    "author": "Julie Johnson",
+    "title": "‘Game-changer’: UC Berkeley chemists develop powder to suck carbon dioxide from the air - San Francisco Chronicle",
+    "description": "Trees are critical in the fight against climate change. But now there’s also a powder that can pull CO2 from the air.",
+    "url": "https://www.sfchronicle.com/climate/article/carbon-dioxide-removal-powder-19857923.php",
+    "urlToImage": "https://s.hdnux.com/photos/01/44/63/01/26423418/3/rawImage.jpg",
+    "publishedAt": "2024-10-23T23:48:40Z",
+    "category": "science",
+    "content": "UC Berkeley chemists have developed a yellow crystalline powder that can absorb carbon dioxide from ambient air.Zihui Zhou, UC Berkeley\r\nCarbon-drinking trees are so far the greatest warriors against… [+2404 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Futurism"
+    },
+    "author": "Victor Tangermann",
+    "title": "Almost All Meteorites That Hit Earth Are Coming From the Same Three Places, Scientists Discover - Futurism",
+    "description": "Resaerchers found that the vast majority of meteorites pummelling the Earth's atmosphere come from only three different asteroid families.",
+    "url": "https://futurism.com/the-byte/almost-all-meterorites-same-place",
+    "urlToImage": "https://wordpress-assets.futurism.com/2024/10/almost-all-meterorites-same-place.jpg",
+    "publishedAt": "2024-10-23T23:05:30Z",
+    "category": "science",
+    "content": "The source of the asteroids.\r\nOrigin Story\r\nResearchers have found that the vast majority of meteorites that plummet through the Earth's atmosphere come from only three different asteroid families, w… [+1905 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Space.com"
+    },
+    "author": "Elizabeth Howell",
+    "title": "SpaceX rolls out Super Heavy rocket for Starship Flight 6 test launch (photos) - Space.com",
+    "description": "SpaceX has not yet released a date for the launch, but it may be soon.",
+    "url": "https://www.space.com/spacex-starship-super-heavy-booster-roll-out-flight-test-six",
+    "urlToImage": "https://cdn.mos.cms.futurecdn.net/esNpNgnNP2gVR8ZiMmFdVg-1200-80.jpg",
+    "publishedAt": "2024-10-23T22:00:00Z",
+    "category": "science",
+    "content": "SpaceX is deep into planning for its newest Starship launch.\r\nSuper Heavy, the first stage of the rocket that hefts Starship into space, was moved to a Starbase pad for testing ahead of the planned s… [+2793 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Gizmodo.com"
+    },
+    "author": "Adam Kovac",
+    "title": "Five Asteroids Will Zoom Past Earth on Thursday, But Don't Panic—They're Just Passing Through - Gizmodo",
+    "description": "No need to freak out—only one asteroid is big enough to be considered hazardous, and it’s staying millions of miles away.",
+    "url": "https://gizmodo.com/five-asteroids-will-zoom-past-earth-on-thursday-but-dont-panic-theyre-just-passing-through-2000515825",
+    "urlToImage": "https://gizmodo.com/app/uploads/2024/09/earth-planet-killer-asteroid-nuke-x-ray.jpg",
+    "publishedAt": "2024-10-23T21:35:04Z",
+    "category": "science",
+    "content": "A quintet of asteroids will all come close to Earth on October 24, but no need to hit the panic button. None are civilization killers, only one can be accurately called a potential hazard, and accord… [+2737 chars]"
+  },
+
+  {
+    "source": {
+      "id": null,
+      "name": "SciTechDaily"
+    },
+    "author": null,
+    "title": "Climate Game-Changer: Fossil Fuels Aren’t Behind Surging Methane Emissions - SciTechDaily",
+    "description": "Microbes are now the primary driver of methane emissions, according to CU Boulder researchers. Mitigating fossil fuel use and other human-related activities is still key to tackling climate change. According to a new detailed analysis recently published in th…",
+    "url": "https://scitechdaily.com/climate-game-changer-fossil-fuels-arent-behind-surging-methane-emissions/",
+    "urlToImage": "https://scitechdaily.com/images/Methane-or-Ammonium-Molecules.jpg",
+    "publishedAt": "2024-10-23T21:23:42Z",
+    "category": "science",
+    "content": "A new study from CU Boulder reveals that microbes, rather than fossil fuels, have been the main driver of the recent surge in methane emissions globally. While fossil fuel reduction remains essential… [+5679 chars]"
+  },
+  {
+    "source": {
+      "id": "cnn",
+      "name": "CNN"
+    },
+    "author": "Ashley Strickland",
+    "title": "Mission to study the ‘dark side’ of the universe just revealed the first piece of unprecedented map - CNN",
+    "description": "The European Space Agency’s Euclid telescope aims to create the largest 3D map of the universe in the next six years. The observatory just completed the first piece.",
+    "url": "https://www.cnn.com/2024/10/23/science/euclid-telescope-map-first-piece/index.html",
+    "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/241023112309-06-euclid-space-telescope-first-images.jpg?c=16x9&q=w_800,c_fill",
+    "publishedAt": "2024-10-23T20:59:00Z",
+    "category": "science",
+    "content": "Sign up for CNNs Wonder Theory science newsletter. Explore the universe with news on fascinating discoveries, scientific advancements and more.\r\nThe powerful Euclid telescope has captured millions of… [+4741 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Phys.Org"
+    },
+    "author": "Kanaga Rajan",
+    "title": "Researchers' unique 3D maps might help solve the mysteries of octopus arms - Phys.org",
+    "description": "Octopuses are fascinating. Their eight arms gracefully whip through water and can accomplish extraordinary tasks like using tools and opening jars. While humans have one spinal cord attached to their brain, in octopuses, it's almost like each arm has its own …",
+    "url": "https://phys.org/news/2024-10-unique-3d-mysteries-octopus-arms.html",
+    "urlToImage": "https://scx2.b-cdn.net/gfx/news/hires/2024/sfsu-researchers-uniqu.jpg",
+    "publishedAt": "2024-10-23T20:45:00Z",
+    "category": "science",
+    "content": "Octopuses are fascinating. Their eight arms gracefully whip through water and can accomplish extraordinary tasks like using tools and opening jars. While humans have one spinal cord attached to their… [+5894 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Neurosciencenews.com"
+    },
+    "author": "Neuroscience News",
+    "title": "How Social Learning Guides Decisions When Preferences Differ - Neuroscience News",
+    "description": "A new study shows that humans use social information to guide their decisions, even when others’ preferences differ from their own.",
+    "url": "https://neurosciencenews.com/social-learning-decisions-27930/",
+    "urlToImage": "https://neurosciencenews.com/files/2024/10/social-information-decision-making-neurosicence.jpg",
+    "publishedAt": "2024-10-23T20:27:35Z",
+    "category": "science",
+    "content": "Summary: A new study shows that humans use social information to guide their decisions, even when others preferences differ from their own. Researchers found that people treat social cues as helpful … [+6263 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "The Daily Galaxy --Great Discoveries Channel"
+    },
+    "author": null,
+    "title": "Mysterious structure discovered at solar system’s edge hints at hidden cosmic architecture - The Daily Galaxy --Great Discoveries Channel",
+    "description": "At the fringes of our cosmic neighborhood, a fascinating discovery has emerged, hinting at a hidden structure within the Kuiper Belt. This revelation challenges our understanding of the Solar System's architecture and may reshape theories about planetary form…",
+    "url": "https://dailygalaxy.com/2024/10/mysterious-structure-discovered-solar-systems-edge-hints-hidden-cosmic-architecture/",
+    "urlToImage": "https://dailygalaxy.com/wp-content/uploads/2024/10/mysterious-structure-discovered-solar-systems-edge-hints-hidden-cosmic-architecture.jpg",
+    "publishedAt": "2024-10-23T20:01:00Z",
+    "category": "science",
+    "content": "Beyond Neptune's orbit lies a vast, ring-shaped expanse known as the Kuiper Belt. This region, home to countless icy rocks including Pluto and Arrokoth, has long been considered the outer boundary of… [+4995 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Space.com"
+    },
+    "author": "Joe Rao",
+    "title": "Headless 'Halloween comet' could already be doomed - Space.com",
+    "description": "The comet \"... has almost certainly disintegrated. There's probably not much left of its primary core.\"",
+    "url": "https://www.space.com/halloween-comet-headless-already-doomed",
+    "urlToImage": "https://cdn.mos.cms.futurecdn.net/wAh4MdeBZ2CRiuvZrjXEiF-1200-80.jpg",
+    "publishedAt": "2024-10-23T19:59:24Z",
+    "category": "science",
+    "content": "The latest update concerning \"the other comet\" of October 2024 — Comet C/2024 S1 (ATLAS) — is that it continues on target to completely disintegrate before it sweeps around the sun early next Monday.… [+8519 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "NASASpaceflight.com"
+    },
+    "author": "Justin Davenport",
+    "title": "Commercial industry gears up for ISS replacement around 2030 amid concerns - NASASpaceflight.com",
+    "description": "NASA and the commercial space industry are planning for the eventual replacement of the International…",
+    "url": "https://www.nasaspaceflight.com/2024/10/commercial-space-stations/",
+    "urlToImage": "https://www.nasaspaceflight.com/wp-content/uploads/2024/10/IMG_9721.jpeg",
+    "publishedAt": "2024-10-23T19:53:28Z",
+    "category": "science",
+    "content": "11NASA and the commercial space industry are planning for the eventual replacement of the International Space Station (ISS), which is currently set for 2030. Companies like Axiom and VAST have alread… [+15270 chars]"
+  },
+  {
+    "source": {
+      "id": "usa-today",
+      "name": "USA Today"
+    },
+    "author": "Jeff Zillgitt",
+    "title": "NBA winners and losers: Dejounte Murray injury puts damper on Pelicans debut - USA TODAY",
+    "description": "The New Orleans Pelicans are among the winners and losers of the early NBA slate.",
+    "url": "https://www.usatoday.com/story/sports/nba/2024/10/24/nba-winners-losers-dejounte-murray-injury-lonzo-ball-knicks/75818728007/",
+    "urlToImage": "https://www.usatoday.com/gcdn/authoring/authoring-images/2024/10/24/USAT/75818961007-usp-nba-chicago-bulls-at-new-orleans-pelicans.jpg?crop=3390,1909,x0,y98&width=3200&height=1803&format=pjpg&auto=webp",
+    "publishedAt": "2024-10-24T09:32:24Z",
+    "category": "sports",
+    "content": "Twenty-four NBA teams have opened their 2024-25 season. The remaining six teams open their season Thursday.\r\nWere not making sweeping conclusions after 12 games, but we will acknowledge the good and … [+4603 chars]"
+  },
+  {
+    "source": {
+      "id": "cnn",
+      "name": "CNN"
+    },
+    "author": "Jacob Lev",
+    "title": "NC State quarterback Grayson McCall retires from football after suffering concussion he ‘cannot come back from’ - CNN",
+    "description": "North Carolina State University quarterback Grayson McCall has retired from football after suffering a concussion he “cannot come back from,” the 23-year-old announced on Wednesday.",
+    "url": "https://www.cnn.com/2024/10/24/sport/grayson-mccall-nc-state-retires-concussion-spt-intl/index.html",
+    "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-2170111284.jpg?c=16x9&q=w_800,c_fill",
+    "publishedAt": "2024-10-24T07:29:00Z",
+    "category": "sports",
+    "content": "North Carolina State University quarterback Grayson McCall has retired from football after suffering a concussion he cannot come back from, the 23-year-old announced on Wednesday.\r\nThe senior was str… [+1924 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "CBS Sports"
+    },
+    "author": "",
+    "title": "Clippers' gleaming new arena can't obscure the mediocrity of the team that plays inside it - CBS Sports",
+    "description": "Wednesday's debut was a metaphor for this entire Clippers era -- hope gained, and quickly extinguished",
+    "url": "https://www.cbssports.com/nba/news/clippers-gleaming-new-arena-cant-obscure-the-mediocrity-of-the-team-that-plays-inside-it/",
+    "urlToImage": "https://sportshub.cbsistatic.com/i/r/2024/10/24/0788b290-b324-4543-a69f-5ba3c90e6fdb/thumbnail/1200x675/fac2b16074ab037b4d7048dcc75c5c77/102324-steveballmer.jpg",
+    "publishedAt": "2024-10-24T06:00:00Z",
+    "category": "sports",
+    "content": "INGLEWOOD, Calif. -- The place was beautiful. \r\nOn Wednesday night, in the season opener, the Los Angeles Clippers debuted their new, gleaming, futuristic arena. No more sharing with the Los Angeles … [+6264 chars]"
+  },
+  {
+    "source": {
+      "id": "the-washington-post",
+      "name": "The Washington Post"
+    },
+    "author": "Des Bieler",
+    "title": "Bryce Young back as Panthers’ starter after Andy Dalton hurt in car crash - The Washington Post",
+    "description": "The top pick in the 2023 draft, Young was benched earlier this season but gets another chance after Dalton suffered a minor injury to his throwing hand.",
+    "url": "https://www.washingtonpost.com/sports/2024/10/23/bryce-young-panthers-starter-andy-dalton-crash/",
+    "urlToImage": "https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/46TI2IS5ZNHBMDCQ5SN6UEOGFQ_size-normalized.jpg&w=1440",
+    "publishedAt": "2024-10-24T05:48:36Z",
+    "category": "sports",
+    "content": "Carolina Panthers quarterback Bryce Young, the No. 1 pick in the 2023 NFL draft who was benched earlier this year in favor of Andy Dalton, will start this week after Dalton injured his thumb in a car… [+326 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Arizona Sports"
+    },
+    "author": null,
+    "title": "Suns grit through growing pains, old habits for OT win vs. Clippers - Arizona Sports",
+    "description": "The process of building is always going to be unforgiving in basketball, even in an offseason full of promising change, and that was the lesson (if you needed it) within the Phoenix Suns' 116-113 win over the Los Angeles Clippers in overtime.",
+    "url": "https://arizonasports.com/story/3562344/suns-clippers-win-season-opener/",
+    "urlToImage": "https://arizonasports.com/wp-content/uploads/2024/10/GettyImages-2180664293-e1729747492428.jpg",
+    "publishedAt": "2024-10-24T05:29:52Z",
+    "category": "sports",
+    "content": "The process of building is always going to be unforgiving in basketball, even in an offseason full of promising change, and that was the lesson (if you needed it) within the Phoenix Suns’ 116-113 win… [+4476 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Blazer's Edge"
+    },
+    "author": "Dave Deckard",
+    "title": "Deni Avdija Sparkles, Trail Blazers Implode vs. Warriors - Blazer's Edge",
+    "description": "It was the best of nights, it was the worst of nights.",
+    "url": "https://www.blazersedge.com/2024/10/23/24278237/portland-trail-blazers-golden-state-warriors-final-score-avdija-analysis-scoot-henderson",
+    "urlToImage": "https://cdn.vox-cdn.com/thumbor/C6CgDluCcGZ_iw8qxG7lQN7LHb4=/0x986:5504x3868/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/25696162/2179773218.jpg",
+    "publishedAt": "2024-10-24T04:44:01Z",
+    "category": "sports",
+    "content": "The Portland Trail Blazers welcomed Deni Avdija to their starting lineup in the opening night of the 2024-25 NBA season. The incoming forward made good, nearly singlehandedly revolutionizing Portland… [+5271 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "CBS Sports"
+    },
+    "author": "",
+    "title": "Fantasy Football Week 8 Start 'Em & Sit 'Em: C.J. Stroud the must-start, plus DFS sleepers to fire up - CBS Sports",
+    "description": "A big bounce back is coming for the talented second-year QB",
+    "url": "https://www.cbssports.com/fantasy/football/news/fantasy-football-week-8-start-em-sit-em-c-j-stroud-the-must-start-plus-dfs-sleepers-to-fire-up/",
+    "urlToImage": "https://sportshub.cbsistatic.com/i/r/2024/10/20/b6674cad-a11b-4082-b8d0-43c3b6b879b1/thumbnail/1200x675/8e735813689ddb96d2fcb7ebf5b9a00d/stroud-5g.jpg",
+    "publishedAt": "2024-10-24T03:56:00Z",
+    "category": "sports",
+    "content": "We might be getting some good news for Week 8 after some difficult injuries in Week 7. You'll want to keep checking the injury report -- and this column -- before setting your lineup. \r\nWeek 7 was to… [+2265 chars]"
+  },
+  {
+    "source": {
+      "id": "usa-today",
+      "name": "USA Today"
+    },
+    "author": "Jon Hoefling",
+    "title": "How many points did Zach Edey score tonight? Grizzlies-Jazz box score - USA TODAY",
+    "description": "How Memphis Grizzlies rookie Zach Edey fared against the Utah Jazz in his regular season debut.",
+    "url": "https://www.usatoday.com/story/sports/nba/grizzlies/2024/10/23/zach-edey-points-grizzlies-jazz-stats/75809796007/",
+    "urlToImage": "https://www.usatoday.com/gcdn/authoring/authoring-images/2024/10/24/USAT/75818475007-usp-nba-memphis-grizzlies-at-utah-jazz.jpg?crop=5135,2887,x0,y37&width=3200&height=1800&format=pjpg&auto=webp",
+    "publishedAt": "2024-10-24T03:52:50Z",
+    "category": "sports",
+    "content": "Zach Edey, the two-time college basketball player of the year, officially began his NBA career on Wednesday night.\r\nThe ninth overall pick in the 2024 NBA draft had a solid preseason, the former Purd… [+991 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "bleachernation.com"
+    },
+    "author": null,
+    "title": "Enhanced Box Score: Pelicans 123, Bulls 111– October 23, 2024 - Bleacher Nation",
+    "description": "Well, this one went about as expected. The Bulls drop the season opener on the road in New Orleans thanks to a sloppy effort.",
+    "url": "https://www.bleachernation.com/bulls/2024/10/23/pelicans-123-bulls-111/",
+    "urlToImage": "https://www.bleachernation.com/wp-content/uploads/2021/01/23.jpg",
+    "publishedAt": "2024-10-24T02:52:44Z",
+    "category": "sports",
+    "content": "This game felt like exactly how we thought the Bulls might be this season.\r\nThe defense was very spotty at times. The turnovers just seemed to be endless, especially in the second half. Zach LaVine l… [+3669 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Yahoo Entertainment"
+    },
+    "author": "Jack Baer",
+    "title": "Pistons called for playing 6 men on the court during 4th-quarter collapse in season opener - Yahoo Sports",
+    "description": "The Pistons might still be the Pistons.",
+    "url": "https://sports.yahoo.com/pistons-called-for-playing-6-men-on-the-court-during-4th-quarter-collapse-in-season-opener-015945866.html",
+    "urlToImage": "https://s.yimg.com/ny/api/res/1.2/RxoUOgNc1wJ3Z1sw4CcC2g--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD03MzA-/https://s.yimg.com/os/creatr-uploaded-images/2024-10/87fc2aa0-91ab-11ef-9d57-be9fd0e9a918",
+    "publishedAt": "2024-10-24T02:42:00Z",
+    "category": "sports",
+    "content": "The Detroit Pistons weren't good last year and aren't supposed to be good this year. But you'd still expect them to keep track of how many players they have on the floor.\r\nA promising season opener t… [+1396 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "ESPN Australia"
+    },
+    "author": null,
+    "title": "Kennesaw St. ends Liberty streak, wins 1st in FBS - ESPN Australia",
+    "description": "Kennesaw State beat previously unbeaten Liberty 27-24 on Wednesday night to secure the program's first FBS victory.",
+    "url": "https://www.espn.com.au/college-football/story/_/id/41971187/kennesaw-state-ends-liberty-win-streak-wins-first-fbs",
+    "urlToImage": "https://a.espncdn.com/combiner/i?img=%2Fphoto%2F2016%2F0917%2Fr126977_1296x729_16%2D9.jpg",
+    "publishedAt": "2024-10-24T02:37:30Z",
+    "category": "sports",
+    "content": "KENNESAW, Ga. -- Davis Bryson threw for a touchdown, Michael Benefield and Qua Ashley each rushed for a score, and Kennesaw State topped previously unbeaten Liberty27-24 on Wednesday night to secure … [+1863 chars]"
+  },
+  {
+    "source": {
+      "id": "espn",
+      "name": "ESPN"
+    },
+    "author": null,
+    "title": "Heat dedicate home court to beloved Pat Riley - ESPN",
+    "description": "Dwyane Wade, Goran Dragic, Mike Miller and Jamal Mashburn were among the ex-Heat players who returned to Miami on Wednesday night to watch the team's home court be renamed for their former coach, Pat Riley.",
+    "url": "https://www.espn.com/nba/story/_/id/41970007/heat-dedicate-court-ex-coach-current-president-pat-riley",
+    "urlToImage": "https://a3.espncdn.com/combiner/i?img=%2Fphoto%2F2024%2F1024%2Fr1404919_1296x729_16%2D9.jpg",
+    "publishedAt": "2024-10-24T02:07:00Z",
+    "category": "sports",
+    "content": "Oct 23, 2024, 10:07 PM ET\r\nMIAMI -- Pat Riley stood in front of 20,000 people Wednesday night. And they all seemed to be cheering as the Miami Heat officially dedicated their home court in his honor.… [+3629 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "KC Kingdom"
+    },
+    "author": "Richard Louis",
+    "title": "DeAndre Hopkins Revealed Chiefs Trade on Social Media Prior to Deal Crossing Finish Line - KC Kingdom",
+    "description": "The veteran wideout gave fans a hint on social media prior to the trade.",
+    "url": "https://kckingdom.com/deandre-hopkins-revealed-chiefs-trade-on-social-media-prior-to-deal-crossing-finish-line-01jay1mht70p",
+    "urlToImage": "https://images2.minutemediacdn.com/image/upload/c_crop,w_4532,h_2549,x_0,y_0/c_fill,w_1440,ar_16:9,f_auto,q_auto,g_auto/images/ImagnImages/mmsport/220/01jay3ze1c0df4y927ny.jpg",
+    "publishedAt": "2024-10-24T02:06:47Z",
+    "category": "sports",
+    "content": "The Kansas City Chiefs are sitting at 6-0 and made a splashy move on Wednesday. The fanbase woke up to thrilling news as the team traded for receiver DeAndre Hopkins. \r\nThe Chiefs sent a conditional … [+1463 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "cleveland.com"
+    },
+    "author": "Chris Fedor, cleveland.com",
+    "title": "Cavs open Kenny Atkinson era with record-setting 136-106 road win over Toronto Raptors - cleveland.com",
+    "description": "With a new-look offense that features more modern philosophies — pace, space, continuous movement, diversity and a slightly modified hierarchy — superior Cleveland shredded a helpless Toronto defense.",
+    "url": "https://www.cleveland.com/cavs/2024/10/cavs-open-kenny-atkinson-era-with-resounding-130-104-road-win-over-toronto-raptors.html",
+    "urlToImage": "https://www.cleveland.com/resizer/v2/LXQQUTUBB5GZFFTT6KBTMGHOPY.jpg?auth=e4ca56148adadc317f81e59c135290a3524e034528c6c2fe97cbd0a26cf1b3c0&width=1280&quality=90",
+    "publishedAt": "2024-10-24T02:06:00Z",
+    "category": "sports",
+    "content": null
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "A Sea Of Blue"
+    },
+    "author": "Drew Brown",
+    "title": "Kentucky demolishes Kentucky Wesleyan 123-52: 4 things to know and postgame cheers - A Sea Of Blue",
+    "description": "Mark Pope’s system was on full display, and it has the Big Blue Nation salivating at what this team can do.",
+    "url": "https://www.aseaofblue.com/2024/10/23/24278112/kentucky-basketball-vs-kentucky-wesleyan-score-recap-4-takeaways-uk-wildcats",
+    "urlToImage": "https://cdn.vox-cdn.com/thumbor/xdtrpRboiWvixOIWHikZhayBbhI=/0x0:7688x4025/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/25695908/usa_today_24566686.jpg",
+    "publishedAt": "2024-10-24T00:47:39Z",
+    "category": "sports",
+    "content": "It felt great to watch a new era of Kentucky Wildcats mens basketball begin as the Cats opened exhibition play against Kentucky Wesleyan on Wednesday night. \r\nThis was the first of two exhibition gam… [+4149 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "New York Post"
+    },
+    "author": "Tracy Swartz",
+    "title": "Ozempic may significantly lower the risk of Alzheimer’s disease — here’s how - New York Post ",
+    "description": "Nearly 7 million Americans 65 and older are living with Alzheimer’s disease, which gradually destroys memory and thinking skills and the ability to perform daily tasks.",
+    "url": "https://nypost.com/2024/10/24/lifestyle/ozempic-may-lower-the-risk-of-alzheimers-disease-new-study/",
+    "urlToImage": "https://nypost.com/wp-content/uploads/sites/2/2024/10/92232000.jpg?quality=75&strip=all&w=1024",
+    "publishedAt": "2024-10-24T11:00:00Z",
+    "category": "politics",
+    "content": "Type 2 diabetics may have a shot at significantly lowering their risk of Alzheimer’s disease if they take Ozempic instead of other diabetes medications, a new study finds.\r\nSemaglutide  the active in… [+3414 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "CNBC"
+    },
+    "author": "Alex Sherman",
+    "title": "TKO Group to acquire IMG, Professional Bull Riders and On Location from Endeavor for $3.25 billion - CNBC",
+    "description": "TKO Group, the company that owns UFC and WWE, is expanding its reach in the sports world by acquiring three businesses from Endeavor Group for $3.25 billion.",
+    "url": "https://www.cnbc.com/2024/10/24/tko-group-to-acquire-img-pbr-and-on-location-from-endeavor.html",
+    "urlToImage": "https://image.cnbcfm.com/api/v1/image/107363166-17060314842024-01-23t173451z_2098709955_rc2qn5ah21l9_rtrmadp_0_usa-stocks.jpeg?v=1706031562&w=1920&h=1080",
+    "publishedAt": "2024-10-24T10:50:42Z",
+    "category": "politics",
+    "content": "TKO Group, the company that owns WWE and UFC, is expanding into sports-adjacent properties by acquiring three businesses for $3.25 billion from its controlling owner, Endeavor Group.\r\nThe businesses … [+2245 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Investopedia"
+    },
+    "author": "Aaron McDade",
+    "title": "UPS Stock Rises as Shipping Giant Returns To Growth - Yahoo Finance",
+    "description": "UPS shares rose Thursday morning after the company reported better-than-expected third-quarter results, returning to revenue and profit growth for the first ...",
+    "url": "https://www.investopedia.com/ups-stock-rises-as-shipping-giant-returns-to-revenue-growth-8731450",
+    "urlToImage": "https://s.yimg.com/ny/api/res/1.2/_TLImXjRdqLlN.y_vCX.XA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD04MDA-/https://media.zenfs.com/en/investopedia_245/21a573f40395d9d605d06d750f237d6a",
+    "publishedAt": "2024-10-24T10:29:05Z",
+    "category": "politics",
+    "content": "United Parcel Service (UPS) shares rose as the company reported third-quarter results above analysts' expectations Thursday morning.\r\nThe shipping giant reported revenue of $22.2 billion, better than… [+1472 chars]"
+  },
+  {
+    "source": {
+      "id": "associated-press",
+      "name": "Associated Press"
+    },
+    "author": "KIM TONG-HYUNG",
+    "title": "South Korean president raises possibility of supplying Ukraine with arms - The Associated Press",
+    "description": "South Korea’s president has raised the possibility of supplying Ukraine with weapons while stressing that his government “won’t sit idle” as North Korea allegedly sends troops to support Russia’s aggression toward its neighbor. South Korean President Yoon Suk…",
+    "url": "https://apnews.com/article/south-korea-poland-yoon-duda-north-korea-russia-troop-deployment-2435e6ab2b795edf5b7dd233b93b69dd",
+    "urlToImage": "https://dims.apnews.com/dims4/default/7bbf521/2147483647/strip/true/crop/5902x3320+0+256/resize/1440x810!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Fad%2Fec%2F38afe0d9ea36e353680daf425f39%2F737a4f97f1394491b49197b743490e18",
+    "publishedAt": "2024-10-24T10:21:00Z",
+    "category": "politics",
+    "content": "SEOUL, South Korea (AP) South Koreas president on Thursday raised the possibility of supplying Ukraine with weapons while stressing that his government wont sit idle as North Korea allegedly sends tr… [+4119 chars]"
+  },
+  {
+    "source": {
+      "id": "cnn",
+      "name": "CNN"
+    },
+    "author": "Jackie Wattles",
+    "title": "A SpaceX capsule is coming back to Earth. Here’s why Boeing Starliner’s astronauts aren’t on it - CNN",
+    "description": "NASA’s Suni Williams and Butch Wilmore will wait until 2025 to return to Earth on their newly assigned spacecraft, SpaceX’s Crew-9. Here’s what they’re doing in space.",
+    "url": "https://www.cnn.com/2024/10/24/science/boeing-astronauts-spacex-crew-8-splashdown/index.html",
+    "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/spacex-dragon-endeavour.jpg?c=16x9&q=w_800,c_fill",
+    "publishedAt": "2024-10-24T10:00:00Z",
+    "category": "politics",
+    "content": "The two test pilots for the inaugural crewed flight of Boeings Starliner spacecraft NASAs Suni Williams and Butch Wilmore left Earth for the International Space Station under the impression their tri… [+7439 chars]"
+  },
+  {
+    "source": {
+      "id": "associated-press",
+      "name": "Associated Press"
+    },
+    "author": "SUZAN FRASER",
+    "title": "Turkey strikes Kurdish militant targets in Syria and Iraq for a second day - The Associated Press",
+    "description": "Turkey has struck suspected Kurdish militant targets in Syria and Iraq for a second day after a deadly attack on the premises of a key defense company. Drones belonging to the National Intelligence Organization on Thursday targeted numerous “strategic locatio…",
+    "url": "https://apnews.com/article/turkey-strikes-pkk-targets-syria-iraq-8b8c5e09716e2d3e3a29809b4082854d",
+    "urlToImage": "https://dims.apnews.com/dims4/default/549dd05/2147483647/strip/true/crop/2671x1502+0+139/resize/1440x810!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F2d%2F24%2Fa89b731f6348a716516e93173cb6%2F8b47b2b0855747c4a8876e0aac247878",
+    "publishedAt": "2024-10-24T09:46:00Z",
+    "category": "politics",
+    "content": "ANKARA, Turkey (AP) Turkey struck suspected Kurdish militant targets in Syria and Iraq for a second day on Thursday following an attack on the premises of a key defense company which killed at least … [+3517 chars]"
+  },
+  {
+    "source": {
+      "id": "reuters",
+      "name": "Reuters"
+    },
+    "author": "Daniel Catchpole, Allison Lampert, Matt Mcknight",
+    "title": "Boeing strike barrels on as workers reject wage deal - Reuters",
+    "description": "The vote was 64% in opposition to the deal, which offered a 35% rise in wages over four years.",
+    "url": "https://www.reuters.com/business/aerospace-defense/boeing-braces-union-vote-wage-deal-that-could-end-costly-strike-2024-10-23/",
+    "urlToImage": "https://www.reuters.com/resizer/v2/U2R3RKK6YZMWDGKLUZYMPPX2GM.jpg?auth=5b151d5f7b9da335e945f7d0ad9a64f817c0c49b12f1135d97ffec3e62e25a81&height=1005&width=1920&quality=80&smart=true",
+    "publishedAt": "2024-10-24T09:44:53Z",
+    "category": "politics",
+    "content": null
+  },
+  {
+    "source": {
+      "id": "politico",
+      "name": "Politico"
+    },
+    "author": "Benjamin Guggenheim",
+    "title": "‘Trying to curry favor’: Lobbyists on tax matters hired Richard Neal’s son - POLITICO",
+    "description": "Brendan Neal, son of the Democrats’ longtime Ways and Means leader, has collected regular payments from his father’s campaign and received business from lobbyists on tax issues.",
+    "url": "https://www.politico.com/news/2024/10/24/richard-neal-son-congress-lobbying-00181853",
+    "urlToImage": "https://static.politico.com/9b/27/9c9bdecf489a810de145cee52577/ap20063519357120.jpg",
+    "publishedAt": "2024-10-24T09:00:00Z",
+    "category": "politics",
+    "content": "For more than a decade, Richard Neal has been a quietly dominant force in tax policy, culminating in his four years as chair of the House Ways and Means Committee, arguably the most powerful panel in… [+14913 chars]"
+  },
+  {
+    "source": {
+      "id": "al-jazeera-english",
+      "name": "Al Jazeera English"
+    },
+    "author": "Al Jazeera Staff",
+    "title": "US election: 12 days left – Who is ahead, what Harris and Trump are up to - Al Jazeera English",
+    "description": "With less than two weeks until voting day, Trump and Harris sharpen their attacks and pitches in key swing states.",
+    "url": "https://www.aljazeera.com/news/2024/10/24/us-election-12-days-left-who-is-ahead-what-harris-and-trump-are-up-to",
+    "urlToImage": "https://www.aljazeera.com/wp-content/uploads/2024/10/12580866-1-1-1729768603.jpg?resize=1920%2C1440",
+    "publishedAt": "2024-10-24T08:59:55Z",
+    "category": "politics",
+    "content": "With just 12 days until the US election, Vice President Kamala Harris addressed undecided voters at a CNN town hall in Pennsylvania on Wednesday.\r\nAmong the seven swing states that analysts believe c… [+8638 chars]"
+  },
+  {
+    "source": {
+      "id": "fox-news",
+      "name": "Fox News"
+    },
+    "author": "Janelle Ash",
+    "title": "Jelly Roll drops 100 pounds: How the country music star transformed his body - Fox News",
+    "description": "Jelly Roll has reached a huge milestone in his weight-loss journey. The country music star took to Instagram on Wednesday to share that he is 100 pounds down so far.",
+    "url": "https://www.foxnews.com/entertainment/jelly-roll-drops-100-pounds-how-country-music-star-transformed-his-body",
+    "urlToImage": "https://static.foxnews.com/foxnews.com/content/uploads/2024/10/jelly-roll-before-and-after.jpg",
+    "publishedAt": "2024-10-24T08:30:00Z",
+    "category": "politics",
+    "content": "Join Fox News for access to this content\r\nPlus special access to select articles and other premium content with your account - free of charge.\r\nBy entering your email and pushing continue, you are ag… [+5116 chars]"
+  },
+  {
+    "source": {
+      "id": "business-insider",
+      "name": "Business Insider"
+    },
+    "author": "Matthew Loh",
+    "title": "BRICS' new declaration shows Russia's war still can't get the international backing that Moscow wants - Business Insider",
+    "description": "The war was only mentioned once in the 43-page summary, while BRICS devoted five paragraphs to criticizing Israel's actions in the Middle East.",
+    "url": "https://www.businessinsider.com/brics-kazan-declaration-russia-cant-get-backing-war-ukraine-putin-2024-10",
+    "urlToImage": "https://i.insider.com/6719dd6601ea6d83dee3a9ef?width=1200&format=jpeg",
+    "publishedAt": "2024-10-24T07:36:00Z",
+    "category": "politics",
+    "content": "Over two dozen world leaders at this year's BRICS summit ended Wednesday's talks with the Kazan Declaration, a 134-point summary of their agreements.\r\nThe war in Ukraine was only mentioned once in th… [+2664 chars]"
+  },
+  {
+    "source": {
+      "id": "the-washington-post",
+      "name": "The Washington Post"
+    },
+    "author": "Andrew Jeong, Claire Parker, Vivian Ho, John Hudson, Leo Sands, Missy Ryan, Amanda Coletta, Mohamad El Chamaa, Adam Taylor, Lior Soroka, Sammy Westfall",
+    "title": "Blinken says ‘more progress’ from Israel needed on Gaza aid flow - The Washington Post",
+    "description": "Secretary of State Antony Blinken is visiting the Middle East. Israeli forces said they killed Hashem Safieddine, a top Hezbollah leader.",
+    "url": "https://www.washingtonpost.com/world/2024/10/23/israel-iran-war-news-hamas-lebanon-hezbollah/",
+    "urlToImage": "https://www.washingtonpost.com/wp-apps/imrs.php?src=https://d1i4t8bqe7zgj6.cloudfront.net/10-23-2024/t_a01dcd972a944407af1986a41c27be37_name_blinken.jpg&w=1440",
+    "publishedAt": "2024-10-24T06:56:00Z",
+    "category": "politics",
+    "content": "JERUSALEM The head of the United Nations humanitarian affairs office in Gaza painted a desperate portrait of the northern part of the enclave, calling conditions in the area after renewed fighting be… [+2268 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "BBC News"
+    },
+    "author": null,
+    "title": "Lebanon: Satellite imagery reveals intensity of Israeli bombing - BBC.com",
+    "description": "Israel damaged more buildings in two weeks than in a year of fighting with Hezbollah, data shows.",
+    "url": "https://www.bbc.com/news/articles/cvgx3zjvjg3o",
+    "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/8751/live/558e3170-91f2-11ef-b48d-558489c034c9.jpg",
+    "publishedAt": "2024-10-24T06:43:15Z",
+    "category": "politics",
+    "content": "Damaged buildings in a residential area following an Israeli attack on Dahieh suburb in Beirut\r\nIsrael's intensified bombing campaign of Lebanon has caused more damage to buildings in two weeks than … [+5271 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "New York Post"
+    },
+    "author": "Tracy Swartz",
+    "title": "Ozempic may significantly lower the risk of Alzheimer’s disease — here’s how - New York Post ",
+    "description": "Nearly 7 million Americans 65 and older are living with Alzheimer’s disease, which gradually destroys memory and thinking skills and the ability to perform daily tasks.",
+    "url": "https://nypost.com/2024/10/24/lifestyle/ozempic-may-lower-the-risk-of-alzheimers-disease-new-study/",
+    "urlToImage": "https://nypost.com/wp-content/uploads/sites/2/2024/10/92232000.jpg?quality=75&strip=all&w=1024",
+    "publishedAt": "2024-10-24T11:00:00Z",
+    "category": "general",
+    "content": "Type 2 diabetics may have a shot at significantly lowering their risk of Alzheimer’s disease if they take Ozempic instead of other diabetes medications, a new study finds.\r\nSemaglutide  the active in… [+3414 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "CNBC"
+    },
+    "author": "Alex Sherman",
+    "title": "TKO Group to acquire IMG, Professional Bull Riders and On Location from Endeavor for $3.25 billion - CNBC",
+    "description": "TKO Group, the company that owns UFC and WWE, is expanding its reach in the sports world by acquiring three businesses from Endeavor Group for $3.25 billion.",
+    "url": "https://www.cnbc.com/2024/10/24/tko-group-to-acquire-img-pbr-and-on-location-from-endeavor.html",
+    "urlToImage": "https://image.cnbcfm.com/api/v1/image/107363166-17060314842024-01-23t173451z_2098709955_rc2qn5ah21l9_rtrmadp_0_usa-stocks.jpeg?v=1706031562&w=1920&h=1080",
+    "publishedAt": "2024-10-24T10:50:42Z",
+    "category": "general",
+    "content": "TKO Group, the company that owns WWE and UFC, is expanding into sports-adjacent properties by acquiring three businesses for $3.25 billion from its controlling owner, Endeavor Group.\r\nThe businesses … [+2245 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Investopedia"
+    },
+    "author": "Aaron McDade",
+    "title": "UPS Stock Rises as Shipping Giant Returns To Growth - Yahoo Finance",
+    "description": "UPS shares rose Thursday morning after the company reported better-than-expected third-quarter results, returning to revenue and profit growth for the first ...",
+    "url": "https://www.investopedia.com/ups-stock-rises-as-shipping-giant-returns-to-revenue-growth-8731450",
+    "urlToImage": "https://s.yimg.com/ny/api/res/1.2/_TLImXjRdqLlN.y_vCX.XA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD04MDA-/https://media.zenfs.com/en/investopedia_245/21a573f40395d9d605d06d750f237d6a",
+    "publishedAt": "2024-10-24T10:29:05Z",
+    "category": "general",
+    "content": "United Parcel Service (UPS) shares rose as the company reported third-quarter results above analysts' expectations Thursday morning.\r\nThe shipping giant reported revenue of $22.2 billion, better than… [+1472 chars]"
+  },
+  {
+    "source": {
+      "id": "associated-press",
+      "name": "Associated Press"
+    },
+    "author": "KIM TONG-HYUNG",
+    "title": "South Korean president raises possibility of supplying Ukraine with arms - The Associated Press",
+    "description": "South Korea’s president has raised the possibility of supplying Ukraine with weapons while stressing that his government “won’t sit idle” as North Korea allegedly sends troops to support Russia’s aggression toward its neighbor. South Korean President Yoon Suk…",
+    "url": "https://apnews.com/article/south-korea-poland-yoon-duda-north-korea-russia-troop-deployment-2435e6ab2b795edf5b7dd233b93b69dd",
+    "urlToImage": "https://dims.apnews.com/dims4/default/7bbf521/2147483647/strip/true/crop/5902x3320+0+256/resize/1440x810!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Fad%2Fec%2F38afe0d9ea36e353680daf425f39%2F737a4f97f1394491b49197b743490e18",
+    "publishedAt": "2024-10-24T10:21:00Z",
+    "category": "general",
+    "content": "SEOUL, South Korea (AP) South Koreas president on Thursday raised the possibility of supplying Ukraine with weapons while stressing that his government wont sit idle as North Korea allegedly sends tr… [+4119 chars]"
+  },
+  {
+    "source": {
+      "id": "cnn",
+      "name": "CNN"
+    },
+    "author": "Jackie Wattles",
+    "title": "A SpaceX capsule is coming back to Earth. Here’s why Boeing Starliner’s astronauts aren’t on it - CNN",
+    "description": "NASA’s Suni Williams and Butch Wilmore will wait until 2025 to return to Earth on their newly assigned spacecraft, SpaceX’s Crew-9. Here’s what they’re doing in space.",
+    "url": "https://www.cnn.com/2024/10/24/science/boeing-astronauts-spacex-crew-8-splashdown/index.html",
+    "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/spacex-dragon-endeavour.jpg?c=16x9&q=w_800,c_fill",
+    "publishedAt": "2024-10-24T10:00:00Z",
+    "category": "general",
+    "content": "The two test pilots for the inaugural crewed flight of Boeings Starliner spacecraft NASAs Suni Williams and Butch Wilmore left Earth for the International Space Station under the impression their tri… [+7439 chars]"
+  },
+  {
+    "source": {
+      "id": "associated-press",
+      "name": "Associated Press"
+    },
+    "author": "SUZAN FRASER",
+    "title": "Turkey strikes Kurdish militant targets in Syria and Iraq for a second day - The Associated Press",
+    "description": "Turkey has struck suspected Kurdish militant targets in Syria and Iraq for a second day after a deadly attack on the premises of a key defense company. Drones belonging to the National Intelligence Organization on Thursday targeted numerous “strategic locatio…",
+    "url": "https://apnews.com/article/turkey-strikes-pkk-targets-syria-iraq-8b8c5e09716e2d3e3a29809b4082854d",
+    "urlToImage": "https://dims.apnews.com/dims4/default/549dd05/2147483647/strip/true/crop/2671x1502+0+139/resize/1440x810!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F2d%2F24%2Fa89b731f6348a716516e93173cb6%2F8b47b2b0855747c4a8876e0aac247878",
+    "publishedAt": "2024-10-24T09:46:00Z",
+    "category": "general",
+    "content": "ANKARA, Turkey (AP) Turkey struck suspected Kurdish militant targets in Syria and Iraq for a second day on Thursday following an attack on the premises of a key defense company which killed at least … [+3517 chars]"
+  },
+  {
+    "source": {
+      "id": "reuters",
+      "name": "Reuters"
+    },
+    "author": "Daniel Catchpole, Allison Lampert, Matt Mcknight",
+    "title": "Boeing strike barrels on as workers reject wage deal - Reuters",
+    "description": "The vote was 64% in opposition to the deal, which offered a 35% rise in wages over four years.",
+    "url": "https://www.reuters.com/business/aerospace-defense/boeing-braces-union-vote-wage-deal-that-could-end-costly-strike-2024-10-23/",
+    "urlToImage": "https://www.reuters.com/resizer/v2/U2R3RKK6YZMWDGKLUZYMPPX2GM.jpg?auth=5b151d5f7b9da335e945f7d0ad9a64f817c0c49b12f1135d97ffec3e62e25a81&height=1005&width=1920&quality=80&smart=true",
+    "publishedAt": "2024-10-24T09:44:53Z",
+    "category": "general",
+    "content": null
+  },
+  {
+    "source": {
+      "id": "politico",
+      "name": "Politico"
+    },
+    "author": "Benjamin Guggenheim",
+    "title": "‘Trying to curry favor’: Lobbyists on tax matters hired Richard Neal’s son - POLITICO",
+    "description": "Brendan Neal, son of the Democrats’ longtime Ways and Means leader, has collected regular payments from his father’s campaign and received business from lobbyists on tax issues.",
+    "url": "https://www.politico.com/news/2024/10/24/richard-neal-son-congress-lobbying-00181853",
+    "urlToImage": "https://static.politico.com/9b/27/9c9bdecf489a810de145cee52577/ap20063519357120.jpg",
+    "publishedAt": "2024-10-24T09:00:00Z",
+    "category": "general",
+    "content": "For more than a decade, Richard Neal has been a quietly dominant force in tax policy, culminating in his four years as chair of the House Ways and Means Committee, arguably the most powerful panel in… [+14913 chars]"
+  },
+  {
+    "source": {
+      "id": "al-jazeera-english",
+      "name": "Al Jazeera English"
+    },
+    "author": "Al Jazeera Staff",
+    "title": "US election: 12 days left – Who is ahead, what Harris and Trump are up to - Al Jazeera English",
+    "description": "With less than two weeks until voting day, Trump and Harris sharpen their attacks and pitches in key swing states.",
+    "url": "https://www.aljazeera.com/news/2024/10/24/us-election-12-days-left-who-is-ahead-what-harris-and-trump-are-up-to",
+    "urlToImage": "https://www.aljazeera.com/wp-content/uploads/2024/10/12580866-1-1-1729768603.jpg?resize=1920%2C1440",
+    "publishedAt": "2024-10-24T08:59:55Z",
+    "category": "general",
+    "content": "With just 12 days until the US election, Vice President Kamala Harris addressed undecided voters at a CNN town hall in Pennsylvania on Wednesday.\r\nAmong the seven swing states that analysts believe c… [+8638 chars]"
+  },
+  {
+    "source": {
+      "id": "fox-news",
+      "name": "Fox News"
+    },
+    "author": "Janelle Ash",
+    "title": "Jelly Roll drops 100 pounds: How the country music star transformed his body - Fox News",
+    "description": "Jelly Roll has reached a huge milestone in his weight-loss journey. The country music star took to Instagram on Wednesday to share that he is 100 pounds down so far.",
+    "url": "https://www.foxnews.com/entertainment/jelly-roll-drops-100-pounds-how-country-music-star-transformed-his-body",
+    "urlToImage": "https://static.foxnews.com/foxnews.com/content/uploads/2024/10/jelly-roll-before-and-after.jpg",
+    "publishedAt": "2024-10-24T08:30:00Z",
+    "category": "general",
+    "content": "Join Fox News for access to this content\r\nPlus special access to select articles and other premium content with your account - free of charge.\r\nBy entering your email and pushing continue, you are ag… [+5116 chars]"
+  },
+  {
+    "source": {
+      "id": "business-insider",
+      "name": "Business Insider"
+    },
+    "author": "Matthew Loh",
+    "title": "BRICS' new declaration shows Russia's war still can't get the international backing that Moscow wants - Business Insider",
+    "description": "The war was only mentioned once in the 43-page summary, while BRICS devoted five paragraphs to criticizing Israel's actions in the Middle East.",
+    "url": "https://www.businessinsider.com/brics-kazan-declaration-russia-cant-get-backing-war-ukraine-putin-2024-10",
+    "urlToImage": "https://i.insider.com/6719dd6601ea6d83dee3a9ef?width=1200&format=jpeg",
+    "publishedAt": "2024-10-24T07:36:00Z",
+    "category": "general",
+    "content": "Over two dozen world leaders at this year's BRICS summit ended Wednesday's talks with the Kazan Declaration, a 134-point summary of their agreements.\r\nThe war in Ukraine was only mentioned once in th… [+2664 chars]"
+  },
+  {
+    "source": {
+      "id": "the-washington-post",
+      "name": "The Washington Post"
+    },
+    "author": "Andrew Jeong, Claire Parker, Vivian Ho, John Hudson, Leo Sands, Missy Ryan, Amanda Coletta, Mohamad El Chamaa, Adam Taylor, Lior Soroka, Sammy Westfall",
+    "title": "Blinken says ‘more progress’ from Israel needed on Gaza aid flow - The Washington Post",
+    "description": "Secretary of State Antony Blinken is visiting the Middle East. Israeli forces said they killed Hashem Safieddine, a top Hezbollah leader.",
+    "url": "https://www.washingtonpost.com/world/2024/10/23/israel-iran-war-news-hamas-lebanon-hezbollah/",
+    "urlToImage": "https://www.washingtonpost.com/wp-apps/imrs.php?src=https://d1i4t8bqe7zgj6.cloudfront.net/10-23-2024/t_a01dcd972a944407af1986a41c27be37_name_blinken.jpg&w=1440",
+    "publishedAt": "2024-10-24T06:56:00Z",
+    "category": "general",
+    "content": "JERUSALEM The head of the United Nations humanitarian affairs office in Gaza painted a desperate portrait of the northern part of the enclave, calling conditions in the area after renewed fighting be… [+2268 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "BBC News"
+    },
+    "author": null,
+    "title": "Lebanon: Satellite imagery reveals intensity of Israeli bombing - BBC.com",
+    "description": "Israel damaged more buildings in two weeks than in a year of fighting with Hezbollah, data shows.",
+    "url": "https://www.bbc.com/news/articles/cvgx3zjvjg3o",
+    "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/8751/live/558e3170-91f2-11ef-b48d-558489c034c9.jpg",
+    "publishedAt": "2024-10-24T06:43:15Z",
+    "category": "general",
+    "content": "Damaged buildings in a residential area following an Israeli attack on Dahieh suburb in Beirut\r\nIsrael's intensified bombing campaign of Lebanon has caused more damage to buildings in two weeks than … [+5271 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "CBS Sports"
+    },
+    "author": "",
+    "title": "Clippers' gleaming new arena can't obscure the mediocrity of the team that plays inside it - CBS Sports",
+    "description": "Wednesday's debut was a metaphor for this entire Clippers era -- hope gained, and quickly extinguished",
+    "url": "https://www.cbssports.com/nba/news/clippers-gleaming-new-arena-cant-obscure-the-mediocrity-of-the-team-that-plays-inside-it/",
+    "urlToImage": "https://sportshub.cbsistatic.com/i/r/2024/10/24/0788b290-b324-4543-a69f-5ba3c90e6fdb/thumbnail/1200x675/fac2b16074ab037b4d7048dcc75c5c77/102324-steveballmer.jpg",
+    "publishedAt": "2024-10-24T06:00:00Z",
+    "category": "general",
+    "content": "INGLEWOOD, Calif. -- The place was beautiful. \r\nOn Wednesday night, in the season opener, the Los Angeles Clippers debuted their new, gleaming, futuristic arena. No more sharing with the Los Angeles … [+6264 chars]"
+  },
+  {
+    "source": {
+      "id": "the-washington-post",
+      "name": "The Washington Post"
+    },
+    "author": "Des Bieler",
+    "title": "Bryce Young back as Panthers’ starter after Andy Dalton hurt in car crash - The Washington Post",
+    "description": "The top pick in the 2023 draft, Young was benched earlier this season but gets another chance after Dalton suffered a minor injury to his throwing hand.",
+    "url": "https://www.washingtonpost.com/sports/2024/10/23/bryce-young-panthers-starter-andy-dalton-crash/",
+    "urlToImage": "https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/46TI2IS5ZNHBMDCQ5SN6UEOGFQ_size-normalized.jpg&w=1440",
+    "publishedAt": "2024-10-24T05:48:36Z",
+    "category": "general",
+    "content": "Carolina Panthers quarterback Bryce Young, the No. 1 pick in the 2023 NFL draft who was benched earlier this year in favor of Andy Dalton, will start this week after Dalton injured his thumb in a car… [+326 chars]"
+  }
+]

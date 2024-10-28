@@ -59,8 +59,8 @@ const NewsPersonal = () => {
   const handleCategoryClick = (category) => {
     setActiveCategory(category);
     // Filter news by selected category
-    const filtered = newsData.filter((newsItem) => 
-      newsItem?.category?.toLowerCase() === category.toLowerCase()
+    const filtered = newsData.filter(
+      (newsItem) => newsItem?.category?.toLowerCase() === category.toLowerCase()
     );
     setFilteredNews(filtered);
   };
@@ -99,7 +99,9 @@ const NewsPersonal = () => {
               key={index}
               onClick={() => handleCategoryClick(category)}
               className={`px-4 py-2 rounded ${
-                activeCategory === category ? "bg-blue-500 text-white" : "bg-gray-300"
+                activeCategory === category
+                  ? "bg-blue-500 text-white"
+                  : "bg-gray-300"
               }`}
             >
               {category}
@@ -111,21 +113,30 @@ const NewsPersonal = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {filteredNews.length > 0 ? (
             filteredNews.map((newsItem, index) => (
-              <div key={index} className="bg-white shadow-lg rounded-lg overflow-hidden">
+              <div
+                key={index}
+                className="bg-white shadow-lg rounded-lg overflow-hidden"
+              >
                 {/* Show Image */}
                 <img
-                  src={newsItem.image_url || "https://i.ibb.co.com/Vgggtfd/images-1.png"} // Placeholder image if no image
+                  src={
+                    newsItem.image_url ||
+                    "https://i.ibb.co.com/Vgggtfd/images-1.png"
+                  } // Placeholder image if no image
                   alt={newsItem.title}
                   className="w-full h-48 object-cover"
                 />
 
                 <div className="p-4">
                   {/* Show Category */}
-                  <p className="text-blue-500 font-semibold mb-2">{newsItem.category}</p>
+                  <p className="text-blue-500 font-semibold mb-2">
+                    {newsItem.category}
+                  </p>
 
                   {/* Show Title (truncated) */}
                   <h2 className="text-lg font-bold mb-2">
-                    {truncateText(newsItem.title, 50)} {/* Limit title length */}
+                    {truncateText(newsItem.title, 50)}{" "}
+                    {/* Limit title length */}
                   </h2>
 
                   {/* Show Description (truncated) */}
