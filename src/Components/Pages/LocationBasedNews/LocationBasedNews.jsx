@@ -2,12 +2,11 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Card from "../../../Shared/Card";
 import ReadMoreLink from "../../../Shared/ReadMoreLink";
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
-import 'leaflet/dist/leaflet.css';
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import "leaflet/dist/leaflet.css";
 import Loading from "../../Loading/Loading";
 import { useDispatch } from "react-redux";
 import { setLocationBasedNews } from "../../../features/allNews/allNewsSlice";
-
 
 const LocationBasedNews = () => {
   const [location, setLocation] = useState({ latitude: null, longitude: null });
@@ -16,18 +15,10 @@ const LocationBasedNews = () => {
   const [error, setError] = useState("");
 
   const [locationBasedNews, setLocationBasednews] = useState([]);
-  const [loading , setLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
 
   // redux
   const dispatch = useDispatch();
-
-
-
-
-
-
-
-
 
   const [menuValue, setMenuValue] = useState("2");
   // console.log("menuValue : ", menuValue);
@@ -55,17 +46,13 @@ const LocationBasedNews = () => {
               setCountry(response?.data?.address?.country);
 
               axios
-                .get(
-                  `https://newsapi.org/v2/everything?q=${response?.data?.address?.city}&apiKey=${import.meta.env.VITE_NAIMUL_API_KEY}`
-                )
+                .get("https://news-grid-server.vercel.app/locationnews")
                 .then((res) => {
-                  // console.log(res?.data)-8/
+                  // console.log(res?.data)
 
-
-                  setLocationBasednews(res?.data?.articles);
-                  dispatch(setLocationBasedNews(res?.data?.articles))
+                  setLocationBasednews(res?.data.slice(40, 56));
+                  dispatch(setLocationBasedNews(res?.data?.slice(40, 56)));
                   setLoading(false);
-
                 });
             })
             .catch((error) => {
@@ -80,40 +67,31 @@ const LocationBasedNews = () => {
     } else {
       setError("Geolocation is not supported by your browser");
     }
-  }, [city , dispatch]);
+  }, [city, dispatch]);
 
-
-  if(loading){
-    return <Loading></Loading>
-  }
-
-
-  if(loading){
-    return <Loading></Loading>
+  if (loading) {
+    return <Loading></Loading>;
   }
 
   return (
     <div>
-
-
-
-          <div>
-          {
-    location?.latitude && location?.longitude &&
-      <MapContainer center={[location?.latitude, location?.longitude]} zoom={13}  className="mt-[171px] lg:mt-[136px] z-10 w-full h-[350px] lg:h-[500px]">
-      <TileLayer
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-      />
-      <Marker position={[location?.latitude, location?.longitude]}>
-        <Popup>{city}</Popup>
-      </Marker>
-    </MapContainer> 
-}
-
-          </div>
-
-      
+      <div>
+        {location?.latitude && location?.longitude && (
+          <MapContainer
+            center={[location?.latitude, location?.longitude]}
+            zoom={13}
+            className="mt-[164px] lg:mt-[136px] z-10 w-full h-[350px] lg:h-[500px]"
+          >
+            <TileLayer
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            />
+            <Marker position={[location?.latitude, location?.longitude]}>
+              <Popup>{city}</Popup>
+            </Marker>
+          </MapContainer>
+        )}
+      </div>
 
       <div className="my-10 md:my-20 container mx-auto heebo text-black">
         <div className="flex flex-col md:flex-row justify-center md:justify-between mx-3 md:mx-0 md:px-6 py-4 rounded bg-base-300  items-center  mb-10">
@@ -165,9 +143,7 @@ const LocationBasedNews = () => {
         {/* grid-cols-1 */}
 
         {!error ? (
-          <div
-            className={`grid grid-cols-1 lg:grid-cols-${menuValue} gap-8`}
-          >
+          <div className={`grid grid-cols-1 lg:grid-cols-${menuValue} gap-8`}>
             {locationBasedNews?.map((news) => {
               return menuValue === "1" ? (
                 <div className="mx-4 md:mx-0 bg-white transition-all duration-500 transform hover:scale-105 overflow-hidden shadow-md shadow-gray-700">

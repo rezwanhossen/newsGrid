@@ -60,4 +60,13 @@ const allNewsSlice = createSlice({
 
 
 export default allNewsSlice.reducer;
+export const getAllNews = (state) => [
+    ...state?.allNews?.locationBasedNews || [],
+    ...state?.allNews?.categoriesNews || [],
+    ...state?.allNews?.newsData || [],
+    ...state?.allNews?.allTrendingNews || [],
+    ...state?.allNews?.breakingNews || [],
+    ...state?.allNews?.recomendedNews || [],
+
+];
 export const { setLocationBasedNews , setCategoriesNews  , setNewsData , setAllNewsTrending , setAllRecommendedNews , setAllBreakingNews} = allNewsSlice.actions;
