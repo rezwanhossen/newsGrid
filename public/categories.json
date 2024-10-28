@@ -1,1382 +1,1290 @@
 [
-    {
-      "_id": "671ab686de6e5e27fecd4b2e",
-      "source": {
-        "id": "wired",
-        "name": "Wired"
-      },
-      "author": "Joel Khalili",
-      "title": "Unmasking Bitcoin Creator Satoshi Nakamoto—Again",
-      "description": "A new HBO documentary takes a swing at uncovering the real identity of Satoshi Nakamoto, inventor of Bitcoin. But without incontrovertible proof, the myth lives on.",
-      "url": "https://www.wired.com/story/unmasking-bitcoin-creator-satoshi-nakamoto-again/",
-      "urlToImage": "https://media.wired.com/photos/6703eb3979f13fda7f04485b/191:100/w_1280,c_limit/Satoshi-Nakamoto-biz-1341874258.jpg",
-      "publishedAt": "2024-10-09T01:00:00Z",
-      "content": "Peter Todd is standing on the upper floor of a dilapidated industrial building somewhere in Czechia, chuckling under his breath. He has just been accused on camera of being Satoshi Nakamoto, the Bitc… [+3043 chars]",
-      "category": "technology"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b2f",
-      "source": {
-        "id": "wired",
-        "name": "Wired"
-      },
-      "author": "Joel Khalili",
-      "title": "Peter Todd Was ‘Unmasked’ As Bitcoin Creator Satoshi Nakamoto. Now He’s In Hiding",
-      "description": "Peter Todd has gone underground after an HBO documentary named him as the creator of Bitcoin, Satoshi Nakamoto, whose real identity has long remained a mystery.",
-      "url": "https://www.wired.com/story/peter-todd-was-unmasked-as-bitcoin-creator-satoshi-nakamoto-now-hes-in-hiding/",
-      "urlToImage": "https://media.wired.com/photos/6716870e6874cb5feda0798e/191:100/w_1280,c_limit/102124-bitcoin-satoshi-an.jpg",
-      "publishedAt": "2024-10-22T11:33:59Z",
-      "content": "In the week before the documentary was released, online betting markets had Len Sassaman, a cryptographer who moved in similar online circles to Satoshi, as the most likely candidate to be revealed a… [+2075 chars]",
-      "category": "technology"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b30",
-      "source": {
-        "id": "wired",
-        "name": "Wired"
-      },
-      "author": "Joel Khalili",
-      "title": "In the Kentucky Mountains, a Bitcoin Mining Dream Becomes the Stuff of Nightmares",
-      "description": "When bitcoin was on a hot streak, owners of small industrial facilities in Kentucky struck up crypto mining partnerships with Chinese companies. Then things fell apart.",
-      "url": "https://www.wired.com/story/in-the-kentucky-mountains-a-bitcoin-mining-dream-becomes-the-stuff-of-nightmares/",
-      "urlToImage": "https://media.wired.com/photos/670981994729e98a3f0fd49d/191:100/w_1280,c_limit/Kentucky-Farmers-Crypto-Mining-Duped-Business.jpg",
-      "publishedAt": "2024-10-21T11:00:00Z",
-      "content": "In both cases, Biofuel claims, the firms shipped equipment from China to its hosting facility in Eastern Kentucky, then walked away with the bitcoin produced, leaving behind hundreds of thousands of … [+2717 chars]",
-      "category": "business"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b31",
-      "source": {
-        "id": null,
-        "name": "[Removed]"
-      },
-      "author": null,
-      "title": "[Removed]",
-      "description": "[Removed]",
-      "url": "https://removed.com",
-      "urlToImage": null,
-      "publishedAt": "2024-10-17T19:35:08Z",
-      "content": "[Removed]",
-      "category": "general"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b32",
-      "source": {
-        "id": null,
-        "name": "Gizmodo.com"
-      },
-      "author": "Matthew Gault",
-      "title": "Controversial HBO Documentary Concludes Peter Todd Invented Bitcoin",
-      "description": "The cryptocurrency community is not amused.",
-      "url": "https://gizmodo.com/controversial-hbo-documentary-concludes-peter-todd-invented-bitcoin-2000509751",
-      "urlToImage": "https://gizmodo.com/app/uploads/2024/10/PeterToddHBO.jpg",
-      "publishedAt": "2024-10-09T14:05:37Z",
-      "content": "Last night, HBO aired a documentary about Bitcoin that claimed to reveal the identity of the cryptocurrencys anonymous creator Satoshi Nakamoto. In Money Electric, journalist Cullen Hoback chased the… [+3152 chars]",
-      "category": "technology"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b33",
-      "source": {
-        "id": null,
-        "name": "Gizmodo.com"
-      },
-      "author": "Todd Feathers",
-      "title": "FBI Arrests Man Who Searched ‘How Can I Know for Sure If I Am Being Investigated by the FBI’",
-      "description": "Eric Counsel Jr. is accused of helping to hack the U.S. Securities and Exchange Commission's X account in order to post false information about Bitcoin.",
-      "url": "https://gizmodo.com/fbi-arrests-man-who-searched-how-can-i-know-for-sure-if-i-am-being-investigated-by-the-fbi-2000513216",
-      "urlToImage": "https://gizmodo.com/app/uploads/2024/10/sec-bitcoin-hack-arrest.jpg",
-      "publishedAt": "2024-10-17T21:10:49Z",
-      "content": "The FBI has arrested an Alabama man who allegedly hacked the U.S. Securities and Exchange Commission’s X (formerly Twitter) account in order to post erroneous information about Bitcoin that briefly d… [+2369 chars]",
-      "category": "politics"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b34",
-      "source": {
-        "id": null,
-        "name": "Gizmodo.com"
-      },
-      "author": "Lucas Ropek",
-      "title": "New HBO Doc Promises to Unmask the Mysterious Inventor of Bitcoin",
-      "description": "Who invented crypto? A filmmaker believes he's cracked the case.",
-      "url": "https://gizmodo.com/new-hbo-doc-promises-to-unmask-the-mysterious-inventor-of-bitcoin-2000507216",
-      "urlToImage": "https://gizmodo.com/app/uploads/2024/10/A-Statue-of-the-Mysterious-Bitcoin-Inventor-Satoshi-Nakamoto-in-Budapest-Park.jpg",
-      "publishedAt": "2024-10-04T13:35:42Z",
-      "content": "The world has long wondered who created Bitcoin. Ever since a white paper bearing his name was published on the web in 2008, the digital asset’s conception has widely been attributed to a pseudonymou… [+2431 chars]",
-      "category": "technology"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b35",
-      "source": {
-        "id": null,
-        "name": "Gizmodo.com"
-      },
-      "author": "Lucas Ropek",
-      "title": "Guy Who Threw Away $500 Million Bitcoin Hard Drive Sues Local Government to Search Dump",
-      "description": "What do you do when you've thrown half a billion dollars worth of crypto in the trash?",
-      "url": "https://gizmodo.com/guy-who-threw-away-500-million-bitcoin-hard-drive-sues-local-government-to-search-dump-2000512846",
-      "urlToImage": "https://gizmodo.com/app/uploads/2024/10/A-landfill-in-Newport-Wales.jpg",
-      "publishedAt": "2024-10-17T12:35:08Z",
-      "content": "For the past decade, a Welsh man has been begging his city government for permission to peruse the contents of the local dump. 39-year-old Newport resident James Howells has been desperately asking t… [+3029 chars]",
-      "category": "business"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b36",
-      "source": {
-        "id": null,
-        "name": "Gizmodo.com"
-      },
-      "author": "Matthew Gault",
-      "title": "Peter Todd Is in Hiding After a Documentary Named Him as Bitcoin’s Creator",
-      "description": "To hear the software developer tell it, being outed as Satoshi has radically changed his life.",
-      "url": "https://gizmodo.com/peter-todd-is-in-hiding-after-a-documentary-named-him-as-bitcoins-creator-2000514993",
-      "urlToImage": "https://gizmodo.com/app/uploads/2024/10/PeterToddHBO.jpg",
-      "publishedAt": "2024-10-22T15:45:38Z",
-      "content": "According to Peter Todd, an HBO documentary has turned his life into a nightmare. Money Electricaired on the network earlier this month and named Todd as Satoshi, the anonymous creator of Bitcoin. To… [+2885 chars]",
-      "category": "entertainment"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b37",
-      "source": {
-        "id": null,
-        "name": "CNET"
-      },
-      "author": "Samantha Kelly",
-      "title": "PayPal to Allow Businesses Buy and Sell Crypto",
-      "description": "The change will bring bitcoin and other virtual coins to \"millions\" of merchants across the US.",
-      "url": "https://www.cnet.com/personal-finance/crypto/paypal-to-allow-businesses-buy-and-sell-crypto/",
-      "urlToImage": "https://www.cnet.com/a/img/resize/2b2ba45973ffae7baacd4449b399bd35435e4fa0/hub/2022/04/22/d7acb748-e7bd-4553-ae44-2f893ccb87ba/paypal-logo-2022-659.jpg?auto=webp&fit=crop&height=675&width=1200",
-      "publishedAt": "2024-09-26T15:12:00Z",
-      "content": "It's about to get easier for US merchants to use cryptocurrency for payments. PayPal is launching a new service to allow the businesses that use its platform to buy, hold and sell crypto. \r\nAlthough … [+1029 chars]",
-      "category": "business"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b38",
-      "source": {
-        "id": null,
-        "name": "Slashdot.org"
-      },
-      "author": "msmash",
-      "title": "Government of Bhutan Holds Over $825 Million, or Nearly a Third of Its GDP, in Bitcoin, Arkham Data Shows",
-      "description": "The government of Bhutan is currently holding over $828 million in bitcoin, according to onchain data by Arkham Intelligence. From a report: \"Unlike most governments, Bhutan's BTC does not come from law enforcement asset seizures, but from bitcoin mining oper…",
-      "url": "https://slashdot.org/story/24/09/23/1940238/government-of-bhutan-holds-over-825-million-or-nearly-a-third-of-its-gdp-in-bitcoin-arkham-data-shows",
-      "urlToImage": "https://a.fsdn.com/sd/topics/bitcoin_64.png",
-      "publishedAt": "2024-09-23T20:05:00Z",
-      "content": "The government of Bhutan is currently holding over $828 million in bitcoin, according to onchain data by Arkham Intelligence. From a report: \"Unlike most governments, Bhutan's BTC does not come from … [+1208 chars]",
-      "category": "business"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b39",
-      "source": {
-        "id": null,
-        "name": "Gizmodo.com"
-      },
-      "author": "Lucas Ropek",
-      "title": "Infamous Tech Bro Starts School That Teaches How to Crowdfund Your Own Country",
-      "description": "A well-funded free market doctrine is getting its own mysterious educational platform.",
-      "url": "https://gizmodo.com/infamous-tech-bro-starts-school-that-teaches-how-to-crowdfund-your-own-country-2000502383",
-      "urlToImage": "https://gizmodo.com/app/uploads/2024/09/Balaji-Srinivasan-during-the-Fintech-Festival-in-Singapore.jpg",
-      "publishedAt": "2024-09-24T13:35:22Z",
-      "content": "Balaji Srinivasan, the former chief technology officer of Coinbase, is a weird guy. He’s talked about living forever. He helped finance a pro-steroids athletic competition. And he once threw away a m… [+3090 chars]",
-      "category": "technology"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b3a",
-      "source": {
-        "id": null,
-        "name": "Slashdot.org"
-      },
-      "author": "BeauHD",
-      "title": "Mystery Creator of Bitcoin Identified, New HBO Documentary Claims",
-      "description": "A new HBO documentary directed by Emmy-nominated filmmaker Cullen Hoback claims to have revealed the true identity of the pseudonymous creator of Bitcoin, Satoshi Nakamoto. As Politico notes, Hoback \"drew critical acclaim for his series 'Q: Into the Storm' th…",
-      "url": "https://slashdot.org/story/24/10/03/2330200/mystery-creator-of-bitcoin-identified-new-hbo-documentary-claims",
-      "urlToImage": "https://a.fsdn.com/sd/topics/bitcoin_64.png",
-      "publishedAt": "2024-10-04T00:02:00Z",
-      "content": "[T]he exposure of Satoshi as its alleged creator threatens to raise some huge questions, not least his potential complicity in crimes that have featured Bitcoin use. It could also establish him as on… [+986 chars]",
-      "category": "entertainment"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b3b",
-      "source": {
-        "id": "business-insider",
-        "name": "Business Insider"
-      },
-      "author": "abharade@insider.com (Aditi Bharade,Kwan Wei Kevin Tan)",
-      "title": "Trump flip-flopped on crypto, but his PAC has raked in millions of dollars of crypto donations since June",
-      "description": "The former president has positioned himself as the pro-crypto candidate this election cycle. But he hasn't always had nice things to say about crypto.",
-      "url": "https://www.businessinsider.com/trump-pac-raised-millions-crypto-donations-since-june-2024-10",
-      "urlToImage": "https://i.insider.com/670f5459a70318649282ad0f?width=1200&format=jpeg",
-      "publishedAt": "2024-10-16T09:44:31Z",
-      "content": "A political action committee called Trump 47 has raised $7.5 million in cryptocurrency donations for former President Donald Trump's White House bid.\r\nAccording to Federal Election Commission filings… [+3227 chars]",
-      "category": "politics"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b3c",
-      "source": {
-        "id": null,
-        "name": "Slashdot.org"
-      },
-      "author": "msmash",
-      "title": "Hacker Arrested For the Fake SEC Tweet That Caused a Bitcoin Price Spike",
-      "description": "The FBI has arrested an Alabama man who is accused of hacking the Securities and Exchange Commission's X account in January. From a report: The indictment alleges that 25-year-old Eric Council Jr. worked with co-conspirators to take control of the account and…",
-      "url": "https://news.slashdot.org/story/24/10/17/2044230/hacker-arrested-for-the-fake-sec-tweet-that-caused-a-bitcoin-price-spike",
-      "urlToImage": "https://a.fsdn.com/sd/topics/news_64.png",
-      "publishedAt": "2024-10-17T22:10:00Z",
-      "content": "The indictment alleges that 25-year-old Eric Council Jr. worked with co-conspirators to take control of the account and post a fake message from SEC Chair Gary Gensler about Bitcoin ETFs that caused … [+534 chars]",
-      "category": "technology"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b3d",
-      "source": {
-        "id": null,
-        "name": "Hipertextual"
-      },
-      "author": "Quelian Sanz",
-      "title": "HBO revela el mayor misterio sobre Bitcoin, ¿quién es realmente Satoshi Nakamoto?",
-      "description": "Bitcoin es la criptomoneda más popular del planeta, y también una de las más transparentes para el usuario. Se sabe casi todo sobre ella, sus transacciones son públicas, se conoce cuántas hay en circulación y muchísimos detalles sobre su dinámica. Pero a día …",
-      "url": "http://hipertextual.com/2024/10/hbo-revela-el-mayor-misterio-sobre-bitcoin-quien-es-realmente-satoshi-nakamoto",
-      "urlToImage": "https://imgs.hipertextual.com/wp-content/uploads/2024/10/bitcoin-creador-scaled.jpg",
-      "publishedAt": "2024-10-09T12:09:45Z",
-      "content": "Bitcoin es la criptomoneda más popular del planeta, y también una de las más transparentes para el usuario. Se sabe casi todo sobre ella, sus transacciones son públicas, se conoce cuántas hay en circ… [+2064 chars]",
-      "category": "technology"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b3e",
-      "source": {
-        "id": "wired",
-        "name": "Wired"
-      },
-      "author": "Alistair Charlton",
-      "title": "Trump's $100,000 Watches Are the Most Tragic Celebrity Watch Yet",
-      "description": "Former president Donald Trump wants you to buy gaudy, overpriced timepieces “made for those who combine boldness and elegance.” He got one part right.",
-      "url": "https://www.wired.com/story/trumps-dollar100000-watches-are-the-most-tragic-celebrity-watch-yet/",
-      "urlToImage": "https://media.wired.com/photos/66f6c5b5c143415d72625aca/191:100/w_1280,c_limit/trump-watches-pol.jpg",
-      "publishedAt": "2024-09-27T17:48:08Z",
-      "content": "Celebrities partnering with watch brands is nothing new. Sometimes a bona fide watch enthusiast like John Mayer partners with Audemars Piguet, or Ed Sheeran (owner of a unique Patek Philippe, no less… [+2694 chars]",
-      "category": "entertainment"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b3f",
-      "source": {
-        "id": "wired",
-        "name": "Wired"
-      },
-      "author": "Lily Hay Newman, Andrew Couts",
-      "title": "Google Chrome’s uBlock Origin Purge Has Begun",
-      "description": "Plus: The alleged SEC X account hacker gets charged, Kroger wriggles out of a face recognition scandal, and Microsoft deals with missing customer security logs.",
-      "url": "https://www.wired.com/story/google-chrome-ublock-origin-extension/",
-      "urlToImage": "https://media.wired.com/photos/6712a9ad28a5e591865a1b60/191:100/w_1280,c_limit/GettyImages-2151457378.jpg",
-      "publishedAt": "2024-10-19T10:30:00Z",
-      "content": "And thats not all. Each week, we round up the security and privacy news we didnt cover in depth ourselves. Click the headlines to read the full stories. And stay safe out there.\r\nIf you use uBlock Or… [+3760 chars]",
-      "category": "technology"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b40",
-      "source": {
-        "id": null,
-        "name": "Gizmodo.com"
-      },
-      "author": "Joe Tilleli",
-      "title": "Wall Street in Your Pocket: The Tykr Stock Screener App Will Teach You to Earn Back the Money You Spent on Its Lifetime Plan",
-      "description": "Save 83% and an additional $30 when you sign up for the Tykr Stock Screener premium plan lifetime subscription with this code.",
-      "url": "https://gizmodo.com/wall-street-in-your-pocket-the-tykr-stock-screener-app-will-teach-you-to-earn-back-the-money-you-spent-on-its-lifetime-plan-2000505735",
-      "urlToImage": "https://gizmodo.com/app/uploads/2024/10/Tykr.jpg",
-      "publishedAt": "2024-10-01T18:18:47Z",
-      "content": "Just starting out with stock trading can be an overwhelming experience. Knowing what stocks are good and bad and knowing when to buy or sell doesn’t come naturally. You can work with a financial advi… [+2251 chars]",
-      "category": "business"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b41",
-      "source": {
-        "id": null,
-        "name": "Bitcoindevs.xyz"
-      },
-      "author": "BDP",
-      "title": "Decoding Bitcoin: An interactive, exercise-heavy approach to learning Bitcoin",
-      "description": "Simplifying bitcoin tech to help you learn as efficiently as possible",
-      "url": "https://bitcoindevs.xyz/decoding/decoding/1-welcome",
-      "urlToImage": "https://bitcoindevs.xyz/images/pages-thumbnails/topics.png",
-      "publishedAt": "2024-10-07T17:46:16Z",
-      "content": "Welcome to Decoding Bitcoin, your go-to resource for understanding bitcoin, Privacy, and Decentralization. We're here to break down complex bitcoin concepts and provide straightforward explanations t… [+708 chars]",
-      "category": "technology"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b42",
-      "source": {
-        "id": "time",
-        "name": "Time"
-      },
-      "author": "Andrew R. Chow",
-      "title": "Documentarian Says He’s Solved the Mystery of Bitcoin’s Creator. Insiders Are Extremely Skeptical.",
-      "description": "Cullen Hoback's new documentary argues Bitcoin's Satoshi Nakamoto has been hiding in plain sight all along.",
-      "url": "https://time.com/7064841/satoshi-nakamoto-hbo-money-electric/",
-      "urlToImage": "https://api.time.com/wp-content/uploads/2024/10/peter-todd.jpeg?quality=85&w=1200&h=628&crop=1",
-      "publishedAt": "2024-10-09T01:01:00Z",
-      "content": "This article contains spoilers for Money Electric: The Bitcoin Mystery.\r\nWho is Bitcoins founder, Satoshi Nakamoto? The question has perplexed and excited cryptocurrency fans ever since Bitcoin was c… [+12372 chars]",
-      "category": "technology"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b43",
-      "source": {
-        "id": null,
-        "name": "Xataka.com"
-      },
-      "author": "Rubén Andrés",
-      "title": "Bitcoin ha batido récords en 2024 y ha disparado las fortunas: hay un 95% más de criptomillonarios",
-      "description": "2024 ha sido un año especialmente delicado para los inversores en criptomonedas, marcado por distintos eventos importantes que han condicionado la cotización de los distintos tokens y han puesto punto final a la travesía por el desierto que el bitcoin experim…",
-      "url": "https://www.xataka.com/criptomonedas/bitcoin-ha-batido-records-2024-ha-disparado-fortunas-hay-95-criptomillonarios",
-      "urlToImage": "https://i.blogs.es/04273b/erling-loken-andersen-7fiieouobtu-unsplash/840_560.jpeg",
-      "publishedAt": "2024-10-19T09:01:19Z",
-      "content": "2024 ha sido un año especialmente delicado para los inversores en criptomonedas, marcado por distintos eventos importantes que han condicionado la cotización de los distintos tokens y han puesto punt… [+3676 chars]",
-      "category": "business"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b44",
-      "source": {
-        "id": "business-insider",
-        "name": "Business Insider"
-      },
-      "author": "fdemott@insider.com (Filip De Mott)",
-      "title": "Legendary investor Paul Tudor Jones says he's buying gold and bitcoin pre-election because inflation will rise under both Trump and Harris",
-      "description": "\"The playbook to get out of this is that you inflate your way out,\" Jones said about America's ballooning national debt.",
-      "url": "https://markets.businessinsider.com/news/commodities/paul-tudor-jones-gold-crypto-bitcoin-election-inflation-debt-crisis-2024-10",
-      "urlToImage": "https://i.insider.com/6717cb66a0a0cc14f222fe8a?width=1200&format=jpeg",
-      "publishedAt": "2024-10-22T18:13:29Z",
-      "content": "Paul Tudor Jones is holding gold, bitcoin, and commodities to hedge against inflation, as neither presidential candidate has a plan suitable for tackling US debt, the legendary investor said.\r\nThe bi… [+2252 chars]",
-      "category": "business"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b45",
-      "source": {
-        "id": null,
-        "name": "Xataka.com"
-      },
-      "author": "Javier Pastor",
-      "title": "La identidad del creador de bitcoin siempre ha sido un misterio. HBO promete revelarla muy pronto",
-      "description": "En 2008 alguien que usaba como pseudónimo Satoshi Nakamoto reveló al mundo su creación: el bitcoin...",
-      "url": "https://www.xataka.com/criptomonedas/identidad-creador-bitcoin-siempre-ha-sido-misterio-hbo-promete-revelarla-muy-pronto",
-      "urlToImage": "https://i.blogs.es/8cf13f/btc/840_560.jpeg",
-      "publishedAt": "2024-10-04T16:30:51Z",
-      "content": "En 2008 alguien que usaba como pseudónimo Satoshi Nakamoto reveló al mundo su creación...",
-      "category": "technology"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b46",
-      "source": {
-        "id": null,
-        "name": "Xataka.com"
-      },
-      "author": "Enrique Pérez",
-      "title": "El candidato a Satoshi Nakamoto más querido por la comunidad Bitcoin...",
-      "description": "En julio de 2011, Leonard Harris \"Len\" Sassaman decidió quitarse la vida...",
-      "url": "https://www.xataka.com/criptomonedas/candidato-a-satoshi-nakamoto-querido-comunidad-bitcoin-cypherpunk-que-fue-inmortalizado-blockchain",
-      "urlToImage": "https://i.blogs.es/d0f570/len_sassaman_ascii/840_560.jpeg",
-      "publishedAt": "2024-10-13T17:01:49Z",
-      "content": "En julio de 2011, Leonard Harris \"Len\" Sassaman decidió quitarse la vida...",
-      "category": "technology"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b47",
-      "source": {
-        "id": "business-insider",
-        "name": "Business Insider"
-      },
-      "author": "fdemott@insider.com (Filip De Mott)",
-      "title": "Stock market today: Indexes slide and yields rise as rate-cut outlook dims",
-      "description": "US stocks added to Monday's losses as investors pared back rate cut expectations...",
-      "url": "https://markets.businessinsider.com/news/stocks/stock-market-today-bond-yields-rise-fed-interest-rate-cuts-2024-10",
-      "urlToImage": "https://i.insider.com/6717aa5d01ea6d83dee31691?width=1024&format=jpeg",
-      "publishedAt": "2024-10-22T13:53:27Z",
-      "content": "US stocks headed for their second losing session in a row...",
-      "category": "business"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b48",
-      "source": {
-        "id": null,
-        "name": "Xataka.com"
-      },
-      "author": "Javier Pastor",
-      "title": "En HBO creen que Peter Todd es el creador de bitcoin...",
-      "description": "Ya sabemos cuál es la identidad real de Satoshi Nakamoto, el creador de bitcoin...",
-      "url": "https://www.xataka.com/criptomonedas/hbo-creen-que-peter-todd-creador-bitcoin-su-respuesta-supuesto-que-no-soy-satoshi",
-      "urlToImage": "https://i.blogs.es/955483/todd-11/840_560.jpeg",
-      "publishedAt": "2024-10-09T06:40:54Z",
-      "content": "Ya sabemos cuál es la identidad real de Satoshi Nakamoto, el creador de bitcoin...",
-      "category": "technology"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b49",
-      "source": {
-        "id": null,
-        "name": "Xataka.com"
-      },
-      "author": "Javier Marquez",
-      "title": "Alguien ha montado una enorme mina de Bitcoin en un pueblo de Texas...",
-      "description": "La fiebre del bitcoin parece haber pedido fuerza por estos días...",
-      "url": "https://www.xataka.com/criptomonedas/alguien-ha-montado-enorme-mina-bitcoin-pueblo-texas-vecinos-dicen-que-ruido-les-esta-arruinando-vida",
-      "urlToImage": "https://i.blogs.es/4fcb29/1mina-de-bitcoin-portada/840_560.jpeg",
-      "publishedAt": "2024-10-09T06:31:13Z",
-      "content": "La fiebre del bitcoin parece haber pedido fuerza por estos días...",
-      "category": "technology"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b4a",
-      "source": {
-        "id": null,
-        "name": "Emailbtc.net"
-      },
-      "author": null,
-      "title": "EmailBTC – A new way to send and receive Bitcoin using only email addresses",
-      "description": "No seed phrases. No KYC. No recipient EmailBTC account needed...",
-      "url": "https://emailbtc.net",
-      "urlToImage": "https://emailbtc.net/og-image.jpg",
-      "publishedAt": "2024-10-18T10:54:50Z",
-      "content": "Ready for truly simple, secure Bitcoin transactions?...",
-      "category": "technology"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b4b",
-      "source": {
-        "id": null,
-        "name": "Theregister.com"
-      },
-      "author": "Brandon Vigliarolo",
-      "title": "Bitcoin creator suspect says he is not Bitcoin creator suspect",
-      "description": "'If I was Satoshi I would have destroyed my ability to prove I'm Satoshi'...",
-      "url": "https://www.theregister.com/2024/10/09/satoshi_nakamoto_suspect_hbo_bitcoin/",
-      "urlToImage": "https://regmedia.co.uk/2016/06/06/bitcoinsstack.jpg",
-      "publishedAt": "2024-10-09T17:00:08Z",
-      "content": "The man identified as Bitcoin creator Satoshi Nakamoto in a new HBO documentary...",
-      "category": "technology"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b4c",
-      "source": {
-        "id": null,
-        "name": "Blockhead.co"
-      },
-      "author": "Perion Lim",
-      "title": "New HBO Documentary Claims Bitcoin Creator Satoshi Nakamoto Is Len Sassaman",
-      "description": "HBO's upcoming documentary, 'Money Electric: The Bitcoin Mystery', claims the real Satoshi Nakamoto is Len Sassaman...",
-      "url": "https://www.blockhead.co/2024/10/05/new-bitcoin-documentary-to-sheds-more-light-on-satoshi-nakamotos-identity/",
-      "urlToImage": "https://www.blockhead.co/content/images/size/w1200/2024/10/Lens-Sassaman.jpg",
-      "publishedAt": "2024-10-05T12:13:02Z",
-      "content": "A new HBO documentary titled Money Electric: The Bitcoin Mystery...",
-      "category": "technology"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b4d",
-      "source": {
-        "id": null,
-        "name": "heise online"
-      },
-      "author": "Alexander Spier",
-      "title": "heise+ | Heizlüfter mit Bitcoin-Miner: Ofen Pro von 21energy im Test​",
-      "description": "Die Wohnung gemütlich heizen und damit Geld verdienen? Der Ofen Pro von 21energy schürft Bitcoins und gibt dabei Wärme ab...",
-      "url": "https://www.heise.de/tests/Heizluefter-mit-Bitcoin-Miner-Ofen-Pro-von-21energy-im-Test-9968169.html?wt_mc=rss.red.ho.ho.atom.beitrag_plus.beitrag_plus",
-      "urlToImage": "https://heise.cloudimg.io/bound/1200x1200/q85.png-lossy-85.webp-lossy-85.foil1/_www-heise-de_/imgs/18/4/6/8/3/2/6/2/PXL_20241008_110936111-EDIT-3abd22e5fe6d777d.jpg",
-      "publishedAt": "2024-10-09T05:30:00Z",
-      "content": "Das Heizen der Wohnung im Winter kostet viel Energie...",
-      "category": "technology"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b4e",
-      "source": {
-        "id": null,
-        "name": "Gizmodo.com"
-      },
-      "author": "Matt Novak",
-      "title": "Truth Social Users Are Losing Ridiculous Sums of Money to Scams",
-      "description": "Read the complaints submitted to the FTC by users of Donald Trump's social media platform...",
-      "url": "https://gizmodo.com/truth-social-users-are-losing-ridiculous-sums-of-money-to-scams-2000506604",
-      "urlToImage": "https://gizmodo.com/app/uploads/2024/10/donald-trump-october-3-2024.jpg",
-      "publishedAt": "2024-10-05T13:00:34Z",
-      "content": "Donald Trump launched Truth Social in 2022 as a social media platform...",
-      "category": "politics"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b4f",
-      "source": {
-        "id": null,
-        "name": "Xataka.com"
-      },
-      "author": "Javier Pastor",
-      "title": "Un documental afirmó que Peter Todd es Satoshi Nakamoto, el creador de bitcoin. Ahora Todd ha desaparecido",
-      "description": "La identidad real de Satoshi Nakamoto, creador de bitcoin, siempre ha sido un misterio. Un reciente documental de HBO reunió diversas informaciones y pruebas y sus creadores aseguraban haber encontrado la solución.",
-      "url": "https://www.xataka.com/criptomonedas/documental-afirmo-que-peter-todd-satoshi-nakamoto-creador-bitcoin-ahora-todd-ha-desaparecido",
-      "urlToImage": "https://i.blogs.es/3b3dda/peter-todd/840_560.jpeg",
-      "publishedAt": "2024-10-23T15:31:43Z",
-      "category": "technology",
-      "content": "La identidad real de Satoshi Nakamoto..."
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b50",
-      "source": {
-        "id": null,
-        "name": "heise online"
-      },
-      "author": "Frank Schräer",
-      "title": "Erste Verhaftung nach Bitcoin-Kursmanipulation durch gefälschten SEC-Tweet",
-      "description": "Ein Mann aus Alabama hätte bei der Übernahme des X-Accounts der SEC geholfen.",
-      "url": "https://www.heise.de/news/Erste-Verhaftung-nach-Bitcoin-Kursmanipulation-durch-gefaelschten-SEC-Tweet-9985460.html",
-      "urlToImage": "https://heise.cloudimg.io/bound/1200x1200/q85.png-lossy-85.webp-lossy-85.foil1/_www-heise-de_/imgs/18/4/6/9/1/4/6/2/shutterstock_1916262404-b7c59be85e1ebe55.jpg",
-      "publishedAt": "2024-10-18T02:31:00Z",
-      "category": "business",
-      "content": "Inhaltsverzeichnis: Der gefälschte Tweet vom..."
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b51",
-      "source": {
-        "id": null,
-        "name": "Genbeta.com"
-      },
-      "author": "Bárbara Bécares",
-      "title": "HBO afirmó que este desarrollador es el creador de bitcoin. Ha desaparecido.",
-      "description": "Hace unos días compartíamos nuevas pistas sobre quién puede ser el creador de bitcoin, conocido por su pseudónimo Satoshi Nakamoto.",
-      "url": "https://www.genbeta.com/actualidad/hbo-afirmo-que-este-desarrollador-creador-bitcoin-ello-multimillonario-ha-desaparecido-no-paran-pedirle-dinero",
-      "urlToImage": "https://i.blogs.es/c3a4d8/1200_800-3/840_560.jpeg",
-      "publishedAt": "2024-10-23T12:27:10Z",
-      "category": "technology",
-      "content": "Hace unos días compartíamos nuevas pistas sobre..."
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b52",
-      "source": {
-        "id": "business-insider",
-        "name": "Business Insider"
-      },
-      "author": "Dan DeFrancesco",
-      "title": "An incoming 'M&A supercycle' wouldn't just be a win for dealmakers",
-      "description": "Goldman Sachs' earnings hint at the revival of the M&A market, which could help companies big and small.",
-      "url": "https://www.businessinsider.com/goldman-sachs-earnings-dealmaking-benefit-economy-2024-10",
-      "urlToImage": "https://i.insider.com/670fa446a70318649282b2f4?width=1000&format=jpeg",
-      "publishedAt": "2024-10-16T11:33:31Z",
-      "category": "business",
-      "content": "Goldman Sachs' earnings hint at the revival..."
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b53",
-      "source": {
-        "id": null,
-        "name": "CNET"
-      },
-      "author": "Samantha Kelly",
-      "title": "PayPal Will Allow Businesses to Buy and Sell Crypto",
-      "description": "PayPal will bring bitcoin and other virtual coins to \"millions\" of merchants across the US.",
-      "url": "https://www.cnet.com/personal-finance/crypto/paypal-will-allow-businesses-to-buy-and-sell-crypto/",
-      "urlToImage": "https://www.cnet.com/a/img/resize/2b2ba45973ffae7baacd4449b399bd35435e4fa0/hub/2022/04/22/d7acb748-e7bd-4553-ae44-2f893ccb87ba/paypal-logo-2022-659.jpg?auto=webp&fit=crop&height=675&width=1200",
-      "publishedAt": "2024-09-28T22:00:04Z",
-      "category": "business",
-      "content": "PayPal is launching a new service to allow businesses to buy..."
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b54",
-      "source": {
-        "id": null,
-        "name": "heise online"
-      },
-      "author": "Frank Schräer",
-      "title": "Freitag: Festnahme nach falschem Bitcoin-Tweet, Googles Eile wegen Play-Auflagen",
-      "description": "Kursmanipulation nach SIM-Swapping + Google gegen Wettbewerbsauflagen + Amazon fördert Atomkraft + Verordnung gegen Cookie-Banner-Flut + KI für Arbeitsagentur",
-      "url": "https://www.heise.de/news/Freitag-Festnahme-nach-falschem-Bitcoin-Tweet-Googles-Eile-wegen-Play-Auflagen-9985488.html",
-      "urlToImage": "https://heise.cloudimg.io/bound/1200x1200/q85.png-lossy-85.webp-lossy-85.foil1/_www-heise-de_/imgs/18/4/6/9/1/4/7/6/friday-c6a39647e6904344.webp",
-      "publishedAt": "2024-10-18T04:15:00Z",
-      "content": "Ein Mann aus Alabama hätte bei der Übernahme des X-Accounts der US-Börsenaufsicht geholfen, sagen das FBI und das US-Justizministerium. Er habe die Zugangsdaten besorgt und seine Kumpanen setzten ein… [+4353 chars]",
-      "category": "technology"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b55",
-      "source": {
-        "id": "business-insider",
-        "name": "Business Insider"
-      },
-      "author": "jsor@businessinsider.com (Jennifer Sor)",
-      "title": "Stock market today: US stocks close at all-time highs ahead of key inflation update",
-      "description": "The Dow and the S&P 500 closed at a record high. Markets are waiting for September inflation data, a key data point ahead of the Fed's next move.",
-      "url": "https://markets.businessinsider.com/news/stocks/stock-market-today-fed-rate-cuts-outlook-fomc-minutes-inflation-2024-10",
-      "urlToImage": "https://i.insider.com/6706e1f7a70318649280a65f?width=800&format=jpeg",
-      "publishedAt": "2024-10-09T20:13:30Z",
-      "content": "US stocks jumped on Wednesday as traders looked ahead to coming inflation data and took in the minutes of the Federal Reserve's last meeting. \r\nAll three benchmark indexes surged to end the day highe… [+3041 chars]",
-      "category": "business"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b56",
-      "source": {
-        "id": "business-insider",
-        "name": "Business Insider"
-      },
-      "author": "kcloonan@insider.com (Kelly Cloonan)",
-      "title": "Stock market today: Indexes close lower after CPI shows sticky inflation in September",
-      "description": "Indexes slipped Thursday as investors took in higher-than-expected inflation. The latest data has sparked talk of a \"no landing\" for the US economy.",
-      "url": "https://markets.businessinsider.com/news/stocks/stock-market-inflation-cpi-data-jobless-claims-labor-market-landing-2024-10",
-      "urlToImage": "https://i.insider.com/670831903f2165d716e00609?width=1200&format=jpeg",
-      "publishedAt": "2024-10-10T20:06:52Z",
-      "content": "Stocks fell on Thursday from records reached in the previous session, as traders took in a sticky inflation reading for September. \r\nAll three benchmark indexes fell, with the Dow Jones Industrial Av… [+2472 chars]",
-      "category": "business"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b57",
-      "source": {
-        "id": null,
-        "name": "Xataka.com"
-      },
-      "author": "Javier Marquez",
-      "title": "El británico que perdió millones en bitcoins al tirar su disco duro no se da por vencido: ahora ha demandado al ayuntamiento",
-      "description": "James Howells, un ingeniero informático que vive en la ciudad de Newport, Gales, lleva años asegurando que en 2013 tiró a la basura un disco duro con alrededor de 8.000 bitcoins, los cuales había conseguido minar en su casa poco después de que la criptomoneda…",
-      "url": "https://www.xataka.com/criptomonedas/britanico-que-perdio-millones-bitcoins-al-tirar-su-disco-duro-no-se-da-vencido-ahora-ha-demandado-al-ayuntamiento",
-      "urlToImage": "https://i.blogs.es/29b07c/vertedero-bitcoin-portada/840_560.jpeg",
-      "publishedAt": "2024-10-15T22:33:00Z",
-      "content": "James Howells, un ingeniero informático que vive en la ciudad de Newport, Gales, lleva años asegurando que en 2013 tiró a la basura un disco duro con alrededor de 8.000 bitcoins, los cuales había con… [+3141 chars]",
-      "category": "technology"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b58",
-      "source": {
-        "id": null,
-        "name": "Hackaday"
-      },
-      "author": "Dan Maloney",
-      "title": "Hackaday Links: September 29, 2024",
-      "description": "There was movement in the “AM Radio in Every Vehicle Act” last week, with the bill advancing out of the US House of Representatives Energy and Commerce Committee and heading to a full f…",
-      "url": "https://hackaday.com/2024/09/29/hackaday-links-september-29-2024/",
-      "urlToImage": "https://hackaday.com/wp-content/uploads/2014/11/had-links-banner.jpg",
-      "publishedAt": "2024-09-29T23:00:28Z",
-      "content": "There was movement in the “AM Radio in Every Vehicle Act” last week, with the bill advancing out of the US House of Representatives Energy and Commerce Committee and heading to a full floor vote. For… [+4562 chars]",
-      "category": "technology"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b59",
-      "source": {
-        "id": null,
-        "name": "Presse-citron"
-      },
-      "author": "Robin Sabbadini",
-      "title": "Le Bitcoin est de retour à un niveau stratosphérique",
-      "description": "Le roi des cryptomonnaies flirte à nouveau avec les sommets, porté par l’afflux massif de capitaux dans les ETF et l’optimisme réglementaire aux États-Unis.",
-      "url": "https://www.presse-citron.net/le-bitcoin-est-de-retour-a-un-niveau-stratospherique/",
-      "urlToImage": "https://www.presse-citron.net/app/uploads/2024/03/Bitcoin-ETF.jpg",
-      "publishedAt": "2024-10-21T04:38:31Z",
-      "content": "Le Bitcoin reprend des couleurs et senvole vers de nouveaux sommets. La cryptomonnaie phare a frôlé les 70 000 dollars ce lundi, ravivant les souvenirs de son record historique atteint en mars dernie… [+3396 chars]",
-      "category": "technology"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b5a",
-      "source": {
-        "id": null,
-        "name": "Presse-citron"
-      },
-      "author": "Tristan Carballeda",
-      "title": "Le Bitcoin pourrait bientôt monter à 200 000 dollars selon cet expert",
-      "description": "Le Bitcoin a-t-il une limite, ces analyses ne semblent pas le penser et le voient déjà à 200 000 dollars.",
-      "url": "https://www.presse-citron.net/le-bitcoin-pourrait-bientot-monter-a-200-000-dollars-selon-cet-expert/",
-      "urlToImage": "https://www.presse-citron.net/app/uploads/2024/03/Bitcoin-ETF.jpg",
-      "publishedAt": "2024-10-23T08:32:59Z",
-      "content": "Sminston With nest pas nimporte qui dans le monde des cryptomonnaies. Il est « un des plus grands experts en ce qui concerne le Bitcoin. Le cours de cette devise numérique ne fait que fluctuer ces de… [+2544 chars]",
-      "category": "technology"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b5b",
-      "source": {
-        "id": null,
-        "name": "genbeta.com"
-      },
-      "author": "José Alberto Lizana",
-      "title": "Olvidó la contraseña de su USB donde almacenaba 400 millones de euros en Bitcoin. Y un hacker lo consiguió descifrar",
-      "description": "A casi todos en alguna ocasión se nos ha olvidado la contraseña para acceder a nuestro correo electrónico, la nube o a una red social. Pero esto no tenía mayor importancia, pues simplemente se podía recuperar de los servidores y tampoco se iba a perder algo r…",
-      "url": "https://www.genbeta.com/actualidad/olvido-contrasena-su-usb-donde-almacenaba-400-millones-euros-bitcoin-hacker-consiguio-descifrar",
-      "urlToImage": "https://i.blogs.es/beb99e/bitcoin/840_560.jpeg",
-      "publishedAt": "2024-10-12T12:01:41Z",
-      "content": "A casi todos en alguna ocasión se nos ha olvidado la contraseña para acceder a nuestro correo electrónico, la nube o a una red social. Pero esto no tenía mayor importancia, pues simplemente se podía … [+2573 chars]",
-      "category": "business"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b5c",
-      "source": {
-        "id": null,
-        "name": "theregister.com"
-      },
-      "author": "Connor Jones",
-      "title": "Alleged Bitcoin crook faces 5 years after SEC's X account pwned",
-      "description": "SIM swappers strike again, warping cryptocurrency prices\nAn Alabama man faces five years in prison for allegedly attempting to manipulate the price of Bitcoin by pwning the US Securities and Exchange Commission's X account earlier this year.…",
-      "url": "https://www.theregister.com/2024/10/18/sec_bitcoin_arrest/",
-      "urlToImage": "https://regmedia.co.uk/2024/03/04/bitcoin_shutterstock.jpg",
-      "publishedAt": "2024-10-18T12:30:09Z",
-      "content": "An Alabama man faces five years in prison for allegedly attempting to manipulate the price of Bitcoin by pwning the US Securities and Exchange Commission's X account earlier this year.\r\nThe feds arre… [+3651 chars]",
-      "category": "technology"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b5d",
-      "source": {
-        "id": null,
-        "name": "tagesschau.de"
-      },
-      "author": "Angela Göpfert",
-      "title": "FTX-Rückzahlungen und Trump: Neue Bitcoin-Rally voraus?",
-      "description": "Die Krypto-Börse FTX will 16 Milliarden Dollar an ihre Kunden zurückzahlen - Geld, das wieder in Bitcoin & Co. fließen könnte. Unterdessen versucht Trump, sich als \"Bitcoin-Präsident\" zu profilieren. Von Angela Göpfert.",
-      "url": "https://www.tagesschau.de/wirtschaft/finanzen/bitcoin-trump-ftx-krypto-boerse-100.html",
-      "urlToImage": "https://images.tagesschau.de/image/a0002f3a-4e31-450f-82a5-47f5f28e29cf/AAABkmq0_XM/AAABkZLhkrw/16x9-1280/ftx-110.jpg",
-      "publishedAt": "2024-10-08T11:33:15Z",
-      "content": "Stand: 08.10.2024 13:33 Uhr\r\nDie Krypto-Börse FTX will 16 Milliarden Dollar an ihre Kunden zurückzahlen - Geld, das wieder in Bitcoin &amp; Co. fließen könnte. Unterdessen versucht Trump, sich als \"B… [+5221 chars]",
-      "category": "politics"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b5e",
-      "source": {
-        "id": null,
-        "name": "quartz india"
-      },
-      "author": "Vinamrata Chaturvedi",
-      "title": "Who really created Bitcoin? A new HBO documentary claims it has the answer",
-      "description": "“Money Electric: The Bitcoin Mystery,” a new documentary from HBO (WBD) debuting Tuesday, promises to unmask one of the richest and most mysterious figures on the planet: the creator of Bitcoin. Read more...",
-      "url": "https://qz.com/hbo-documentary-bitcoin-creator-satoshi-nakamoto-1851666819",
-      "urlToImage": "https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/24a7fc9a9e3fa9eac8b8381fae5cb121.jpg",
-      "publishedAt": "2024-10-07T16:40:00Z",
-      "content": "In This Story\r\n Money Electric: The Bitcoin Mystery, a new documentary from HBO (WBD) debuting Tuesday, promises to unmask one of the richest and most mysterious figures on the planet: the creator of… [+2396 chars]",
-      "category": "entertainment"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b5f",
-      "source": {
-        "id": null,
-        "name": "quartz india"
-      },
-      "author": "Vinamrata Chaturvedi",
-      "title": "Bitcoin surges as investor interest in ETFs grows, eyeing $70k milestone",
-      "description": "Bitcoin is on an upward trajectory. Its price is hovering around $68,000, reflecting a 9.5% increase over the past week and a 2.8% rise in just one day. The surge in the leading cryptocurrency is being driven by a wave of investor interest in U.S. spot bitcoi…",
-      "url": "https://qz.com/spot-bitcoin-etfs-see-over-555-million-in-inflows-in-a-1851673718",
-      "urlToImage": "https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/413cc655995e31ed2425c65181b698fb.jpg",
-      "publishedAt": "2024-10-16T14:16:54Z",
-      "content": "In This Story\r\nBitcoin is on an upward trajectory. Its price is hovering around $68,000, reflecting a 9.5% increase over the past week and a 2.8% rise in just one day. The surge in the leading crypto… [+1471 chars]",
-      "category": "business"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b60",
-      "source": {
-        "id": null,
-        "name": "Genbeta.com"
-      },
-      "author": "Miguel Jorge",
-      "title": "\"Hola, somos de Google”: así empezó el mayor robo de bitcoins a una persona en EEUU. La fiesta posterior los ha delatado",
-      "description": "Robos y estafas con criptomonedas por medio hay prácticamente cada mes. Aquí hemos contado algunos de los casos más impactantes, como el del líder de una de las grandes criptoestafas de la historia que desapareció tras robar miles de millones, o el predicador…",
-      "url": "https://www.genbeta.com/actualidad/hola-somos-google-asi-empezo-mayor-robo-bitcoins-a-persona-eeuu-fiesta-posterior-ha-delatado",
-      "urlToImage": "https://i.blogs.es/77e6e1/dalla.e-2024-10-23-14.21.58---a-scene-in-the-style-of-the-simpsons-showing-two-criminals-pretending-to-be-google-technical-support-staff-to-steal-a-person-s-bitcoin-wallet-access-i/840_560.jpeg",
-      "publishedAt": "2024-10-23T15:00:00Z",
-      "content": "Robos y estafas con criptomonedas por medio hay prácticamente cada mes. Aquí hemos contadoalgunosde los casosmás impactantes, como el del líder de una de las grandes criptoestafas de la historia que … [+4675 chars]",
-      "category": "technology"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b61",
-      "source": {
-        "id": null,
-        "name": "Quartz India"
-      },
-      "author": "Vinamrata Chaturvedi",
-      "title": "The SEC greenlit Bitcoin ETF options trading. Here come the big fish",
-      "description": "The Securities and Exchange Commission (SEC) has granted approval for the NYSE American LLC and CBOE to list options on spot Bitcoin exchange-traded funds (ETFs), marking a significant development in cryptocurrency history. This approval paves the way for ins…",
-      "url": "https://qz.com/spot-bitcoin-etfs-options-trading-sec-nyse-cboe-1851677472",
-      "urlToImage": "https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/b321604739732aad677026eb9af310b9.jpg",
-      "publishedAt": "2024-10-21T16:02:00Z",
-      "content": "In This Story\r\nThe Securities and Exchange Commission (SEC) has granted approval for the NYSE American LLC and CBOE to list options on spot Bitcoin exchange-traded funds (ETFs), marking a significant… [+3047 chars]",
-      "category": "business"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b62",
-      "source": {
-        "id": null,
-        "name": "Theregister.com"
-      },
-      "author": "Jessica Lyons",
-      "title": "Feds reach for sliver of crypto-cash nicked by North Korea's notorious Lazarus Group",
-      "description": "A couple million will do for a start … but Kim's crews are suspected of stealing much more\nThe US government is attempting to claw back more than $2.67 million stolen by North Korea's Lazarus Group, filing two lawsuits to force the forfeiture of millions in T…",
-      "url": "https://www.theregister.com/2024/10/08/us_lazarus_group_crypto_seizure/",
-      "urlToImage": "https://regmedia.co.uk/2023/10/03/korea_shutterstock.jpg",
-      "publishedAt": "2024-10-08T00:27:08Z",
-      "content": "The US government is attempting to claw back more than $2.67 million stolen by North Korea's Lazarus Group, filing two lawsuits to force the forfeiture of millions in Tether and Bitcoin.\r\nThe first l… [+2713 chars]",
-      "category": "general"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b63",
-      "source": {
-        "id": null,
-        "name": "Quartz India"
-      },
-      "author": "Vinamrata Chaturvedi",
-      "title": "Satoshi Nakamoto unmasked: Will HBO reveal the identity of the creator of bitcoin?",
-      "description": "HBO’s (WBD) latest documentary, “Money Electric: The Bitcoin Mystery,” premiering Tuesday, promises to delve into one of the greatest enigmas of the digital age: the identity of bitcoin’s elusive creator, believed to be among the richest and most enigmatic in…",
-      "url": "https://qz.com/bitcoin-creator-satoshi-nakamoto-hbo-documentary-1851667608",
-      "urlToImage": "https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/6a363a034e712602ee791f42e5a75cbb.jpg",
-      "publishedAt": "2024-10-08T14:14:00Z",
-      "content": "In This Story\r\nHBOs (WBD) latest documentary, Money Electric: The Bitcoin Mystery, premiering Tuesday, promises to delve into one of the greatest enigmas of the digital age: the identity of bitcoins … [+1766 chars]",
-      "category": "entertainment"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b64",
-      "source": {
-        "id": null,
-        "name": "Genbeta.com"
-      },
-      "author": "Miguel Jorge",
-      "title": "Gales recibe la demanda más insólita de su historia: 495 millones de libras por un disco duro perdido con las claves de 8.000 bitcoin",
-      "description": "La historia es conocida, pero el giro que acaban de dar los acontecimientos merece una actualización. James Howells es un galés que, en circunstancias normales, debería estar disfrutando de una cuenta corriente sin fin viviendo una vida solo apta para el 1% d…",
-      "url": "https://www.genbeta.com/actualidad/gales-recibe-demanda-insolita-su-historia-495-millones-libras-disco-duro-perdido-claves-8-000-bitcoin",
-      "urlToImage": "https://i.blogs.es/782d62/pexels-photo-3174349/840_560.jpeg",
-      "publishedAt": "2024-10-15T11:00:49Z",
-      "content": "La historia es conocida, pero el giro que acaban de dar los acontecimientos merece una actualización. James Howells es un galés que, en circunstancias normales, debería estar disfrutando de una cuent… [+4248 chars]",
-      "category": "technology"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b65",
-      "source": {
-        "id": null,
-        "name": "Quartz India"
-      },
-      "author": "Vinamrata Chaturvedi",
-      "title": "HBO documentary claims Bitcoin developer Peter Todd is Satoshi Nakamoto – now comes the denial",
-      "description": "The HBO documentary suggests Todd, a former Bitcoin developer, is the cryptocurrency's mysterious creator. But it fails to provide solid evidence",
-      "url": "https://qz.com/hbo-documentary-claims-peter-todd-bitcoin-creator-satos-1851668667",
-      "urlToImage": "https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/4046de6574a7a5aa7932ebeccd7008b5.png",
-      "publishedAt": "2024-10-09T14:18:00Z",
-      "content": "In This Story\r\nWho created Bitcoin? Is it finally known? Perhaps not. \r\nMoney Electric: The Bitcoin Mystery, a new HBO (WBD) documentary that premiered on Tuesday, claims that former Bitcoin develope… [+3260 chars]",
-      "category": "entertainment"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b66",
-      "source": {
-        "id": null,
-        "name": "Quartz India"
-      },
-      "author": "Rocio Fabbro",
-      "title": "The FBI arrested the man it says hacked the SEC's Twitter and sent bitcoin soaring",
-      "description": "The FBI arrested the man it believes hacked and posted from the Securities and Exchange Commission’s X (formerly Twitter) account in January and sent the price of bitcoin soaring.Read more...",
-      "url": "https://qz.com/bitcoin-fbi-arrest-sec-twitter-x-hack-sim-swap-1851675349",
-      "urlToImage": "https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/b5f025fed3915aae98b09e3db08f4bd2.jpg",
-      "publishedAt": "2024-10-17T17:42:00Z",
-      "content": "The FBI arrested the man it believes hacked and posted from the Securities and Exchange Commissions X (formerly Twitter) account in January and sent the price of bitcoin soaring.\r\nEric Council Jr., a… [+2394 chars]",
-      "category": "technology"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b67",
-      "source": {
-        "id": null,
-        "name": "First Showing"
-      },
-      "author": "Alex Billington",
-      "title": "Official Trailer for 'Money Electric: The Bitcoin Mystery' Documentary",
-      "description": "\"If you dig deep enough, the inconsistencies will emerge.\" HBO has revealed the trailer for a documentary film titled Money Electric: The Bitcoin Mystery, another investigative look at Bitcoin and the world of cryptocurrency. This would play well as a double …",
-      "url": "https://www.firstshowing.net/2024/official-trailer-for-money-electric-the-bitcoin-mystery-documentary/",
-      "urlToImage": "https://media2.firstshowing.net/firstshowing/img16/MoneyElectricDocPostermainTW1.jpg",
-      "publishedAt": "2024-10-04T13:28:09Z",
-      "category": "technology",
-      "content": "by Alex BillingtonOctober 4, 2024Source:YouTube\r\n\"If you dig deep enough, the inconsistencies will emerge.\" HBO has revealed the trailer for a documentary film titled Money Electric: The Bitcoin Myst… [+2727 chars]"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b68",
-      "source": {
-        "id": null,
-        "name": "Variety"
-      },
-      "author": "Cynthia Littleton",
-      "title": "Who Invented Bitcoin? HBO Documentary ‘Money Electric’ Tries to Solve an Enduring Crypto Mystery",
-      "description": "Who invented Bitcoin? That question has become a capitivating mystery for the digital age along the lines of whatever happened to D.B. Cooper or who was Deep Throat in the Watergate scandal. Documentarian Cullen Hoback thinks he has the answer. His new HBO do…",
-      "url": "https://variety.com/2024/tv/news/bitcoin-hbo-doc-money-electric-satoshi-nakamoto-1236183061/",
-      "urlToImage": "https://variety.com/wp-content/uploads/2024/10/peter-todd-e1729349646204.jpeg?w=1000&h=561&crop=1",
-      "publishedAt": "2024-10-19T16:37:08Z",
-      "category": "technology",
-      "content": "Who invented Bitcoin? That question has become a capitivating mystery for the digital age along the lines of whatever happened to D.B. Cooper or who was Deep Throat in the Watergate scandal.\r\nDocumen… [+5328 chars]"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b69",
-      "source": {
-        "id": null,
-        "name": "BBC News"
-      },
-      "author": null,
-      "title": "Alleged Bitcoin hacker Googled 'signs the FBI is after you'",
-      "description": "A man from Georgia is alleged to be part of a group which hacked the US regulator's X account.",
-      "url": "https://www.bbc.com/news/articles/c20pvkg35xyo",
-      "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/cf48/live/dd8f0280-8d28-11ef-bee0-39b1bce7fdf1.jpg",
-      "publishedAt": "2024-10-18T10:08:10Z",
-      "category": "technology",
-      "content": "\"What are some signs the FBI is after you\" is one of the alleged hacker's searches, according to court documents\r\nA man arrested in connection with a hack of the US markets regulator's X account sear… [+2466 chars]"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b6a",
-      "source": {
-        "id": null,
-        "name": "Quartz India"
-      },
-      "author": "Vinamrata Chaturvedi",
-      "title": "Bitcoin drops to $60,000 as escalating Middle East tensions rattle the crypto market",
-      "description": "Bitcoin fell to $60,000 on Tuesday evening as tensions in the Middle East worsened due to Iran’s attack on Israel. The leading cryptocurrency dropped nearly 5%, trading at $60,834. Read more...",
-      "url": "https://qz.com/bitcoin-60-000-tension-middle-east-1851662604",
-      "urlToImage": "https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/d06df12221b342e0f27052697a5a6a2a.jpg",
-      "publishedAt": "2024-10-01T21:37:00Z",
-      "category": "technology",
-      "content": "Bitcoin fell to $60,000 on Tuesday evening as tensions in the Middle East worsened due to Irans attack on Israel. The leading cryptocurrency dropped nearly 5%, trading at $60,834. \r\nEther, the second… [+1260 chars]"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b6b",
-      "source": {
-        "id": null,
-        "name": "Quartz India"
-      },
-      "author": "Vinamrata Chaturvedi",
-      "title": "Crypto is getting hammered today, with Bitcoin dropping to $65,000",
-      "description": "The cryptocurrency market is experiencing a downturn, closely mirroring the decline in the stock market. On Wednesday, Bitcoin saw a significant drop of over 2.5% in the past 24 hours, with its price hovering around $65,000. This decline has dashed hopes of b…",
-      "url": "https://qz.com/crypto-market-down-bitcoin-65-000-1851679497",
-      "urlToImage": "https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/b5e1795ecf299ac0ef7257fd52c37002.jpg",
-      "publishedAt": "2024-10-23T17:01:58Z",
-      "category": "technology",
-      "content": "In This Story\r\nThe cryptocurrency market is experiencing a downturn, closely mirroring the decline in the stock market. On Wednesday, Bitcoin saw a significant drop of over 2.5% in the past 24 hours,… [+1793 chars]"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b6c",
-      "source": {
-        "id": null,
-        "name": "Quartz India"
-      },
-      "author": "Vinamrata Chaturvedi",
-      "title": "5 crypto criminals serving the longest prison sentences",
-      "description": "The Social Capital Markets, a global initiative focused on fostering a just and sustainable economy, has recently published a revealing report on crypto crimes. The findings indicate a staggering 267% increase in global crypto-related convictions over the pas…",
-      "url": "https://qz.com/sam-bankman-fried-cryptocurrency-crime-prison-sentences-1851665731",
-      "urlToImage": "https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/59a22590499594fb6b4aee53e2392478.jpg",
-      "publishedAt": "2024-10-14T09:00:00Z",
-      "category": "entertainment",
-      "content": "Ross Ulbricht was born in 1984 in Austin, Texas, and founded the Silk Road in 2013, a notorious dark web marketplace that facilitated illegal activities such as drug trafficking through Bitcoin trans… [+719 chars]"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b6d",
-      "source": {
-        "id": null,
-        "name": "Tech Xplore"
-      },
-      "author": "Bob Yirka",
-      "title": "Integer addition algorithm could reduce energy needs of AI by 95%",
-      "description": "A team of engineers at AI inference technology company BitEnergy AI reports a method to reduce the energy needs of AI applications by 95%. The group has published a paper describing their new technique on the arXiv preprint server.",
-      "url": "https://techxplore.com/news/2024-10-integer-addition-algorithm-energy-ai.html",
-      "urlToImage": "https://scx2.b-cdn.net/gfx/news/hires/2024/image-of-computer-scre.jpg",
-      "publishedAt": "2024-10-13T16:27:12Z",
-      "category": "entertainment",
-      "content": "A team of engineers at AI inference technology company BitEnergy AI reports a method to reduce the energy needs of AI applications by 95%. The group has published a paper describing their new techniq… [+2457 chars]"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b6f",
-      "source": {
-        "id": "techcrunch",
-        "name": "TechCrunch"
-      },
-      "author": "Kyle Wiggers",
-      "title": "Crypto scammers hack OpenAI's press account on X",
-      "description": "OpenAI's official newsroom account on X was compromised by cryptocurrency scammers.",
-      "url": "https://techcrunch.com/2024/09/23/crypto-scammers-hack-openais-press-account-on-x/",
-      "urlToImage": "https://techcrunch.com/wp-content/uploads/2024/05/openAI-spiral-color-v2.jpg?resize=1200,675",
-      "publishedAt": "2024-09-23T22:49:57Z",
-      "category": "entertainment",
-      "content": "OpenAI’s official press account on X was compromised by cryptocurrency scammers. Or, at least that’s what appears to have happened. \r\nLate Monday afternoon, OpenAI Newsroom, an account OpenAI recentl… [+2175 chars]"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b70",
-      "source": {
-        "id": null,
-        "name": "Xataka.com"
-      },
-      "author": "Rubén Andrés",
-      "title": "Elon Musk respondió \"Sí, DOGE\" en un mitin junto a Trump. No importó que no se refiriera a Dogecoin, su precio se disparó un 15%",
-      "description": "En las últimas semanas, Elon Musk ha pasado de mantener una posición de respaldo económico a la candidatura presidencial de Donald Trump, a un papel protagonista, subiéndose a los escenarios de los mítines que el candidato está haciendo durante su gira electo…",
-      "url": "https://www.xataka.com/criptomonedas/elon-musk-respondio-doge-mitin-a-trump-no-importo-que-no-se-refiriera-a-dogecoin-su-precio-se-disparo-15",
-      "urlToImage": "https://i.blogs.es/97229e/memecoin/840_560.jpeg",
-      "publishedAt": "2024-10-22T13:45:39Z",
-      "category": "entertainment",
-      "content": "En las últimas semanas, Elon Musk ha pasado de mantener una posición de respaldo económico a la candidatura presidencial de Donald Trump, a un papel protagonista, subiéndose a los escenarios de los m… [+3379 chars]"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b71",
-      "source": {
-        "id": null,
-        "name": "BBC News"
-      },
-      "author": null,
-      "title": "I am not Bitcoin inventor, says man named in HBO film",
-      "description": "The real identity of the person, known only as Satoshi Nakamoto, has captivated the internet for years.",
-      "url": "https://www.bbc.com/news/articles/c62m73my0dno",
-      "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/19a2/live/b3158730-8621-11ef-9329-f30486eb2a33.jpg",
-      "publishedAt": "2024-10-09T09:45:42Z",
-      "category": "entertainment",
-      "content": "A new documentary claims to have solved the greatest mystery in cryptocurrency: the true identity of the inventor of Bitcoin.\r\nThe question has captivated the internet since the digital currency was … [+3494 chars]"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b72",
-      "source": {
-        "id": null,
-        "name": "Quartz India"
-      },
-      "author": "Vinamrata Chaturvedi",
-      "title": "The man named as Bitcoin's creator in an HBO documentary has gone into hiding",
-      "description": "Remember the buzz surrounding the HBO (WBD) documentary that claimed to have uncovered the true identity of Bitcoin’s mysterious creator, Satoshi Nakamoto? It appears that the person identified as Satoshi has now gone underground, reportedly driven into hidin…",
-      "url": "https://qz.com/peter-todd-the-hbo-documentary-called-bitcoin-creator-s-1851679244",
-      "urlToImage": "https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/087757437c2db235960901753a249c8c.png",
-      "publishedAt": "2024-10-23T16:04:00Z",
-      "category": "entertainment",
-      "content": "In This Story\r\nRemember the buzz surrounding the HBO (WBD-1.86%\r\n) documentary that claimed to have uncovered the true identity of Bitcoins mysterious creator, Satoshi Nakamoto? It appears that the p… [+3137 chars]"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b73",
-      "source": {
-        "id": null,
-        "name": "Quartz India"
-      },
-      "author": "Vinamrata Chaturvedi",
-      "title": "Dogecoin, ApeCoin, Solana, and more: Cryptocurrencies to watch this week",
-      "description": "The crypto market is currently bullish, with growing anticipation around when bitcoin will surpass the $70,000 mark. And coming tech earnings reports could further boost the overall market sentiment.Read more...",
-      "url": "https://qz.com/dogecoin-apecoin-solana-cryptocurrencies-to-watch-thi-1851677299",
-      "urlToImage": "https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/21216b4e9d998690a33858235e380fae.jpg",
-      "publishedAt": "2024-10-21T14:48:00Z",
-      "category": "entertainment",
-      "content": "ApeCoin is the native token designed to govern and enhance the APE ecosystem, which originated from the success of the Bored Ape Yacht Club (BAYC). BAYC is one of the most prominent and influential N… [+344 chars]"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b74",
-      "source": {
-        "id": "business-insider",
-        "name": "Business Insider"
-      },
-      "author": "Dan DeFrancesco",
-      "title": "Taylor Swift is flexing her economic muscles again with the return of her tour and a new book",
-      "description": "Taylor Swift's upcoming self-published challenges business norm. But her tour's return raises concerns about mega-events' impact on economic recovery.",
-      "url": "https://www.businessinsider.com/taylor-swift-self-publishing-eras-tour-book-disrupting-industry-again-2024-10",
-      "urlToImage": "https://i.insider.com/67123d4ea0a0cc14f221eeb9?width=1200&format=jpeg",
-      "publishedAt": "2024-10-18T13:04:14Z",
-      "category": "entertainment",
-      "content": "Taylor Swift performing on stage at Wembley Stadium for the London leg of \"The Eras Tour.\"Kate Green/Getty Images\r\n\u003Cul\u003E\u003Cli\u003EThis post originally appeared in the Insider Today newsletter.how\u003C/li\u003E\u003Cli\u003EYo… [+7453 chars]"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b75",
-      "source": {
-        "id": null,
-        "name": "Deadline"
-      },
-      "author": "Matthew Carey",
-      "title": "HBO’s ‘Money Electric: The Bitcoin Mystery’ Sets Out To Unmask Secretive Creator Of World’s Most Valuable Crypto Currency",
-      "description": "Like a Bansky of the crypto world, little is known about Satoshi Nakamoto, the reputed creator of the digital currency Bitcoin. What’s his real name? What’s he worth? Who is he, really? Director Cullen Hoback attempts to get to the bottom of Nakamoto’s identi…",
-      "url": "http://deadline.com/2024/10/money-electric-the-bitcoin-mystery-hbo-documentary-trailer-1236107405/",
-      "urlToImage": "https://deadline.com/wp-content/uploads/2024/10/Money-Electric-The-Bitcoin-Mystery-graphic.png?w=1024",
-      "publishedAt": "2024-10-04T15:00:00Z",
-      "category": "entertainment",
-      "content": "Like a Bansky of the crypto world, little is known about Satoshi Nakamoto, the reputed creator of the digital currency Bitcoin. What’s his real name? What’s he worth? Who is he, really?\r\nDirector Cul… [+2429 chars]"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b76",
-      "source": {
-        "id": null,
-        "name": "Socialmediaexplorer.com"
-      },
-      "author": "Doug Brown",
-      "title": "How Bitcoin Is Empowering Social Media Creators and Changing the Game in 2024",
-      "description": "Hey, social media explorers! Today, we’re diving into one of the hottest and most exciting...\nThe post How Bitcoin Is Empowering Social Media Creators and Changing the Game in 2024 appeared first on Social Media Explorer.",
-      "url": "https://socialmediaexplorer.com/social-media-marketing/how-bitcoin-is-empowering-social-media-creators-and-changing-the-game-in-2024/",
-      "urlToImage": "https://socialmediaexplorer.com/wp-content/uploads/2024/10/01plavakafa.jpg",
-      "publishedAt": "2024-10-10T21:17:14Z",
-      "category": "entertainment",
-      "content": "Hey, social media explorers! Today, we’re diving into one of the hottest and most exciting topics for creators in 2024how Bitcoin and crypto wallets are empowering social media creators to take their… [+7357 chars]"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b77",
-      "source": {
-        "id": null,
-        "name": "Biztoc.com"
-      },
-      "author": "news.google.com",
-      "title": "Bitcoin Protocol sees TVL growth as staking restrictions lift",
-      "description": "Bitcoin Protocol sees TVL growth as staking restrictions lift AMBCrypto News\nBitcoin Protocol Babylon Pulls in $1.5B of Staking Deposits as Cap Lifted CoinDesk\nBitcoin Staking Protocol Babylon Attracts About 24,000 BTC in Deposits – News Bytes Bitcoin News Bi…",
-      "url": "https://biztoc.com/x/57fc41fad14b06c2",
-      "urlToImage": "https://biztoc.com/cdn/803/og.png",
-      "publishedAt": "2024-10-10T14:31:34Z",
-      "category": "entertainment",
-      "content": "Bitcoin Protocol sees TVL growth as staking restrictions lift AMBCrypto NewsBitcoin Protocol Babylon Pulls in $1.5B of Staking Deposits as Cap Lifted CoinDeskBitcoin Staking Protocol Babylon Attracts… [+117 chars]"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b78",
-      "source": {
-        "id": null,
-        "name": "Forbes"
-      },
-      "author": "Trefis Team, Contributor, \n Trefis Team, Contributor\n https://www.forbes.com/sites/greatspeculations/people/trefis/",
-      "title": "Will Bitcoin Reach $100K?",
-      "description": "The buzz around cryptocurrencies is back with Bitcoin prices getting a boost this year and investors and the media renewing their interest.",
-      "url": "https://www.forbes.com/sites/greatspeculations/2024/10/17/will-bitcoin-reach-100k/",
-      "urlToImage": "https://imageio.forbes.com/specials-images/imageserve/6710a88c0dbf228b4a13c8e1/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds",
-      "publishedAt": "2024-10-17T12:00:20Z",
-      "category": "entertainment",
-      "content": "UNITED KINGDOM - 2024/10/08: In this photo illustration, the Bitcoin logo seen displayed on a ... [+] smartphone with stock market graphs in the background. (Photo Illustration by Dominika Zarzycka/S… [+5329 chars]"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b79",
-      "source": {
-        "id": null,
-        "name": "20 Minutes"
-      },
-      "author": "L.B. (20 Minutes)",
-      "title": "HBO pense avoir identifié Satoshi Nakamoto, l’inventeur de Bitcoin",
-      "description": "Coup de pub géant ou vraie révélation ? On en saura davantage le 8 octobre",
-      "url": "https://www.20minutes.fr/high-tech/20-mint/4113886-20241005-hbo-pense-avoir-identifie-satoshi-nakamoto-inventeur-bitcoin",
-      "urlToImage": "https://img.20mn.fr/S2DdQ1QwTpOhHKwxIAxkUik/1444x920_in-this-photo-illustration-a-bitcoin-logo-is-displayed-on-a-smartphone-with-stock-market-percentages-in-the-background-omar-marques-sopa-images-sopaimages-1738132-credit-sopa-images-sipa-2307191754",
-      "publishedAt": "2024-10-05T10:36:56Z",
-      "category": "general",
-      "content": "Cest la Chouette dor sous stéroïde. Si le mystère entourant la réelle identité du créateur de Bitcoin, Satoshi Nakamoto, ne dure que depuis 2008 et non 31 ans comme pour lartefact déterré jeudi, il c… [+1739 chars]"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b7a",
-      "source": {
-        "id": null,
-        "name": "Forbes"
-      },
-      "author": "Susie Violet Ward, Contributor, \n Susie Violet Ward, Contributor\n https://www.forbes.com/sites/susievioletward/",
-      "title": "Experts Challenge ECB’s Claims On Bitcoin And Wealth Inequality",
-      "description": "Experts refute the ECB’s claims on bitcoin, citing flaws and biases in its analysis. They argue bitcoin promotes financial freedom and inclusion, disputing the position.",
-      "url": "https://www.forbes.com/sites/digital-assets/2024/10/22/experts-challenge-ecbs-claims-on-bitcoin-and-wealth-inequality/",
-      "urlToImage": "https://imageio.forbes.com/specials-images/imageserve/6717c64f6aa970e273525e34/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds",
-      "publishedAt": "2024-10-22T20:08:58Z",
-      "category": "general",
-      "content": "FRANKFURT, GERMANY - JUNE 13: A huge euro logo is seen in front of the headquarters of the European ... [+] Central Bank (ECB) on June 13, 2005 in Frankfurt, Germany. The German economy was suffering… [+7541 chars]"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b7b",
-      "source": {
-        "id": null,
-        "name": "Forbes"
-      },
-      "author": "Dave Birnbaum, Contributor, \n Dave Birnbaum, Contributor\n https://www.forbes.com/sites/davidbirnbaum/",
-      "title": "Grayscale’s Bitcoin Mini Trust: Here’s What You Need To Know",
-      "description": "Want to learn more about Grayscale’s Bitcoin Mini Trust? See our summary of what this mini trust is and how it differs from other Bitcoin investment vehicles.",
-      "url": "https://www.forbes.com/sites/digital-assets/article/grayscale-bitcoin-mini-trust-what-you-need-to-know/",
-      "urlToImage": "https://imageio.forbes.com/specials-images/imageserve/670f16f41498cec2ba74cf0c/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds",
-      "publishedAt": "2024-10-20T19:00:00Z",
-      "category": "general",
-      "content": "Grayscale signage on the floor of the New York Stock Exchange.\r\n© 2024 Bloomberg Finance LP\r\nWith the rise in bitcoins popularity, Grayscale has introduced a new way for smaller investors to gain exp… [+9841 chars]"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b7c",
-      "source": {
-        "id": null,
-        "name": "Forbes"
-      },
-      "author": "Dave Birnbaum, Contributor, \n Dave Birnbaum, Contributor\n https://www.forbes.com/sites/davidbirnbaum/",
-      "title": "How Will Bitcoin ETF Options Impact Bitcoin’s Price?",
-      "description": "The SEC's approval of bitcoin ETF options will forever change the bitcoin market, making it more practical for use by institutional investors.",
-      "url": "https://www.forbes.com/sites/davidbirnbaum/2024/10/20/how-will-bitcoin-etf-options-impact-bitcoins-price/",
-      "urlToImage": "https://imageio.forbes.com/specials-images/imageserve/6715558311ff768bede9e039/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds",
-      "publishedAt": "2024-10-20T19:21:00Z",
-      "category": "general",
-      "content": "Samara Cohen, Chief Investment Officer of ETF and Index Investments at Blackrock, walks in Times ... [+] Square after ringing the opening bell as Bitcoin Spot ETF's are launched on the Nasdaq Exchang… [+6778 chars]"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b7d",
-      "source": {
-        "id": null,
-        "name": "Biztoc.com"
-      },
-      "author": "go.theregister.com",
-      "title": "Bitcoin creator suspect says he is not Bitcoin creator suspect",
-      "description": "'If I was Satoshi I would have destroyed my ability to prove I'm Satoshi'\nThe man identified as Bitcoin creator Satoshi Nakamoto in a new HBO documentary has something to say: Wrong again, world.…",
-      "url": "https://biztoc.com/x/a19a9dfaca0404e1",
-      "urlToImage": "https://biztoc.com/cdn/803/og.png",
-      "publishedAt": "2024-10-09T17:12:43Z",
-      "category": "general",
-      "content": "'If I was Satoshi I would have destroyed my ability to prove I'm Satoshi'The man identified as Bitcoin creator Satoshi Nakamoto in a new HBO documentary has something to say: Wrong again, world.\r\nThi… [+50 chars]"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b7e",
-      "source": {
-        "id": null,
-        "name": "Olhardigital.com.br"
-      },
-      "author": "Pedro Spadoni",
-      "title": "Documentário da HBO promete revelar identidade do criador do Bitcoin",
-      "description": "\"Money Electric: The Bitcoin Mystery\" promete revelar a identidade de Satoshi Nakamoto, pseudônimo da (suposta) pessoa que criou o Bitcoin\nO post Documentário da HBO promete revelar identidade do criador do Bitcoin apareceu primeiro em Olhar Digital.",
-      "url": "https://olhardigital.com.br/2024/10/07/pro/documentario-da-hbo-promete-revelar-identidade-do-criador-do-bitcoin/",
-      "urlToImage": "https://olhardigital.com.br/wp-content/uploads/2024/06/Destaque-Satoshi-Nakamoto-criador-do-bitcoin-scaled.jpg",
-      "publishedAt": "2024-10-07T15:03:12Z",
-      "category": "general",
-      "content": "Um novo documentário da HBO promete revelar a verdadeira identidade de Satoshi Nakamoto, pseudônimo usado pela suposta pessoa que criou o Bitcoin. Money Electric: The Bitcoin Mystery vai ao ar nesta … [+2120 chars]"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b7f",
-      "source": {
-        "id": null,
-        "name": "Biztoc.com"
-      },
-      "author": "news.google.com",
-      "title": "SEC Greenlights Bitcoin Options ETFs for New York Stock Exchange and CBOE",
-      "description": "SEC Greenlights Bitcoin Options ETFs for New York Stock Exchange and CBOE The Daily Hodl\nUS SEC gives green light for options listing for spot bitcoin ETFs to NYSE Reuters\nHow Will Bitcoin ETF Options Impact Bitcoin’s Price? Forbes\nNYSE, Cboe Win SEC Approval…",
-      "url": "https://biztoc.com/x/c7fd03ac507d41bc",
-      "urlToImage": "https://biztoc.com/cdn/805/og.png",
-      "publishedAt": "2024-10-21T10:19:00Z",
-      "category": "general",
-      "content": "SEC Greenlights Bitcoin Options ETFs for New York Stock Exchange and CBOE The Daily HodlUS SEC gives green light for options listing for spot bitcoin ETFs to NYSE ReutersHow Will Bitcoin ETF Options … [+148 chars]"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b80",
-      "source": {
-        "id": null,
-        "name": "Biztoc.com"
-      },
-      "author": "news.google.com",
-      "title": "Hacker arrested for the fake SEC tweet that caused a Bitcoin price spike",
-      "description": "Hacker arrested for the fake SEC tweet that caused a Bitcoin price spike The Verge\nFBI arrests Alabama man for SEC X hack that spiked price of bitcoin CNBC\nAlabama man allegedly hacked SEC’s X account, causing bitcoin value to soar with fake post AL.com\nArres…",
-      "url": "https://biztoc.com/x/9ceff82e873d19fa",
-      "urlToImage": "https://biztoc.com/cdn/805/og.png",
-      "publishedAt": "2024-10-17T18:36:03Z",
-      "category": "general",
-      "content": "Hacker arrested for the fake SEC tweet that caused a Bitcoin price spike The VergeFBI arrests Alabama man for SEC X hack that spiked price of bitcoin CNBCAlabama man allegedly hacked SECs X account, … [+152 chars]"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b81",
-      "source": {
-        "id": null,
-        "name": "Biztoc.com"
-      },
-      "author": "news.google.com",
-      "title": "Japan’s Metaplanet makes $7M Bitcoin buy, bringing holdings to $40.5M",
-      "description": "Japan’s Metaplanet makes $7M Bitcoin buy, bringing holdings to $40.5M Cointelegraph\nJapan's Metaplanet Buys Another $6.7M Worth of Bitcoin CoinDesk\nMetaplanet buys average of 34 BTC per day in October Bitcoin buying spree CryptoSlate\nMetaplanet Inc. Expands B…",
-      "url": "https://biztoc.com/x/882263abfc28d830",
-      "urlToImage": "https://biztoc.com/cdn/803/og.png",
-      "publishedAt": "2024-10-07T11:48:45Z",
-      "category": "general",
-      "content": "Japans Metaplanet makes $7M Bitcoin buy, bringing holdings to $40.5M CointelegraphJapan's Metaplanet Buys Another $6.7M Worth of Bitcoin CoinDeskMetaplanet buys average of 34 BTC per day in October B… [+136 chars]"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b82",
-      "source": {
-        "id": null,
-        "name": "Quartz India"
-      },
-      "author": "Quartz Bot",
-      "title": "Super Micro Computer's big stock split, Costco rises, and Bitcoin falls: Markets news roundup",
-      "description": "Super Micro Computer (SMCI) is set to undergo a stock split after the market closes on Monday, aligning itself with other prominent AI-driven companies like Nvidia and Broadcom, which also executed stock splits earlier this year. Following the split, the stoc…",
-      "url": "https://qz.com/super-micro-computer-stock-split-costco-bitcoin-price-1851665581",
-      "urlToImage": "https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/e2cd5bdbdb1ec4a967cd35b4289c431c.jpg",
-      "publishedAt": "2024-10-05T13:00:00Z",
-      "category": "business",
-      "content": "If youre thinking about buying a condo in Miami, you might want to hold off.\r\nAccording to a new report from UBS, Miami has the highest bubble risk among all the cities it surveyed globally. \r\nUBS (U… [+241 chars]"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b83",
-      "source": {
-        "id": null,
-        "name": "Quartz India"
-      },
-      "author": "Vinamrata Chaturvedi",
-      "title": "Bitcoin and Ether ETFs helped take crypto mainstream. Are Solana and XRP next?",
-      "description": "The Securities and Exchange Commission (SEC) approved bitcoin spot exchange-traded funds (ETFs) at the start of this year, capturing the attention of investors. The influx of capital into these funds fueled a rapid rise in bitcoin’s value, which soon reached …",
-      "url": "https://qz.com/bitcoin-ether-etf-solana-xrp-sec-1851664387",
-      "urlToImage": "https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/ddc65c7151ed150ed2b35f2b6c9c566b.jpg",
-      "publishedAt": "2024-10-07T09:00:00Z",
-      "category": "business",
-      "content": "The Securities and Exchange Commission (SEC) approved bitcoin spot exchange-traded funds (ETFs) at the start of this year, capturing the attention of investors. The influx of capital into these funds… [+3927 chars]"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b84",
-      "source": {
-        "id": null,
-        "name": "Habr.com"
-      },
-      "author": "pnaydanovgoo (MetaLamp)",
-      "title": "Полный разбор Polymarket: от интерфейса до смарт-контрактов",
-      "description": "Написал для вас подробный технический разбор Polymarket — децентрализованного рынка предсказаний на блокчейне. В статье мы рассмотрим ключевые компоненты протокола: интерфейс, смарт-контракты, оракул, токенизация исходов и механизмы управления ордерами. Матер…",
-      "url": "https://habr.com/ru/companies/metalamp/articles/851892/#post-content-body",
-      "urlToImage": "https://habrastorage.org/getpro/habr/upload_files/4e0/56c/6b4/4e056c6b4f3705ab5dbc2c062a0d1095.png",
-      "publishedAt": "2024-10-22T14:06:17Z",
-      "category": "business",
-      "content": "Polymarket  . : , , .\r\n . , .\r\nProxy wallets\r\n Polymarket, . :\r\n\u003Cul\u003E\u003Cli\u003E EOA-. Metamask, Coinbase WalletConnect.\r\n\u003C/li\u003E\u003Cli\u003E  Magic Link\r\n. , .\r\n\u003C/li\u003E\u003C/ul\u003E - 1/1, , .\r\n Polymarket , , .\r\n. , .  condit… [+3647 chars]"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b85",
-      "source": {
-        "id": null,
-        "name": "Quartz India"
-      },
-      "author": "Vinamrata Chaturvedi",
-      "title": "The crypto industry is heavily favoring Republicans in its 2024 election spending",
-      "description": "The crypto industry is channeling more of its advertising budget towards supporting Republican candidates over Democrats, according to a recent report by Axios.Read more...",
-      "url": "https://qz.com/crypto-companies-spends-more-on-ads-for-republicans-tha-1851678302",
-      "urlToImage": "https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/16b475f3eccee91abdec2386b61d6ea6.jpg",
-      "publishedAt": "2024-10-22T16:15:00Z",
-      "category": "business",
-      "content": "In This Story\r\nThe crypto industry is channeling more of its advertising budget towards supporting Republican candidates over Democrats, according to a recent report by Axios. \r\nData from AdImpact re… [+2365 chars]"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b86",
-      "source": {
-        "id": null,
-        "name": "Forbes"
-      },
-      "author": "Clem Chambers, Senior Contributor, \n Clem Chambers, Senior Contributor\n https://www.forbes.com/sites/investor/people/clem/",
-      "title": "Boomer Gold Is Now Bitcoin",
-      "description": "While the probability of the next leg up seems distant, if something wicked this way comes, up will go crypto, if not down it will go into the new cycle’s crypto winter.",
-      "url": "https://www.forbes.com/sites/digital-assets/2024/09/26/boomer-gold-is-now-bitcoin/",
-      "urlToImage": "https://imageio.forbes.com/specials-images/imageserve/66f525a2dba0ed8142f26e82/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds",
-      "publishedAt": "2024-09-26T14:45:17Z",
-      "category": "business",
-      "content": "Bitcoin may be taking the place of gold. \r\ngetty\r\nYou cant be right all the time. I decided to play this crypto cycle with ether not bitcoin on the premise that Eth is spicier than BTCBitcoin\r\n and w… [+4328 chars]"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b87",
-      "source": {
-        "id": null,
-        "name": "Forbes"
-      },
-      "author": "Trefis Team, Contributor, \n Trefis Team, Contributor\n https://www.forbes.com/sites/greatspeculations/people/trefis/",
-      "title": "Making Crypto Bitcoin Less Cryptic",
-      "description": "The buzz around cryptocurrencies is back with Bitcoin prices getting a boost this year and investors and the media renewing their interest.",
-      "url": "https://www.forbes.com/sites/greatspeculations/2024/10/07/making-crypto-bitcoin-less-cryptic/",
-      "urlToImage": "https://imageio.forbes.com/specials-images/imageserve/67037982bf0b4325f5dc13e7/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds",
-      "publishedAt": "2024-10-07T12:00:29Z",
-      "category": "business",
-      "content": "Bitcoin symbol is seen on Bitcoin ATM kiosk in the city center of Krakow, Poland on July 26th, 2024. ... [+] (Photo by Beata Zawrzel/NurPhoto via Getty Images)\r\nNurPhoto via Getty Images\r\nThe buzz ar… [+4962 chars]"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b88",
-      "source": {
-        "id": null,
-        "name": "BBC News"
-      },
-      "author": null,
-      "title": "Meet Pesto: the fat baby penguin and viral superstar",
-      "description": "The obscenely fluffy nine-month-old chick weighs more than both of his foster parents combined.",
-      "url": "https://www.bbc.com/news/articles/cp3w4nld5e3o",
-      "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/c3e3/live/9687f9c0-7a2f-11ef-8c1a-df523ba43a9a.jpg",
-      "publishedAt": "2024-09-24T04:50:47Z",
-      "category": "business",
-      "content": "Among the sea of glossy black and white penguins which call a popular Australian aquarium home, one baby bird stands out like a sore thumb.\r\nChocolatey brown, obscenely fluffy, and towering a head ab… [+3529 chars]"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b89",
-      "source": {
-        "id": null,
-        "name": "Forbes"
-      },
-      "author": "Billy Bambrough, Senior Contributor, \n Billy Bambrough, Senior Contributor\n https://www.forbes.com/sites/billybambrough/",
-      "title": "Who Is Peter Todd, The Man Named By HBO As Bitcoin’s Mystery Creator Satoshi Nakamoto?",
-      "description": "HBO documentary film maker Cullen Hoback has named Peter Todd, a bitcoin core developer who has been involved with bitcoin since 2010, as who he believes to be the real-world identity of Satoshi Nakamoto...",
-      "url": "https://www.forbes.com/sites/digital-assets/2024/10/08/who-is-peter-todd-the-man-named-by-hbo-as-bitcoins-mystery-creator-satoshi-nakamoto/",
-      "urlToImage": "https://imageio.forbes.com/specials-images/imageserve/6705678306c5e6029232be09/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds",
-      "publishedAt": "2024-10-08T22:00:13Z",
-      "category": "politics",
-      "content": "Satoshi Nakamotothe mysterious, anonymous creator of bitcoinhas successfully kept their real identity hidden since they published bitcoin's white paper in 2008.\r\nUnlock over $3,000 in perks including… [+4603 chars]"
-    },
-    {
-      "_id": "671ab686de6e5e27fecd4b8a",
-      "source": {
-        "id": null,
-        "name": "Forbes"
-      },
-      "author": "Billy Bambrough, Senior Contributor, \n Billy Bambrough, Senior Contributor\n https://www.forbes.com/sites/billybambrough/",
-      "title": "Michael Saylor Reveals Shock $100 Trillion MicroStrategy ‘Endgame’ As The Bitcoin Price Suddenly Soars",
-      "description": "Michael Saylor, founder and executive chairman of MicroStrategy, has revealed the company’s endgame is to become a bitcoin investment bank—and to buy up to $150 billion of bitcoin...",
-      "url": "https://www.forbes.com/sites/digital-assets/2024/10/11/michael-saylor-reveals-shock-100-trillion-microstrategy-endgame-as-the-bitcoin-price-suddenly-soars/",
-      "urlToImage": "https://imageio.forbes.com/specials-images/imageserve/64f973d47e2a9b3ad373b636/0x0.jpg?format=jpg&crop=2015,1288,x825,y128,safe&height=900&width=1600&fit=bounds",
-      "publishedAt": "2024-10-11T19:12:22Z",
-      "category": "politics",
-      "content": "BitcoinBitcoin\r\n has swung wildly this week as analysts warn \"something's got to give.\"\r\nUnlock over $3,000 in perks including unparalleled access to a community of top Web3 entrepreneurs, creators, … [+4205 chars]"
-    }
-  ]
+  {
+    "source": {
+      "id": "wired",
+      "name": "Wired"
+    },
+    "author": "Joel Khalili",
+    "title": "Unmasking Bitcoin Creator Satoshi Nakamoto—Again",
+    "description": "A new HBO documentary takes a swing at uncovering the real identity of Satoshi Nakamoto, inventor of Bitcoin. But without incontrovertible proof, the myth lives on.",
+    "url": "https://www.wired.com/story/unmasking-bitcoin-creator-satoshi-nakamoto-again/",
+    "urlToImage": "https://media.wired.com/photos/6703eb3979f13fda7f04485b/191:100/w_1280,c_limit/Satoshi-Nakamoto-biz-1341874258.jpg",
+    "publishedAt": "2024-10-09T01:00:00Z",
+    "content": "Peter Todd is standing on the upper floor of a dilapidated industrial building somewhere in Czechia, chuckling under his breath. He has just been accused on camera of being Satoshi Nakamoto, the Bitc… [+3043 chars]",
+    "category": "technology"
+  },
+  {
+    "source": {
+      "id": "wired",
+      "name": "Wired"
+    },
+    "author": "Joel Khalili",
+    "title": "Peter Todd Was ‘Unmasked’ As Bitcoin Creator Satoshi Nakamoto. Now He’s In Hiding",
+    "description": "Peter Todd has gone underground after an HBO documentary named him as the creator of Bitcoin, Satoshi Nakamoto, whose real identity has long remained a mystery.",
+    "url": "https://www.wired.com/story/peter-todd-was-unmasked-as-bitcoin-creator-satoshi-nakamoto-now-hes-in-hiding/",
+    "urlToImage": "https://media.wired.com/photos/6716870e6874cb5feda0798e/191:100/w_1280,c_limit/102124-bitcoin-satoshi-an.jpg",
+    "publishedAt": "2024-10-22T11:33:59Z",
+    "content": "In the week before the documentary was released, online betting markets had Len Sassaman, a cryptographer who moved in similar online circles to Satoshi, as the most likely candidate to be revealed a… [+2075 chars]",
+    "category": "technology"
+  },
+  {
+    "source": {
+      "id": "wired",
+      "name": "Wired"
+    },
+    "author": "Joel Khalili",
+    "title": "In the Kentucky Mountains, a Bitcoin Mining Dream Becomes the Stuff of Nightmares",
+    "description": "When bitcoin was on a hot streak, owners of small industrial facilities in Kentucky struck up crypto mining partnerships with Chinese companies. Then things fell apart.",
+    "url": "https://www.wired.com/story/in-the-kentucky-mountains-a-bitcoin-mining-dream-becomes-the-stuff-of-nightmares/",
+    "urlToImage": "https://media.wired.com/photos/670981994729e98a3f0fd49d/191:100/w_1280,c_limit/Kentucky-Farmers-Crypto-Mining-Duped-Business.jpg",
+    "publishedAt": "2024-10-21T11:00:00Z",
+    "content": "In both cases, Biofuel claims, the firms shipped equipment from China to its hosting facility in Eastern Kentucky, then walked away with the bitcoin produced, leaving behind hundreds of thousands of … [+2717 chars]",
+    "category": "business"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "[Removed]"
+    },
+    "author": null,
+    "title": "[Removed]",
+    "description": "[Removed]",
+    "url": "https://removed.com",
+    "urlToImage": null,
+    "publishedAt": "2024-10-17T19:35:08Z",
+    "content": "[Removed]",
+    "category": "general"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Gizmodo.com"
+    },
+    "author": "Matthew Gault",
+    "title": "Controversial HBO Documentary Concludes Peter Todd Invented Bitcoin",
+    "description": "The cryptocurrency community is not amused.",
+    "url": "https://gizmodo.com/controversial-hbo-documentary-concludes-peter-todd-invented-bitcoin-2000509751",
+    "urlToImage": "https://gizmodo.com/app/uploads/2024/10/PeterToddHBO.jpg",
+    "publishedAt": "2024-10-09T14:05:37Z",
+    "content": "Last night, HBO aired a documentary about Bitcoin that claimed to reveal the identity of the cryptocurrencys anonymous creator Satoshi Nakamoto. In Money Electric, journalist Cullen Hoback chased the… [+3152 chars]",
+    "category": "technology"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Gizmodo.com"
+    },
+    "author": "Todd Feathers",
+    "title": "FBI Arrests Man Who Searched ‘How Can I Know for Sure If I Am Being Investigated by the FBI’",
+    "description": "Eric Counsel Jr. is accused of helping to hack the U.S. Securities and Exchange Commission's X account in order to post false information about Bitcoin.",
+    "url": "https://gizmodo.com/fbi-arrests-man-who-searched-how-can-i-know-for-sure-if-i-am-being-investigated-by-the-fbi-2000513216",
+    "urlToImage": "https://gizmodo.com/app/uploads/2024/10/sec-bitcoin-hack-arrest.jpg",
+    "publishedAt": "2024-10-17T21:10:49Z",
+    "content": "The FBI has arrested an Alabama man who allegedly hacked the U.S. Securities and Exchange Commission’s X (formerly Twitter) account in order to post erroneous information about Bitcoin that briefly d… [+2369 chars]",
+    "category": "politics"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Gizmodo.com"
+    },
+    "author": "Lucas Ropek",
+    "title": "New HBO Doc Promises to Unmask the Mysterious Inventor of Bitcoin",
+    "description": "Who invented crypto? A filmmaker believes he's cracked the case.",
+    "url": "https://gizmodo.com/new-hbo-doc-promises-to-unmask-the-mysterious-inventor-of-bitcoin-2000507216",
+    "urlToImage": "https://gizmodo.com/app/uploads/2024/10/A-Statue-of-the-Mysterious-Bitcoin-Inventor-Satoshi-Nakamoto-in-Budapest-Park.jpg",
+    "publishedAt": "2024-10-04T13:35:42Z",
+    "content": "The world has long wondered who created Bitcoin. Ever since a white paper bearing his name was published on the web in 2008, the digital asset’s conception has widely been attributed to a pseudonymou… [+2431 chars]",
+    "category": "technology"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Gizmodo.com"
+    },
+    "author": "Lucas Ropek",
+    "title": "Guy Who Threw Away $500 Million Bitcoin Hard Drive Sues Local Government to Search Dump",
+    "description": "What do you do when you've thrown half a billion dollars worth of crypto in the trash?",
+    "url": "https://gizmodo.com/guy-who-threw-away-500-million-bitcoin-hard-drive-sues-local-government-to-search-dump-2000512846",
+    "urlToImage": "https://gizmodo.com/app/uploads/2024/10/A-landfill-in-Newport-Wales.jpg",
+    "publishedAt": "2024-10-17T12:35:08Z",
+    "content": "For the past decade, a Welsh man has been begging his city government for permission to peruse the contents of the local dump. 39-year-old Newport resident James Howells has been desperately asking t… [+3029 chars]",
+    "category": "business"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Gizmodo.com"
+    },
+    "author": "Matthew Gault",
+    "title": "Peter Todd Is in Hiding After a Documentary Named Him as Bitcoin’s Creator",
+    "description": "To hear the software developer tell it, being outed as Satoshi has radically changed his life.",
+    "url": "https://gizmodo.com/peter-todd-is-in-hiding-after-a-documentary-named-him-as-bitcoins-creator-2000514993",
+    "urlToImage": "https://gizmodo.com/app/uploads/2024/10/PeterToddHBO.jpg",
+    "publishedAt": "2024-10-22T15:45:38Z",
+    "content": "According to Peter Todd, an HBO documentary has turned his life into a nightmare. Money Electricaired on the network earlier this month and named Todd as Satoshi, the anonymous creator of Bitcoin. To… [+2885 chars]",
+    "category": "entertainment"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "CNET"
+    },
+    "author": "Samantha Kelly",
+    "title": "PayPal to Allow Businesses Buy and Sell Crypto",
+    "description": "The change will bring bitcoin and other virtual coins to \"millions\" of merchants across the US.",
+    "url": "https://www.cnet.com/personal-finance/crypto/paypal-to-allow-businesses-buy-and-sell-crypto/",
+    "urlToImage": "https://www.cnet.com/a/img/resize/2b2ba45973ffae7baacd4449b399bd35435e4fa0/hub/2022/04/22/d7acb748-e7bd-4553-ae44-2f893ccb87ba/paypal-logo-2022-659.jpg?auto=webp&fit=crop&height=675&width=1200",
+    "publishedAt": "2024-09-26T15:12:00Z",
+    "content": "It's about to get easier for US merchants to use cryptocurrency for payments. PayPal is launching a new service to allow the businesses that use its platform to buy, hold and sell crypto. \r\nAlthough … [+1029 chars]",
+    "category": "business"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Slashdot.org"
+    },
+    "author": "msmash",
+    "title": "Government of Bhutan Holds Over $825 Million, or Nearly a Third of Its GDP, in Bitcoin, Arkham Data Shows",
+    "description": "The government of Bhutan is currently holding over $828 million in bitcoin, according to onchain data by Arkham Intelligence. From a report: \"Unlike most governments, Bhutan's BTC does not come from law enforcement asset seizures, but from bitcoin mining oper…",
+    "url": "https://slashdot.org/story/24/09/23/1940238/government-of-bhutan-holds-over-825-million-or-nearly-a-third-of-its-gdp-in-bitcoin-arkham-data-shows",
+    "urlToImage": "https://a.fsdn.com/sd/topics/bitcoin_64.png",
+    "publishedAt": "2024-09-23T20:05:00Z",
+    "content": "The government of Bhutan is currently holding over $828 million in bitcoin, according to onchain data by Arkham Intelligence. From a report: \"Unlike most governments, Bhutan's BTC does not come from … [+1208 chars]",
+    "category": "business"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Gizmodo.com"
+    },
+    "author": "Lucas Ropek",
+    "title": "Infamous Tech Bro Starts School That Teaches How to Crowdfund Your Own Country",
+    "description": "A well-funded free market doctrine is getting its own mysterious educational platform.",
+    "url": "https://gizmodo.com/infamous-tech-bro-starts-school-that-teaches-how-to-crowdfund-your-own-country-2000502383",
+    "urlToImage": "https://gizmodo.com/app/uploads/2024/09/Balaji-Srinivasan-during-the-Fintech-Festival-in-Singapore.jpg",
+    "publishedAt": "2024-09-24T13:35:22Z",
+    "content": "Balaji Srinivasan, the former chief technology officer of Coinbase, is a weird guy. He’s talked about living forever. He helped finance a pro-steroids athletic competition. And he once threw away a m… [+3090 chars]",
+    "category": "technology"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Slashdot.org"
+    },
+    "author": "BeauHD",
+    "title": "Mystery Creator of Bitcoin Identified, New HBO Documentary Claims",
+    "description": "A new HBO documentary directed by Emmy-nominated filmmaker Cullen Hoback claims to have revealed the true identity of the pseudonymous creator of Bitcoin, Satoshi Nakamoto. As Politico notes, Hoback \"drew critical acclaim for his series 'Q: Into the Storm' th…",
+    "url": "https://slashdot.org/story/24/10/03/2330200/mystery-creator-of-bitcoin-identified-new-hbo-documentary-claims",
+    "urlToImage": "https://a.fsdn.com/sd/topics/bitcoin_64.png",
+    "publishedAt": "2024-10-04T00:02:00Z",
+    "content": "[T]he exposure of Satoshi as its alleged creator threatens to raise some huge questions, not least his potential complicity in crimes that have featured Bitcoin use. It could also establish him as on… [+986 chars]",
+    "category": "entertainment"
+  },
+  {
+    "source": {
+      "id": "business-insider",
+      "name": "Business Insider"
+    },
+    "author": "abharade@insider.com (Aditi Bharade,Kwan Wei Kevin Tan)",
+    "title": "Trump flip-flopped on crypto, but his PAC has raked in millions of dollars of crypto donations since June",
+    "description": "The former president has positioned himself as the pro-crypto candidate this election cycle. But he hasn't always had nice things to say about crypto.",
+    "url": "https://www.businessinsider.com/trump-pac-raised-millions-crypto-donations-since-june-2024-10",
+    "urlToImage": "https://i.insider.com/670f5459a70318649282ad0f?width=1200&format=jpeg",
+    "publishedAt": "2024-10-16T09:44:31Z",
+    "content": "A political action committee called Trump 47 has raised $7.5 million in cryptocurrency donations for former President Donald Trump's White House bid.\r\nAccording to Federal Election Commission filings… [+3227 chars]",
+    "category": "politics"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Slashdot.org"
+    },
+    "author": "msmash",
+    "title": "Hacker Arrested For the Fake SEC Tweet That Caused a Bitcoin Price Spike",
+    "description": "The FBI has arrested an Alabama man who is accused of hacking the Securities and Exchange Commission's X account in January. From a report: The indictment alleges that 25-year-old Eric Council Jr. worked with co-conspirators to take control of the account and…",
+    "url": "https://news.slashdot.org/story/24/10/17/2044230/hacker-arrested-for-the-fake-sec-tweet-that-caused-a-bitcoin-price-spike",
+    "urlToImage": "https://a.fsdn.com/sd/topics/news_64.png",
+    "publishedAt": "2024-10-17T22:10:00Z",
+    "content": "The indictment alleges that 25-year-old Eric Council Jr. worked with co-conspirators to take control of the account and post a fake message from SEC Chair Gary Gensler about Bitcoin ETFs that caused … [+534 chars]",
+    "category": "technology"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Hipertextual"
+    },
+    "author": "Quelian Sanz",
+    "title": "HBO revela el mayor misterio sobre Bitcoin, ¿quién es realmente Satoshi Nakamoto?",
+    "description": "Bitcoin es la criptomoneda más popular del planeta, y también una de las más transparentes para el usuario. Se sabe casi todo sobre ella, sus transacciones son públicas, se conoce cuántas hay en circulación y muchísimos detalles sobre su dinámica. Pero a día …",
+    "url": "http://hipertextual.com/2024/10/hbo-revela-el-mayor-misterio-sobre-bitcoin-quien-es-realmente-satoshi-nakamoto",
+    "urlToImage": "https://imgs.hipertextual.com/wp-content/uploads/2024/10/bitcoin-creador-scaled.jpg",
+    "publishedAt": "2024-10-09T12:09:45Z",
+    "content": "Bitcoin es la criptomoneda más popular del planeta, y también una de las más transparentes para el usuario. Se sabe casi todo sobre ella, sus transacciones son públicas, se conoce cuántas hay en circ… [+2064 chars]",
+    "category": "technology"
+  },
+  {
+    "source": {
+      "id": "wired",
+      "name": "Wired"
+    },
+    "author": "Alistair Charlton",
+    "title": "Trump's $100,000 Watches Are the Most Tragic Celebrity Watch Yet",
+    "description": "Former president Donald Trump wants you to buy gaudy, overpriced timepieces “made for those who combine boldness and elegance.” He got one part right.",
+    "url": "https://www.wired.com/story/trumps-dollar100000-watches-are-the-most-tragic-celebrity-watch-yet/",
+    "urlToImage": "https://media.wired.com/photos/66f6c5b5c143415d72625aca/191:100/w_1280,c_limit/trump-watches-pol.jpg",
+    "publishedAt": "2024-09-27T17:48:08Z",
+    "content": "Celebrities partnering with watch brands is nothing new. Sometimes a bona fide watch enthusiast like John Mayer partners with Audemars Piguet, or Ed Sheeran (owner of a unique Patek Philippe, no less… [+2694 chars]",
+    "category": "entertainment"
+  },
+  {
+    "source": {
+      "id": "wired",
+      "name": "Wired"
+    },
+    "author": "Lily Hay Newman, Andrew Couts",
+    "title": "Google Chrome’s uBlock Origin Purge Has Begun",
+    "description": "Plus: The alleged SEC X account hacker gets charged, Kroger wriggles out of a face recognition scandal, and Microsoft deals with missing customer security logs.",
+    "url": "https://www.wired.com/story/google-chrome-ublock-origin-extension/",
+    "urlToImage": "https://media.wired.com/photos/6712a9ad28a5e591865a1b60/191:100/w_1280,c_limit/GettyImages-2151457378.jpg",
+    "publishedAt": "2024-10-19T10:30:00Z",
+    "content": "And thats not all. Each week, we round up the security and privacy news we didnt cover in depth ourselves. Click the headlines to read the full stories. And stay safe out there.\r\nIf you use uBlock Or… [+3760 chars]",
+    "category": "technology"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Gizmodo.com"
+    },
+    "author": "Joe Tilleli",
+    "title": "Wall Street in Your Pocket: The Tykr Stock Screener App Will Teach You to Earn Back the Money You Spent on Its Lifetime Plan",
+    "description": "Save 83% and an additional $30 when you sign up for the Tykr Stock Screener premium plan lifetime subscription with this code.",
+    "url": "https://gizmodo.com/wall-street-in-your-pocket-the-tykr-stock-screener-app-will-teach-you-to-earn-back-the-money-you-spent-on-its-lifetime-plan-2000505735",
+    "urlToImage": "https://gizmodo.com/app/uploads/2024/10/Tykr.jpg",
+    "publishedAt": "2024-10-01T18:18:47Z",
+    "content": "Just starting out with stock trading can be an overwhelming experience. Knowing what stocks are good and bad and knowing when to buy or sell doesn’t come naturally. You can work with a financial advi… [+2251 chars]",
+    "category": "business"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Bitcoindevs.xyz"
+    },
+    "author": "BDP",
+    "title": "Decoding Bitcoin: An interactive, exercise-heavy approach to learning Bitcoin",
+    "description": "Simplifying bitcoin tech to help you learn as efficiently as possible",
+    "url": "https://bitcoindevs.xyz/decoding/decoding/1-welcome",
+    "urlToImage": "https://bitcoindevs.xyz/images/pages-thumbnails/topics.png",
+    "publishedAt": "2024-10-07T17:46:16Z",
+    "content": "Welcome to Decoding Bitcoin, your go-to resource for understanding bitcoin, Privacy, and Decentralization. We're here to break down complex bitcoin concepts and provide straightforward explanations t… [+708 chars]",
+    "category": "technology"
+  },
+  {
+    "source": {
+      "id": "time",
+      "name": "Time"
+    },
+    "author": "Andrew R. Chow",
+    "title": "Documentarian Says He’s Solved the Mystery of Bitcoin’s Creator. Insiders Are Extremely Skeptical.",
+    "description": "Cullen Hoback's new documentary argues Bitcoin's Satoshi Nakamoto has been hiding in plain sight all along.",
+    "url": "https://time.com/7064841/satoshi-nakamoto-hbo-money-electric/",
+    "urlToImage": "https://api.time.com/wp-content/uploads/2024/10/peter-todd.jpeg?quality=85&w=1200&h=628&crop=1",
+    "publishedAt": "2024-10-09T01:01:00Z",
+    "content": "This article contains spoilers for Money Electric: The Bitcoin Mystery.\r\nWho is Bitcoins founder, Satoshi Nakamoto? The question has perplexed and excited cryptocurrency fans ever since Bitcoin was c… [+12372 chars]",
+    "category": "technology"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Xataka.com"
+    },
+    "author": "Rubén Andrés",
+    "title": "Bitcoin ha batido récords en 2024 y ha disparado las fortunas: hay un 95% más de criptomillonarios",
+    "description": "2024 ha sido un año especialmente delicado para los inversores en criptomonedas, marcado por distintos eventos importantes que han condicionado la cotización de los distintos tokens y han puesto punto final a la travesía por el desierto que el bitcoin experim…",
+    "url": "https://www.xataka.com/criptomonedas/bitcoin-ha-batido-records-2024-ha-disparado-fortunas-hay-95-criptomillonarios",
+    "urlToImage": "https://i.blogs.es/04273b/erling-loken-andersen-7fiieouobtu-unsplash/840_560.jpeg",
+    "publishedAt": "2024-10-19T09:01:19Z",
+    "content": "2024 ha sido un año especialmente delicado para los inversores en criptomonedas, marcado por distintos eventos importantes que han condicionado la cotización de los distintos tokens y han puesto punt… [+3676 chars]",
+    "category": "business"
+  },
+  {
+    "source": {
+      "id": "business-insider",
+      "name": "Business Insider"
+    },
+    "author": "fdemott@insider.com (Filip De Mott)",
+    "title": "Legendary investor Paul Tudor Jones says he's buying gold and bitcoin pre-election because inflation will rise under both Trump and Harris",
+    "description": "\"The playbook to get out of this is that you inflate your way out,\" Jones said about America's ballooning national debt.",
+    "url": "https://markets.businessinsider.com/news/commodities/paul-tudor-jones-gold-crypto-bitcoin-election-inflation-debt-crisis-2024-10",
+    "urlToImage": "https://i.insider.com/6717cb66a0a0cc14f222fe8a?width=1200&format=jpeg",
+    "publishedAt": "2024-10-22T18:13:29Z",
+    "content": "Paul Tudor Jones is holding gold, bitcoin, and commodities to hedge against inflation, as neither presidential candidate has a plan suitable for tackling US debt, the legendary investor said.\r\nThe bi… [+2252 chars]",
+    "category": "business"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Xataka.com"
+    },
+    "author": "Javier Pastor",
+    "title": "La identidad del creador de bitcoin siempre ha sido un misterio. HBO promete revelarla muy pronto",
+    "description": "En 2008 alguien que usaba como pseudónimo Satoshi Nakamoto reveló al mundo su creación: el bitcoin...",
+    "url": "https://www.xataka.com/criptomonedas/identidad-creador-bitcoin-siempre-ha-sido-misterio-hbo-promete-revelarla-muy-pronto",
+    "urlToImage": "https://i.blogs.es/8cf13f/btc/840_560.jpeg",
+    "publishedAt": "2024-10-04T16:30:51Z",
+    "content": "En 2008 alguien que usaba como pseudónimo Satoshi Nakamoto reveló al mundo su creación...",
+    "category": "technology"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Xataka.com"
+    },
+    "author": "Enrique Pérez",
+    "title": "El candidato a Satoshi Nakamoto más querido por la comunidad Bitcoin...",
+    "description": "En julio de 2011, Leonard Harris \"Len\" Sassaman decidió quitarse la vida...",
+    "url": "https://www.xataka.com/criptomonedas/candidato-a-satoshi-nakamoto-querido-comunidad-bitcoin-cypherpunk-que-fue-inmortalizado-blockchain",
+    "urlToImage": "https://i.blogs.es/d0f570/len_sassaman_ascii/840_560.jpeg",
+    "publishedAt": "2024-10-13T17:01:49Z",
+    "content": "En julio de 2011, Leonard Harris \"Len\" Sassaman decidió quitarse la vida...",
+    "category": "technology"
+  },
+  {
+    "source": {
+      "id": "business-insider",
+      "name": "Business Insider"
+    },
+    "author": "fdemott@insider.com (Filip De Mott)",
+    "title": "Stock market today: Indexes slide and yields rise as rate-cut outlook dims",
+    "description": "US stocks added to Monday's losses as investors pared back rate cut expectations...",
+    "url": "https://markets.businessinsider.com/news/stocks/stock-market-today-bond-yields-rise-fed-interest-rate-cuts-2024-10",
+    "urlToImage": "https://i.insider.com/6717aa5d01ea6d83dee31691?width=1024&format=jpeg",
+    "publishedAt": "2024-10-22T13:53:27Z",
+    "content": "US stocks headed for their second losing session in a row...",
+    "category": "business"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Xataka.com"
+    },
+    "author": "Javier Pastor",
+    "title": "En HBO creen que Peter Todd es el creador de bitcoin...",
+    "description": "Ya sabemos cuál es la identidad real de Satoshi Nakamoto, el creador de bitcoin...",
+    "url": "https://www.xataka.com/criptomonedas/hbo-creen-que-peter-todd-creador-bitcoin-su-respuesta-supuesto-que-no-soy-satoshi",
+    "urlToImage": "https://i.blogs.es/955483/todd-11/840_560.jpeg",
+    "publishedAt": "2024-10-09T06:40:54Z",
+    "content": "Ya sabemos cuál es la identidad real de Satoshi Nakamoto, el creador de bitcoin...",
+    "category": "technology"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Xataka.com"
+    },
+    "author": "Javier Marquez",
+    "title": "Alguien ha montado una enorme mina de Bitcoin en un pueblo de Texas...",
+    "description": "La fiebre del bitcoin parece haber pedido fuerza por estos días...",
+    "url": "https://www.xataka.com/criptomonedas/alguien-ha-montado-enorme-mina-bitcoin-pueblo-texas-vecinos-dicen-que-ruido-les-esta-arruinando-vida",
+    "urlToImage": "https://i.blogs.es/4fcb29/1mina-de-bitcoin-portada/840_560.jpeg",
+    "publishedAt": "2024-10-09T06:31:13Z",
+    "content": "La fiebre del bitcoin parece haber pedido fuerza por estos días...",
+    "category": "technology"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Emailbtc.net"
+    },
+    "author": null,
+    "title": "EmailBTC – A new way to send and receive Bitcoin using only email addresses",
+    "description": "No seed phrases. No KYC. No recipient EmailBTC account needed...",
+    "url": "https://emailbtc.net",
+    "urlToImage": "https://emailbtc.net/og-image.jpg",
+    "publishedAt": "2024-10-18T10:54:50Z",
+    "content": "Ready for truly simple, secure Bitcoin transactions?...",
+    "category": "technology"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Theregister.com"
+    },
+    "author": "Brandon Vigliarolo",
+    "title": "Bitcoin creator suspect says he is not Bitcoin creator suspect",
+    "description": "'If I was Satoshi I would have destroyed my ability to prove I'm Satoshi'...",
+    "url": "https://www.theregister.com/2024/10/09/satoshi_nakamoto_suspect_hbo_bitcoin/",
+    "urlToImage": "https://regmedia.co.uk/2016/06/06/bitcoinsstack.jpg",
+    "publishedAt": "2024-10-09T17:00:08Z",
+    "content": "The man identified as Bitcoin creator Satoshi Nakamoto in a new HBO documentary...",
+    "category": "technology"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Blockhead.co"
+    },
+    "author": "Perion Lim",
+    "title": "New HBO Documentary Claims Bitcoin Creator Satoshi Nakamoto Is Len Sassaman",
+    "description": "HBO's upcoming documentary, 'Money Electric: The Bitcoin Mystery', claims the real Satoshi Nakamoto is Len Sassaman...",
+    "url": "https://www.blockhead.co/2024/10/05/new-bitcoin-documentary-to-sheds-more-light-on-satoshi-nakamotos-identity/",
+    "urlToImage": "https://www.blockhead.co/content/images/size/w1200/2024/10/Lens-Sassaman.jpg",
+    "publishedAt": "2024-10-05T12:13:02Z",
+    "content": "A new HBO documentary titled Money Electric: The Bitcoin Mystery...",
+    "category": "technology"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "heise online"
+    },
+    "author": "Alexander Spier",
+    "title": "heise+ | Heizlüfter mit Bitcoin-Miner: Ofen Pro von 21energy im Test​",
+    "description": "Die Wohnung gemütlich heizen und damit Geld verdienen? Der Ofen Pro von 21energy schürft Bitcoins und gibt dabei Wärme ab...",
+    "url": "https://www.heise.de/tests/Heizluefter-mit-Bitcoin-Miner-Ofen-Pro-von-21energy-im-Test-9968169.html?wt_mc=rss.red.ho.ho.atom.beitrag_plus.beitrag_plus",
+    "urlToImage": "https://heise.cloudimg.io/bound/1200x1200/q85.png-lossy-85.webp-lossy-85.foil1/_www-heise-de_/imgs/18/4/6/8/3/2/6/2/PXL_20241008_110936111-EDIT-3abd22e5fe6d777d.jpg",
+    "publishedAt": "2024-10-09T05:30:00Z",
+    "content": "Das Heizen der Wohnung im Winter kostet viel Energie...",
+    "category": "technology"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Gizmodo.com"
+    },
+    "author": "Matt Novak",
+    "title": "Truth Social Users Are Losing Ridiculous Sums of Money to Scams",
+    "description": "Read the complaints submitted to the FTC by users of Donald Trump's social media platform...",
+    "url": "https://gizmodo.com/truth-social-users-are-losing-ridiculous-sums-of-money-to-scams-2000506604",
+    "urlToImage": "https://gizmodo.com/app/uploads/2024/10/donald-trump-october-3-2024.jpg",
+    "publishedAt": "2024-10-05T13:00:34Z",
+    "content": "Donald Trump launched Truth Social in 2022 as a social media platform...",
+    "category": "politics"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Xataka.com"
+    },
+    "author": "Javier Pastor",
+    "title": "Un documental afirmó que Peter Todd es Satoshi Nakamoto, el creador de bitcoin. Ahora Todd ha desaparecido",
+    "description": "La identidad real de Satoshi Nakamoto, creador de bitcoin, siempre ha sido un misterio. Un reciente documental de HBO reunió diversas informaciones y pruebas y sus creadores aseguraban haber encontrado la solución.",
+    "url": "https://www.xataka.com/criptomonedas/documental-afirmo-que-peter-todd-satoshi-nakamoto-creador-bitcoin-ahora-todd-ha-desaparecido",
+    "urlToImage": "https://i.blogs.es/3b3dda/peter-todd/840_560.jpeg",
+    "publishedAt": "2024-10-23T15:31:43Z",
+    "category": "technology",
+    "content": "La identidad real de Satoshi Nakamoto..."
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "heise online"
+    },
+    "author": "Frank Schräer",
+    "title": "Erste Verhaftung nach Bitcoin-Kursmanipulation durch gefälschten SEC-Tweet",
+    "description": "Ein Mann aus Alabama hätte bei der Übernahme des X-Accounts der SEC geholfen.",
+    "url": "https://www.heise.de/news/Erste-Verhaftung-nach-Bitcoin-Kursmanipulation-durch-gefaelschten-SEC-Tweet-9985460.html",
+    "urlToImage": "https://heise.cloudimg.io/bound/1200x1200/q85.png-lossy-85.webp-lossy-85.foil1/_www-heise-de_/imgs/18/4/6/9/1/4/6/2/shutterstock_1916262404-b7c59be85e1ebe55.jpg",
+    "publishedAt": "2024-10-18T02:31:00Z",
+    "category": "business",
+    "content": "Inhaltsverzeichnis: Der gefälschte Tweet vom..."
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Genbeta.com"
+    },
+    "author": "Bárbara Bécares",
+    "title": "HBO afirmó que este desarrollador es el creador de bitcoin. Ha desaparecido.",
+    "description": "Hace unos días compartíamos nuevas pistas sobre quién puede ser el creador de bitcoin, conocido por su pseudónimo Satoshi Nakamoto.",
+    "url": "https://www.genbeta.com/actualidad/hbo-afirmo-que-este-desarrollador-creador-bitcoin-ello-multimillonario-ha-desaparecido-no-paran-pedirle-dinero",
+    "urlToImage": "https://i.blogs.es/c3a4d8/1200_800-3/840_560.jpeg",
+    "publishedAt": "2024-10-23T12:27:10Z",
+    "category": "technology",
+    "content": "Hace unos días compartíamos nuevas pistas sobre..."
+  },
+  {
+    "source": {
+      "id": "business-insider",
+      "name": "Business Insider"
+    },
+    "author": "Dan DeFrancesco",
+    "title": "An incoming 'M&A supercycle' wouldn't just be a win for dealmakers",
+    "description": "Goldman Sachs' earnings hint at the revival of the M&A market, which could help companies big and small.",
+    "url": "https://www.businessinsider.com/goldman-sachs-earnings-dealmaking-benefit-economy-2024-10",
+    "urlToImage": "https://i.insider.com/670fa446a70318649282b2f4?width=1000&format=jpeg",
+    "publishedAt": "2024-10-16T11:33:31Z",
+    "category": "business",
+    "content": "Goldman Sachs' earnings hint at the revival..."
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "CNET"
+    },
+    "author": "Samantha Kelly",
+    "title": "PayPal Will Allow Businesses to Buy and Sell Crypto",
+    "description": "PayPal will bring bitcoin and other virtual coins to \"millions\" of merchants across the US.",
+    "url": "https://www.cnet.com/personal-finance/crypto/paypal-will-allow-businesses-to-buy-and-sell-crypto/",
+    "urlToImage": "https://www.cnet.com/a/img/resize/2b2ba45973ffae7baacd4449b399bd35435e4fa0/hub/2022/04/22/d7acb748-e7bd-4553-ae44-2f893ccb87ba/paypal-logo-2022-659.jpg?auto=webp&fit=crop&height=675&width=1200",
+    "publishedAt": "2024-09-28T22:00:04Z",
+    "category": "business",
+    "content": "PayPal is launching a new service to allow businesses to buy..."
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "heise online"
+    },
+    "author": "Frank Schräer",
+    "title": "Freitag: Festnahme nach falschem Bitcoin-Tweet, Googles Eile wegen Play-Auflagen",
+    "description": "Kursmanipulation nach SIM-Swapping + Google gegen Wettbewerbsauflagen + Amazon fördert Atomkraft + Verordnung gegen Cookie-Banner-Flut + KI für Arbeitsagentur",
+    "url": "https://www.heise.de/news/Freitag-Festnahme-nach-falschem-Bitcoin-Tweet-Googles-Eile-wegen-Play-Auflagen-9985488.html",
+    "urlToImage": "https://heise.cloudimg.io/bound/1200x1200/q85.png-lossy-85.webp-lossy-85.foil1/_www-heise-de_/imgs/18/4/6/9/1/4/7/6/friday-c6a39647e6904344.webp",
+    "publishedAt": "2024-10-18T04:15:00Z",
+    "content": "Ein Mann aus Alabama hätte bei der Übernahme des X-Accounts der US-Börsenaufsicht geholfen, sagen das FBI und das US-Justizministerium. Er habe die Zugangsdaten besorgt und seine Kumpanen setzten ein… [+4353 chars]",
+    "category": "technology"
+  },
+  {
+    "source": {
+      "id": "business-insider",
+      "name": "Business Insider"
+    },
+    "author": "jsor@businessinsider.com (Jennifer Sor)",
+    "title": "Stock market today: US stocks close at all-time highs ahead of key inflation update",
+    "description": "The Dow and the S&P 500 closed at a record high. Markets are waiting for September inflation data, a key data point ahead of the Fed's next move.",
+    "url": "https://markets.businessinsider.com/news/stocks/stock-market-today-fed-rate-cuts-outlook-fomc-minutes-inflation-2024-10",
+    "urlToImage": "https://i.insider.com/6706e1f7a70318649280a65f?width=800&format=jpeg",
+    "publishedAt": "2024-10-09T20:13:30Z",
+    "content": "US stocks jumped on Wednesday as traders looked ahead to coming inflation data and took in the minutes of the Federal Reserve's last meeting. \r\nAll three benchmark indexes surged to end the day highe… [+3041 chars]",
+    "category": "business"
+  },
+  {
+    "source": {
+      "id": "business-insider",
+      "name": "Business Insider"
+    },
+    "author": "kcloonan@insider.com (Kelly Cloonan)",
+    "title": "Stock market today: Indexes close lower after CPI shows sticky inflation in September",
+    "description": "Indexes slipped Thursday as investors took in higher-than-expected inflation. The latest data has sparked talk of a \"no landing\" for the US economy.",
+    "url": "https://markets.businessinsider.com/news/stocks/stock-market-inflation-cpi-data-jobless-claims-labor-market-landing-2024-10",
+    "urlToImage": "https://i.insider.com/670831903f2165d716e00609?width=1200&format=jpeg",
+    "publishedAt": "2024-10-10T20:06:52Z",
+    "content": "Stocks fell on Thursday from records reached in the previous session, as traders took in a sticky inflation reading for September. \r\nAll three benchmark indexes fell, with the Dow Jones Industrial Av… [+2472 chars]",
+    "category": "business"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Xataka.com"
+    },
+    "author": "Javier Marquez",
+    "title": "El británico que perdió millones en bitcoins al tirar su disco duro no se da por vencido: ahora ha demandado al ayuntamiento",
+    "description": "James Howells, un ingeniero informático que vive en la ciudad de Newport, Gales, lleva años asegurando que en 2013 tiró a la basura un disco duro con alrededor de 8.000 bitcoins, los cuales había conseguido minar en su casa poco después de que la criptomoneda…",
+    "url": "https://www.xataka.com/criptomonedas/britanico-que-perdio-millones-bitcoins-al-tirar-su-disco-duro-no-se-da-vencido-ahora-ha-demandado-al-ayuntamiento",
+    "urlToImage": "https://i.blogs.es/29b07c/vertedero-bitcoin-portada/840_560.jpeg",
+    "publishedAt": "2024-10-15T22:33:00Z",
+    "content": "James Howells, un ingeniero informático que vive en la ciudad de Newport, Gales, lleva años asegurando que en 2013 tiró a la basura un disco duro con alrededor de 8.000 bitcoins, los cuales había con… [+3141 chars]",
+    "category": "technology"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Hackaday"
+    },
+    "author": "Dan Maloney",
+    "title": "Hackaday Links: September 29, 2024",
+    "description": "There was movement in the “AM Radio in Every Vehicle Act” last week, with the bill advancing out of the US House of Representatives Energy and Commerce Committee and heading to a full f…",
+    "url": "https://hackaday.com/2024/09/29/hackaday-links-september-29-2024/",
+    "urlToImage": "https://hackaday.com/wp-content/uploads/2014/11/had-links-banner.jpg",
+    "publishedAt": "2024-09-29T23:00:28Z",
+    "content": "There was movement in the “AM Radio in Every Vehicle Act” last week, with the bill advancing out of the US House of Representatives Energy and Commerce Committee and heading to a full floor vote. For… [+4562 chars]",
+    "category": "technology"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Presse-citron"
+    },
+    "author": "Robin Sabbadini",
+    "title": "Le Bitcoin est de retour à un niveau stratosphérique",
+    "description": "Le roi des cryptomonnaies flirte à nouveau avec les sommets, porté par l’afflux massif de capitaux dans les ETF et l’optimisme réglementaire aux États-Unis.",
+    "url": "https://www.presse-citron.net/le-bitcoin-est-de-retour-a-un-niveau-stratospherique/",
+    "urlToImage": "https://www.presse-citron.net/app/uploads/2024/03/Bitcoin-ETF.jpg",
+    "publishedAt": "2024-10-21T04:38:31Z",
+    "content": "Le Bitcoin reprend des couleurs et senvole vers de nouveaux sommets. La cryptomonnaie phare a frôlé les 70 000 dollars ce lundi, ravivant les souvenirs de son record historique atteint en mars dernie… [+3396 chars]",
+    "category": "technology"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Presse-citron"
+    },
+    "author": "Tristan Carballeda",
+    "title": "Le Bitcoin pourrait bientôt monter à 200 000 dollars selon cet expert",
+    "description": "Le Bitcoin a-t-il une limite, ces analyses ne semblent pas le penser et le voient déjà à 200 000 dollars.",
+    "url": "https://www.presse-citron.net/le-bitcoin-pourrait-bientot-monter-a-200-000-dollars-selon-cet-expert/",
+    "urlToImage": "https://www.presse-citron.net/app/uploads/2024/03/Bitcoin-ETF.jpg",
+    "publishedAt": "2024-10-23T08:32:59Z",
+    "content": "Sminston With nest pas nimporte qui dans le monde des cryptomonnaies. Il est « un des plus grands experts en ce qui concerne le Bitcoin. Le cours de cette devise numérique ne fait que fluctuer ces de… [+2544 chars]",
+    "category": "technology"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "genbeta.com"
+    },
+    "author": "José Alberto Lizana",
+    "title": "Olvidó la contraseña de su USB donde almacenaba 400 millones de euros en Bitcoin. Y un hacker lo consiguió descifrar",
+    "description": "A casi todos en alguna ocasión se nos ha olvidado la contraseña para acceder a nuestro correo electrónico, la nube o a una red social. Pero esto no tenía mayor importancia, pues simplemente se podía recuperar de los servidores y tampoco se iba a perder algo r…",
+    "url": "https://www.genbeta.com/actualidad/olvido-contrasena-su-usb-donde-almacenaba-400-millones-euros-bitcoin-hacker-consiguio-descifrar",
+    "urlToImage": "https://i.blogs.es/beb99e/bitcoin/840_560.jpeg",
+    "publishedAt": "2024-10-12T12:01:41Z",
+    "content": "A casi todos en alguna ocasión se nos ha olvidado la contraseña para acceder a nuestro correo electrónico, la nube o a una red social. Pero esto no tenía mayor importancia, pues simplemente se podía … [+2573 chars]",
+    "category": "business"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "theregister.com"
+    },
+    "author": "Connor Jones",
+    "title": "Alleged Bitcoin crook faces 5 years after SEC's X account pwned",
+    "description": "SIM swappers strike again, warping cryptocurrency prices\nAn Alabama man faces five years in prison for allegedly attempting to manipulate the price of Bitcoin by pwning the US Securities and Exchange Commission's X account earlier this year.…",
+    "url": "https://www.theregister.com/2024/10/18/sec_bitcoin_arrest/",
+    "urlToImage": "https://regmedia.co.uk/2024/03/04/bitcoin_shutterstock.jpg",
+    "publishedAt": "2024-10-18T12:30:09Z",
+    "content": "An Alabama man faces five years in prison for allegedly attempting to manipulate the price of Bitcoin by pwning the US Securities and Exchange Commission's X account earlier this year.\r\nThe feds arre… [+3651 chars]",
+    "category": "technology"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "tagesschau.de"
+    },
+    "author": "Angela Göpfert",
+    "title": "FTX-Rückzahlungen und Trump: Neue Bitcoin-Rally voraus?",
+    "description": "Die Krypto-Börse FTX will 16 Milliarden Dollar an ihre Kunden zurückzahlen - Geld, das wieder in Bitcoin & Co. fließen könnte. Unterdessen versucht Trump, sich als \"Bitcoin-Präsident\" zu profilieren. Von Angela Göpfert.",
+    "url": "https://www.tagesschau.de/wirtschaft/finanzen/bitcoin-trump-ftx-krypto-boerse-100.html",
+    "urlToImage": "https://images.tagesschau.de/image/a0002f3a-4e31-450f-82a5-47f5f28e29cf/AAABkmq0_XM/AAABkZLhkrw/16x9-1280/ftx-110.jpg",
+    "publishedAt": "2024-10-08T11:33:15Z",
+    "content": "Stand: 08.10.2024 13:33 Uhr\r\nDie Krypto-Börse FTX will 16 Milliarden Dollar an ihre Kunden zurückzahlen - Geld, das wieder in Bitcoin &amp; Co. fließen könnte. Unterdessen versucht Trump, sich als \"B… [+5221 chars]",
+    "category": "politics"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "quartz india"
+    },
+    "author": "Vinamrata Chaturvedi",
+    "title": "Who really created Bitcoin? A new HBO documentary claims it has the answer",
+    "description": "“Money Electric: The Bitcoin Mystery,” a new documentary from HBO (WBD) debuting Tuesday, promises to unmask one of the richest and most mysterious figures on the planet: the creator of Bitcoin. Read more...",
+    "url": "https://qz.com/hbo-documentary-bitcoin-creator-satoshi-nakamoto-1851666819",
+    "urlToImage": "https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/24a7fc9a9e3fa9eac8b8381fae5cb121.jpg",
+    "publishedAt": "2024-10-07T16:40:00Z",
+    "content": "In This Story\r\n Money Electric: The Bitcoin Mystery, a new documentary from HBO (WBD) debuting Tuesday, promises to unmask one of the richest and most mysterious figures on the planet: the creator of… [+2396 chars]",
+    "category": "entertainment"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "quartz india"
+    },
+    "author": "Vinamrata Chaturvedi",
+    "title": "Bitcoin surges as investor interest in ETFs grows, eyeing $70k milestone",
+    "description": "Bitcoin is on an upward trajectory. Its price is hovering around $68,000, reflecting a 9.5% increase over the past week and a 2.8% rise in just one day. The surge in the leading cryptocurrency is being driven by a wave of investor interest in U.S. spot bitcoi…",
+    "url": "https://qz.com/spot-bitcoin-etfs-see-over-555-million-in-inflows-in-a-1851673718",
+    "urlToImage": "https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/413cc655995e31ed2425c65181b698fb.jpg",
+    "publishedAt": "2024-10-16T14:16:54Z",
+    "content": "In This Story\r\nBitcoin is on an upward trajectory. Its price is hovering around $68,000, reflecting a 9.5% increase over the past week and a 2.8% rise in just one day. The surge in the leading crypto… [+1471 chars]",
+    "category": "business"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Genbeta.com"
+    },
+    "author": "Miguel Jorge",
+    "title": "\"Hola, somos de Google”: así empezó el mayor robo de bitcoins a una persona en EEUU. La fiesta posterior los ha delatado",
+    "description": "Robos y estafas con criptomonedas por medio hay prácticamente cada mes. Aquí hemos contado algunos de los casos más impactantes, como el del líder de una de las grandes criptoestafas de la historia que desapareció tras robar miles de millones, o el predicador…",
+    "url": "https://www.genbeta.com/actualidad/hola-somos-google-asi-empezo-mayor-robo-bitcoins-a-persona-eeuu-fiesta-posterior-ha-delatado",
+    "urlToImage": "https://i.blogs.es/77e6e1/dalla.e-2024-10-23-14.21.58---a-scene-in-the-style-of-the-simpsons-showing-two-criminals-pretending-to-be-google-technical-support-staff-to-steal-a-person-s-bitcoin-wallet-access-i/840_560.jpeg",
+    "publishedAt": "2024-10-23T15:00:00Z",
+    "content": "Robos y estafas con criptomonedas por medio hay prácticamente cada mes. Aquí hemos contadoalgunosde los casosmás impactantes, como el del líder de una de las grandes criptoestafas de la historia que … [+4675 chars]",
+    "category": "technology"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Quartz India"
+    },
+    "author": "Vinamrata Chaturvedi",
+    "title": "The SEC greenlit Bitcoin ETF options trading. Here come the big fish",
+    "description": "The Securities and Exchange Commission (SEC) has granted approval for the NYSE American LLC and CBOE to list options on spot Bitcoin exchange-traded funds (ETFs), marking a significant development in cryptocurrency history. This approval paves the way for ins…",
+    "url": "https://qz.com/spot-bitcoin-etfs-options-trading-sec-nyse-cboe-1851677472",
+    "urlToImage": "https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/b321604739732aad677026eb9af310b9.jpg",
+    "publishedAt": "2024-10-21T16:02:00Z",
+    "content": "In This Story\r\nThe Securities and Exchange Commission (SEC) has granted approval for the NYSE American LLC and CBOE to list options on spot Bitcoin exchange-traded funds (ETFs), marking a significant… [+3047 chars]",
+    "category": "business"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Theregister.com"
+    },
+    "author": "Jessica Lyons",
+    "title": "Feds reach for sliver of crypto-cash nicked by North Korea's notorious Lazarus Group",
+    "description": "A couple million will do for a start … but Kim's crews are suspected of stealing much more\nThe US government is attempting to claw back more than $2.67 million stolen by North Korea's Lazarus Group, filing two lawsuits to force the forfeiture of millions in T…",
+    "url": "https://www.theregister.com/2024/10/08/us_lazarus_group_crypto_seizure/",
+    "urlToImage": "https://regmedia.co.uk/2023/10/03/korea_shutterstock.jpg",
+    "publishedAt": "2024-10-08T00:27:08Z",
+    "content": "The US government is attempting to claw back more than $2.67 million stolen by North Korea's Lazarus Group, filing two lawsuits to force the forfeiture of millions in Tether and Bitcoin.\r\nThe first l… [+2713 chars]",
+    "category": "general"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Quartz India"
+    },
+    "author": "Vinamrata Chaturvedi",
+    "title": "Satoshi Nakamoto unmasked: Will HBO reveal the identity of the creator of bitcoin?",
+    "description": "HBO’s (WBD) latest documentary, “Money Electric: The Bitcoin Mystery,” premiering Tuesday, promises to delve into one of the greatest enigmas of the digital age: the identity of bitcoin’s elusive creator, believed to be among the richest and most enigmatic in…",
+    "url": "https://qz.com/bitcoin-creator-satoshi-nakamoto-hbo-documentary-1851667608",
+    "urlToImage": "https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/6a363a034e712602ee791f42e5a75cbb.jpg",
+    "publishedAt": "2024-10-08T14:14:00Z",
+    "content": "In This Story\r\nHBOs (WBD) latest documentary, Money Electric: The Bitcoin Mystery, premiering Tuesday, promises to delve into one of the greatest enigmas of the digital age: the identity of bitcoins … [+1766 chars]",
+    "category": "entertainment"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Genbeta.com"
+    },
+    "author": "Miguel Jorge",
+    "title": "Gales recibe la demanda más insólita de su historia: 495 millones de libras por un disco duro perdido con las claves de 8.000 bitcoin",
+    "description": "La historia es conocida, pero el giro que acaban de dar los acontecimientos merece una actualización. James Howells es un galés que, en circunstancias normales, debería estar disfrutando de una cuenta corriente sin fin viviendo una vida solo apta para el 1% d…",
+    "url": "https://www.genbeta.com/actualidad/gales-recibe-demanda-insolita-su-historia-495-millones-libras-disco-duro-perdido-claves-8-000-bitcoin",
+    "urlToImage": "https://i.blogs.es/782d62/pexels-photo-3174349/840_560.jpeg",
+    "publishedAt": "2024-10-15T11:00:49Z",
+    "content": "La historia es conocida, pero el giro que acaban de dar los acontecimientos merece una actualización. James Howells es un galés que, en circunstancias normales, debería estar disfrutando de una cuent… [+4248 chars]",
+    "category": "technology"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Quartz India"
+    },
+    "author": "Vinamrata Chaturvedi",
+    "title": "HBO documentary claims Bitcoin developer Peter Todd is Satoshi Nakamoto – now comes the denial",
+    "description": "The HBO documentary suggests Todd, a former Bitcoin developer, is the cryptocurrency's mysterious creator. But it fails to provide solid evidence",
+    "url": "https://qz.com/hbo-documentary-claims-peter-todd-bitcoin-creator-satos-1851668667",
+    "urlToImage": "https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/4046de6574a7a5aa7932ebeccd7008b5.png",
+    "publishedAt": "2024-10-09T14:18:00Z",
+    "content": "In This Story\r\nWho created Bitcoin? Is it finally known? Perhaps not. \r\nMoney Electric: The Bitcoin Mystery, a new HBO (WBD) documentary that premiered on Tuesday, claims that former Bitcoin develope… [+3260 chars]",
+    "category": "entertainment"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Quartz India"
+    },
+    "author": "Rocio Fabbro",
+    "title": "The FBI arrested the man it says hacked the SEC's Twitter and sent bitcoin soaring",
+    "description": "The FBI arrested the man it believes hacked and posted from the Securities and Exchange Commission’s X (formerly Twitter) account in January and sent the price of bitcoin soaring.Read more...",
+    "url": "https://qz.com/bitcoin-fbi-arrest-sec-twitter-x-hack-sim-swap-1851675349",
+    "urlToImage": "https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/b5f025fed3915aae98b09e3db08f4bd2.jpg",
+    "publishedAt": "2024-10-17T17:42:00Z",
+    "content": "The FBI arrested the man it believes hacked and posted from the Securities and Exchange Commissions X (formerly Twitter) account in January and sent the price of bitcoin soaring.\r\nEric Council Jr., a… [+2394 chars]",
+    "category": "technology"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "First Showing"
+    },
+    "author": "Alex Billington",
+    "title": "Official Trailer for 'Money Electric: The Bitcoin Mystery' Documentary",
+    "description": "\"If you dig deep enough, the inconsistencies will emerge.\" HBO has revealed the trailer for a documentary film titled Money Electric: The Bitcoin Mystery, another investigative look at Bitcoin and the world of cryptocurrency. This would play well as a double …",
+    "url": "https://www.firstshowing.net/2024/official-trailer-for-money-electric-the-bitcoin-mystery-documentary/",
+    "urlToImage": "https://media2.firstshowing.net/firstshowing/img16/MoneyElectricDocPostermainTW1.jpg",
+    "publishedAt": "2024-10-04T13:28:09Z",
+    "category": "technology",
+    "content": "by Alex BillingtonOctober 4, 2024Source:YouTube\r\n\"If you dig deep enough, the inconsistencies will emerge.\" HBO has revealed the trailer for a documentary film titled Money Electric: The Bitcoin Myst… [+2727 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Variety"
+    },
+    "author": "Cynthia Littleton",
+    "title": "Who Invented Bitcoin? HBO Documentary ‘Money Electric’ Tries to Solve an Enduring Crypto Mystery",
+    "description": "Who invented Bitcoin? That question has become a capitivating mystery for the digital age along the lines of whatever happened to D.B. Cooper or who was Deep Throat in the Watergate scandal. Documentarian Cullen Hoback thinks he has the answer. His new HBO do…",
+    "url": "https://variety.com/2024/tv/news/bitcoin-hbo-doc-money-electric-satoshi-nakamoto-1236183061/",
+    "urlToImage": "https://variety.com/wp-content/uploads/2024/10/peter-todd-e1729349646204.jpeg?w=1000&h=561&crop=1",
+    "publishedAt": "2024-10-19T16:37:08Z",
+    "category": "technology",
+    "content": "Who invented Bitcoin? That question has become a capitivating mystery for the digital age along the lines of whatever happened to D.B. Cooper or who was Deep Throat in the Watergate scandal.\r\nDocumen… [+5328 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "BBC News"
+    },
+    "author": null,
+    "title": "Alleged Bitcoin hacker Googled 'signs the FBI is after you'",
+    "description": "A man from Georgia is alleged to be part of a group which hacked the US regulator's X account.",
+    "url": "https://www.bbc.com/news/articles/c20pvkg35xyo",
+    "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/cf48/live/dd8f0280-8d28-11ef-bee0-39b1bce7fdf1.jpg",
+    "publishedAt": "2024-10-18T10:08:10Z",
+    "category": "technology",
+    "content": "\"What are some signs the FBI is after you\" is one of the alleged hacker's searches, according to court documents\r\nA man arrested in connection with a hack of the US markets regulator's X account sear… [+2466 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Quartz India"
+    },
+    "author": "Vinamrata Chaturvedi",
+    "title": "Bitcoin drops to $60,000 as escalating Middle East tensions rattle the crypto market",
+    "description": "Bitcoin fell to $60,000 on Tuesday evening as tensions in the Middle East worsened due to Iran’s attack on Israel. The leading cryptocurrency dropped nearly 5%, trading at $60,834. Read more...",
+    "url": "https://qz.com/bitcoin-60-000-tension-middle-east-1851662604",
+    "urlToImage": "https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/d06df12221b342e0f27052697a5a6a2a.jpg",
+    "publishedAt": "2024-10-01T21:37:00Z",
+    "category": "technology",
+    "content": "Bitcoin fell to $60,000 on Tuesday evening as tensions in the Middle East worsened due to Irans attack on Israel. The leading cryptocurrency dropped nearly 5%, trading at $60,834. \r\nEther, the second… [+1260 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Quartz India"
+    },
+    "author": "Vinamrata Chaturvedi",
+    "title": "Crypto is getting hammered today, with Bitcoin dropping to $65,000",
+    "description": "The cryptocurrency market is experiencing a downturn, closely mirroring the decline in the stock market. On Wednesday, Bitcoin saw a significant drop of over 2.5% in the past 24 hours, with its price hovering around $65,000. This decline has dashed hopes of b…",
+    "url": "https://qz.com/crypto-market-down-bitcoin-65-000-1851679497",
+    "urlToImage": "https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/b5e1795ecf299ac0ef7257fd52c37002.jpg",
+    "publishedAt": "2024-10-23T17:01:58Z",
+    "category": "technology",
+    "content": "In This Story\r\nThe cryptocurrency market is experiencing a downturn, closely mirroring the decline in the stock market. On Wednesday, Bitcoin saw a significant drop of over 2.5% in the past 24 hours,… [+1793 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Quartz India"
+    },
+    "author": "Vinamrata Chaturvedi",
+    "title": "5 crypto criminals serving the longest prison sentences",
+    "description": "The Social Capital Markets, a global initiative focused on fostering a just and sustainable economy, has recently published a revealing report on crypto crimes. The findings indicate a staggering 267% increase in global crypto-related convictions over the pas…",
+    "url": "https://qz.com/sam-bankman-fried-cryptocurrency-crime-prison-sentences-1851665731",
+    "urlToImage": "https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/59a22590499594fb6b4aee53e2392478.jpg",
+    "publishedAt": "2024-10-14T09:00:00Z",
+    "category": "entertainment",
+    "content": "Ross Ulbricht was born in 1984 in Austin, Texas, and founded the Silk Road in 2013, a notorious dark web marketplace that facilitated illegal activities such as drug trafficking through Bitcoin trans… [+719 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Tech Xplore"
+    },
+    "author": "Bob Yirka",
+    "title": "Integer addition algorithm could reduce energy needs of AI by 95%",
+    "description": "A team of engineers at AI inference technology company BitEnergy AI reports a method to reduce the energy needs of AI applications by 95%. The group has published a paper describing their new technique on the arXiv preprint server.",
+    "url": "https://techxplore.com/news/2024-10-integer-addition-algorithm-energy-ai.html",
+    "urlToImage": "https://scx2.b-cdn.net/gfx/news/hires/2024/image-of-computer-scre.jpg",
+    "publishedAt": "2024-10-13T16:27:12Z",
+    "category": "entertainment",
+    "content": "A team of engineers at AI inference technology company BitEnergy AI reports a method to reduce the energy needs of AI applications by 95%. The group has published a paper describing their new techniq… [+2457 chars]"
+  },
+  {
+    "source": {
+      "id": "techcrunch",
+      "name": "TechCrunch"
+    },
+    "author": "Kyle Wiggers",
+    "title": "Crypto scammers hack OpenAI's press account on X",
+    "description": "OpenAI's official newsroom account on X was compromised by cryptocurrency scammers.",
+    "url": "https://techcrunch.com/2024/09/23/crypto-scammers-hack-openais-press-account-on-x/",
+    "urlToImage": "https://techcrunch.com/wp-content/uploads/2024/05/openAI-spiral-color-v2.jpg?resize=1200,675",
+    "publishedAt": "2024-09-23T22:49:57Z",
+    "category": "entertainment",
+    "content": "OpenAI’s official press account on X was compromised by cryptocurrency scammers. Or, at least that’s what appears to have happened. \r\nLate Monday afternoon, OpenAI Newsroom, an account OpenAI recentl… [+2175 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Xataka.com"
+    },
+    "author": "Rubén Andrés",
+    "title": "Elon Musk respondió \"Sí, DOGE\" en un mitin junto a Trump. No importó que no se refiriera a Dogecoin, su precio se disparó un 15%",
+    "description": "En las últimas semanas, Elon Musk ha pasado de mantener una posición de respaldo económico a la candidatura presidencial de Donald Trump, a un papel protagonista, subiéndose a los escenarios de los mítines que el candidato está haciendo durante su gira electo…",
+    "url": "https://www.xataka.com/criptomonedas/elon-musk-respondio-doge-mitin-a-trump-no-importo-que-no-se-refiriera-a-dogecoin-su-precio-se-disparo-15",
+    "urlToImage": "https://i.blogs.es/97229e/memecoin/840_560.jpeg",
+    "publishedAt": "2024-10-22T13:45:39Z",
+    "category": "entertainment",
+    "content": "En las últimas semanas, Elon Musk ha pasado de mantener una posición de respaldo económico a la candidatura presidencial de Donald Trump, a un papel protagonista, subiéndose a los escenarios de los m… [+3379 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "BBC News"
+    },
+    "author": null,
+    "title": "I am not Bitcoin inventor, says man named in HBO film",
+    "description": "The real identity of the person, known only as Satoshi Nakamoto, has captivated the internet for years.",
+    "url": "https://www.bbc.com/news/articles/c62m73my0dno",
+    "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/19a2/live/b3158730-8621-11ef-9329-f30486eb2a33.jpg",
+    "publishedAt": "2024-10-09T09:45:42Z",
+    "category": "entertainment",
+    "content": "A new documentary claims to have solved the greatest mystery in cryptocurrency: the true identity of the inventor of Bitcoin.\r\nThe question has captivated the internet since the digital currency was … [+3494 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Quartz India"
+    },
+    "author": "Vinamrata Chaturvedi",
+    "title": "The man named as Bitcoin's creator in an HBO documentary has gone into hiding",
+    "description": "Remember the buzz surrounding the HBO (WBD) documentary that claimed to have uncovered the true identity of Bitcoin’s mysterious creator, Satoshi Nakamoto? It appears that the person identified as Satoshi has now gone underground, reportedly driven into hidin…",
+    "url": "https://qz.com/peter-todd-the-hbo-documentary-called-bitcoin-creator-s-1851679244",
+    "urlToImage": "https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/087757437c2db235960901753a249c8c.png",
+    "publishedAt": "2024-10-23T16:04:00Z",
+    "category": "entertainment",
+    "content": "In This Story\r\nRemember the buzz surrounding the HBO (WBD-1.86%\r\n) documentary that claimed to have uncovered the true identity of Bitcoins mysterious creator, Satoshi Nakamoto? It appears that the p… [+3137 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Quartz India"
+    },
+    "author": "Vinamrata Chaturvedi",
+    "title": "Dogecoin, ApeCoin, Solana, and more: Cryptocurrencies to watch this week",
+    "description": "The crypto market is currently bullish, with growing anticipation around when bitcoin will surpass the $70,000 mark. And coming tech earnings reports could further boost the overall market sentiment.Read more...",
+    "url": "https://qz.com/dogecoin-apecoin-solana-cryptocurrencies-to-watch-thi-1851677299",
+    "urlToImage": "https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/21216b4e9d998690a33858235e380fae.jpg",
+    "publishedAt": "2024-10-21T14:48:00Z",
+    "category": "entertainment",
+    "content": "ApeCoin is the native token designed to govern and enhance the APE ecosystem, which originated from the success of the Bored Ape Yacht Club (BAYC). BAYC is one of the most prominent and influential N… [+344 chars]"
+  },
+  {
+    "source": {
+      "id": "business-insider",
+      "name": "Business Insider"
+    },
+    "author": "Dan DeFrancesco",
+    "title": "Taylor Swift is flexing her economic muscles again with the return of her tour and a new book",
+    "description": "Taylor Swift's upcoming self-published challenges business norm. But her tour's return raises concerns about mega-events' impact on economic recovery.",
+    "url": "https://www.businessinsider.com/taylor-swift-self-publishing-eras-tour-book-disrupting-industry-again-2024-10",
+    "urlToImage": "https://i.insider.com/67123d4ea0a0cc14f221eeb9?width=1200&format=jpeg",
+    "publishedAt": "2024-10-18T13:04:14Z",
+    "category": "entertainment",
+    "content": "Taylor Swift performing on stage at Wembley Stadium for the London leg of \"The Eras Tour.\"Kate Green/Getty Images\r\n\u003Cul\u003E\u003Cli\u003EThis post originally appeared in the Insider Today newsletter.how\u003C/li\u003E\u003Cli\u003EYo… [+7453 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Deadline"
+    },
+    "author": "Matthew Carey",
+    "title": "HBO’s ‘Money Electric: The Bitcoin Mystery’ Sets Out To Unmask Secretive Creator Of World’s Most Valuable Crypto Currency",
+    "description": "Like a Bansky of the crypto world, little is known about Satoshi Nakamoto, the reputed creator of the digital currency Bitcoin. What’s his real name? What’s he worth? Who is he, really? Director Cullen Hoback attempts to get to the bottom of Nakamoto’s identi…",
+    "url": "http://deadline.com/2024/10/money-electric-the-bitcoin-mystery-hbo-documentary-trailer-1236107405/",
+    "urlToImage": "https://deadline.com/wp-content/uploads/2024/10/Money-Electric-The-Bitcoin-Mystery-graphic.png?w=1024",
+    "publishedAt": "2024-10-04T15:00:00Z",
+    "category": "entertainment",
+    "content": "Like a Bansky of the crypto world, little is known about Satoshi Nakamoto, the reputed creator of the digital currency Bitcoin. What’s his real name? What’s he worth? Who is he, really?\r\nDirector Cul… [+2429 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Socialmediaexplorer.com"
+    },
+    "author": "Doug Brown",
+    "title": "How Bitcoin Is Empowering Social Media Creators and Changing the Game in 2024",
+    "description": "Hey, social media explorers! Today, we’re diving into one of the hottest and most exciting...\nThe post How Bitcoin Is Empowering Social Media Creators and Changing the Game in 2024 appeared first on Social Media Explorer.",
+    "url": "https://socialmediaexplorer.com/social-media-marketing/how-bitcoin-is-empowering-social-media-creators-and-changing-the-game-in-2024/",
+    "urlToImage": "https://socialmediaexplorer.com/wp-content/uploads/2024/10/01plavakafa.jpg",
+    "publishedAt": "2024-10-10T21:17:14Z",
+    "category": "entertainment",
+    "content": "Hey, social media explorers! Today, we’re diving into one of the hottest and most exciting topics for creators in 2024how Bitcoin and crypto wallets are empowering social media creators to take their… [+7357 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Biztoc.com"
+    },
+    "author": "news.google.com",
+    "title": "Bitcoin Protocol sees TVL growth as staking restrictions lift",
+    "description": "Bitcoin Protocol sees TVL growth as staking restrictions lift AMBCrypto News\nBitcoin Protocol Babylon Pulls in $1.5B of Staking Deposits as Cap Lifted CoinDesk\nBitcoin Staking Protocol Babylon Attracts About 24,000 BTC in Deposits – News Bytes Bitcoin News Bi…",
+    "url": "https://biztoc.com/x/57fc41fad14b06c2",
+    "urlToImage": "https://biztoc.com/cdn/803/og.png",
+    "publishedAt": "2024-10-10T14:31:34Z",
+    "category": "entertainment",
+    "content": "Bitcoin Protocol sees TVL growth as staking restrictions lift AMBCrypto NewsBitcoin Protocol Babylon Pulls in $1.5B of Staking Deposits as Cap Lifted CoinDeskBitcoin Staking Protocol Babylon Attracts… [+117 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Forbes"
+    },
+    "author": "Trefis Team, Contributor, \n Trefis Team, Contributor\n https://www.forbes.com/sites/greatspeculations/people/trefis/",
+    "title": "Will Bitcoin Reach $100K?",
+    "description": "The buzz around cryptocurrencies is back with Bitcoin prices getting a boost this year and investors and the media renewing their interest.",
+    "url": "https://www.forbes.com/sites/greatspeculations/2024/10/17/will-bitcoin-reach-100k/",
+    "urlToImage": "https://imageio.forbes.com/specials-images/imageserve/6710a88c0dbf228b4a13c8e1/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds",
+    "publishedAt": "2024-10-17T12:00:20Z",
+    "category": "entertainment",
+    "content": "UNITED KINGDOM - 2024/10/08: In this photo illustration, the Bitcoin logo seen displayed on a ... [+] smartphone with stock market graphs in the background. (Photo Illustration by Dominika Zarzycka/S… [+5329 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "20 Minutes"
+    },
+    "author": "L.B. (20 Minutes)",
+    "title": "HBO pense avoir identifié Satoshi Nakamoto, l’inventeur de Bitcoin",
+    "description": "Coup de pub géant ou vraie révélation ? On en saura davantage le 8 octobre",
+    "url": "https://www.20minutes.fr/high-tech/20-mint/4113886-20241005-hbo-pense-avoir-identifie-satoshi-nakamoto-inventeur-bitcoin",
+    "urlToImage": "https://img.20mn.fr/S2DdQ1QwTpOhHKwxIAxkUik/1444x920_in-this-photo-illustration-a-bitcoin-logo-is-displayed-on-a-smartphone-with-stock-market-percentages-in-the-background-omar-marques-sopa-images-sopaimages-1738132-credit-sopa-images-sipa-2307191754",
+    "publishedAt": "2024-10-05T10:36:56Z",
+    "category": "general",
+    "content": "Cest la Chouette dor sous stéroïde. Si le mystère entourant la réelle identité du créateur de Bitcoin, Satoshi Nakamoto, ne dure que depuis 2008 et non 31 ans comme pour lartefact déterré jeudi, il c… [+1739 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Forbes"
+    },
+    "author": "Susie Violet Ward, Contributor, \n Susie Violet Ward, Contributor\n https://www.forbes.com/sites/susievioletward/",
+    "title": "Experts Challenge ECB’s Claims On Bitcoin And Wealth Inequality",
+    "description": "Experts refute the ECB’s claims on bitcoin, citing flaws and biases in its analysis. They argue bitcoin promotes financial freedom and inclusion, disputing the position.",
+    "url": "https://www.forbes.com/sites/digital-assets/2024/10/22/experts-challenge-ecbs-claims-on-bitcoin-and-wealth-inequality/",
+    "urlToImage": "https://imageio.forbes.com/specials-images/imageserve/6717c64f6aa970e273525e34/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds",
+    "publishedAt": "2024-10-22T20:08:58Z",
+    "category": "general",
+    "content": "FRANKFURT, GERMANY - JUNE 13: A huge euro logo is seen in front of the headquarters of the European ... [+] Central Bank (ECB) on June 13, 2005 in Frankfurt, Germany. The German economy was suffering… [+7541 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Forbes"
+    },
+    "author": "Dave Birnbaum, Contributor, \n Dave Birnbaum, Contributor\n https://www.forbes.com/sites/davidbirnbaum/",
+    "title": "Grayscale’s Bitcoin Mini Trust: Here’s What You Need To Know",
+    "description": "Want to learn more about Grayscale’s Bitcoin Mini Trust? See our summary of what this mini trust is and how it differs from other Bitcoin investment vehicles.",
+    "url": "https://www.forbes.com/sites/digital-assets/article/grayscale-bitcoin-mini-trust-what-you-need-to-know/",
+    "urlToImage": "https://imageio.forbes.com/specials-images/imageserve/670f16f41498cec2ba74cf0c/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds",
+    "publishedAt": "2024-10-20T19:00:00Z",
+    "category": "general",
+    "content": "Grayscale signage on the floor of the New York Stock Exchange.\r\n© 2024 Bloomberg Finance LP\r\nWith the rise in bitcoins popularity, Grayscale has introduced a new way for smaller investors to gain exp… [+9841 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Forbes"
+    },
+    "author": "Dave Birnbaum, Contributor, \n Dave Birnbaum, Contributor\n https://www.forbes.com/sites/davidbirnbaum/",
+    "title": "How Will Bitcoin ETF Options Impact Bitcoin’s Price?",
+    "description": "The SEC's approval of bitcoin ETF options will forever change the bitcoin market, making it more practical for use by institutional investors.",
+    "url": "https://www.forbes.com/sites/davidbirnbaum/2024/10/20/how-will-bitcoin-etf-options-impact-bitcoins-price/",
+    "urlToImage": "https://imageio.forbes.com/specials-images/imageserve/6715558311ff768bede9e039/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds",
+    "publishedAt": "2024-10-20T19:21:00Z",
+    "category": "general",
+    "content": "Samara Cohen, Chief Investment Officer of ETF and Index Investments at Blackrock, walks in Times ... [+] Square after ringing the opening bell as Bitcoin Spot ETF's are launched on the Nasdaq Exchang… [+6778 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Biztoc.com"
+    },
+    "author": "go.theregister.com",
+    "title": "Bitcoin creator suspect says he is not Bitcoin creator suspect",
+    "description": "'If I was Satoshi I would have destroyed my ability to prove I'm Satoshi'\nThe man identified as Bitcoin creator Satoshi Nakamoto in a new HBO documentary has something to say: Wrong again, world.…",
+    "url": "https://biztoc.com/x/a19a9dfaca0404e1",
+    "urlToImage": "https://biztoc.com/cdn/803/og.png",
+    "publishedAt": "2024-10-09T17:12:43Z",
+    "category": "general",
+    "content": "'If I was Satoshi I would have destroyed my ability to prove I'm Satoshi'The man identified as Bitcoin creator Satoshi Nakamoto in a new HBO documentary has something to say: Wrong again, world.\r\nThi… [+50 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Olhardigital.com.br"
+    },
+    "author": "Pedro Spadoni",
+    "title": "Documentário da HBO promete revelar identidade do criador do Bitcoin",
+    "description": "\"Money Electric: The Bitcoin Mystery\" promete revelar a identidade de Satoshi Nakamoto, pseudônimo da (suposta) pessoa que criou o Bitcoin\nO post Documentário da HBO promete revelar identidade do criador do Bitcoin apareceu primeiro em Olhar Digital.",
+    "url": "https://olhardigital.com.br/2024/10/07/pro/documentario-da-hbo-promete-revelar-identidade-do-criador-do-bitcoin/",
+    "urlToImage": "https://olhardigital.com.br/wp-content/uploads/2024/06/Destaque-Satoshi-Nakamoto-criador-do-bitcoin-scaled.jpg",
+    "publishedAt": "2024-10-07T15:03:12Z",
+    "category": "general",
+    "content": "Um novo documentário da HBO promete revelar a verdadeira identidade de Satoshi Nakamoto, pseudônimo usado pela suposta pessoa que criou o Bitcoin. Money Electric: The Bitcoin Mystery vai ao ar nesta … [+2120 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Biztoc.com"
+    },
+    "author": "news.google.com",
+    "title": "SEC Greenlights Bitcoin Options ETFs for New York Stock Exchange and CBOE",
+    "description": "SEC Greenlights Bitcoin Options ETFs for New York Stock Exchange and CBOE The Daily Hodl\nUS SEC gives green light for options listing for spot bitcoin ETFs to NYSE Reuters\nHow Will Bitcoin ETF Options Impact Bitcoin’s Price? Forbes\nNYSE, Cboe Win SEC Approval…",
+    "url": "https://biztoc.com/x/c7fd03ac507d41bc",
+    "urlToImage": "https://biztoc.com/cdn/805/og.png",
+    "publishedAt": "2024-10-21T10:19:00Z",
+    "category": "general",
+    "content": "SEC Greenlights Bitcoin Options ETFs for New York Stock Exchange and CBOE The Daily HodlUS SEC gives green light for options listing for spot bitcoin ETFs to NYSE ReutersHow Will Bitcoin ETF Options … [+148 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Biztoc.com"
+    },
+    "author": "news.google.com",
+    "title": "Hacker arrested for the fake SEC tweet that caused a Bitcoin price spike",
+    "description": "Hacker arrested for the fake SEC tweet that caused a Bitcoin price spike The Verge\nFBI arrests Alabama man for SEC X hack that spiked price of bitcoin CNBC\nAlabama man allegedly hacked SEC’s X account, causing bitcoin value to soar with fake post AL.com\nArres…",
+    "url": "https://biztoc.com/x/9ceff82e873d19fa",
+    "urlToImage": "https://biztoc.com/cdn/805/og.png",
+    "publishedAt": "2024-10-17T18:36:03Z",
+    "category": "general",
+    "content": "Hacker arrested for the fake SEC tweet that caused a Bitcoin price spike The VergeFBI arrests Alabama man for SEC X hack that spiked price of bitcoin CNBCAlabama man allegedly hacked SECs X account, … [+152 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Biztoc.com"
+    },
+    "author": "news.google.com",
+    "title": "Japan’s Metaplanet makes $7M Bitcoin buy, bringing holdings to $40.5M",
+    "description": "Japan’s Metaplanet makes $7M Bitcoin buy, bringing holdings to $40.5M Cointelegraph\nJapan's Metaplanet Buys Another $6.7M Worth of Bitcoin CoinDesk\nMetaplanet buys average of 34 BTC per day in October Bitcoin buying spree CryptoSlate\nMetaplanet Inc. Expands B…",
+    "url": "https://biztoc.com/x/882263abfc28d830",
+    "urlToImage": "https://biztoc.com/cdn/803/og.png",
+    "publishedAt": "2024-10-07T11:48:45Z",
+    "category": "general",
+    "content": "Japans Metaplanet makes $7M Bitcoin buy, bringing holdings to $40.5M CointelegraphJapan's Metaplanet Buys Another $6.7M Worth of Bitcoin CoinDeskMetaplanet buys average of 34 BTC per day in October B… [+136 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Quartz India"
+    },
+    "author": "Quartz Bot",
+    "title": "Super Micro Computer's big stock split, Costco rises, and Bitcoin falls: Markets news roundup",
+    "description": "Super Micro Computer (SMCI) is set to undergo a stock split after the market closes on Monday, aligning itself with other prominent AI-driven companies like Nvidia and Broadcom, which also executed stock splits earlier this year. Following the split, the stoc…",
+    "url": "https://qz.com/super-micro-computer-stock-split-costco-bitcoin-price-1851665581",
+    "urlToImage": "https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/e2cd5bdbdb1ec4a967cd35b4289c431c.jpg",
+    "publishedAt": "2024-10-05T13:00:00Z",
+    "category": "business",
+    "content": "If youre thinking about buying a condo in Miami, you might want to hold off.\r\nAccording to a new report from UBS, Miami has the highest bubble risk among all the cities it surveyed globally. \r\nUBS (U… [+241 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Quartz India"
+    },
+    "author": "Vinamrata Chaturvedi",
+    "title": "Bitcoin and Ether ETFs helped take crypto mainstream. Are Solana and XRP next?",
+    "description": "The Securities and Exchange Commission (SEC) approved bitcoin spot exchange-traded funds (ETFs) at the start of this year, capturing the attention of investors. The influx of capital into these funds fueled a rapid rise in bitcoin’s value, which soon reached …",
+    "url": "https://qz.com/bitcoin-ether-etf-solana-xrp-sec-1851664387",
+    "urlToImage": "https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/ddc65c7151ed150ed2b35f2b6c9c566b.jpg",
+    "publishedAt": "2024-10-07T09:00:00Z",
+    "category": "business",
+    "content": "The Securities and Exchange Commission (SEC) approved bitcoin spot exchange-traded funds (ETFs) at the start of this year, capturing the attention of investors. The influx of capital into these funds… [+3927 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Habr.com"
+    },
+    "author": "pnaydanovgoo (MetaLamp)",
+    "title": "Полный разбор Polymarket: от интерфейса до смарт-контрактов",
+    "description": "Написал для вас подробный технический разбор Polymarket — децентрализованного рынка предсказаний на блокчейне. В статье мы рассмотрим ключевые компоненты протокола: интерфейс, смарт-контракты, оракул, токенизация исходов и механизмы управления ордерами. Матер…",
+    "url": "https://habr.com/ru/companies/metalamp/articles/851892/#post-content-body",
+    "urlToImage": "https://habrastorage.org/getpro/habr/upload_files/4e0/56c/6b4/4e056c6b4f3705ab5dbc2c062a0d1095.png",
+    "publishedAt": "2024-10-22T14:06:17Z",
+    "category": "business",
+    "content": "Polymarket  . : , , .\r\n . , .\r\nProxy wallets\r\n Polymarket, . :\r\n\u003Cul\u003E\u003Cli\u003E EOA-. Metamask, Coinbase WalletConnect.\r\n\u003C/li\u003E\u003Cli\u003E  Magic Link\r\n. , .\r\n\u003C/li\u003E\u003C/ul\u003E - 1/1, , .\r\n Polymarket , , .\r\n. , .  condit… [+3647 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Quartz India"
+    },
+    "author": "Vinamrata Chaturvedi",
+    "title": "The crypto industry is heavily favoring Republicans in its 2024 election spending",
+    "description": "The crypto industry is channeling more of its advertising budget towards supporting Republican candidates over Democrats, according to a recent report by Axios.Read more...",
+    "url": "https://qz.com/crypto-companies-spends-more-on-ads-for-republicans-tha-1851678302",
+    "urlToImage": "https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/16b475f3eccee91abdec2386b61d6ea6.jpg",
+    "publishedAt": "2024-10-22T16:15:00Z",
+    "category": "business",
+    "content": "In This Story\r\nThe crypto industry is channeling more of its advertising budget towards supporting Republican candidates over Democrats, according to a recent report by Axios. \r\nData from AdImpact re… [+2365 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Forbes"
+    },
+    "author": "Clem Chambers, Senior Contributor, \n Clem Chambers, Senior Contributor\n https://www.forbes.com/sites/investor/people/clem/",
+    "title": "Boomer Gold Is Now Bitcoin",
+    "description": "While the probability of the next leg up seems distant, if something wicked this way comes, up will go crypto, if not down it will go into the new cycle’s crypto winter.",
+    "url": "https://www.forbes.com/sites/digital-assets/2024/09/26/boomer-gold-is-now-bitcoin/",
+    "urlToImage": "https://imageio.forbes.com/specials-images/imageserve/66f525a2dba0ed8142f26e82/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds",
+    "publishedAt": "2024-09-26T14:45:17Z",
+    "category": "business",
+    "content": "Bitcoin may be taking the place of gold. \r\ngetty\r\nYou cant be right all the time. I decided to play this crypto cycle with ether not bitcoin on the premise that Eth is spicier than BTCBitcoin\r\n and w… [+4328 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Forbes"
+    },
+    "author": "Trefis Team, Contributor, \n Trefis Team, Contributor\n https://www.forbes.com/sites/greatspeculations/people/trefis/",
+    "title": "Making Crypto Bitcoin Less Cryptic",
+    "description": "The buzz around cryptocurrencies is back with Bitcoin prices getting a boost this year and investors and the media renewing their interest.",
+    "url": "https://www.forbes.com/sites/greatspeculations/2024/10/07/making-crypto-bitcoin-less-cryptic/",
+    "urlToImage": "https://imageio.forbes.com/specials-images/imageserve/67037982bf0b4325f5dc13e7/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds",
+    "publishedAt": "2024-10-07T12:00:29Z",
+    "category": "business",
+    "content": "Bitcoin symbol is seen on Bitcoin ATM kiosk in the city center of Krakow, Poland on July 26th, 2024. ... [+] (Photo by Beata Zawrzel/NurPhoto via Getty Images)\r\nNurPhoto via Getty Images\r\nThe buzz ar… [+4962 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "BBC News"
+    },
+    "author": null,
+    "title": "Meet Pesto: the fat baby penguin and viral superstar",
+    "description": "The obscenely fluffy nine-month-old chick weighs more than both of his foster parents combined.",
+    "url": "https://www.bbc.com/news/articles/cp3w4nld5e3o",
+    "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/c3e3/live/9687f9c0-7a2f-11ef-8c1a-df523ba43a9a.jpg",
+    "publishedAt": "2024-09-24T04:50:47Z",
+    "category": "business",
+    "content": "Among the sea of glossy black and white penguins which call a popular Australian aquarium home, one baby bird stands out like a sore thumb.\r\nChocolatey brown, obscenely fluffy, and towering a head ab… [+3529 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Forbes"
+    },
+    "author": "Billy Bambrough, Senior Contributor, \n Billy Bambrough, Senior Contributor\n https://www.forbes.com/sites/billybambrough/",
+    "title": "Who Is Peter Todd, The Man Named By HBO As Bitcoin’s Mystery Creator Satoshi Nakamoto?",
+    "description": "HBO documentary film maker Cullen Hoback has named Peter Todd, a bitcoin core developer who has been involved with bitcoin since 2010, as who he believes to be the real-world identity of Satoshi Nakamoto...",
+    "url": "https://www.forbes.com/sites/digital-assets/2024/10/08/who-is-peter-todd-the-man-named-by-hbo-as-bitcoins-mystery-creator-satoshi-nakamoto/",
+    "urlToImage": "https://imageio.forbes.com/specials-images/imageserve/6705678306c5e6029232be09/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds",
+    "publishedAt": "2024-10-08T22:00:13Z",
+    "category": "politics",
+    "content": "Satoshi Nakamotothe mysterious, anonymous creator of bitcoinhas successfully kept their real identity hidden since they published bitcoin's white paper in 2008.\r\nUnlock over $3,000 in perks including… [+4603 chars]"
+  },
+  {
+    "source": {
+      "id": null,
+      "name": "Forbes"
+    },
+    "author": "Billy Bambrough, Senior Contributor, \n Billy Bambrough, Senior Contributor\n https://www.forbes.com/sites/billybambrough/",
+    "title": "Michael Saylor Reveals Shock $100 Trillion MicroStrategy ‘Endgame’ As The Bitcoin Price Suddenly Soars",
+    "description": "Michael Saylor, founder and executive chairman of MicroStrategy, has revealed the company’s endgame is to become a bitcoin investment bank—and to buy up to $150 billion of bitcoin...",
+    "url": "https://www.forbes.com/sites/digital-assets/2024/10/11/michael-saylor-reveals-shock-100-trillion-microstrategy-endgame-as-the-bitcoin-price-suddenly-soars/",
+    "urlToImage": "https://imageio.forbes.com/specials-images/imageserve/64f973d47e2a9b3ad373b636/0x0.jpg?format=jpg&crop=2015,1288,x825,y128,safe&height=900&width=1600&fit=bounds",
+    "publishedAt": "2024-10-11T19:12:22Z",
+    "category": "politics",
+    "content": "BitcoinBitcoin\r\n has swung wildly this week as analysts warn \"something's got to give.\"\r\nUnlock over $3,000 in perks including unparalleled access to a community of top Web3 entrepreneurs, creators, … [+4205 chars]"
+  }
+]

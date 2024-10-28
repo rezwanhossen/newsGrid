@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
-import useAxiosPublic from "../../../hooks/useAxiosPublic";
 import UsersNewsCard from "./UsersNewsCard";
 import ReadMoreLink from "../../../Shared/ReadMoreLink";
 import { IoMenuSharp } from "react-icons/io5";
+import axios from "axios";
 
 const UsersNews = () => {
-  const axiosPublic = useAxiosPublic();
   const [menuValue, setMenuValue] = useState("3");
   const [categoryNews, setCategoryNews] = useState([]);
   const [allNews, setAllNews] = useState([]);
@@ -15,7 +14,9 @@ const UsersNews = () => {
   useEffect(() => {
     const fetchNews = async () => {
       try {
-        const response = await axiosPublic.get("/myNews");
+        const response = await axios.get(
+          "https://news-grid-server.vercel.app/mynews"
+        );
         setAllNews(response.data);
         setCategoryNews(response.data);
       } catch (error) {
@@ -24,9 +25,10 @@ const UsersNews = () => {
     };
     fetchNews();
   }, []);
+  const [category, setCategory] = useState();
+  const [active, setActive] = useState();
 
   const handleCategory = (category) => {
-    console.log("category", category);
     if (category === "allNews") {
       setCategoryNews(allNews);
     } else {
@@ -61,32 +63,32 @@ const UsersNews = () => {
                 <div className="lg:space-y-3 mt-4 uppercase  lg:block list-none  flex flex-wrap justify-center items-center gap-4">
                   <li
                     onClick={() => handleCategory("allNews")}
-                    className="text-lg heebo font-semibold hover:cursor-pointer"
+                    className={`text-lg heebo font-semibold hover:cursor-pointer`}
                   >
                     All News
                   </li>
 
                   <li
                     onClick={() => handleCategory("science")}
-                    className="text-lg heebo font-semibold hover:cursor-pointer"
+                    className={`text-lg heebo font-semibold hover:cursor-pointer`}
                   >
                     Science
                   </li>
                   <li
                     onClick={() => handleCategory("entertainment")}
-                    className="text-lg heebo font-semibold hover:cursor-pointer"
+                    className={`text-lg heebo font-semibold hover:cursor-pointer`}
                   >
                     Entertainment
                   </li>
                   <li
                     onClick={() => handleCategory("business")}
-                    className="text-lg heebo font-semibold hover:cursor-pointer"
+                    className={`text-lg heebo font-semibold hover:cursor-pointer`}
                   >
                     Business
                   </li>
                   <li
                     onClick={() => handleCategory("technology")}
-                    className="text-lg heebo font-semibold hover:cursor-pointer"
+                    className={`text-lg heebo font-semibold hover:cursor-pointer`}
                   >
                     Technology
                   </li>

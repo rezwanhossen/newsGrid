@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 import { FiMenu, FiX } from "react-icons/fi";
 import logo from "/fotlogo.png";
@@ -13,54 +13,24 @@ import SpeechRecognition, {
 } from "react-speech-recognition";
 import { useDispatch, useSelector } from "react-redux";
 import { searchNews } from "../../../features/searchNews/searchNewsSlice";
+import { getAllNews } from "../../../features/allNews/allNewsSlice";
 
 // import  from 'lodash';
 
 const Navbar = () => {
-  const [allNews , setAllNewsLocalStorage] = useState([]);
+  const allNewsData = useSelector(getAllNews);
 
+  const allNews = useMemo(() => allNewsData, [allNewsData]);
 
-  // redux
-  const locationBasedNews = useSelector((state) => state?.allNews?.locationBasedNews);
-  const categoriesNews = useSelector((state) => state?.allNews?.categoriesNews);
-  const newsData = useSelector((state) => state?.allNews?.newsData);
-  const allTrendingNews = useSelector((state) => state?.allNews?.allTrendingNews);
-  const recomendedNews = useSelector((state) => state?.allNews?.recomendedNews);
-  const breakingNews = useSelector((state) => state?.allNews?.breakingNews);
-  
+  // console.log(allNews);
+
+ 
   
   
 
   
   
-
-  
-  
-  useEffect(() => {
-      const news = [
-          
-          ...locationBasedNews,
-          ...categoriesNews,
-          ...newsData,
-          ...recomendedNews,
-          ...breakingNews,
-          
-          ...allTrendingNews
-      ]
-
-      console.log("news" , news)
-      if(news?.length > 0){
-
-        localStorage.setItem("allNewsData" , JSON.stringify(news));
-      }
-  
-  
-      const data = localStorage.getItem('allNewsData');
-  const newsAll = JSON.parse(data);
-  
-  setAllNewsLocalStorage(newsAll)
-  } , [])
-
+ 
 
 
 
@@ -134,21 +104,23 @@ const Navbar = () => {
   const { user, logout } = useAuth();
 
   // theme
-  const [theme, setTheme] = useState("light");
+  // const [theme, setTheme] = useState("light");
 
-  useEffect(() => {
-    localStorage.setItem("theme", theme);
+  // useEffect(() => {
+  //   localStorage.setItem("theme", theme);
 
-    const localTheme = localStorage.getItem("theme");
-    document.querySelector("html").setAttribute("data-theme", localTheme);
-  }, [theme]);
+  //   const localTheme = localStorage.getItem("theme");
+  //   document.querySelector("html").setAttribute("data-theme", localTheme);
+  // }, [theme]);
 
   const handleToggle = (e) => {
-    if (e.target.checked) {
-      setTheme("black");
-    } else {
-      setTheme("light");
-    }
+    document.querySelector("html").classList.add('#FFD580');
+    // if (e.target.checked) {
+    //   setTheme("black");
+
+    // } else {
+    //   setTheme("light");
+    // }
   };
 
   const categories = [
@@ -249,7 +221,7 @@ const Navbar = () => {
 
                   {/* sun icon */}
                   <svg
-                    className="swap-off h-10 w-10 fill-current"
+                    className="swap-off h-10 w-10 fill-current hidden"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                   >
@@ -258,7 +230,7 @@ const Navbar = () => {
 
                   {/* moon icon */}
                   <svg
-                    className="swap-on h-10 w-10 fill-current"
+                    className="swap-on h-10 w-10 fill-current hidden"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                   >
@@ -320,7 +292,7 @@ const Navbar = () => {
 
                   {/* sun icon */}
                   <svg
-                    className="swap-off h-10 w-10 fill-current"
+                    className="swap-off h-10 w-10 fill-current hidden"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                   >
@@ -329,7 +301,7 @@ const Navbar = () => {
 
                   {/* moon icon */}
                   <svg
-                    className="swap-on h-10 w-10 fill-current"
+                    className="swap-on h-10 w-10 fill-current hidden"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                   >
@@ -373,11 +345,11 @@ const Navbar = () => {
                   </div>
                 ) : (
                   <Link
-                    to="/login"
-                    className="text-black border border-black px-4 py-2 rounded hover:bg-gray-100"
-                  >
-                    Login
-                  </Link>
+                  to="/login"
+                  className="text-white border border-white px-4 py-2 rounded hover:text-black hover:bg-gray-100"
+                >
+                  Login
+                </Link>
                 )}
               </div>
             </div>
@@ -431,7 +403,7 @@ const Navbar = () => {
                     <input
                       type="text"
                       name="search"
-                      className="grow bg-base-200"
+                      className="grow"
                       onChange={handleInputChange}
                       placeholder="Search"
                       value={inputValue}
@@ -463,7 +435,7 @@ const Navbar = () => {
 
                   {/* sun icon */}
                   <svg
-                    className="swap-off h-10 w-10 fill-current"
+                    className="swap-off h-10 w-10 fill-current hidden"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                   >
@@ -472,7 +444,7 @@ const Navbar = () => {
 
                   {/* moon icon */}
                   <svg
-                    className="swap-on h-10 w-10 fill-current"
+                    className="swap-on h-10 w-10 fill-current hidden"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                   >
@@ -526,13 +498,13 @@ const Navbar = () => {
 
               {/* small device */}
               <div className="lg:hidden items-center max-w-[280px] lg:w-full lg:space-x-4 space-x-2">
-                <label className="input input-bordered flex items-center gap-2">
+                <label className="input text-black input-bordered flex items-center gap-2">
                   {/* Search news */}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 16 16"
                     fill="currentColor"
-                    className="h-4 w-4 opacity-70"
+                    className="h-4 w-4 opacity-70 text-black bg-black"
                   >
                     <path
                       fillRule="evenodd"
@@ -546,7 +518,7 @@ const Navbar = () => {
                     <input
                       type="text"
                       name="search"
-                      className="grow max-w-[150px] bg-base-200"
+                      className="grow max-w-[150px] text-black"
                       onChange={handleInputChange}
                       placeholder="Search"
                       value={inputValue}
@@ -580,11 +552,11 @@ const Navbar = () => {
                   {categories.map((category) => (
                     <li
                       key={category}
-                      className={`font-bold rounded-none  border-b-2 border-[#005689] w-full    text-[#232323] ${
+                      className={`font-bold rounded-none  w-full    text-[#232323] ${
                         active === category ? "text-[#005689]" : ""
                       } hover:cursor-pointer`}
                     >
-                      <Link
+                      <NavLink
                         to={
                           category === "Home"
                             ? "/"
@@ -593,7 +565,7 @@ const Navbar = () => {
                         onClick={() => setActive(category)}
                       >
                         {category.toUpperCase()}
-                      </Link>
+                      </NavLink>
                     </li>
                   ))}
                 </ul>

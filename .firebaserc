@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "newsgrid-95245"
-  }
+    "default": "news-grid-d61a6",
+    "staging": "news-grid-d61a6"
+  },
+  "targets": {},
+  "etags": {}
 }
