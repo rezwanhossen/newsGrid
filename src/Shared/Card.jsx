@@ -8,6 +8,7 @@ import useAxiosCommon from "../Hook/useAxiosCommon";
 import { useQuery } from "@tanstack/react-query";
 import { useNavigate } from "react-router-dom";
 import { CiShare2 } from "react-icons/ci";
+import { HiOutlineDotsHorizontal } from "react-icons/hi";
 
 const Card = ({ news }) => {
   const [modalComment, setModalComment] = useState(false);
@@ -154,32 +155,33 @@ const Card = ({ news }) => {
 
       {modalComment && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 ">
-          <div className="bg-white p-4 rounded-lg w-96  shadow-lg overflow-auto">
+          <div className="bg-white p-4 rounded-lg w-96 relative  shadow-lg overflow-y-auto max-h-72">
+            <button
+              onClick={() => setModalComment(false)}
+              className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
+            >
+              &#x2715; {/* X icon */}
+            </button>
             <h2 className="text-lg font-semibold mb-2">Comments</h2>
 
-            {/* Display existing comments */}
-            <div className="mb-3 space-y-1 overflow-y-auto">
-              {messages.length > 0 ? (
-                messages
-                  .slice(visibleStartIndex, visibleStartIndex + 2)
-                  .map((comment) => (
-                    <div key={comment._id} className="border-b p-2">
-                      <div className="flex items-center gap-2 text-gray-800">
-                        <img
-                          src={comment?.userImg}
-                          alt=""
-                          className="w-8 h-8 rounded-full"
-                        />
-                        <h1 className="font-semibold">{comment?.name}</h1>
-                      </div>
-                      <p className="text-gray-700">{comment?.message}</p>
-                    </div>
-                  ))
-              ) : (
-                <p className="text-gray-600">No comments yet.</p>
-              )}
+            <form onSubmit={handleCommentSubmit}>
+              <textarea
+                className="w-full  border border-gray-300 overflow-y-auto rounded-md p-1"
+                placeholder="Write your comment here..."
+                name="message"
+              ></textarea>
 
-              {/* View More Comments Button */}
+              <div className="flex justify-end mt-4">
+                <button
+                  type="submit"
+                  className="px-4 py-1 bg-blue-600 text-white rounded"
+                >
+                  Comment
+                </button>
+              </div>
+            </form>
+
+            <div className="mb-3 space-y-1 overflow-y-auto ">
               {messages.length > visibleStartIndex + 2 && (
                 <button
                   onClick={handleViewMoreComments}
@@ -188,31 +190,31 @@ const Card = ({ news }) => {
                   View More Comments
                 </button>
               )}
+              {messages.length > 0 ? (
+                messages
+                  .slice(visibleStartIndex, visibleStartIndex + 2)
+                  .map((comment) => (
+                    <div key={comment._id} className="border-b p-2">
+                      <div className=" flex justify-between">
+                        <div className="flex items-center gap-2 text-gray-800">
+                          <img
+                            src={comment?.userImg}
+                            alt=""
+                            className="w-6 h-6 rounded-full"
+                          />
+                          <h1 className="font-semibold">{comment?.name}</h1>
+                        </div>
+                        <h2>
+                          <HiOutlineDotsHorizontal />
+                        </h2>
+                      </div>
+                      <p className="text-gray-700">{comment?.message}</p>
+                    </div>
+                  ))
+              ) : (
+                <p className="text-gray-600">No comments yet.</p>
+              )}
             </div>
-
-            {/* Add new comment */}
-            <form onSubmit={handleCommentSubmit}>
-              <textarea
-                className="w-full border border-gray-300 rounded-md p-1"
-                placeholder="Write your comment here..."
-                name="message"
-              ></textarea>
-
-              <div className="flex justify-end mt-4">
-                <button
-                  onClick={() => setModalComment(false)}
-                  className="px-4 py-1 bg-gray-500 text-white rounded mr-2"
-                >
-                  Cancel
-                </button>
-                <button
-                  type="submit"
-                  className="px-4 py-1 bg-blue-600 text-white rounded"
-                >
-                  Submit
-                </button>
-              </div>
-            </form>
           </div>
         </div>
       )}
