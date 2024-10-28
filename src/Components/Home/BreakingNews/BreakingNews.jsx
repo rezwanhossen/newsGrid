@@ -5,8 +5,8 @@ import { FaVolumeUp, FaPause, FaPlay, FaBookmark } from "react-icons/fa";
 import useAuth from "../../../Hook/useAuth/useAuth";
 import Swal from "sweetalert2";
 
-const BreakingNews = () => {
-  const [allNewsBreaking, setAllNewsBreaking] = useState([]);
+const BreakingNews = ( ) => {
+  const [newsBreaking, setNewsBreaking] = useState([]);
   const [breakingNews, setBreakingNews] = useState([]);
   const [visibleNewsCount, setVisibleNewsCount] = useState(7);
   const [isSpeaking, setIsSpeaking] = useState(false);
@@ -47,7 +47,7 @@ const BreakingNews = () => {
         if (combinedNews.length > 0) {
           combinedNews.sort((a, b) => new Date(b.published) - new Date(a.published));
           setBreakingNews(combinedNews);
-          setAllNewsBreaking(combinedNews);
+          setNewsBreaking(combinedNews);
         } else {
           setError("No news data found for the selected categories.");
           setBreakingNews([]);
@@ -68,7 +68,7 @@ const BreakingNews = () => {
 
         if (dateSpecificNews.length > 0) {
           setBreakingNews(dateSpecificNews.slice(0, 10));
-          setAllNewsBreaking(dateSpecificNews);
+          setNewsBreaking(dateSpecificNews);
         } else {
           setError("No news found for the selected date.");
           setBreakingNews([]);
