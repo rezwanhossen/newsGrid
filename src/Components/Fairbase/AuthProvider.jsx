@@ -61,7 +61,10 @@ const AuthProvider = ({ children }) => {
       name: user?.displayName,
       email: user?.email,
     };
-    const { data } = await axios.post(`http://localhost:5000/users`, cuser);
+    const { data } = await axios.post(
+      `https://news-grid-server.vercel.app/users`,
+      cuser
+    );
     return data;
   };
 

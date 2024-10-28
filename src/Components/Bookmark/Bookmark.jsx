@@ -10,7 +10,7 @@ const Bookmark = () => {
   useEffect(() => {
     const getBookmarksData = async () => {
       const { data } = await axios(
-        `http://localhost:5000/bookmark/${user?.email}`
+        `https://news-grid-server.vercel.app/bookmark/${user?.email}`
       );
       setBookmarks(data);
     };
