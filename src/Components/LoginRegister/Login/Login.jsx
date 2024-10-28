@@ -32,7 +32,7 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center pt-12 md:pt-12 justify-center bg-gray-100 p-4">
+    <div className="min-h-screen flex items-center pt-12 md:pt-12 lg:pt-0 justify-center bg-gray-100 p-4">
       {/* Main container */}
       <div className="w-full max-w-4xl flex flex-col-reverse lg:flex-row bg-white rounded-lg shadow-lg overflow-hidden">
         {/* Right side - Welcome message (shows first on small and medium screens) */}
@@ -57,14 +57,14 @@ const Login = () => {
                 htmlFor="email"
                 className="block text-lg font-semibold text-gray-700"
               >
-                Username
+                Email
               </label>
               <input
                 type="email"
                 className={`w-full bg-gray-100 border py-3 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${
                   errors.email ? "border-red-500" : "border-gray-300"
                 }`}
-                placeholder="Enter your username"
+                placeholder="Enter your Email"
                 {...register("email", { required: "Email is required" })}
               />
               {errors.email && (
