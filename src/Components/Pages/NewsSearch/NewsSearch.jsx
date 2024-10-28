@@ -17,8 +17,8 @@ const NewsSearch = () => {
             {
                           searchResults?.length > 0 ? 
                           <div>
-                                    <h1 className="text-3xl mb-6 font-bold heebo">Your Search News</h1>
-<div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                                    <h1 className="text-3xl mx-4 lg:mx-4 mb-6 font-bold heebo">Your Search News</h1>
+<div className="grid grid-cols-1 lg:grid-cols-4 gap-8 mx-4 lg:mx-0">
                           {
                                searchResults?.map(news => <Card news={news}></Card>)
                               

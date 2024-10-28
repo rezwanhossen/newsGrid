@@ -51,8 +51,10 @@ const TrendingNews = () => {
 
       // Update articles if news is found
       setArticles(response.data.news.slice(0, 10));
-      console.log("trending news : ", response?.data?.news);
-      dispatch(setAllNewsTrending(response?.data?.news));
+
+      // console.log("trending news : " , response?.data?.news)
+      dispatch(setAllNewsTrending(response?.data?.news))
+
 
       setLoading(false);
     } catch (error) {
