@@ -10,8 +10,8 @@ const AdminHome = () => {
   useEffect(() => {
     const fetchLikeCounts = async () => {
       try {
-        // Replace this URL with the actual endpoint that returns all news IDs with their like counts
         const response = await axios.get("/likeCount");
+        console.log("API Response:", response.data); // Log the API response
         setLikeData(response.data || []); // Ensure the data is an array
       } catch (error) {
         console.error("Error fetching like counts:", error);
@@ -30,6 +30,8 @@ const AdminHome = () => {
     // Check if likeData is an array before proceeding
     if (!Array.isArray(likeData)) return;
 
+    console.log("Like Data:", likeData); // Log the like data
+
     // Prepare data and options for the new chart
     const data = {
       labels: likeData.map((item) => item.newsId),
@@ -42,26 +44,26 @@ const AdminHome = () => {
       ],
     };
 
-    const options = {
-      responsive: true,
-      plugins: {
-        legend: {
-          display: true,
-          position: "top",
-        },
-      },
-      scales: {
-        y: {
-          beginAtZero: true,
-        },
-      },
-    };
+    console.log("Chart Data:", data); // Log the chart data
 
     // Create new chart instance
     chartInstanceRef.current = new Chart(chartRef.current, {
       type: "bar",
       data: data,
-      options: options,
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            display: true,
+            position: "top",
+          },
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+          },
+        },
+      },
     });
 
     // Cleanup function to destroy the chart instance on component unmount
