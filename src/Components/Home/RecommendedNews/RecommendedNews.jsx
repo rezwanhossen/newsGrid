@@ -1,9 +1,10 @@
-// import { useEffect, useState } from 'react';
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { FaVolumeUp, FaPause, FaPlay } from "react-icons/fa";
+import { useDispatch } from "react-redux";
+import { setAllRecommendedNews } from "../../../features/allNews/allNewsSlice";
 
-const RecommendedNews = ({ setAllNewsRecommended }) => {
+const RecommendedNews = () => {
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -12,6 +13,7 @@ const RecommendedNews = ({ setAllNewsRecommended }) => {
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
   const [currentUtterance, setCurrentUtterance] = useState(null);
+  const dispatch = useDispatch();
 
   // Fetch recommended news from NewsData.io API
   const fetchRecommendedNews = async () => {
@@ -26,12 +28,23 @@ const RecommendedNews = ({ setAllNewsRecommended }) => {
         },
       });
       setArticles(response.data.results.slice(0, 10));
-      setAllNewsRecommended(response?.data?.results);
+      
+      dispatch(setAllRecommendedNews(response?.data?.results))
       setLoading(false);
     } catch (error) {
-      setError("Failed to fetch recommended news. Please try again later.");
+      console.error(error);
+      loadBackupData();
+    }
+  };
+
+  // Load backup data from a JSON file
+  const loadBackupData = async () => {
+    try {
+      const response = await axios.get("/recommenddata.json"); 
+      setArticles(response.data.results.slice(0, 10)); 
       setLoading(false);
-      console.log(error);
+    } catch (error) {
+      setLoading(false);
     }
   };
 
@@ -88,7 +101,7 @@ const RecommendedNews = ({ setAllNewsRecommended }) => {
 
   return (
     <div className="p-5 mt-10 rounded-lg bg-[#F5F5F5]">
-      <h1 className="text-4xl border-b-4 pb-4 text-[#3BAFDA] border-[#007E7E] font-extrabold mb-6">
+      <h1 className="text-2xl md:text-3xl lg:text-4xl border-b-4 pb-4 text-[#3BAFDA] border-[#007E7E] font-extrabold mb-6">
         Recommended News
       </h1>
 
@@ -97,14 +110,14 @@ const RecommendedNews = ({ setAllNewsRecommended }) => {
         {displayedArticles.map((article, index) => (
           <div
             key={index}
-            className="flex items-start gap-4 p-4 bg-white shadow rounded-lg"
+            className="flex flex-col md:flex-row items-start gap-4 p-4 bg-white shadow rounded-lg"
           >
             {/* Image */}
             {article.image_url && (
               <img
                 src={article.image_url}
                 alt={article.title}
-                className="w-40 h-28 object-cover rounded-lg"
+                className="w-full md:w-40 lg:w-48 h-32 object-cover rounded-lg"
               />
             )}
 

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 import { FiMenu, FiX } from "react-icons/fi";
 import logo from "/fotlogo.png";
@@ -13,10 +13,34 @@ import SpeechRecognition, {
 } from "react-speech-recognition";
 import { useDispatch, useSelector } from "react-redux";
 import { searchNews } from "../../../features/searchNews/searchNewsSlice";
+import { getAllNews } from "../../../features/allNews/allNewsSlice";
 
 // import  from 'lodash';
 
-const Navbar = ({ allNews }) => {
+const Navbar = () => {
+  const allNewsData = useSelector(getAllNews);
+
+  const allNews = useMemo(() => allNewsData, [allNewsData]);
+
+  // console.log(allNews);
+
+ 
+  
+  
+
+  
+  
+ 
+
+
+
+
+
+
+
+
+
+
   const navigate = useNavigate();
   // const [searchNews, setNewsSearch] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -80,21 +104,23 @@ const Navbar = ({ allNews }) => {
   const { user, logout } = useAuth();
 
   // theme
-  const [theme, setTheme] = useState("light");
+  // const [theme, setTheme] = useState("light");
 
-  useEffect(() => {
-    localStorage.setItem("theme", theme);
+  // useEffect(() => {
+  //   localStorage.setItem("theme", theme);
 
-    const localTheme = localStorage.getItem("theme");
-    document.querySelector("html").setAttribute("data-theme", localTheme);
-  }, [theme]);
+  //   const localTheme = localStorage.getItem("theme");
+  //   document.querySelector("html").setAttribute("data-theme", localTheme);
+  // }, [theme]);
 
   const handleToggle = (e) => {
-    if (e.target.checked) {
-      setTheme("night");
-    } else {
-      setTheme("light");
-    }
+    document.querySelector("html").classList.add('#FFD580');
+    // if (e.target.checked) {
+    //   setTheme("black");
+
+    // } else {
+    //   setTheme("light");
+    // }
   };
 
   const categories = [
@@ -149,7 +175,7 @@ const Navbar = ({ allNews }) => {
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 16 16"
                     fill="currentColor"
-                    className="h-4 w-4 opacity-70"
+                    className="h-4 w-4 opacity-70 text-black"
                   >
                     <path
                       fillRule="evenodd"
@@ -195,7 +221,7 @@ const Navbar = ({ allNews }) => {
 
                   {/* sun icon */}
                   <svg
-                    className="swap-off h-10 w-10 fill-current"
+                    className="swap-off h-10 w-10 fill-current hidden"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                   >
@@ -204,7 +230,7 @@ const Navbar = ({ allNews }) => {
 
                   {/* moon icon */}
                   <svg
-                    className="swap-on h-10 w-10 fill-current"
+                    className="swap-on h-10 w-10 fill-current hidden"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                   >
@@ -231,7 +257,7 @@ const Navbar = ({ allNews }) => {
                         </li>
                         {user && isAdmin && (
                           <li>
-                            <Link to="/dashbord/adminHome">Dashboard</Link>
+                            <Link to="/dashbord/users">Dashboard</Link>
                           </li>
                         )}
                         {user && !isAdmin && (
@@ -266,7 +292,7 @@ const Navbar = ({ allNews }) => {
 
                   {/* sun icon */}
                   <svg
-                    className="swap-off h-10 w-10 fill-current"
+                    className="swap-off h-10 w-10 fill-current hidden"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                   >
@@ -275,7 +301,7 @@ const Navbar = ({ allNews }) => {
 
                   {/* moon icon */}
                   <svg
-                    className="swap-on h-10 w-10 fill-current"
+                    className="swap-on h-10 w-10 fill-current hidden"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                   >
@@ -319,11 +345,11 @@ const Navbar = ({ allNews }) => {
                   </div>
                 ) : (
                   <Link
-                    to="/login"
-                    className="text-black border border-black px-4 py-2 rounded hover:bg-gray-100"
-                  >
-                    Login
-                  </Link>
+                  to="/login"
+                  className="text-white border border-white px-4 py-2 rounded hover:text-black hover:bg-gray-100"
+                >
+                  Login
+                </Link>
                 )}
               </div>
             </div>
@@ -337,8 +363,8 @@ const Navbar = ({ allNews }) => {
               {categories.map((category) => (
                 <li
                   key={category}
-                  className={`font-bold text-lg sm:text-xl px-2 sm:px-4 text-[#232323] ${
-                    active === category ? "text-red-500 underline" : ""
+                  className={`font-bold text-lg sm:text-xl px-2 sm:px-4  text-[#232323] ${
+                    active === category ? "bg-[#004E5B] text-white p-2 rounded-md" : ""
                   } hover:cursor-pointer`}
                 >
                   <Link
@@ -377,7 +403,7 @@ const Navbar = ({ allNews }) => {
                     <input
                       type="text"
                       name="search"
-                      className="grow bg-base-200"
+                      className="grow"
                       onChange={handleInputChange}
                       placeholder="Search"
                       value={inputValue}
@@ -409,7 +435,7 @@ const Navbar = ({ allNews }) => {
 
                   {/* sun icon */}
                   <svg
-                    className="swap-off h-10 w-10 fill-current"
+                    className="swap-off h-10 w-10 fill-current hidden"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                   >
@@ -418,7 +444,7 @@ const Navbar = ({ allNews }) => {
 
                   {/* moon icon */}
                   <svg
-                    className="swap-on h-10 w-10 fill-current"
+                    className="swap-on h-10 w-10 fill-current hidden"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                   >
@@ -472,13 +498,13 @@ const Navbar = ({ allNews }) => {
 
               {/* small device */}
               <div className="lg:hidden items-center max-w-[280px] lg:w-full lg:space-x-4 space-x-2">
-                <label className="input input-bordered flex items-center gap-2">
+                <label className="input text-black input-bordered flex items-center gap-2">
                   {/* Search news */}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 16 16"
                     fill="currentColor"
-                    className="h-4 w-4 opacity-70"
+                    className="h-4 w-4 opacity-70 text-black bg-black"
                   >
                     <path
                       fillRule="evenodd"
@@ -492,7 +518,7 @@ const Navbar = ({ allNews }) => {
                     <input
                       type="text"
                       name="search"
-                      className="grow max-w-[150px] bg-base-200"
+                      className="grow max-w-[150px] text-black"
                       onChange={handleInputChange}
                       placeholder="Search"
                       value={inputValue}
@@ -526,11 +552,11 @@ const Navbar = ({ allNews }) => {
                   {categories.map((category) => (
                     <li
                       key={category}
-                      className={`font-bold rounded-none  border-b-2 border-[#005689] w-full    text-[#232323] ${
+                      className={`font-bold rounded-none  w-full    text-[#232323] ${
                         active === category ? "text-[#005689]" : ""
                       } hover:cursor-pointer`}
                     >
-                      <Link
+                      <NavLink
                         to={
                           category === "Home"
                             ? "/"
@@ -539,7 +565,7 @@ const Navbar = ({ allNews }) => {
                         onClick={() => setActive(category)}
                       >
                         {category.toUpperCase()}
-                      </Link>
+                      </NavLink>
                     </li>
                   ))}
                 </ul>
@@ -559,17 +585,17 @@ const Navbar = ({ allNews }) => {
             <FiX className="w-6 h-6" />
           </button>
 
-          <ul className="p-4 space-y-4  max-w-[300px] z-auto">
-            <li className="flex justify-between items-center">
-              <NavLink className="border border-1 w-full px-3 py-1" to="/">
+          <ul className="p-4 space-y-4  max-w-[300px] z-auto  ">
+            <li className="flex justify-between items-center hover:bg-white hover:text-black rounded-md">
+              <NavLink className="border border-1 w-full px-3 py-1 rounded-md" to="/">
                 Home
               </NavLink>
             </li>
 
             {user && (
-              <li className="flex justify-between items-center">
+              <li className="flex justify-between items-center hover:bg-white hover:text-black rounded-md">
                 <NavLink
-                  className="border border-1 w-full px-3 py-1"
+                  className="border border-1 w-full px-3 py-1 rounded-md"
                   to="/bookmark"
                 >
                   My Bookmarks
@@ -577,33 +603,41 @@ const Navbar = ({ allNews }) => {
               </li>
             )}
 
-            <li className="flex justify-between items-center">
+            <li className="flex justify-between items-center hover:bg-white hover:text-black rounded-md">
               <NavLink
-                className="border border-1 w-full px-3 py-1"
+                className="border border-1 w-full px-3 py-1 rounded-md"
                 to={"/CustomizedNews"}
               >
                 Custom News
               </NavLink>
             </li>
-            <li className="flex justify-between items-center">
+            <li className="flex justify-between items-center hover:bg-white hover:text-black rounded-md">
               <NavLink
-                className="border border-1 w-full px-3 py-1"
+                className="border border-1 w-full px-3 py-1 rounded-md"
                 to={"/locationBasedNews"}
               >
                 Location Based News
               </NavLink>
             </li>
-            <li className="flex justify-between items-center">
+            <li className="flex justify-between items-center hover:bg-white hover:text-black rounded-md">
               <NavLink
-                className="border border-1 w-full px-3 py-1"
+                className="border border-1 w-full px-3 py-1 rounded-md"
                 to={"/usersNews"}
               >
                 Users News
               </NavLink>
             </li>
-            <li className="flex justify-between items-center">
+            <li className="flex justify-between items-center hover:bg-white hover:text-black rounded-md">
               <NavLink
-                className="border border-1 w-full px-3 py-1"
+                className="border border-1 w-full px-3 py-1 rounded-md"
+                to={"/weatherNews"}
+              >
+                Weather News
+              </NavLink>
+            </li>
+            <li className="flex justify-between items-center hover:bg-white hover:text-black rounded-md">
+              <NavLink
+                className="border border-1 w-full px-3 py-1 rounded-md"
                 to={"/contact"}
               >
                 Contact Us

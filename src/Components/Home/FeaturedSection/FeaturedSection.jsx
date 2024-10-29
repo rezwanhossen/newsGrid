@@ -16,7 +16,6 @@ const FeaturedSection = () => {
   const [newsData, setNewsData] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [categories, setCategories] = useState([]);
-  
 
   // Fetch news data
   useEffect(() => {
@@ -39,7 +38,7 @@ const FeaturedSection = () => {
     const email = user?.email;
     const listOfBookmark = { image, title, email };
 
-    fetch("http://localhost:5000/bookmarks", {
+    fetch("https://news-grid-server.vercel.app/bookmarks", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -60,7 +59,6 @@ const FeaturedSection = () => {
         }
       });
   };
-
 
   const displayedNews = selectedCategory
     ? newsData.filter((item) => item.category === selectedCategory)
@@ -172,4 +170,3 @@ const FeaturedSection = () => {
 };
 
 export default FeaturedSection;
-
