@@ -80,77 +80,75 @@ const NewsPersonal = () => {
   };
 
   return (
-    <div>
-      <div className="w-10/12 mx-auto ">
-        <p>Alhamdulillah This is News Personal Component</p>
+    <div className="w-10/12 mx-auto ">
+      <p>Alhamdulillah This is News Personal Component</p>
 
-        {/* Category Filter Buttons */}
-        <div className="flex space-x-4 my-4">
+      {/* Category Filter Buttons */}
+      <div className="flex flex-wrap gap-4 my-4">
+        <button
+          onClick={handleAllClick}
+          className={`px-4 py-2 rounded ${
+            activeCategory === "" ? "bg-blue-500 text-white" : "bg-gray-300"
+          }`}
+        >
+          All
+        </button>
+        {storeSelecetedCategory.map((category, index) => (
           <button
-            onClick={handleAllClick}
+            key={index}
+            onClick={() => handleCategoryClick(category)}
             className={`px-4 py-2 rounded ${
-              activeCategory === "" ? "bg-blue-500 text-white" : "bg-gray-300"
+              activeCategory === category ? "bg-blue-500 text-white" : "bg-gray-300"
             }`}
           >
-            All
+            {category}
           </button>
-          {storeSelecetedCategory.map((category, index) => (
-            <button
-              key={index}
-              onClick={() => handleCategoryClick(category)}
-              className={`px-4 py-2 rounded ${
-                activeCategory === category ? "bg-blue-500 text-white" : "bg-gray-300"
-              }`}
-            >
-              {category}
-            </button>
-          ))}
-        </div>
+        ))}
+      </div>
 
-        {/* News Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {filteredNews.length > 0 ? (
-            filteredNews.map((newsItem, index) => (
-              <div key={index} className="bg-white shadow-lg rounded-lg overflow-hidden">
-                {/* Show Image */}
-                <img
-                  src={newsItem.image_url || "https://i.ibb.co.com/Vgggtfd/images-1.png"} // Placeholder image if no image
-                  alt={newsItem.title}
-                  className="w-full h-48 object-cover"
-                />
+      {/* News Cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        {filteredNews.length > 0 ? (
+          filteredNews.map((newsItem, index) => (
+            <div key={index} className="bg-white shadow-lg rounded-lg overflow-hidden">
+              {/* Show Image */}
+              <img
+                src={newsItem.image_url || "https://i.ibb.co/Vgggtfd/images-1.png"} // Placeholder image if no image
+                alt={newsItem.title}
+                className="w-full h-48 object-cover"
+              />
 
-                <div className="p-4">
-                  {/* Show Category */}
-                  <p className="text-blue-500 font-semibold mb-2">{newsItem.category}</p>
+              <div className="p-4">
+                {/* Show Category */}
+                <p className="text-blue-500 font-semibold mb-2">{newsItem.category}</p>
 
-                  {/* Show Title (truncated) */}
-                  <h2 className="text-lg font-bold mb-2">
-                    {truncateText(newsItem.title, 50)} {/* Limit title length */}
-                  </h2>
+                {/* Show Title (truncated) */}
+                <h2 className="text-lg font-bold mb-2">
+                  {truncateText(newsItem.title, 50)} {/* Limit title length */}
+                </h2>
 
-                  {/* Show Description (truncated) */}
-                  <p className="text-gray-700 mb-4">
-                    {newsItem.description
-                      ? truncateText(newsItem.description, 100) // Limit description length
-                      : "No description available."}
-                  </p>
+                {/* Show Description (truncated) */}
+                <p className="text-gray-700 mb-4">
+                  {newsItem.description
+                    ? truncateText(newsItem.description, 100) // Limit description length
+                    : "No description available."}
+                </p>
 
-                  {/* Link to full article */}
-                  <a
-                    href={newsItem.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-500"
-                  >
-                    Read more
-                  </a>
-                </div>
+                {/* Link to full article */}
+                <a
+                  href={newsItem.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-500"
+                >
+                  Read more
+                </a>
               </div>
-            ))
-          ) : (
-            <p>No news available for the selected category.</p>
-          )}
-        </div>
+            </div>
+          ))
+        ) : (
+          <p>No news available for the selected category.</p>
+        )}
       </div>
     </div>
   );
