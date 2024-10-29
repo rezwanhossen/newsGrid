@@ -7,14 +7,11 @@ const WeatherNews = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [location, setLocation] = useState({ latitude: null, longitude: null });
-  const [city, setCity] = useState("");
-  const [country, setCountry] = useState("");
+  const [locationDetails, setLocationDetails] = useState({ city: "", country: "" });
 
- 
-  const apiKey = "78c5050fdb1c4ce6b494ec7b4df75e8d"; // Weatherbit API key
+  const apiKey = "494b6b9d38fb446ca8c162604242710"; // weatherapi.com API key end date 10/11/2024
 
-
-  useEffect( () => {
+  useEffect(() => {
     if ("geolocation" in navigator) {
       navigator.geolocation.getCurrentPosition(
         (position) => {
@@ -22,42 +19,46 @@ const WeatherNews = () => {
             latitude: position.coords.latitude,
             longitude: position.coords.longitude,
           });
-          axios
-            .get(
-              `https://nominatim.openstreetmap.org/reverse?format=json&lat=${position.coords.latitude}&lon=${position.coords.longitude}`
-            )
-            .then((response) => {
-              console.log(response.data || 'Unknown location')
-
-              setCity(response.data.address.city || "Unknown location");
-              setCountry(response?.data?.address?.country);
-            })
+        },
+        (error) => {
+          console.error("Location access denied:", error);
+          setError("Location access denied.");
+          setLoading(false);
         }
-  )}
-  },[])
+      );
+    } else {
+      setError("Geolocation is not supported by this browser.");
+      setLoading(false);
+    }
+  }, []);
 
   useEffect(() => {
     const fetchWeatherData = async () => {
       try {
-        const currentWeatherResponse = await axios.get(
-          `https://api.weatherbit.io/v2.0/current?city=${city},${country}&key=${apiKey}`
+        const { latitude, longitude } = location;
+        if (!latitude || !longitude) return;
+
+        // Fetch current weather and 6-day forecast data
+        const response = await axios.get(
+          `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${latitude},${longitude}&days=6`
         );
 
-        const forecastResponse = await axios.get(
-          `https://api.weatherbit.io/v2.0/forecast/daily?city=${city},${country}&key=${apiKey}&days=5`
-        );
-
-        setWeatherData(currentWeatherResponse.data.data[0]);
-        setForecastData(forecastResponse.data.data);
+        setWeatherData(response.data.current);
+        setForecastData(response.data.forecast.forecastday);
+        setLocationDetails({
+          city: response.data.location.name,
+          country: response.data.location.country,
+        });
         setLoading(false);
       } catch (err) {
-        setError(err.message);
+        console.error("Error fetching weather data:", err);
+        setError("Error fetching weather data.");
         setLoading(false);
       }
     };
 
     fetchWeatherData();
-  }, []);
+  }, [location, apiKey]);
 
   if (loading) {
     return <p>Loading weather data...</p>;
@@ -67,52 +68,59 @@ const WeatherNews = () => {
     return <p>Error fetching weather data: {error}</p>;
   }
 
-  const { temp, weather, wind_spd, precip, pres } = weatherData;
+  if (!weatherData) {
+    return <p>No weather data available.</p>;
+  }
+
+  const { temp_c, condition, wind_kph, precip_mm, pressure_mb } = weatherData;
 
   const forecastItems = forecastData.map((day, index) => (
     <div key={index} className="text-center">
       <p className="text-sm font-bold text-[#007E7E]">
-        {new Date(day.valid_date).toLocaleDateString('en-US', { weekday: 'short' })}
+        {new Date(day.date).toLocaleDateString("en-US", { weekday: "short" })}
       </p>
-      <p className="text-lg text-[#4A4A4A]">{Math.round(day.temp)}°c</p>
+      <img src={day.day.condition.icon} alt="weather icon" className="mx-auto" />
+      <p className="text-lg text-[#4A4A4A]">{Math.round(day.day.avgtemp_c)}°c</p>
     </div>
   ));
 
   return (
-    <div className="bg-[#F5F5F5] shadow-md rounded-lg p-6 mb-6">
-      <h2 className="text-2xl text-[#3BAFDA] font-bold mb-4 border-b-2 border-[#007E7E] pb-2">
-        Weather Update
-      </h2>
-      <div className="flex justify-between items-center mb-6">
-        <div>
-          <h3 className="text-xl font-bold text-[#3BAFDA]">
-            {location}
-          </h3>
-          <p className="text-lg capitalize text-[#767676]">{weather.description}</p>
+    <div className="pt-16 pb-8 mx-auto container flex justify-center items-center">
+      <div className="bg-[#F5F5F5] shadow-md rounded-lg p-6 mb-6">
+        <h2 className="text-2xl text-[#3BAFDA] text-center font-bold mb-4 border-b-2 border-[#007E7E] pb-2">
+          Weather Update
+        </h2>
+        <div className="flex justify-between items-center mb-6">
+          <div>
+            <h3 className="text-xl font-bold text-[#3BAFDA]">
+              {`${locationDetails.city}, ${locationDetails.country}`}
+            </h3>
+            <p className="text-lg capitalize text-[#767676]">{condition.text}</p>
+          </div>
         </div>
-      </div>
 
-      <div className="grid grid-cols-3 gap-4 mb-6">
-        <div className="text-center">
-          <p className="text-sm font-semibold text-[#007E7E]">Wind</p>
-          <p className="text-lg font-medium text-[#4A4A4A]">{Math.round(wind_spd)} kmph</p>
+        <div className="grid grid-cols-3 gap-4 mb-6">
+          <div className="text-center">
+            <p className="text-sm font-semibold text-[#007E7E]">Wind</p>
+            <p className="text-lg font-medium text-[#4A4A4A]">{Math.round(wind_kph)} kmph</p>
+          </div>
+          <div className="text-center">
+            <p className="text-sm font-semibold text-[#007E7E]">Precip</p>
+            <p className="text-lg font-medium text-[#4A4A4A]">{precip_mm} mm</p>
+          </div>
+          <div className="text-center">
+            <p className="text-sm font-semibold text-[#007E7E]">Pressure</p>
+            <p className="text-lg font-medium text-[#4A4A4A]">{pressure_mb} mb</p>
+          </div>
         </div>
-        <div className="text-center">
-          <p className="text-sm font-semibold text-[#007E7E]">Precip</p>
-          <p className="text-lg font-medium text-[#4A4A4A]">{precip} mm</p>
-        </div>
-        <div className="text-center">
-          <p className="text-sm font-semibold text-[#007E7E]">Pressure</p>
-          <p className="text-lg font-medium text-[#4A4A4A]">{pres} mb</p>
-        </div>
-      </div>
 
-      <div className="text-center mb-6">
-        <p className="text-5xl font-bold text-[#007E7E]">{Math.round(temp)}°c</p>
-      </div>
+        <div className="text-center mb-6">
+          <p className="text-5xl font-bold text-[#007E7E]">{Math.round(temp_c)}°c</p>
+        </div>
 
-      <div className="grid grid-cols-5 gap-4">
-        {forecastItems}
+        <div className="grid grid-cols-6 gap-4">
+          {forecastItems}
+        </div>
       </div>
     </div>
   );

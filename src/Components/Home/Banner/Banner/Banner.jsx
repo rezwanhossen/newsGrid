@@ -2,16 +2,13 @@
 import { useState } from "react";
 import Card from "../../../../Shared/Card";
 import Slider from "../Slider/Slider";
-import { FaVolumeUp, FaPause, FaPlay } from 'react-icons/fa';
-
+import { FaVolumeUp, FaPause, FaPlay } from "react-icons/fa";
 
 const Banner = ({ newsData }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
   const [currentUtterance, setCurrentUtterance] = useState(null);
-
-  
 
   const itemsPerPage = 3;
 
@@ -25,7 +22,7 @@ const Banner = ({ newsData }) => {
   // Check if there's more news to show
   const hasMoreNews = newsData?.length > 10 + startIndex + itemsPerPage;
 
-  // Handle speech 
+  // Handle speech
   const handleSpeak = (text) => {
     if (isSpeaking) {
       window.speechSynthesis.cancel();
@@ -86,7 +83,9 @@ const Banner = ({ newsData }) => {
 
                     {/* Read  Button */}
                     <button
-                      onClick={() => handleSpeak(`${news.title}. ${news.description}`)}
+                      onClick={() =>
+                        handleSpeak(`${news.title}. ${news.description}`)
+                      }
                       className="mt-4 text-gray-600 hover:text-blue-500 flex items-center"
                     >
                       <FaVolumeUp className="mr-2" />

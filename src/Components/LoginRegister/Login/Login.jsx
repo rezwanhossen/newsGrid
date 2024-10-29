@@ -34,12 +34,24 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+    <div className="min-h-screen flex items-center pt-12 md:pt-12 lg:pt-0 justify-center bg-gray-100 p-4">
       {/* Main container */}
-      <div className="w-full max-w-4xl flex  bg-white rounded-lg shadow-lg overflow-hidden">
+      <div className="w-full max-w-4xl flex flex-col-reverse lg:flex-row bg-white rounded-lg shadow-lg overflow-hidden">
+        {/* Right side - Welcome message (shows first on small and medium screens) */}
+        <div className="w-full lg:w-1/2 bg-gray-600 text-white flex flex-col justify-center items-center p-10">
+          <h2 className="text-3xl md:text-4xl font-bold mb-5 text-center">
+            Welcome to <span className="font-bold">News Grid!</span>
+          </h2>
+          <p className="text-lg text-center">
+            Stay updated with the latest headlines and trending stories from
+            around the globe. Dive into a curated feed of top news, tailored
+            just for you.
+          </p>
+        </div>
+
         {/* Left side - Form */}
-        <div className="w-1/2 p-8 bg-white">
-          <h2 className="text-3xl font-bold text-gray-800 mb-6">Login</h2>
+        <div className="w-full lg:w-1/2 p-8 bg-white">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">Login</h2>
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
             {/* Email Input */}
             <div className="space-y-2">
@@ -47,14 +59,14 @@ const Login = () => {
                 htmlFor="email"
                 className="block text-lg font-semibold text-gray-700"
               >
-                Username
+                Email
               </label>
               <input
                 type="email"
                 className={`w-full bg-gray-100 border py-3 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 ${
                   errors.email ? "border-red-500" : "border-gray-300"
                 }`}
-                placeholder="Enter your username"
+                placeholder="Enter your Email"
                 {...register("email", { required: "Email is required" })}
               />
               {errors.email && (
@@ -99,7 +111,7 @@ const Login = () => {
             <div>
               <button
                 type="submit"
-                className="w-full py-3 bg-gray-800 text-white font-semibold rounded-lg hover:bg-gray-800 transition duration-300"
+                className="w-full py-3 bg-gray-800 text-white font-semibold rounded-lg hover:bg-gray-900 transition duration-300"
               >
                 Login
               </button>
@@ -118,18 +130,6 @@ const Login = () => {
 
           {/* Social Media Login */}
           <Socalmedia  pathName={pathName}/>
-        </div>
-
-        {/* Right side - Welcome message */}
-        <div className="w-1/2 bg-gray-600 text-white flex flex-col justify-center items-center p-10">
-          <h2 className="text-4xl font-bold mb-5">
-            Welcome to <span className="font-bold ">News Grid!</span>
-          </h2>
-          <p className="text-lg text-center  text-white">
-            Stay updated with the latest headlines and trending stories from
-            around the globe. Dive into a curated feed of top news, tailored
-            just for you.
-          </p>
         </div>
       </div>
     </div>

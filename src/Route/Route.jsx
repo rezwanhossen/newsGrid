@@ -33,6 +33,7 @@ import AdminHome from "../Components/DashbordPage/AdminPage/AdminHome/AdminHome"
 import AllpementHistory from "../Components/DashbordPage/AdminPage/AllPementHistory/AllpementHistory";
 import UsersNews from "../Components/Pages/UsersNews/UsersNews";
 import ContactUs from "../../src/Components/Pages/Contact/ContactUs";
+import WeatherNews from "../Components/Home/WeatherNews/WeatherNews";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -98,6 +99,10 @@ const router = createBrowserRouter([
         path: "/contact",
         element: <ContactUs />,
       },
+      {
+        path: "/weatherNews",
+        element: <WeatherNews />
+      }
     ],
   },
 

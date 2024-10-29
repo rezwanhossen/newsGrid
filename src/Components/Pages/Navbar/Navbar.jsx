@@ -257,7 +257,7 @@ const Navbar = () => {
                         </li>
                         {user && isAdmin && (
                           <li>
-                            <Link to="/dashbord/adminHome">Dashboard</Link>
+                            <Link to="/dashbord/users">Dashboard</Link>
                           </li>
                         )}
                         {user && !isAdmin && (
@@ -363,8 +363,8 @@ const Navbar = () => {
               {categories.map((category) => (
                 <li
                   key={category}
-                  className={`font-bold text-lg sm:text-xl px-2 sm:px-4 text-[#232323] ${
-                    active === category ? "text-[#29698d] underline" : ""
+                  className={`font-bold text-lg sm:text-xl px-2 sm:px-4  text-[#232323] ${
+                    active === category ? "bg-[#004E5B] text-white p-2 rounded-md" : ""
                   } hover:cursor-pointer`}
                 >
                   <Link
@@ -585,17 +585,17 @@ const Navbar = () => {
             <FiX className="w-6 h-6" />
           </button>
 
-          <ul className="p-4 space-y-4  max-w-[300px] z-auto">
-            <li className="flex justify-between items-center">
-              <NavLink className="border border-1 w-full px-3 py-1" to="/">
+          <ul className="p-4 space-y-4  max-w-[300px] z-auto  ">
+            <li className="flex justify-between items-center hover:bg-white hover:text-black rounded-md">
+              <NavLink className="border border-1 w-full px-3 py-1 rounded-md" to="/">
                 Home
               </NavLink>
             </li>
 
             {user && (
-              <li className="flex justify-between items-center">
+              <li className="flex justify-between items-center hover:bg-white hover:text-black rounded-md">
                 <NavLink
-                  className="border border-1 w-full px-3 py-1"
+                  className="border border-1 w-full px-3 py-1 rounded-md"
                   to="/bookmark"
                 >
                   My Bookmarks
@@ -603,33 +603,41 @@ const Navbar = () => {
               </li>
             )}
 
-            <li className="flex justify-between items-center">
+            <li className="flex justify-between items-center hover:bg-white hover:text-black rounded-md">
               <NavLink
-                className="border border-1 w-full px-3 py-1"
+                className="border border-1 w-full px-3 py-1 rounded-md"
                 to={"/CustomizedNews"}
               >
                 Custom News
               </NavLink>
             </li>
-            <li className="flex justify-between items-center">
+            <li className="flex justify-between items-center hover:bg-white hover:text-black rounded-md">
               <NavLink
-                className="border border-1 w-full px-3 py-1"
+                className="border border-1 w-full px-3 py-1 rounded-md"
                 to={"/locationBasedNews"}
               >
                 Location Based News
               </NavLink>
             </li>
-            <li className="flex justify-between items-center">
+            <li className="flex justify-between items-center hover:bg-white hover:text-black rounded-md">
               <NavLink
-                className="border border-1 w-full px-3 py-1"
+                className="border border-1 w-full px-3 py-1 rounded-md"
                 to={"/usersNews"}
               >
                 Users News
               </NavLink>
             </li>
-            <li className="flex justify-between items-center">
+            <li className="flex justify-between items-center hover:bg-white hover:text-black rounded-md">
               <NavLink
-                className="border border-1 w-full px-3 py-1"
+                className="border border-1 w-full px-3 py-1 rounded-md"
+                to={"/weatherNews"}
+              >
+                Weather News
+              </NavLink>
+            </li>
+            <li className="flex justify-between items-center hover:bg-white hover:text-black rounded-md">
+              <NavLink
+                className="border border-1 w-full px-3 py-1 rounded-md"
                 to={"/contact"}
               >
                 Contact Us
