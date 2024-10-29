@@ -34,6 +34,7 @@ import AllpementHistory from "../Components/DashbordPage/AdminPage/AllPementHist
 import UsersNews from "../Components/Pages/UsersNews/UsersNews";
 import ContactUs from "../../src/Components/Pages/Contact/ContactUs";
 import WeatherNews from "../Components/Home/WeatherNews/WeatherNews";
+import AdminRout from "../Components/Fairbase/AdminRout";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -101,8 +102,8 @@ const router = createBrowserRouter([
       },
       {
         path: "/weatherNews",
-        element: <WeatherNews />
-      }
+        element: <WeatherNews />,
+      },
     ],
   },
 
@@ -138,23 +139,43 @@ const router = createBrowserRouter([
       //admin route
       {
         path: "adminHome",
-        element: <AdminHome />,
+        element: (
+          <PrivateRoute>
+            <AdminRout>
+              <AdminHome />
+            </AdminRout>
+          </PrivateRoute>
+        ),
       },
       {
         path: "users",
-        element: <Alluser></Alluser>,
+        element: (
+          <PrivateRoute>
+            <AdminHome>
+              <Alluser></Alluser>
+            </AdminHome>
+          </PrivateRoute>
+        ),
       },
       {
         path: "addedNews",
-        element: <AddedNews></AddedNews>,
+        element: (
+          <PrivateRoute>
+            <AdminRout>
+              <AddedNews></AddedNews>
+            </AdminRout>
+          </PrivateRoute>
+        ),
       },
       {
         path: "pymentHistory",
-        element: <AllpementHistory></AllpementHistory>,
-      },
-      {
-        path: "personalnews",
-        element: <PersonalizedNews></PersonalizedNews>,
+        element: (
+          <PrivateRoute>
+            <AdminRout>
+              <AllpementHistory></AllpementHistory>
+            </AdminRout>
+          </PrivateRoute>
+        ),
       },
     ],
   },

@@ -38,7 +38,7 @@ const FeaturedSection = () => {
     const email = user?.email;
     const listOfBookmark = { image, title, email };
 
-    fetch("https://news-grid-server.vercel.app/bookmarks", {
+    fetch("http://localhost:5000/bookmarks", {
       method: "POST",
       headers: {
         "content-type": "application/json",

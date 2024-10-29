@@ -45,15 +45,13 @@ const LocationBasedNews = () => {
               setCity(response.data.address.city || "Unknown location");
               setCountry(response?.data?.address?.country);
 
-              axios
-                .get("https://news-grid-server.vercel.app/locationnews")
-                .then((res) => {
-                  // console.log(res?.data)
+              axios.get("http://localhost:5000/locationnews").then((res) => {
+                // console.log(res?.data)
 
-                  setLocationBasednews(res?.data.slice(40, 56));
-                  dispatch(setLocationBasedNews(res?.data?.slice(40, 56)));
-                  setLoading(false);
-                });
+                setLocationBasednews(res?.data.slice(40, 56));
+                dispatch(setLocationBasedNews(res?.data?.slice(40, 56)));
+                setLoading(false);
+              });
             })
             .catch((error) => {
               setError("Unable to retrive location name");

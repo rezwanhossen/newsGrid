@@ -139,7 +139,7 @@ const TrendingNews = () => {
     };
 
     // Save bookmark to database
-    fetch("https://news-grid-server.vercel.app/bookmarks", {
+    fetch("http://localhost:5000/bookmarks", {
       method: "POST",
       headers: {
         "content-type": "application/json",

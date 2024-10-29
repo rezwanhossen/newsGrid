@@ -5,7 +5,7 @@ import { FaVolumeUp, FaPause, FaPlay, FaBookmark } from "react-icons/fa";
 import useAuth from "../../../Hook/useAuth/useAuth";
 import Swal from "sweetalert2";
 
-const BreakingNews = ( ) => {
+const BreakingNews = () => {
   const [newsBreaking, setNewsBreaking] = useState([]);
   const [breakingNews, setBreakingNews] = useState([]);
   const [visibleNewsCount, setVisibleNewsCount] = useState(7);
@@ -45,7 +45,9 @@ const BreakingNews = ( ) => {
         });
 
         if (combinedNews.length > 0) {
-          combinedNews.sort((a, b) => new Date(b.published) - new Date(a.published));
+          combinedNews.sort(
+            (a, b) => new Date(b.published) - new Date(a.published)
+          );
           setBreakingNews(combinedNews);
           setNewsBreaking(combinedNews);
         } else {
@@ -54,14 +56,17 @@ const BreakingNews = ( ) => {
         }
       } else {
         // Date-specific news fetch
-        const response = await axios.get(`https://api.currentsapi.services/v1/search`, {
-          params: {
-            apiKey: import.meta.env.VITE_Breaking_apiKey,
-            language: "en",
-            start_date: selectedDate,
-            end_date: selectedDate,
-          },
-        });
+        const response = await axios.get(
+          `https://api.currentsapi.services/v1/search`,
+          {
+            params: {
+              apiKey: import.meta.env.VITE_Breaking_apiKey,
+              language: "en",
+              start_date: selectedDate,
+              end_date: selectedDate,
+            },
+          }
+        );
 
         console.log("Date-specific API response:", response.data);
         const dateSpecificNews = response?.data?.news || [];
@@ -136,7 +141,7 @@ const BreakingNews = ( ) => {
     };
 
     // Save bookmark to database
-    fetch("https://news-grid-server.vercel.app/bookmarks", {
+    fetch("http://localhost:5000/bookmarks", {
       method: "POST",
       headers: {
         "content-type": "application/json",

@@ -14,9 +14,7 @@ const UsersNews = () => {
   useEffect(() => {
     const fetchNews = async () => {
       try {
-        const response = await axios.get(
-          "https://news-grid-server.vercel.app/mynews"
-        );
+        const response = await axios.get("http://localhost:5000/mynews");
         setAllNews(response.data);
         setCategoryNews(response.data);
       } catch (error) {
