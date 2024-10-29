@@ -14,6 +14,9 @@ import SpeechRecognition, {
 import { useDispatch, useSelector } from "react-redux";
 import { searchNews } from "../../../features/searchNews/searchNewsSlice";
 import { getAllNews } from "../../../features/allNews/allNewsSlice";
+import Swal from "sweetalert2";
+import axios from "axios";
+import { useQuery } from "@tanstack/react-query";
 
 // import  from 'lodash';
 
@@ -46,6 +49,8 @@ const Navbar = () => {
   const [loading, setLoading] = useState(false);
   const [inputValue, setInputValue] = useState("");
   const [categoryActive, setCategoryActive] = useState();
+  
+  
 
   // redux
   const inputSearchValue = useSelector((state) => state.newsSearch);
@@ -141,6 +146,40 @@ const Navbar = () => {
     setActive(data);
   };
 
+    const paymentInfo = {
+        name : user?.displayName,
+        email : user?.email,
+        price : 5,
+        feature : 'voiceSearchFeature'
+    }
+
+    
+    const {data : paymentInfos} = useQuery({
+      queryKey : ['paymentInfo' , user?.email],
+      queryFn : async() => {
+        const res =  await axios.get(`http://localhost:5000/payments/${user?.email}`)
+        return res?.data
+      }
+
+    })
+    const isPayment = paymentInfos ?  paymentInfos?.find(pay => pay?.feature) : null
+    console.log("isPayment" , isPayment);
+    const handleVoicePayment = () => {
+      Swal.fire({
+        title: "You have to pay for voice search. Only $5",
+        text: "Do you want to pay now ?",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Yes!"
+      }).then((result) => {
+        if (result.isConfirmed) {
+            navigate("/dashbord/payment" , {state : {paymentInfo : paymentInfo}})
+            
+        }
+      });
+    }
   return (
     <div>
       <div className="fixed top-0 left-0 z-40 w-full ">
@@ -200,10 +239,20 @@ const Navbar = () => {
                         onClick={SpeechRecognition.stopListening}
                       />
                     ) : (
-                      <MdKeyboardVoice
-                        className="text-2xl text-black"
+                      
+                        isPayment ? <MdKeyboardVoice
+                        className="text-2xl text-black hover:cursor-pointer"
                         onClick={SpeechRecognition.startListening}
                       />
+                      :
+                      <MdKeyboardVoice
+                        className="text-2xl text-black hover:cursor-pointer"
+                        onClick={handleVoicePayment}
+                      />
+
+                      
+                      
+                      
                     )}
                     <button className="btn btn-sm ml-2 text-white font-bold bg-[#005689] hover:bg-[#023553]">
                       Search
@@ -321,7 +370,7 @@ const Navbar = () => {
                       </div>
                       <ul
                         tabIndex={0}
-                        className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
+                        className="dropdown-content z-[1] menu p-2 shadow  rounded-box bg-[#004E5B] w-52"
                       >
                         <li>
                           <a>{user?.displayName}</a>
