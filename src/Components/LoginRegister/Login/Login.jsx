@@ -18,13 +18,15 @@ const Login = () => {
 
   const navigate = useNavigate();
   const location = useLocation();
-  const from = location?.state?.from?.pathname || "/";
+  const pathName = location?.state?.from || "/";
+
+  console.log("from : " , pathName);
 
   const onSubmit = async (data) => {
     const { email, password } = data;
     try {
       await login(email, password);
-      navigate(from);
+      navigate(pathName);
       toast.success("Login successful!");
     } catch (err) {
       toast.error(err.message);
@@ -115,7 +117,7 @@ const Login = () => {
           </p>
 
           {/* Social Media Login */}
-          <Socalmedia />
+          <Socalmedia  pathName={pathName}/>
         </div>
 
         {/* Right side - Welcome message */}

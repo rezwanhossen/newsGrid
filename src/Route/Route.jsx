@@ -88,7 +88,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/locationBasedNews",
-        element: <LocationBasedNews></LocationBasedNews>,
+        element: <PrivateRoute><LocationBasedNews></LocationBasedNews></PrivateRoute>,
       },
       {
         path: "/usersNews",

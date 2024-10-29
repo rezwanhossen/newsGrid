@@ -41,7 +41,7 @@ import useAuth from "../../Hook/useAuth/useAuth";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 
-const SocialMedia = () => {
+const SocialMedia = ({pathName}) => {
   // Destructure the google login function from the custom hook
   const { googlelogin } = useAuth();
   const navigate = useNavigate();
@@ -52,7 +52,7 @@ const SocialMedia = () => {
       // Attempt Google login
       await googlelogin();
       // On success, navigate to the homepage
-      navigate("/");
+      navigate(pathName || "/");
       // Show a success toast message
       toast.success("Google Login successful!");
     } catch (err) {
