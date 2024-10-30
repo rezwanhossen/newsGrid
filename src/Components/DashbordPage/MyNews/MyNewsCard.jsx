@@ -54,7 +54,7 @@ const MyNewsCard = ({ news, refetch }) => {
                   onClick={handleDeleteNews}
                   className="text-2xl text-red-600 hover:cursor-pointer"
                 />
-                <FaEdit className="text-2xl text-[#005689] hover:cursor-pointer"></FaEdit>
+                {/* <FaEdit className="text-2xl text-[#005689] hover:cursor-pointer"></FaEdit> */}
               </div>
             </div>
           </div>

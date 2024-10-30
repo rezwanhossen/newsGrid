@@ -60,11 +60,11 @@ const Dashbord = () => {
         </div>
 
         <div className="">
-          <p className="bg-[#007E7E] w-full z-20 text-center text-white text-xl font-bold py-6 hidden md:block">
+          <p className="bg-[#004E5B] w-full z-20 text-center text-white text-xl font-bold py-6 hidden md:block">
             My DashBoard
           </p>
 
-          <div className="flex justify-center items-center bg-[#F5F5F5]">
+          <div className="flex justify-center  items-center bg-[#F5F5F5]">
             <Outlet />
           </div>
         </div>
@@ -148,7 +148,7 @@ const Dashbord = () => {
                 <Link onClick={() => setShowModal(true)}>Added News</Link>
               </li> */}
               <li className="border border-white rounded-md hover:text-black hover:bg-white font-semibold mb-4">
-                <p onClick={handelAddNews}>Added News</p>
+                <p onClick={handelAddNews}>Add News</p>
               </li>
               <li className="border border-white rounded-md hover:text-black hover:bg-white font-semibold mb-4">
                 <NavLink to={"/dashbord/myNews"}>My News</NavLink>

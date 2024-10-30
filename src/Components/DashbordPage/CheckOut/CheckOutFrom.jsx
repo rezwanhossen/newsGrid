@@ -4,7 +4,7 @@ import useAuth from "../../../Hook/useAuth/useAuth";
 import toast from "react-hot-toast";
 import useAxiosCommon from "../../../Hook/useAxiosCommon";
 import useAxiosSecure from "../../../Hook/useAxiosSecure";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const CheckOutFrom = () => {
   const { user } = useAuth();
@@ -15,7 +15,12 @@ const CheckOutFrom = () => {
   const [clientSecret, setclientSecret] = useState("");
   const axiosSecure = useAxiosSecure();
   const axioscommon = useAxiosCommon();
-  const price = parseInt(120);
+  
+  const location = useLocation();
+  console.log("location : " , location);
+  const price  = parseInt(location?.state?.paymentInfo?.price);
+  const feature = location?.state?.paymentInfo?.feature;
+  console.log(price , feature)
 
   useEffect(() => {
     axiosSecure.post("/create-payment-intent", { price: price }).then((res) => {
@@ -75,12 +80,13 @@ const CheckOutFrom = () => {
         date: new Date(),
         email: user?.email,
         name: user?.displayName,
+        feature : feature
       };
 
       try {
         await axioscommon.post("/payment", paymentInfo);
         toast.success("Payment data successfully saved on server");
-        navigate("/dashbord/addnews");
+        navigate("/");
       } catch (err) {
         toast.error(err.message);
       }
