@@ -6,6 +6,11 @@ const initialState = {
     // categoriesNews : [],
     locationBasedNews: [],
     categoriesNews : [],
+    allTrendingNews  : [],
+    newsData : [],
+    recomendedNews : [],
+    breakingNews : []
+
   };
   
 
@@ -24,11 +29,44 @@ const allNewsSlice = createSlice({
                     ...state,
                     categoriesNews : action.payload || state
                 }
-         }
+         },
+         setNewsData : (state , action) => {
+                return {
+                    ...state,
+                    newsData : action.payload || state
+                }
+         },
+         setAllNewsTrending : (state , action) => {
+                return {
+                    ...state,
+                    allTrendingNews : action.payload || state
+                }
+         },
+         setAllRecommendedNews : (state , action) => {
+                return {
+                    ...state,
+                    recomendedNews : action.payload || state
+                }
+         },
+         setAllBreakingNews : (state , action) => {
+                return {
+                    ...state,
+                    breakingNews : action.payload || state
+                }
+         },
     }
 
 });
 
 
 export default allNewsSlice.reducer;
-export const { setLocationBasedNews , setCategoriesNews } = allNewsSlice.actions;
+export const getAllNews = (state) => [
+    ...state?.allNews?.locationBasedNews || [],
+    ...state?.allNews?.categoriesNews || [],
+    ...state?.allNews?.newsData || [],
+    ...state?.allNews?.allTrendingNews || [],
+    ...state?.allNews?.breakingNews || [],
+    ...state?.allNews?.recomendedNews || [],
+
+];
+export const { setLocationBasedNews , setCategoriesNews  , setNewsData , setAllNewsTrending , setAllRecommendedNews , setAllBreakingNews} = allNewsSlice.actions;

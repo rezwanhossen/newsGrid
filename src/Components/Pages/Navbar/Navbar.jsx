@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 import { FiMenu, FiX } from "react-icons/fi";
 import logo from "/fotlogo.png";
@@ -13,15 +13,44 @@ import SpeechRecognition, {
 } from "react-speech-recognition";
 import { useDispatch, useSelector } from "react-redux";
 import { searchNews } from "../../../features/searchNews/searchNewsSlice";
+import { getAllNews } from "../../../features/allNews/allNewsSlice";
+import Swal from "sweetalert2";
+import axios from "axios";
+import { useQuery } from "@tanstack/react-query";
 
 // import  from 'lodash';
 
-const Navbar = ({ allNews }) => {
+const Navbar = () => {
+  const allNewsData = useSelector(getAllNews);
+
+  const allNews = useMemo(() => allNewsData, [allNewsData]);
+
+  // console.log(allNews);
+
+ 
+  
+  
+
+  
+  
+ 
+
+
+
+
+
+
+
+
+
+
   const navigate = useNavigate();
   // const [searchNews, setNewsSearch] = useState([]);
   const [loading, setLoading] = useState(false);
   const [inputValue, setInputValue] = useState("");
   const [categoryActive, setCategoryActive] = useState();
+  
+  
 
   // redux
   const inputSearchValue = useSelector((state) => state.newsSearch);
@@ -80,21 +109,23 @@ const Navbar = ({ allNews }) => {
   const { user, logout } = useAuth();
 
   // theme
-  const [theme, setTheme] = useState("light");
+  // const [theme, setTheme] = useState("light");
 
-  useEffect(() => {
-    localStorage.setItem("theme", theme);
+  // useEffect(() => {
+  //   localStorage.setItem("theme", theme);
 
-    const localTheme = localStorage.getItem("theme");
-    document.querySelector("html").setAttribute("data-theme", localTheme);
-  }, [theme]);
+  //   const localTheme = localStorage.getItem("theme");
+  //   document.querySelector("html").setAttribute("data-theme", localTheme);
+  // }, [theme]);
 
   const handleToggle = (e) => {
-    if (e.target.checked) {
-      setTheme("night");
-    } else {
-      setTheme("light");
-    }
+    document.querySelector("html").classList.add('#FFD580');
+    // if (e.target.checked) {
+    //   setTheme("black");
+
+    // } else {
+    //   setTheme("light");
+    // }
   };
 
   const categories = [
@@ -115,6 +146,40 @@ const Navbar = ({ allNews }) => {
     setActive(data);
   };
 
+    const paymentInfo = {
+        name : user?.displayName,
+        email : user?.email,
+        price : 5,
+        feature : 'voiceSearchFeature'
+    }
+
+    
+    const {data : paymentInfos} = useQuery({
+      queryKey : ['paymentInfo' , user?.email],
+      queryFn : async() => {
+        const res =  await axios.get(`http://localhost:5000/payments/${user?.email}`)
+        return res?.data
+      }
+
+    })
+    const isPayment = paymentInfos ?  paymentInfos?.find(pay => pay?.feature) : null
+    console.log("isPayment" , isPayment);
+    const handleVoicePayment = () => {
+      Swal.fire({
+        title: "You have to pay for voice search. Only $5",
+        text: "Do you want to pay now ?",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Yes!"
+      }).then((result) => {
+        if (result.isConfirmed) {
+            navigate("/dashbord/payment" , {state : {paymentInfo : paymentInfo}})
+            
+        }
+      });
+    }
   return (
     <div>
       <div className="fixed top-0 left-0 z-40 w-full ">
@@ -149,7 +214,7 @@ const Navbar = ({ allNews }) => {
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 16 16"
                     fill="currentColor"
-                    className="h-4 w-4 opacity-70"
+                    className="h-4 w-4 opacity-70 text-black"
                   >
                     <path
                       fillRule="evenodd"
@@ -174,10 +239,20 @@ const Navbar = ({ allNews }) => {
                         onClick={SpeechRecognition.stopListening}
                       />
                     ) : (
-                      <MdKeyboardVoice
-                        className="text-2xl text-black"
+                      
+                        isPayment ? <MdKeyboardVoice
+                        className="text-2xl text-black hover:cursor-pointer"
                         onClick={SpeechRecognition.startListening}
                       />
+                      :
+                      <MdKeyboardVoice
+                        className="text-2xl text-black hover:cursor-pointer"
+                        onClick={handleVoicePayment}
+                      />
+
+                      
+                      
+                      
                     )}
                     <button className="btn btn-sm ml-2 text-white font-bold bg-[#005689] hover:bg-[#023553]">
                       Search
@@ -195,7 +270,7 @@ const Navbar = ({ allNews }) => {
 
                   {/* sun icon */}
                   <svg
-                    className="swap-off h-10 w-10 fill-current"
+                    className="swap-off h-10 w-10 fill-current hidden"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                   >
@@ -204,7 +279,7 @@ const Navbar = ({ allNews }) => {
 
                   {/* moon icon */}
                   <svg
-                    className="swap-on h-10 w-10 fill-current"
+                    className="swap-on h-10 w-10 fill-current hidden"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                   >
@@ -231,7 +306,7 @@ const Navbar = ({ allNews }) => {
                         </li>
                         {user && isAdmin && (
                           <li>
-                            <Link to="/dashbord/adminHome">Dashboard</Link>
+                            <Link to="/dashbord/users">Dashboard</Link>
                           </li>
                         )}
                         {user && !isAdmin && (
@@ -266,7 +341,7 @@ const Navbar = ({ allNews }) => {
 
                   {/* sun icon */}
                   <svg
-                    className="swap-off h-10 w-10 fill-current"
+                    className="swap-off h-10 w-10 fill-current hidden"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                   >
@@ -275,7 +350,7 @@ const Navbar = ({ allNews }) => {
 
                   {/* moon icon */}
                   <svg
-                    className="swap-on h-10 w-10 fill-current"
+                    className="swap-on h-10 w-10 fill-current hidden"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                   >
@@ -295,7 +370,7 @@ const Navbar = ({ allNews }) => {
                       </div>
                       <ul
                         tabIndex={0}
-                        className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
+                        className="dropdown-content z-[1] menu p-2 shadow  rounded-box bg-[#004E5B] w-52"
                       >
                         <li>
                           <a>{user?.displayName}</a>
@@ -319,11 +394,11 @@ const Navbar = ({ allNews }) => {
                   </div>
                 ) : (
                   <Link
-                    to="/login"
-                    className="text-black border border-black px-4 py-2 rounded hover:bg-gray-100"
-                  >
-                    Login
-                  </Link>
+                  to="/login"
+                  className="text-white border border-white px-4 py-2 rounded hover:text-black hover:bg-gray-100"
+                >
+                  Login
+                </Link>
                 )}
               </div>
             </div>
@@ -337,8 +412,8 @@ const Navbar = ({ allNews }) => {
               {categories.map((category) => (
                 <li
                   key={category}
-                  className={`font-bold text-lg sm:text-xl px-2 sm:px-4 text-[#232323] ${
-                    active === category ? "text-red-500 underline" : ""
+                  className={`font-bold text-lg sm:text-xl px-2 sm:px-4  text-[#232323] ${
+                    active === category ? "bg-[#004E5B] text-white p-2 rounded-md" : ""
                   } hover:cursor-pointer`}
                 >
                   <Link
@@ -377,7 +452,7 @@ const Navbar = ({ allNews }) => {
                     <input
                       type="text"
                       name="search"
-                      className="grow bg-base-200"
+                      className="grow"
                       onChange={handleInputChange}
                       placeholder="Search"
                       value={inputValue}
@@ -409,7 +484,7 @@ const Navbar = ({ allNews }) => {
 
                   {/* sun icon */}
                   <svg
-                    className="swap-off h-10 w-10 fill-current"
+                    className="swap-off h-10 w-10 fill-current hidden"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                   >
@@ -418,7 +493,7 @@ const Navbar = ({ allNews }) => {
 
                   {/* moon icon */}
                   <svg
-                    className="swap-on h-10 w-10 fill-current"
+                    className="swap-on h-10 w-10 fill-current hidden"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                   >
@@ -472,13 +547,13 @@ const Navbar = ({ allNews }) => {
 
               {/* small device */}
               <div className="lg:hidden items-center max-w-[280px] lg:w-full lg:space-x-4 space-x-2">
-                <label className="input input-bordered flex items-center gap-2">
+                <label className="input text-black input-bordered flex items-center gap-2">
                   {/* Search news */}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 16 16"
                     fill="currentColor"
-                    className="h-4 w-4 opacity-70"
+                    className="h-4 w-4 opacity-70 text-black bg-black"
                   >
                     <path
                       fillRule="evenodd"
@@ -492,7 +567,7 @@ const Navbar = ({ allNews }) => {
                     <input
                       type="text"
                       name="search"
-                      className="grow max-w-[150px] bg-base-200"
+                      className="grow max-w-[150px] text-black"
                       onChange={handleInputChange}
                       placeholder="Search"
                       value={inputValue}
@@ -526,11 +601,11 @@ const Navbar = ({ allNews }) => {
                   {categories.map((category) => (
                     <li
                       key={category}
-                      className={`font-bold rounded-none  border-b-2 border-[#005689] w-full    text-[#232323] ${
+                      className={`font-bold rounded-none  w-full    text-[#232323] ${
                         active === category ? "text-[#005689]" : ""
                       } hover:cursor-pointer`}
                     >
-                      <Link
+                      <NavLink
                         to={
                           category === "Home"
                             ? "/"
@@ -539,7 +614,7 @@ const Navbar = ({ allNews }) => {
                         onClick={() => setActive(category)}
                       >
                         {category.toUpperCase()}
-                      </Link>
+                      </NavLink>
                     </li>
                   ))}
                 </ul>
@@ -559,17 +634,17 @@ const Navbar = ({ allNews }) => {
             <FiX className="w-6 h-6" />
           </button>
 
-          <ul className="p-4 space-y-4  max-w-[300px] z-auto">
-            <li className="flex justify-between items-center">
-              <NavLink className="border border-1 w-full px-3 py-1" to="/">
+          <ul className="p-4 space-y-4  max-w-[300px] z-auto  ">
+            <li className="flex justify-between items-center hover:bg-white hover:text-black rounded-md">
+              <NavLink className="border border-1 w-full px-3 py-1 rounded-md" to="/">
                 Home
               </NavLink>
             </li>
 
             {user && (
-              <li className="flex justify-between items-center">
+              <li className="flex justify-between items-center hover:bg-white hover:text-black rounded-md">
                 <NavLink
-                  className="border border-1 w-full px-3 py-1"
+                  className="border border-1 w-full px-3 py-1 rounded-md"
                   to="/bookmark"
                 >
                   My Bookmarks
@@ -577,33 +652,41 @@ const Navbar = ({ allNews }) => {
               </li>
             )}
 
-            <li className="flex justify-between items-center">
+            <li className="flex justify-between items-center hover:bg-white hover:text-black rounded-md">
               <NavLink
-                className="border border-1 w-full px-3 py-1"
+                className="border border-1 w-full px-3 py-1 rounded-md"
                 to={"/CustomizedNews"}
               >
                 Custom News
               </NavLink>
             </li>
-            <li className="flex justify-between items-center">
+            <li className="flex justify-between items-center hover:bg-white hover:text-black rounded-md">
               <NavLink
-                className="border border-1 w-full px-3 py-1"
+                className="border border-1 w-full px-3 py-1 rounded-md"
                 to={"/locationBasedNews"}
               >
                 Location Based News
               </NavLink>
             </li>
-            <li className="flex justify-between items-center">
+            <li className="flex justify-between items-center hover:bg-white hover:text-black rounded-md">
               <NavLink
-                className="border border-1 w-full px-3 py-1"
+                className="border border-1 w-full px-3 py-1 rounded-md"
                 to={"/usersNews"}
               >
                 Users News
               </NavLink>
             </li>
-            <li className="flex justify-between items-center">
+            <li className="flex justify-between items-center hover:bg-white hover:text-black rounded-md">
               <NavLink
-                className="border border-1 w-full px-3 py-1"
+                className="border border-1 w-full px-3 py-1 rounded-md"
+                to={"/weatherNews"}
+              >
+                Weather News
+              </NavLink>
+            </li>
+            <li className="flex justify-between items-center hover:bg-white hover:text-black rounded-md">
+              <NavLink
+                className="border border-1 w-full px-3 py-1 rounded-md"
                 to={"/contact"}
               >
                 Contact Us

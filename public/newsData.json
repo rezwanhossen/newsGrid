@@ -1,5 +1,5 @@
 [
-    {
+  {
       "id": 1,
       "image": "https://i.ibb.co.com/JpKLMJw/politics1.webp",
       "link": "https://www.bbc.com/news/articles/ce3wwjqpx20o",
@@ -7,9 +7,8 @@
       "websitename": "BBC News",
       "category": "Politics",
       "keyword" : "india"
-
-    },
-    {
+},
+ {
       "id": 2,
       "image": "https://i.ibb.co.com/h2fsK2W/politics2.webp",
       "link": "https://www.msnbc.com/morning-joe/morning-joe/donald-trump-kamala-harris-election-day-disrupter-rcna171325?utm_source=flipboard&utm_content=msnbc%2Fmagazine%2FMSNBC",

@@ -1,0 +1,192 @@
+{
+    "news": [
+      {
+        "id": "1c75b142-5c55-4870-94b6-bbd0d250d163",
+        "title": "Global Warming Reaches Record Levels",
+        "description": "New data shows that global temperatures have reached an all-time high, sparking concerns among scientists.",
+        "url": "https://www.climatechange.org/global-warming-record-levels",
+        "author": "John Doe",
+        "image": "https://www.climatechange.org/images/global-warming.jpg",
+        "language": "en",
+        "category": ["environment"],
+        "published": "2024-10-25 15:00:00 +0000"
+      },
+      {
+        "id": "b3a569f0-f6aa-4933-8d5c-4c7e2a748f23",
+        "title": "Tech Giants Invest in Quantum Computing",
+        "description": "Leading tech companies are pouring billions into quantum computing research and development.",
+        "url": "https://www.technologynews.com/tech-giants-quantum-computing",
+        "author": "Tech Insider",
+        "image": "https://www.technologynews.com/images/quantum-computing.jpg",
+        "language": "en",
+        "category": ["technology"],
+        "published": "2024-10-25 14:55:00 +0000"
+      },
+      {
+        "id": "5761d5d3-b2f0-41f0-90be-5a4c5a5b8a4f",
+        "title": "Major Breakthrough in Cancer Research",
+        "description": "Scientists have discovered a new method for detecting cancer earlier and more accurately.",
+        "url": "https://www.healthnews.com/cancer-research-breakthrough",
+        "author": "Dr. Alice Smith",
+        "image": "https://www.healthnews.com/images/cancer-research.jpg",
+        "language": "en",
+        "category": ["health"],
+        "published": "2024-10-25 14:50:00 +0000"
+      },
+      {
+        "id": "8de7650b-44b4-4a9c-8687-bc84d8bc3e57",
+        "title": "New Species of Dinosaur Discovered",
+        "description": "Paleontologists have unveiled a new species of dinosaur that roamed the Earth millions of years ago.",
+        "url": "https://www.sciencenews.com/new-dinosaur-species",
+        "author": "Mia Johnson",
+        "image": "https://www.sciencenews.com/images/dinosaur-discovery.jpg",
+        "language": "en",
+        "category": ["science"],
+        "published": "2024-10-25 14:45:00 +0000"
+      },
+      {
+        "id": "ff2b5bb9-2c09-4f6c-b99b-768c3f8a99c3",
+        "title": "Economic Growth Slows in Q3",
+        "description": "The latest economic report indicates a slowdown in growth for the third quarter of the year.",
+        "url": "https://www.economics.com/q3-growth-report",
+        "author": "Finance Daily",
+        "image": "None",
+        "language": "en",
+        "category": ["business"],
+        "published": "2024-10-25 14:40:00 +0000"
+      },
+      {
+        "id": "b93dc56f-e712-4043-b80e-53aedd9c4316",
+        "title": "Sports League Expands to New Cities",
+        "description": "A major sports league has announced plans to expand its franchises to new cities across the country.",
+        "url": "https://www.sportsnews.com/league-expansion",
+        "author": "Sports Reporter",
+        "image": "https://www.sportsnews.com/images/league-expansion.jpg",
+        "language": "en",
+        "category": ["sports"],
+        "published": "2024-10-25 14:35:00 +0000"
+      },
+      {
+        "id": "e91ab576-64f1-426e-9a2f-e788f73382ea",
+        "title": "New Vaccine Shows Promise Against RSV",
+        "description": "A new vaccine has shown effectiveness in preventing respiratory syncytial virus (RSV) infections.",
+        "url": "https://www.healthnews.com/rsv-vaccine-promise",
+        "author": "Dr. Rachel Green",
+        "image": "None",
+        "language": "en",
+        "category": ["health"],
+        "published": "2024-10-25 14:30:00 +0000"
+      },
+      {
+        "id": "c292f3ab-ec7e-4d67-b194-4885c79e622b",
+        "title": "NASA Plans New Mars Mission",
+        "description": "NASA has announced plans for a new mission to explore the surface of Mars.",
+        "url": "https://www.space.com/nasa-mars-mission",
+        "author": "Space News",
+        "image": "None",
+        "language": "en",
+        "category": ["science"],
+        "published": "2024-10-25 14:25:00 +0000"
+      },
+      {
+        "id": "4b354b9b-4e79-4382-9966-8c3fddce520d",
+        "title": "Electric Vehicles Surge in Popularity",
+        "description": "Sales of electric vehicles are rising sharply, signaling a shift in consumer preferences.",
+        "url": "https://www.automotive.com/electric-vehicles-popularity",
+        "author": "Car Expert",
+        "image": "https://www.automotive.com/images/electric-vehicles.jpg",
+        "language": "en",
+        "category": ["business"],
+        "published": "2024-10-25 14:20:00 +0000"
+      },
+      {
+        "id": "b5e6dabc-908f-4c43-8f82-7b4e19c12151",
+        "title": "New Study Reveals Link Between Diet and Depression",
+        "description": "Research shows a direct correlation between diet quality and levels of depression.",
+        "url": "https://www.psychologytoday.com/diet-depression-link",
+        "author": "Dr. Emily Carter",
+        "image": "None",
+        "language": "en",
+        "category": ["health"],
+        "published": "2024-10-25 14:15:00 +0000"
+      },
+      {
+        "id": "dd1ae62b-91c1-4c81-b3cb-bae216c4beef",
+        "title": "Fashion Week Highlights Emerging Designers",
+        "description": "This year's fashion week showcases innovative collections from emerging designers.",
+        "url": "https://www.fashionnews.com/fashion-week-highlights",
+        "author": "Fashion Insider",
+        "image": "https://www.fashionnews.com/images/fashion-week.jpg",
+        "language": "en",
+        "category": ["entertainment"],
+        "published": "2024-10-25 14:10:00 +0000"
+      },
+      {
+        "id": "b78af60d-69c1-4d1d-95c1-b4fcde5b7d84",
+        "title": "AI Revolutionizes Healthcare Diagnostics",
+        "description": "Artificial intelligence is transforming how healthcare professionals diagnose and treat diseases.",
+        "url": "https://www.healthtech.com/ai-healthcare-diagnostics",
+        "author": "Health Tech",
+        "image": "None",
+        "language": "en",
+        "category": ["technology"],
+        "published": "2024-10-25 14:05:00 +0000"
+      },
+      {
+        "id": "17d79c4e-5053-4e05-b8e6-4eec95e1a59e",
+        "title": "Film Festival Celebrates Diversity in Cinema",
+        "description": "The annual film festival highlights diverse voices and stories from around the world.",
+        "url": "https://www.cinema.com/film-festival-diversity",
+        "author": "Cinema Review",
+        "image": "https://www.cinema.com/images/film-festival.jpg",
+        "language": "en",
+        "category": ["entertainment"],
+        "published": "2024-10-25 14:00:00 +0000"
+      },
+      {
+        "id": "f89df314-2e8c-472b-964f-3e51550d1620",
+        "title": "Record-Breaking Heatwaves Across the Globe",
+        "description": "Countries around the world are experiencing unprecedented heatwaves this summer.",
+        "url": "https://www.climatereport.com/heatwaves",
+        "author": "Climate Reporter",
+        "image": "None",
+        "language": "en",
+        "category": ["environment"],
+        "published": "2024-10-25 13:55:00 +0000"
+      },
+      {
+        "id": "69b88263-6d4f-4c96-b442-0846f80274de",
+        "title": "Olympic Games to Feature New Sports",
+        "description": "The upcoming Olympic Games will include several new sports and disciplines for the first time.",
+        "url": "https://www.sportsnews.com/olympics-new-sports",
+        "author": "Sports Reporter",
+        "image": "https://www.sportsnews.com/images/olympics.jpg",
+        "language": "en",
+        "category": ["sports"],
+        "published": "2024-10-25 13:50:00 +0000"
+      },
+      {
+        "id": "6b2d1d26-1a2b-4c37-a8de-5c53ae8001f7",
+        "title": "Renewable Energy Investment Hits New High",
+        "description": "Global investments in renewable energy technologies have reached record levels this year.",
+        "url": "https://www.energynews.com/renewable-energy-investment",
+        "author": "Energy Analyst",
+        "image": "https://www.energynews.com/images/renewable-energy.jpg",
+        "language": "en",
+        "category": ["business"],
+        "published": "2024-10-25 13:45:00 +0000"
+      },
+      {
+        "id": "27f328a0-cf5a-4b86-9e1d-c90acb8a2568",
+        "title": "Global Population Growth Slows",
+        "description": "New statistics show a slowdown in global population growth, raising concerns about future demographic changes.",
+        "url": "https://www.demographics.com/global-population-growth",
+        "author": "Demography Today",
+        "image": "None",
+        "language": "en",
+        "category": ["world"],
+        "published": "2024-10-25 13:40:00 +0000"
+      }
+    ]
+  }
+  
