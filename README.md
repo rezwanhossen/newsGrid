@@ -1,126 +1,233 @@
-# News Grid
+ **NewsGrid**:
 
-## 1. Introduction
-**News Grid** is an advanced news aggregator platform that provides users with real-time, categorized, and personalized news feeds. It leverages modern technologies to offer a unique, engaging, and interactive experience, allowing users to submit, like, share, and bookmark news while staying updated on trends, weather, and breaking stories.
+---
 
-## 2. Project Overview
-News Grid acts as a comprehensive news hub, offering users easy access to the latest news across diverse categories. The platform also enables user-generated content, moderated by the admin, making it an inclusive space for all types of news interests. This documentation provides a full overview of News Grid’s features, functionality, and development guidelines.
+### **NewsGrid Setup Documentation**
 
-## 3. Getting Started with GitHub Repository
-To run the News Grid project from the GitHub repository, follow these steps:
+---
 
-1. **Clone the Repository**:
+#### **1. Introduction**
+**NewsGrid** is an advanced news aggregator platform offering real-time, categorized, and personalized news feeds. Users can interact with news content by submitting, liking, sharing, and bookmarking articles, all while staying updated on trends, weather, and breaking stories.
+
+#### **2. Project Overview**
+**NewsGrid** serves as a comprehensive news hub, making the latest news accessible across multiple categories and allowing user-generated content, moderated by admins. This documentation provides a complete overview of NewsGrid's features, functionality, and development guidelines.
+
+#### **3. Features in Detail**
+
+1. **Real-Time News**  
+   - Constant updates with the latest articles to keep users informed with current news.
+
+2. **Categorized News**  
+   - Allows sorting news by categories like Politics, Sports, and Entertainment.
+
+3. **Voice Search**  
+   - Users can search for news through voice commands for better accessibility.
+
+4. **Users News**  
+   - Dedicated section for articles contributed by users, displayed after admin approval.
+
+5. **My News**  
+   - Users can submit articles that, upon admin approval, are displayed on the platform.
+
+6. **Like, Comment, Share**  
+   - Social engagement options allow users to interact with articles.
+
+7. **JWT Authentication**  
+   - Provides secure access to user accounts and restricted pages using JWT-based sessions.
+
+8. **Private and Admin Routes**  
+   - Separate routes for general and admin users to ensure platform security.
+
+9. **Payments**  
+   - Users can make payments for premium features with secure gateways.
+
+10. **Report via Email.js**  
+    - Users can report issues or send feedback directly through email.
+
+11. **Social Sharing**  
+    - Articles are easily shareable on popular social media platforms.
+
+12. **Personalized News**  
+    - Custom recommendations page tailored to user interests.
+
+13. **Bookmarking**  
+    - Allows users to save articles for later access in their bookmark collection.
+
+14. **Audio News**  
+    - Users can listen to news articles for an improved accessibility experience.
+
+15. **Date-Based Search**  
+    - A search function that filters news by specific publication dates.
+
+16. **Breaking News**  
+    - Real-time stream for critical, urgent news stories.
+
+17. **Trending News**  
+    - Displays popular topics based on user interactions and engagement.
+
+18. **Recommended News**  
+    - Personalized entertainment recommendations to enhance user experience.
+
+19. **Video News**  
+    - Integrates YouTube live channels for users to watch live news.
+
+20. **Location-Based Weather News**  
+    - Displays local weather updates based on the user's location.
+
+21. **User Dashboard**
+
+    - **Add News**: Users can submit news articles, reviewed by the admin before publication.
+    - **Profile Management**: Users can update their profile information.
+    - **Category-Based News Selection**: Personalized feed by selecting preferred news categories.
+
+22. **Admin Dashboard**
+
+    - **User Management**: Admins can view all users and assign roles.
+    - **Payment History**: Admins have access to all transaction records.
+    - **News Moderation**: Admins review and approve user-submitted news for content quality.
+
+---
+
+#### **4. Architecture & Technologies**
+
+- **Frontend**: React.js for responsive, interactive UI optimized for dynamic content.
+- **Backend**: Node.js and Express.js handle server operations, authentication, and API endpoints.
+- **Database**: MongoDB for user data, news content, payment history, and bookmarks.
+- **Authentication**: JWT-based authentication for secure sessions.
+- **Payment Gateway**: Stripe or PayPal for secure transactions.
+- **Email Service**: Email.js for easy feedback and issue reporting.
+- **Social Media Integration**: Enables social sharing on Facebook, Twitter, and LinkedIn.
+- **Voice Recognition**: Hands-free search and interaction using voice recognition.
+- **Audio Playback**: Text-to-speech APIs for audio playback of news content.
+
+---
+
+#### **5. User Guide**
+
+**Home Page Features**
+
+- **Real-Time News**: Constantly updates content to display the latest news.
+- **Filter by Category**: Users can filter news by specific categories.
+- **Voice Search**: Enables voice-based searching with a microphone icon.
+- **Interact with News**: Like, comment, and share news articles.
+- **Bookmark Articles**: Save articles to read later.
+- **Audio News**: Listen to articles using the "Listen" option.
+- **Date-Based Search**: Calendar-based search for specific publication dates.
+- **Trending and Breaking News**: Separate sections for trending and urgent news.
+- **Video News**: Watch live news channels on the website.
+- **Local Weather Updates**: Location-based weather updates on the home page.
+
+**User Dashboard**
+
+- **Submit News**: Users can contribute articles for admin review.
+- **Manage Profile**: Edit personal details and account settings.
+- **Category Preferences**: Users can select preferred categories for a customized feed.
+
+**Admin Dashboard**
+
+- **Manage Users**: Admins can update user roles and permissions.
+- **Approve or Reject News**: Admin controls user-submitted news to maintain quality.
+- **Payment Tracking**: Admins can review all platform transactions.
+
+---
+
+#### **6. NewsGrid Setup Instructions**
+
+##### **1. Client Side Setup**
+
+1. **Clone the Client Repository**  
    ```bash
-   git clone https://github.com/yourusername/news-grid.git
-Navigate to the Project Directory:
+   git clone https://github.com/rezwanhossen/newsGrid.git
+   ```
 
-bash
-Copy code
-cd news-grid
-Install Dependencies:
+2. **Navigate to the Client Directory**  
+   ```bash
+   cd newsGrid-client
+   ```
 
-For the frontend:
+3. **Install Dependencies**  
+   ```bash
+   npm install
+   ```
 
-bash
-Copy code
-cd frontend
-npm install
-For the backend:
+4. **Configure Environment Variables**  
+   Create an `.env.local` file and include the following:
+   ```env
+   VITE_apiKey=<YOUR_API_KEY>
+   VITE_authDomain=<YOUR_AUTH_DOMAIN>
+   VITE_projectId=<YOUR_PROJECT_ID>
+   VITE_storageBucket=<YOUR_STORAGE_BUCKET>
+   VITE_messagingSenderId=<YOUR_MESSAGING_SENDER_ID>
+   VITE_appId=<YOUR_APP_ID>
 
-bash
-Copy code
-cd backend
-npm install
-Set Up Environment Variables:
+   VITE_IMGBB_key=<YOUR_IMGBB_KEY>
+   VITE_pymeny=<YOUR_PAYMENT_PROVIDER_KEY>
 
-Create a .env file in the backend directory and add necessary configurations (e.g., database connection string, API keys).
+   VITE_NAIMUL_API_KEY=<YOUR_NAIMUL_API_KEY>
+   VITE_Breaking_apiKey=<YOUR_BREAKING_API_KEY>
+   VITE_recommended_apiKey=<YOUR_RECOMMENDED_API_KEY>
+   VITE_Video_apiKey=<YOUR_VIDEO_API_KEY>
+   ```
 
-Start the Development Server:
+5. **Run the Client Application**  
+   ```bash
+   npm run dev
+   ```
 
-For the backend:
+##### **2. Server Side Setup**
 
-bash
-Copy code
-cd backend
-npm start
-For the frontend:
+1. **Clone the Server Repository**  
+   ```bash
+   git clone https://github.com/rezwanhossen/newsGrid-server.git
+   ```
 
-bash
-Copy code
-cd frontend
-npm start
-Access the Application:
+2. **Navigate to the Server Directory**  
+   ```bash
+   cd newsGrid-server
+   ```
 
-Open your browser and navigate to http://localhost:3000 (or the specified port) to view the application.
+3. **Install Dependencies**  
+   ```bash
+   npm install
+   ```
 
-4. Objectives
-Provide users with a real-time, interactive news platform.
-Enable user-generated content while maintaining quality through admin moderation.
-Ensure a personalized news experience with category selections and recommendations.
-5. Features in Detail
-Real-Time News: Constantly updates with the latest articles, ensuring users see the most current news.
-Categorized News: Provides category-based news sorting (e.g., Politics, Sports, Entertainment).
-Voice Search: Users can search for news through voice commands, enhancing accessibility.
-Audio News: Allows users to listen to news articles, making News Grid accessible to more users.
-Users News: A section dedicated to displaying articles contributed by users after admin approval.
-My News: Users can submit news articles which, after admin approval, appear on the site.
-Like, Comment, Share: Users can engage with articles through social interactions, promoting user engagement.
-JWT Authentication: Secure access to user accounts and restricted pages through JWT-based sessions.
-Private and Admin Routes: Separate routes for general users and admin users to enhance security.
-Payments: Allows users to make payments for premium services or to support content, with secure gateways.
-Report via Email.js: A feature for users to report issues or send feedback through email.
-Social Sharing: Articles can be easily shared on popular social media platforms.
-Personalized News: A unique page that provides news recommendations based on user preferences.
-Bookmarking: Users can save articles for later in their personal bookmark collection.
-Date-Based Search: A search function to filter news by specific publication dates.
-Breaking News: A separate, real-time stream for critical breaking news stories.
-Trending News: Displays trending topics across the platform, based on user interactions and popularity.
-Recommended News: Entertainment-based recommendations to enhance user engagement and retention.
-Video News: Integrates YouTube live channels, enabling users to watch live news videos directly on News Grid.
-Location-Based Weather News: Displays local weather updates based on user location, making it a one-stop news and weather source.
-User Dashboard
-Add News: Users can submit news articles, which are reviewed by the admin before publication.
-Profile Management: Users can manage their profile information.
-Category-Based News Selection: Users can choose preferred news categories for a personalized feed.
-Admin Dashboard
-User Management: Admins can view all users and assign roles as needed.
-Payment History: Admins have access to all payment transaction records.
-News Moderation: Admins review user-submitted news for approval, ensuring content relevance and quality.
-Multiple Charts: Admins can display various charts to visualize data trends and user interactions.
-6. Architecture & Technologies
-Frontend: Developed using React.js for interactive, responsive UI and optimized for dynamic content.
-Backend: Node.js and Express.js handle server operations, user authentication, and API endpoints.
-Database: MongoDB stores user data, news content, payment history, and bookmarked articles.
-Authentication: JWT-based authentication provides secure session management for users.
-Payment Gateway: Stripe or PayPal integration for secure, reliable payment handling.
-Email Service: Email.js enables users to send reports or provide feedback easily.
-Social Media Integration: Allows for seamless social sharing on platforms like Facebook, Twitter, and LinkedIn.
-Voice Recognition: Integrates voice recognition for hands-free searching and interaction.
-Audio Playback: Text-to-speech APIs enable audio playback for news content.
-7. User Guide
-Home Page Features
-Real-Time News: News Grid automatically updates content to keep users informed of the latest news.
-Filter by Category: A filter option allows users to view news according to their interests.
-Voice Search: Click the microphone icon to activate voice-based news search.
-Interact with News: Like, comment, and share options encourage users to engage with the content.
-Bookmark Articles: Users can save articles for later by bookmarking them.
-Audio News: Click “Listen” to hear the article read aloud, enhancing accessibility.
-Date-Based Search: A calendar feature enables users to find articles published on specific dates.
-Trending and Breaking News: A dedicated section for the latest trending and breaking news.
-Video News: Watch live news channels integrated directly onto the website.
-Local Weather Updates: Location-based weather news provides relevant local updates.
-User Dashboard
-Submit News: A form allows users to contribute articles for admin review.
-Manage Profile: Users can update personal information and account settings.
-Category Preferences: Users can select preferred news categories for a more personalized news feed.
-Admin Dashboard
-Manage Users: Admins can update user roles and permissions.
-Approve or Reject News: The admin has control over user-submitted news, ensuring content quality.
-Payment Tracking: Admins can access a record of all payments made within News Grid.
-Data Visualization: Admins can present multiple charts for insights into user engagement and trends.
-8. Team Members
-Rezwan Hossain
-Mahfuzur Islam
-Naymul Islam
-Md Hasan
-Rafiet Rana
+4. **Configure Environment Variables**  
+   Create an `.env` file with the following keys:
+   ```env
+   DB_User=<YOUR_DATABASE_USER>
+   DB_Pass=<YOUR_DATABASE_PASSWORD>
+   ACCESS_TOKEN_SECRET=<YOUR_ACCESS_TOKEN_SECRET>
+   STRIP_KEY=<YOUR_STRIPE_KEY>
+   ```
+
+5. **Run the Server Application**  
+   ```bash
+   nodemon index.js
+   ```
+
+---
+
+### **NewsGrid Team Contributors**
+
+1. **Rezwan Hossain**  
+   **Role**: Team Leader  
+   **GitHub**: [github.com/rezwanhossen](https://github.com/rezwanhossen)
+
+2. **Naymul Islam**  
+   **Role**: Contributor  
+   **GitHub**: [github.com/Naimul02](https://github.com/Naimul02)
+
+3. **Mahfuzur Islam**  
+   **Role**: Contributor  
+   **GitHub**: [github.com/mafujur-rahman](https://github.com/mafujur-rahman)
+
+4. **Md Hasan**  
+   **Role**: Contributor  
+   **GitHub**: [github.com/ahsan200t](https://github.com/ahsan200t)
+
+5. **Rafiet Rana**  
+   **Role**: Contributor  
+   **GitHub**: [github.com/rafietrana](https://github.com/rafietrana)
+
+--- 
+ 
