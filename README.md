@@ -213,7 +213,7 @@
    **Role**: Team Leader  
    **GitHub**: [github.com/rezwanhossen](https://github.com/rezwanhossen)
 
-2. **Naymul Islam**  
+2. **Naimul Islum Emon**  
    **Role**: Contributor  
    **GitHub**: [github.com/Naimul02](https://github.com/Naimul02)
 
